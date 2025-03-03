@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eric Bartelsman and MDI team">
-<meta name="dcterms.date" content="2025-02-24">
+<meta name="dcterms.date" content="2025-03-03">
 
 <title>MDI Users Guide</title>
 <style>
@@ -176,7 +176,7 @@ window.Quarto = {
   <li><a href="#module-writers-mdi-users" id="toc-module-writers-mdi-users" class="nav-link" data-scroll-target="#module-writers-mdi-users">Module Writers (MDI Users)</a>
   <ul class="collapse">
   <li><a href="#overview-of-mdi-2" id="toc-overview-of-mdi-2" class="nav-link" data-scroll-target="#overview-of-mdi-2">Overview of MDI</a></li>
-  <li><a href="#writing-modules-for-mdi-launcher" id="toc-writing-modules-for-mdi-launcher" class="nav-link" data-scroll-target="#writing-modules-for-mdi-launcher">Writing Modules for MDI Launcher</a>
+  <li><a href="#writing-modules-for-mdi-launch" id="toc-writing-modules-for-mdi-launch" class="nav-link" data-scroll-target="#writing-modules-for-mdi-launch">Writing Modules for MDI Launch</a>
   <ul class="collapse">
   <li><a href="#key-steps-in-module-development" id="toc-key-steps-in-module-development" class="nav-link" data-scroll-target="#key-steps-in-module-development">Key Steps in Module Development</a></li>
   </ul></li>
@@ -261,7 +261,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 24, 2025</p>
+      <p class="date">March 3, 2025</p>
     </div>
   </div>
   
@@ -335,23 +335,23 @@ window.Quarto = {
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="kyqtvcqrkz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kyqtvcqrkz table {
+<div id="dajpignmjv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dajpignmjv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kyqtvcqrkz thead, #kyqtvcqrkz tbody, #kyqtvcqrkz tfoot, #kyqtvcqrkz tr, #kyqtvcqrkz td, #kyqtvcqrkz th {
+#dajpignmjv thead, #dajpignmjv tbody, #dajpignmjv tfoot, #dajpignmjv tr, #dajpignmjv td, #dajpignmjv th {
   border-style: none;
 }
 
-#kyqtvcqrkz p {
+#dajpignmjv p {
   margin: 0;
   padding: 0;
 }
 
-#kyqtvcqrkz .gt_table {
+#dajpignmjv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -377,12 +377,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_caption {
+#dajpignmjv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kyqtvcqrkz .gt_title {
+#dajpignmjv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -394,7 +394,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#kyqtvcqrkz .gt_subtitle {
+#dajpignmjv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -406,7 +406,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#kyqtvcqrkz .gt_heading {
+#dajpignmjv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -418,13 +418,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_bottom_border {
+#dajpignmjv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_col_headings {
+#dajpignmjv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -439,7 +439,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_col_heading {
+#dajpignmjv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -459,7 +459,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#kyqtvcqrkz .gt_column_spanner_outer {
+#dajpignmjv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -471,15 +471,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#kyqtvcqrkz .gt_column_spanner_outer:first-child {
+#dajpignmjv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kyqtvcqrkz .gt_column_spanner_outer:last-child {
+#dajpignmjv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kyqtvcqrkz .gt_column_spanner {
+#dajpignmjv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -491,11 +491,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#kyqtvcqrkz .gt_spanner_row {
+#dajpignmjv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kyqtvcqrkz .gt_group_heading {
+#dajpignmjv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -521,7 +521,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#kyqtvcqrkz .gt_empty_group_heading {
+#dajpignmjv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -536,15 +536,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#kyqtvcqrkz .gt_from_md > :first-child {
+#dajpignmjv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kyqtvcqrkz .gt_from_md > :last-child {
+#dajpignmjv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kyqtvcqrkz .gt_row {
+#dajpignmjv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -563,7 +563,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#kyqtvcqrkz .gt_stub {
+#dajpignmjv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -576,7 +576,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#kyqtvcqrkz .gt_stub_row_group {
+#dajpignmjv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -590,15 +590,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#kyqtvcqrkz .gt_row_group_first td {
+#dajpignmjv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kyqtvcqrkz .gt_row_group_first th {
+#dajpignmjv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kyqtvcqrkz .gt_summary_row {
+#dajpignmjv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -608,16 +608,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#kyqtvcqrkz .gt_first_summary_row {
+#dajpignmjv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_first_summary_row.thick {
+#dajpignmjv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kyqtvcqrkz .gt_last_summary_row {
+#dajpignmjv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -627,7 +627,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_grand_summary_row {
+#dajpignmjv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -637,7 +637,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#kyqtvcqrkz .gt_first_grand_summary_row {
+#dajpignmjv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -647,7 +647,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_last_grand_summary_row_top {
+#dajpignmjv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -657,11 +657,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_striped {
+#dajpignmjv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kyqtvcqrkz .gt_table_body {
+#dajpignmjv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -670,7 +670,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_footnotes {
+#dajpignmjv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -684,7 +684,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_footnote {
+#dajpignmjv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -693,7 +693,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#kyqtvcqrkz .gt_sourcenotes {
+#dajpignmjv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -707,7 +707,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#kyqtvcqrkz .gt_sourcenote {
+#dajpignmjv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -715,72 +715,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#kyqtvcqrkz .gt_left {
+#dajpignmjv .gt_left {
   text-align: left;
 }
 
-#kyqtvcqrkz .gt_center {
+#dajpignmjv .gt_center {
   text-align: center;
 }
 
-#kyqtvcqrkz .gt_right {
+#dajpignmjv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kyqtvcqrkz .gt_font_normal {
+#dajpignmjv .gt_font_normal {
   font-weight: normal;
 }
 
-#kyqtvcqrkz .gt_font_bold {
+#dajpignmjv .gt_font_bold {
   font-weight: bold;
 }
 
-#kyqtvcqrkz .gt_font_italic {
+#dajpignmjv .gt_font_italic {
   font-style: italic;
 }
 
-#kyqtvcqrkz .gt_super {
+#dajpignmjv .gt_super {
   font-size: 65%;
 }
 
-#kyqtvcqrkz .gt_footnote_marks {
+#dajpignmjv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kyqtvcqrkz .gt_asterisk {
+#dajpignmjv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kyqtvcqrkz .gt_indent_1 {
+#dajpignmjv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kyqtvcqrkz .gt_indent_2 {
+#dajpignmjv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kyqtvcqrkz .gt_indent_3 {
+#dajpignmjv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kyqtvcqrkz .gt_indent_4 {
+#dajpignmjv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kyqtvcqrkz .gt_indent_5 {
+#dajpignmjv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kyqtvcqrkz .katex-display {
+#dajpignmjv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kyqtvcqrkz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dajpignmjv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1166,23 +1166,23 @@ window.Quarto = {
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code> and <code>details</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="qtgpwfgnoy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qtgpwfgnoy table {
+<div id="oakymencyr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oakymencyr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qtgpwfgnoy thead, #qtgpwfgnoy tbody, #qtgpwfgnoy tfoot, #qtgpwfgnoy tr, #qtgpwfgnoy td, #qtgpwfgnoy th {
+#oakymencyr thead, #oakymencyr tbody, #oakymencyr tfoot, #oakymencyr tr, #oakymencyr td, #oakymencyr th {
   border-style: none;
 }
 
-#qtgpwfgnoy p {
+#oakymencyr p {
   margin: 0;
   padding: 0;
 }
 
-#qtgpwfgnoy .gt_table {
+#oakymencyr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1208,12 +1208,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_caption {
+#oakymencyr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qtgpwfgnoy .gt_title {
+#oakymencyr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1225,7 +1225,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#qtgpwfgnoy .gt_subtitle {
+#oakymencyr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1237,7 +1237,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#qtgpwfgnoy .gt_heading {
+#oakymencyr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1249,13 +1249,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_bottom_border {
+#oakymencyr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_col_headings {
+#oakymencyr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1270,7 +1270,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_col_heading {
+#oakymencyr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1290,7 +1290,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#qtgpwfgnoy .gt_column_spanner_outer {
+#oakymencyr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1302,15 +1302,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#qtgpwfgnoy .gt_column_spanner_outer:first-child {
+#oakymencyr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qtgpwfgnoy .gt_column_spanner_outer:last-child {
+#oakymencyr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qtgpwfgnoy .gt_column_spanner {
+#oakymencyr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1322,11 +1322,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#qtgpwfgnoy .gt_spanner_row {
+#oakymencyr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qtgpwfgnoy .gt_group_heading {
+#oakymencyr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1352,7 +1352,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#qtgpwfgnoy .gt_empty_group_heading {
+#oakymencyr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1367,15 +1367,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#qtgpwfgnoy .gt_from_md > :first-child {
+#oakymencyr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qtgpwfgnoy .gt_from_md > :last-child {
+#oakymencyr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qtgpwfgnoy .gt_row {
+#oakymencyr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1394,7 +1394,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#qtgpwfgnoy .gt_stub {
+#oakymencyr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1407,7 +1407,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#qtgpwfgnoy .gt_stub_row_group {
+#oakymencyr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1421,15 +1421,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#qtgpwfgnoy .gt_row_group_first td {
+#oakymencyr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qtgpwfgnoy .gt_row_group_first th {
+#oakymencyr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qtgpwfgnoy .gt_summary_row {
+#oakymencyr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1439,16 +1439,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#qtgpwfgnoy .gt_first_summary_row {
+#oakymencyr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_first_summary_row.thick {
+#oakymencyr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qtgpwfgnoy .gt_last_summary_row {
+#oakymencyr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1458,7 +1458,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_grand_summary_row {
+#oakymencyr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1468,7 +1468,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#qtgpwfgnoy .gt_first_grand_summary_row {
+#oakymencyr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1478,7 +1478,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_last_grand_summary_row_top {
+#oakymencyr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1488,11 +1488,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_striped {
+#oakymencyr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qtgpwfgnoy .gt_table_body {
+#oakymencyr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1501,7 +1501,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_footnotes {
+#oakymencyr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1515,7 +1515,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_footnote {
+#oakymencyr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1524,7 +1524,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#qtgpwfgnoy .gt_sourcenotes {
+#oakymencyr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1538,7 +1538,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#qtgpwfgnoy .gt_sourcenote {
+#oakymencyr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1546,72 +1546,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#qtgpwfgnoy .gt_left {
+#oakymencyr .gt_left {
   text-align: left;
 }
 
-#qtgpwfgnoy .gt_center {
+#oakymencyr .gt_center {
   text-align: center;
 }
 
-#qtgpwfgnoy .gt_right {
+#oakymencyr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qtgpwfgnoy .gt_font_normal {
+#oakymencyr .gt_font_normal {
   font-weight: normal;
 }
 
-#qtgpwfgnoy .gt_font_bold {
+#oakymencyr .gt_font_bold {
   font-weight: bold;
 }
 
-#qtgpwfgnoy .gt_font_italic {
+#oakymencyr .gt_font_italic {
   font-style: italic;
 }
 
-#qtgpwfgnoy .gt_super {
+#oakymencyr .gt_super {
   font-size: 65%;
 }
 
-#qtgpwfgnoy .gt_footnote_marks {
+#oakymencyr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qtgpwfgnoy .gt_asterisk {
+#oakymencyr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qtgpwfgnoy .gt_indent_1 {
+#oakymencyr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qtgpwfgnoy .gt_indent_2 {
+#oakymencyr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qtgpwfgnoy .gt_indent_3 {
+#oakymencyr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qtgpwfgnoy .gt_indent_4 {
+#oakymencyr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qtgpwfgnoy .gt_indent_5 {
+#oakymencyr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qtgpwfgnoy .katex-display {
+#oakymencyr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qtgpwfgnoy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oakymencyr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1907,23 +1907,23 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames.">Example: Netherlands (SBS, 2018): NL_varnames.</h4>
 <div class="cell">
 <div class="cell-output-display">
-<div id="pykbktjfaq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pykbktjfaq table {
+<div id="nqpfqolzrr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nqpfqolzrr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pykbktjfaq thead, #pykbktjfaq tbody, #pykbktjfaq tfoot, #pykbktjfaq tr, #pykbktjfaq td, #pykbktjfaq th {
+#nqpfqolzrr thead, #nqpfqolzrr tbody, #nqpfqolzrr tfoot, #nqpfqolzrr tr, #nqpfqolzrr td, #nqpfqolzrr th {
   border-style: none;
 }
 
-#pykbktjfaq p {
+#nqpfqolzrr p {
   margin: 0;
   padding: 0;
 }
 
-#pykbktjfaq .gt_table {
+#nqpfqolzrr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1949,12 +1949,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_caption {
+#nqpfqolzrr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pykbktjfaq .gt_title {
+#nqpfqolzrr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1966,7 +1966,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#pykbktjfaq .gt_subtitle {
+#nqpfqolzrr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1978,7 +1978,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#pykbktjfaq .gt_heading {
+#nqpfqolzrr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1990,13 +1990,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_bottom_border {
+#nqpfqolzrr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_col_headings {
+#nqpfqolzrr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2011,7 +2011,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_col_heading {
+#nqpfqolzrr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2031,7 +2031,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#pykbktjfaq .gt_column_spanner_outer {
+#nqpfqolzrr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2043,15 +2043,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#pykbktjfaq .gt_column_spanner_outer:first-child {
+#nqpfqolzrr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pykbktjfaq .gt_column_spanner_outer:last-child {
+#nqpfqolzrr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pykbktjfaq .gt_column_spanner {
+#nqpfqolzrr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2063,11 +2063,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#pykbktjfaq .gt_spanner_row {
+#nqpfqolzrr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pykbktjfaq .gt_group_heading {
+#nqpfqolzrr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2093,7 +2093,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#pykbktjfaq .gt_empty_group_heading {
+#nqpfqolzrr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2108,15 +2108,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#pykbktjfaq .gt_from_md > :first-child {
+#nqpfqolzrr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pykbktjfaq .gt_from_md > :last-child {
+#nqpfqolzrr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pykbktjfaq .gt_row {
+#nqpfqolzrr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2135,7 +2135,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#pykbktjfaq .gt_stub {
+#nqpfqolzrr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2148,7 +2148,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#pykbktjfaq .gt_stub_row_group {
+#nqpfqolzrr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2162,15 +2162,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#pykbktjfaq .gt_row_group_first td {
+#nqpfqolzrr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pykbktjfaq .gt_row_group_first th {
+#nqpfqolzrr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pykbktjfaq .gt_summary_row {
+#nqpfqolzrr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2180,16 +2180,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#pykbktjfaq .gt_first_summary_row {
+#nqpfqolzrr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_first_summary_row.thick {
+#nqpfqolzrr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pykbktjfaq .gt_last_summary_row {
+#nqpfqolzrr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2199,7 +2199,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_grand_summary_row {
+#nqpfqolzrr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2209,7 +2209,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#pykbktjfaq .gt_first_grand_summary_row {
+#nqpfqolzrr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2219,7 +2219,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_last_grand_summary_row_top {
+#nqpfqolzrr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2229,11 +2229,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_striped {
+#nqpfqolzrr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pykbktjfaq .gt_table_body {
+#nqpfqolzrr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2242,7 +2242,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_footnotes {
+#nqpfqolzrr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2256,7 +2256,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_footnote {
+#nqpfqolzrr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2265,7 +2265,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#pykbktjfaq .gt_sourcenotes {
+#nqpfqolzrr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2279,7 +2279,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#pykbktjfaq .gt_sourcenote {
+#nqpfqolzrr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2287,72 +2287,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#pykbktjfaq .gt_left {
+#nqpfqolzrr .gt_left {
   text-align: left;
 }
 
-#pykbktjfaq .gt_center {
+#nqpfqolzrr .gt_center {
   text-align: center;
 }
 
-#pykbktjfaq .gt_right {
+#nqpfqolzrr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pykbktjfaq .gt_font_normal {
+#nqpfqolzrr .gt_font_normal {
   font-weight: normal;
 }
 
-#pykbktjfaq .gt_font_bold {
+#nqpfqolzrr .gt_font_bold {
   font-weight: bold;
 }
 
-#pykbktjfaq .gt_font_italic {
+#nqpfqolzrr .gt_font_italic {
   font-style: italic;
 }
 
-#pykbktjfaq .gt_super {
+#nqpfqolzrr .gt_super {
   font-size: 65%;
 }
 
-#pykbktjfaq .gt_footnote_marks {
+#nqpfqolzrr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pykbktjfaq .gt_asterisk {
+#nqpfqolzrr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pykbktjfaq .gt_indent_1 {
+#nqpfqolzrr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pykbktjfaq .gt_indent_2 {
+#nqpfqolzrr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pykbktjfaq .gt_indent_3 {
+#nqpfqolzrr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pykbktjfaq .gt_indent_4 {
+#nqpfqolzrr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pykbktjfaq .gt_indent_5 {
+#nqpfqolzrr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#pykbktjfaq .katex-display {
+#nqpfqolzrr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#pykbktjfaq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nqpfqolzrr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2541,23 +2541,23 @@ window.Quarto = {
 <p>An example below of the values occuring for the unit of measurement in the SI <code>ENER</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ipyesldqwy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ipyesldqwy table {
+<div id="nierqjgxug" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nierqjgxug table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ipyesldqwy thead, #ipyesldqwy tbody, #ipyesldqwy tfoot, #ipyesldqwy tr, #ipyesldqwy td, #ipyesldqwy th {
+#nierqjgxug thead, #nierqjgxug tbody, #nierqjgxug tfoot, #nierqjgxug tr, #nierqjgxug td, #nierqjgxug th {
   border-style: none;
 }
 
-#ipyesldqwy p {
+#nierqjgxug p {
   margin: 0;
   padding: 0;
 }
 
-#ipyesldqwy .gt_table {
+#nierqjgxug .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2583,12 +2583,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_caption {
+#nierqjgxug .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ipyesldqwy .gt_title {
+#nierqjgxug .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2600,7 +2600,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#ipyesldqwy .gt_subtitle {
+#nierqjgxug .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2612,7 +2612,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#ipyesldqwy .gt_heading {
+#nierqjgxug .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2624,13 +2624,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_bottom_border {
+#nierqjgxug .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_col_headings {
+#nierqjgxug .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2645,7 +2645,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_col_heading {
+#nierqjgxug .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2665,7 +2665,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#ipyesldqwy .gt_column_spanner_outer {
+#nierqjgxug .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2677,15 +2677,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#ipyesldqwy .gt_column_spanner_outer:first-child {
+#nierqjgxug .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ipyesldqwy .gt_column_spanner_outer:last-child {
+#nierqjgxug .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ipyesldqwy .gt_column_spanner {
+#nierqjgxug .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2697,11 +2697,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#ipyesldqwy .gt_spanner_row {
+#nierqjgxug .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ipyesldqwy .gt_group_heading {
+#nierqjgxug .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2727,7 +2727,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#ipyesldqwy .gt_empty_group_heading {
+#nierqjgxug .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2742,15 +2742,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#ipyesldqwy .gt_from_md > :first-child {
+#nierqjgxug .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ipyesldqwy .gt_from_md > :last-child {
+#nierqjgxug .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ipyesldqwy .gt_row {
+#nierqjgxug .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2769,7 +2769,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#ipyesldqwy .gt_stub {
+#nierqjgxug .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2782,7 +2782,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ipyesldqwy .gt_stub_row_group {
+#nierqjgxug .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2796,15 +2796,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#ipyesldqwy .gt_row_group_first td {
+#nierqjgxug .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ipyesldqwy .gt_row_group_first th {
+#nierqjgxug .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ipyesldqwy .gt_summary_row {
+#nierqjgxug .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2814,16 +2814,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ipyesldqwy .gt_first_summary_row {
+#nierqjgxug .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_first_summary_row.thick {
+#nierqjgxug .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ipyesldqwy .gt_last_summary_row {
+#nierqjgxug .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2833,7 +2833,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_grand_summary_row {
+#nierqjgxug .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2843,7 +2843,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ipyesldqwy .gt_first_grand_summary_row {
+#nierqjgxug .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2853,7 +2853,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_last_grand_summary_row_top {
+#nierqjgxug .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2863,11 +2863,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_striped {
+#nierqjgxug .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ipyesldqwy .gt_table_body {
+#nierqjgxug .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2876,7 +2876,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_footnotes {
+#nierqjgxug .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2890,7 +2890,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_footnote {
+#nierqjgxug .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2899,7 +2899,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ipyesldqwy .gt_sourcenotes {
+#nierqjgxug .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2913,7 +2913,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ipyesldqwy .gt_sourcenote {
+#nierqjgxug .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2921,72 +2921,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ipyesldqwy .gt_left {
+#nierqjgxug .gt_left {
   text-align: left;
 }
 
-#ipyesldqwy .gt_center {
+#nierqjgxug .gt_center {
   text-align: center;
 }
 
-#ipyesldqwy .gt_right {
+#nierqjgxug .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ipyesldqwy .gt_font_normal {
+#nierqjgxug .gt_font_normal {
   font-weight: normal;
 }
 
-#ipyesldqwy .gt_font_bold {
+#nierqjgxug .gt_font_bold {
   font-weight: bold;
 }
 
-#ipyesldqwy .gt_font_italic {
+#nierqjgxug .gt_font_italic {
   font-style: italic;
 }
 
-#ipyesldqwy .gt_super {
+#nierqjgxug .gt_super {
   font-size: 65%;
 }
 
-#ipyesldqwy .gt_footnote_marks {
+#nierqjgxug .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ipyesldqwy .gt_asterisk {
+#nierqjgxug .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ipyesldqwy .gt_indent_1 {
+#nierqjgxug .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ipyesldqwy .gt_indent_2 {
+#nierqjgxug .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ipyesldqwy .gt_indent_3 {
+#nierqjgxug .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ipyesldqwy .gt_indent_4 {
+#nierqjgxug .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ipyesldqwy .gt_indent_5 {
+#nierqjgxug .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ipyesldqwy .katex-display {
+#nierqjgxug .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ipyesldqwy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nierqjgxug div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3194,23 +3194,23 @@ window.Quarto = {
 <p>An sample of rows from the table of PRODCOM codes (in this case some randomly selected rows from the list of codes of Finland):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ocgjrgnamw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ocgjrgnamw table {
+<div id="elajcnuybj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#elajcnuybj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ocgjrgnamw thead, #ocgjrgnamw tbody, #ocgjrgnamw tfoot, #ocgjrgnamw tr, #ocgjrgnamw td, #ocgjrgnamw th {
+#elajcnuybj thead, #elajcnuybj tbody, #elajcnuybj tfoot, #elajcnuybj tr, #elajcnuybj td, #elajcnuybj th {
   border-style: none;
 }
 
-#ocgjrgnamw p {
+#elajcnuybj p {
   margin: 0;
   padding: 0;
 }
 
-#ocgjrgnamw .gt_table {
+#elajcnuybj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3236,12 +3236,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_caption {
+#elajcnuybj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ocgjrgnamw .gt_title {
+#elajcnuybj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3253,7 +3253,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#ocgjrgnamw .gt_subtitle {
+#elajcnuybj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3265,7 +3265,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#ocgjrgnamw .gt_heading {
+#elajcnuybj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3277,13 +3277,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_bottom_border {
+#elajcnuybj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_col_headings {
+#elajcnuybj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3298,7 +3298,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_col_heading {
+#elajcnuybj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3318,7 +3318,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#ocgjrgnamw .gt_column_spanner_outer {
+#elajcnuybj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3330,15 +3330,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#ocgjrgnamw .gt_column_spanner_outer:first-child {
+#elajcnuybj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ocgjrgnamw .gt_column_spanner_outer:last-child {
+#elajcnuybj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ocgjrgnamw .gt_column_spanner {
+#elajcnuybj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3350,11 +3350,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#ocgjrgnamw .gt_spanner_row {
+#elajcnuybj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ocgjrgnamw .gt_group_heading {
+#elajcnuybj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3380,7 +3380,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#ocgjrgnamw .gt_empty_group_heading {
+#elajcnuybj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3395,15 +3395,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#ocgjrgnamw .gt_from_md > :first-child {
+#elajcnuybj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ocgjrgnamw .gt_from_md > :last-child {
+#elajcnuybj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ocgjrgnamw .gt_row {
+#elajcnuybj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3422,7 +3422,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#ocgjrgnamw .gt_stub {
+#elajcnuybj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3435,7 +3435,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ocgjrgnamw .gt_stub_row_group {
+#elajcnuybj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3449,15 +3449,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#ocgjrgnamw .gt_row_group_first td {
+#elajcnuybj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ocgjrgnamw .gt_row_group_first th {
+#elajcnuybj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ocgjrgnamw .gt_summary_row {
+#elajcnuybj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3467,16 +3467,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ocgjrgnamw .gt_first_summary_row {
+#elajcnuybj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_first_summary_row.thick {
+#elajcnuybj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ocgjrgnamw .gt_last_summary_row {
+#elajcnuybj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3486,7 +3486,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_grand_summary_row {
+#elajcnuybj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3496,7 +3496,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ocgjrgnamw .gt_first_grand_summary_row {
+#elajcnuybj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3506,7 +3506,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_last_grand_summary_row_top {
+#elajcnuybj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3516,11 +3516,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_striped {
+#elajcnuybj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ocgjrgnamw .gt_table_body {
+#elajcnuybj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3529,7 +3529,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_footnotes {
+#elajcnuybj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3543,7 +3543,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_footnote {
+#elajcnuybj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3552,7 +3552,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ocgjrgnamw .gt_sourcenotes {
+#elajcnuybj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3566,7 +3566,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#ocgjrgnamw .gt_sourcenote {
+#elajcnuybj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3574,72 +3574,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#ocgjrgnamw .gt_left {
+#elajcnuybj .gt_left {
   text-align: left;
 }
 
-#ocgjrgnamw .gt_center {
+#elajcnuybj .gt_center {
   text-align: center;
 }
 
-#ocgjrgnamw .gt_right {
+#elajcnuybj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ocgjrgnamw .gt_font_normal {
+#elajcnuybj .gt_font_normal {
   font-weight: normal;
 }
 
-#ocgjrgnamw .gt_font_bold {
+#elajcnuybj .gt_font_bold {
   font-weight: bold;
 }
 
-#ocgjrgnamw .gt_font_italic {
+#elajcnuybj .gt_font_italic {
   font-style: italic;
 }
 
-#ocgjrgnamw .gt_super {
+#elajcnuybj .gt_super {
   font-size: 65%;
 }
 
-#ocgjrgnamw .gt_footnote_marks {
+#elajcnuybj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ocgjrgnamw .gt_asterisk {
+#elajcnuybj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ocgjrgnamw .gt_indent_1 {
+#elajcnuybj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ocgjrgnamw .gt_indent_2 {
+#elajcnuybj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ocgjrgnamw .gt_indent_3 {
+#elajcnuybj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ocgjrgnamw .gt_indent_4 {
+#elajcnuybj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ocgjrgnamw .gt_indent_5 {
+#elajcnuybj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ocgjrgnamw .katex-display {
+#elajcnuybj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ocgjrgnamw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#elajcnuybj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3653,64 +3653,64 @@ window.Quarto = {
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">28961073</td>
-<td class="gt_row gt_right" headers="year">2015</td>
+<td class="gt_row gt_right" headers="code">14131110</td>
+<td class="gt_row gt_right" headers="year">2014</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">25621009</td>
-<td class="gt_row gt_right" headers="year">2017</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">36221353</td>
-<td class="gt_row gt_right" headers="year">2004</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">21101030</td>
-<td class="gt_row gt_right" headers="year">2018</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">28141333</td>
-<td class="gt_row gt_right" headers="year">2021</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">27521234</td>
-<td class="gt_row gt_right" headers="year">2018</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">28512230</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">13108390</td>
-<td class="gt_row gt_right" headers="year">2021</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">15201237</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">20151075</td>
+<td class="gt_row gt_right" headers="code">20143330</td>
 <td class="gt_row gt_right" headers="year">2014</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">20164030</td>
-<td class="gt_row gt_right" headers="year">2011</td>
+<td class="gt_row gt_right" headers="code">28993970</td>
+<td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">28923070</td>
-<td class="gt_row gt_right" headers="year">2008</td>
+<td class="gt_row gt_right" headers="code">20146231</td>
+<td class="gt_row gt_right" headers="year">2013</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">27112405</td>
-<td class="gt_row gt_right" headers="year">2015</td>
+<td class="gt_row gt_right" headers="code">17402173</td>
+<td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">13107200</td>
-<td class="gt_row gt_right" headers="year">2015</td>
+<td class="gt_row gt_right" headers="code">29522550</td>
+<td class="gt_row gt_right" headers="year">2004</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">23491230</td>
+<td class="gt_row gt_right" headers="code">20142410</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">20595971</td>
+<td class="gt_row gt_right" headers="year">2021</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">33161000</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">23611200</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">29323460</td>
+<td class="gt_row gt_right" headers="year">2005</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">23131160</td>
 <td class="gt_row gt_right" headers="year">2018</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">29121237</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">22223230</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">24106250</td>
+<td class="gt_row gt_right" headers="year">2019</td>
 </tr>
 </tbody>
 </table>
@@ -3736,23 +3736,23 @@ window.Quarto = {
 <p>For example, the following table displays how such table looks like for a subset of ITGS codes in PT:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="iootvpyamm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iootvpyamm table {
+<div id="mhdjibmsvt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mhdjibmsvt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iootvpyamm thead, #iootvpyamm tbody, #iootvpyamm tfoot, #iootvpyamm tr, #iootvpyamm td, #iootvpyamm th {
+#mhdjibmsvt thead, #mhdjibmsvt tbody, #mhdjibmsvt tfoot, #mhdjibmsvt tr, #mhdjibmsvt td, #mhdjibmsvt th {
   border-style: none;
 }
 
-#iootvpyamm p {
+#mhdjibmsvt p {
   margin: 0;
   padding: 0;
 }
 
-#iootvpyamm .gt_table {
+#mhdjibmsvt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3778,12 +3778,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_caption {
+#mhdjibmsvt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iootvpyamm .gt_title {
+#mhdjibmsvt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3795,7 +3795,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#iootvpyamm .gt_subtitle {
+#mhdjibmsvt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3807,7 +3807,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#iootvpyamm .gt_heading {
+#mhdjibmsvt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3819,13 +3819,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_bottom_border {
+#mhdjibmsvt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_col_headings {
+#mhdjibmsvt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3840,7 +3840,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_col_heading {
+#mhdjibmsvt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3860,7 +3860,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#iootvpyamm .gt_column_spanner_outer {
+#mhdjibmsvt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3872,15 +3872,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#iootvpyamm .gt_column_spanner_outer:first-child {
+#mhdjibmsvt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iootvpyamm .gt_column_spanner_outer:last-child {
+#mhdjibmsvt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iootvpyamm .gt_column_spanner {
+#mhdjibmsvt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3892,11 +3892,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#iootvpyamm .gt_spanner_row {
+#mhdjibmsvt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iootvpyamm .gt_group_heading {
+#mhdjibmsvt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3922,7 +3922,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#iootvpyamm .gt_empty_group_heading {
+#mhdjibmsvt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3937,15 +3937,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#iootvpyamm .gt_from_md > :first-child {
+#mhdjibmsvt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iootvpyamm .gt_from_md > :last-child {
+#mhdjibmsvt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iootvpyamm .gt_row {
+#mhdjibmsvt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3964,7 +3964,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#iootvpyamm .gt_stub {
+#mhdjibmsvt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3977,7 +3977,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#iootvpyamm .gt_stub_row_group {
+#mhdjibmsvt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3991,15 +3991,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#iootvpyamm .gt_row_group_first td {
+#mhdjibmsvt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iootvpyamm .gt_row_group_first th {
+#mhdjibmsvt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iootvpyamm .gt_summary_row {
+#mhdjibmsvt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4009,16 +4009,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#iootvpyamm .gt_first_summary_row {
+#mhdjibmsvt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_first_summary_row.thick {
+#mhdjibmsvt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iootvpyamm .gt_last_summary_row {
+#mhdjibmsvt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4028,7 +4028,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_grand_summary_row {
+#mhdjibmsvt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4038,7 +4038,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#iootvpyamm .gt_first_grand_summary_row {
+#mhdjibmsvt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4048,7 +4048,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_last_grand_summary_row_top {
+#mhdjibmsvt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4058,11 +4058,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_striped {
+#mhdjibmsvt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iootvpyamm .gt_table_body {
+#mhdjibmsvt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4071,7 +4071,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_footnotes {
+#mhdjibmsvt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4085,7 +4085,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_footnote {
+#mhdjibmsvt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4094,7 +4094,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#iootvpyamm .gt_sourcenotes {
+#mhdjibmsvt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4108,7 +4108,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#iootvpyamm .gt_sourcenote {
+#mhdjibmsvt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4116,72 +4116,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#iootvpyamm .gt_left {
+#mhdjibmsvt .gt_left {
   text-align: left;
 }
 
-#iootvpyamm .gt_center {
+#mhdjibmsvt .gt_center {
   text-align: center;
 }
 
-#iootvpyamm .gt_right {
+#mhdjibmsvt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iootvpyamm .gt_font_normal {
+#mhdjibmsvt .gt_font_normal {
   font-weight: normal;
 }
 
-#iootvpyamm .gt_font_bold {
+#mhdjibmsvt .gt_font_bold {
   font-weight: bold;
 }
 
-#iootvpyamm .gt_font_italic {
+#mhdjibmsvt .gt_font_italic {
   font-style: italic;
 }
 
-#iootvpyamm .gt_super {
+#mhdjibmsvt .gt_super {
   font-size: 65%;
 }
 
-#iootvpyamm .gt_footnote_marks {
+#mhdjibmsvt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iootvpyamm .gt_asterisk {
+#mhdjibmsvt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iootvpyamm .gt_indent_1 {
+#mhdjibmsvt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iootvpyamm .gt_indent_2 {
+#mhdjibmsvt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iootvpyamm .gt_indent_3 {
+#mhdjibmsvt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iootvpyamm .gt_indent_4 {
+#mhdjibmsvt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iootvpyamm .gt_indent_5 {
+#mhdjibmsvt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iootvpyamm .katex-display {
+#mhdjibmsvt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iootvpyamm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mhdjibmsvt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4196,79 +4196,79 @@ window.Quarto = {
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">48025200</td>
-<td class="gt_row gt_right" headers="right">48025280</td>
-<td class="gt_row gt_right" headers="year">1993</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">68131010</td>
-<td class="gt_row gt_right" headers="right">68131000</td>
+<td class="gt_row gt_right" headers="left">84254290</td>
+<td class="gt_row gt_right" headers="right">84254200</td>
 <td class="gt_row gt_right" headers="year">2005</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">29211990</td>
-<td class="gt_row gt_right" headers="right">29211940</td>
-<td class="gt_row gt_right" headers="year">1996</td>
-</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">32159090</td>
-<td class="gt_row gt_right" headers="right">32159080</td>
-<td class="gt_row gt_right" headers="year">1988</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">95035000</td>
-<td class="gt_row gt_right" headers="right">95030055</td>
-<td class="gt_row gt_right" headers="year">2006</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">57033059</td>
-<td class="gt_row gt_right" headers="right">57033089</td>
+<td class="gt_row gt_right" headers="left">55095290</td>
+<td class="gt_row gt_right" headers="right">55095200</td>
 <td class="gt_row gt_right" headers="year">2004</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">48044199</td>
-<td class="gt_row gt_right" headers="right">48239090</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">85112010</td>
-<td class="gt_row gt_right" headers="right">85112000</td>
-<td class="gt_row gt_right" headers="year">2005</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">27101145</td>
-<td class="gt_row gt_right" headers="right">27102090</td>
-<td class="gt_row gt_right" headers="year">2011</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">23099099</td>
-<td class="gt_row gt_right" headers="right">23099098</td>
-<td class="gt_row gt_right" headers="year">1993</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">84081090</td>
-<td class="gt_row gt_right" headers="right">84081099</td>
+<td class="gt_row gt_right" headers="left">22042149</td>
+<td class="gt_row gt_right" headers="right">22042187</td>
 <td class="gt_row gt_right" headers="year">1994</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">4403 99 95</td>
-<td class="gt_row gt_right" headers="right">4403 49 85</td>
-<td class="gt_row gt_right" headers="year">2016</td>
+<td class="gt_row gt_right" headers="left">29350020</td>
+<td class="gt_row gt_right" headers="right">29350030</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">90274000</td>
-<td class="gt_row gt_right" headers="right">90278005</td>
+<td class="gt_row gt_right" headers="left">9706 00 00</td>
+<td class="gt_row gt_right" headers="right">9706 10 00</td>
+<td class="gt_row gt_right" headers="year">2021</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">29012319</td>
+<td class="gt_row gt_right" headers="right">29012310</td>
+<td class="gt_row gt_right" headers="year">2003</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">85421480</td>
+<td class="gt_row gt_right" headers="right">85421490</td>
+<td class="gt_row gt_right" headers="year">1998</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">85071039</td>
+<td class="gt_row gt_right" headers="right">85481020</td>
+<td class="gt_row gt_right" headers="year">1995</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">95010090</td>
+<td class="gt_row gt_right" headers="right">95030010</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">85049090</td>
-<td class="gt_row gt_right" headers="right">85049091</td>
-<td class="gt_row gt_right" headers="year">1997</td>
+<td class="gt_row gt_right" headers="left">8541 40 10</td>
+<td class="gt_row gt_right" headers="right">8541 41 00</td>
+<td class="gt_row gt_right" headers="year">2021</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">8082039</td>
-<td class="gt_row gt_right" headers="right">8082067</td>
-<td class="gt_row gt_right" headers="year">1994</td>
+<td class="gt_row gt_right" headers="left">85282200</td>
+<td class="gt_row gt_right" headers="right">85284910</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">52082215</td>
+<td class="gt_row gt_right" headers="right">52082216</td>
+<td class="gt_row gt_right" headers="year">1998</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">90189090</td>
+<td class="gt_row gt_right" headers="right">90189080</td>
+<td class="gt_row gt_right" headers="year">1993</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">8029020</td>
+<td class="gt_row gt_right" headers="right">8028000</td>
+<td class="gt_row gt_right" headers="year">2011</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">84471200</td>
+<td class="gt_row gt_right" headers="right">84471210</td>
+<td class="gt_row gt_right" headers="year">1993</td>
 </tr>
 </tbody>
 </table>
@@ -8827,12 +8827,8 @@ Note
 <li><code>NSI_datafile</code> is the name of the raw dataset from where the <code>NSI_variable</code> is taken from</li>
 <li><code>year</code> is the reference year for that specific row, which will be used to construct the MD-cross section for that year</li>
 </ul>
-<p>An example of the table for a few variables needed for Slovenian harmonized MD <code>BR</code> for year 2007 (columns <code>year</code> and <code>NSI_datafile</code> are omitted):</p>
+<p>An example of the table for a few variables needed for Slovenian harmonized MD <code>BR</code> for year 2007 (column <code>year</code> is omitted):</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in `[.data.table`(as.data.table(fread("SI_MD_conc.csv")), year == :
-column(s) not removed because not found: [NSI_datafile]</code></pre>
-</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -10353,9 +10349,9 @@ column(s) not removed because not found: [NSI_datafile]</code></pre>
 <h2 class="anchored" data-anchor-id="overview-of-mdi-2">Overview of MDI</h2>
 <p><img src="images/MDI_flowchart_researchers.png" class="img-fluid"></p>
 </section>
-<section id="writing-modules-for-mdi-launcher" class="level2">
-<h2 class="anchored" data-anchor-id="writing-modules-for-mdi-launcher">Writing Modules for MDI Launcher</h2>
-<p>Writing modules for the MDI Launcher is an iterative process that evolves from conceptualization to execution. It requires a good understanding of the research objectives, data structures, and the technical capabilities of the MDI environment.</p>
+<section id="writing-modules-for-mdi-launch" class="level2">
+<h2 class="anchored" data-anchor-id="writing-modules-for-mdi-launch">Writing Modules for MDI Launch</h2>
+<p>Writing modules for the MDI Launch is an iterative process that evolves from conceptualization to execution. It requires a good understanding of the research objectives, data structures, and the technical capabilities of the MDI environment.</p>
 <section id="key-steps-in-module-development" class="level3">
 <h3 class="anchored" data-anchor-id="key-steps-in-module-development">Key Steps in Module Development</h3>
 <ul>
@@ -10363,10 +10359,45 @@ column(s) not removed because not found: [NSI_datafile]</code></pre>
 <li><strong>Workflow Organization</strong>: Divide your analysis into manageable segments. Consider general methodology; data selection; design output from NSIs; code using the MDI tools and launcher; plan cross-country analysis
 <ul>
 <li><strong>Data Selection</strong>: Utilize the MDI data catalog(EB: link to rcode to MD_datafile and MD_varnames files) to select the most relevant datasets and variables for your analysis.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure that the MD variables used in the module are present in all countries.</p>
+</div>
+</div>
+<ul>
 <li><strong>Designing Outputs</strong>: Plan the outputs of your module carefully, including the datasets, records, and variables to be exported from each NSI.</li>
 <li><strong>Analysis</strong>: Use MDI R-packages and Rtools: See the R-package libraries currently installed at NSIs and loaded at runtime of the launcher (link to file “../rocket/Rtools/Rpackages/record_package_info.csv”). If you need another package, notify MDI-staff to have the package added to NSI requirements. Use standardized functions from the MDI Rtools (link to directory “../rocket/Rtools/R”), especially when preparing output.</li>
 <li><strong>Export data</strong>: Using Rtool mdi_export(), generate output in each NSI, to go through disclosure checks. Collect cross-country consolidated output from TEAMS directory for module writers</li>
-</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is fundamental, for disclosure reasons, that the <code>description</code> argument contains a very detailed explanation of what the output file contains. In particular, please include</p>
+<ol type="1">
+<li><strong>Type of content</strong></li>
+<li><strong>Key columns</strong> (if the file is a regression table, please mention what is the independent variable and what the dependent variable)</li>
+<li><strong>Sample coverage</strong></li>
+</ol>
+</div>
+</div>
+<ul>
 <li><strong>Documentation and Summary</strong>: Before coding, document your module’s aim, the datasets and variables required, and any additional resources needed that are not part of the standard MDI environment. (EB: Link to example of module heading)</li>
 </ul>
 </section>
@@ -10448,35 +10479,35 @@ column(s) not removed because not found: [NSI_datafile]</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">This tool unpacks the (NSI)_(MD_dataset)_varnames.csv files into NSI_dataset-specific varname files.</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="do">########################################################################################</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>MD_datafiles <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">paste0</span>(dirPAYLOAD,<span class="st">'MDmetadata/MD_datafiles.csv'</span>))</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>MD_varnames <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">paste0</span>(dirPAYLOAD,<span class="st">'MDmetadata/MD_varnames.csv'</span>))</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="fu">paste0</span>(dirROCKET,<span class="st">'NSImetadata/'</span>,CountryCode,<span class="st">'/'</span>), <span class="at">recursive =</span> T)</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> files[<span class="fu">grepl</span>(<span class="st">'_varnames'</span>,files)]</span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> files) {</span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">paste0</span>(dirROCKET,<span class="st">'NSImetadata/'</span>,CountryCode,<span class="st">'/'</span>,file))</span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  NSI_files <span class="ot">&lt;-</span> <span class="fu">unique</span>(data<span class="sc">$</span>filename)</span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (NSI_file <span class="cf">in</span> NSI_files) {</span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    data_filt <span class="ot">&lt;-</span> data[filename <span class="sc">==</span> NSI_file,]</span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    data_filt<span class="sc">$</span>filename <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(data_filt) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'NSI_varname'</span>,<span class="st">'is_key'</span>,<span class="st">'description'</span>,<span class="st">'class'</span>,<span class="st">'domain'</span>)</span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fwrite</span>(data_filt, <span class="fu">paste0</span>(dirROCKET,<span class="st">'NSImetadata/'</span>,CountryCode,<span class="st">'/'</span>,CountryCode,<span class="st">'_'</span>,NSI_file,<span class="st">'_varnames.csv'</span>))</span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="st">This tool unpacks the (NSI)_(MD_dataset)_varnames.csv files into NSI_dataset-specific varname files.</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="st">'</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="do">########################################################################################</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>MD_datafiles <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">paste0</span>(dirPAYLOAD,<span class="st">'MDmetadata/MD_datafiles.csv'</span>))</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>MD_varnames <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">paste0</span>(dirPAYLOAD,<span class="st">'MDmetadata/MD_varnames.csv'</span>))</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="fu">paste0</span>(dirROCKET,<span class="st">'NSImetadata/'</span>,CountryCode,<span class="st">'/'</span>), <span class="at">recursive =</span> T)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> files[<span class="fu">grepl</span>(<span class="st">'_varnames'</span>,files)]</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file <span class="cf">in</span> files) {</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">paste0</span>(dirROCKET,<span class="st">'NSImetadata/'</span>,CountryCode,<span class="st">'/'</span>,file))</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  NSI_files <span class="ot">&lt;-</span> <span class="fu">unique</span>(data<span class="sc">$</span>filename)</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (NSI_file <span class="cf">in</span> NSI_files) {</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    data_filt <span class="ot">&lt;-</span> data[filename <span class="sc">==</span> NSI_file,]</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    data_filt<span class="sc">$</span>filename <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(data_filt) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'NSI_varname'</span>,<span class="st">'is_key'</span>,<span class="st">'description'</span>,<span class="st">'class'</span>,<span class="st">'domain'</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fwrite</span>(data_filt, <span class="fu">paste0</span>(dirROCKET,<span class="st">'NSImetadata/'</span>,CountryCode,<span class="st">'/'</span>,CountryCode,<span class="st">'_'</span>,NSI_file,<span class="st">'_varnames.csv'</span>))</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -10731,10 +10762,10 @@ column(s) not removed because not found: [NSI_datafile]</code></pre>
 <li>The MDI with all files will show up in the files section on the right</li>
 <li>Then go to home/datahub/ in the file section and open the .gitconfig file. The file will look like this:</li>
 </ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">user</span><span class="co">]</span> email = 12345678+Name@users.noreply.github.com        </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>      name = YourName </span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">credential</span><span class="co">]</span>           </span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>      helper = cache --timeout 64800      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">user</span><span class="co">]</span> email = 12345678+Name@users.noreply.github.com        </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>      name = YourName </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">credential</span><span class="co">]</span>           </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      helper = cache --timeout 64800      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Make sure that the email address is the one from your Github, not eg. the iwh email address. To check which is the right one go to your Github account &gt; Settings &gt; Emails. Copy the email address ending on <span class="citation" data-cites="users.noreply.github.com">@users.noreply.github.com</span> as shown below into the .gitconfig file. Save file.</p></li>
 <li><p>The MDI is correctly set up now. You can run your code with mockdata, edit and pull/push changes to Github</p></li>
 <li><p>To test codes: execute countdown and select interactive_MDI (option 4) before running your own script.</p></li>
@@ -10763,13 +10794,13 @@ column(s) not removed because not found: [NSI_datafile]</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge BR and SBS by firmid and year, only selecting firms that are ever in the SBS</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># DO NOT ALLOW Cartesian: firmid and year need to be the unique record descriptors; set to FALSE</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#but do a left join of the selected br dataset (only firms that are ever in SBS), and the SBS</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>sbs_firms <span class="ot">&lt;-</span> <span class="fu">unique</span>(sbs[,.(firmid)])</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setkey</span>(sbs_firms,firmid)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>br_sbs <span class="ot">&lt;-</span> br[sbs_firms, nomatch<span class="ot">=</span><span class="dv">0</span>]</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>br_sbs <span class="ot">&lt;-</span> sbs[br_sbs, on<span class="ot">=</span>.(firmid, year),nomatch<span class="ot">=</span><span class="cn">NA</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge BR and SBS by firmid and year, only selecting firms that are ever in the SBS</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># DO NOT ALLOW Cartesian: firmid and year need to be the unique record descriptors; set to FALSE</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#but do a left join of the selected br dataset (only firms that are ever in SBS), and the SBS</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>sbs_firms <span class="ot">&lt;-</span> <span class="fu">unique</span>(sbs[,.(firmid)])</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setkey</span>(sbs_firms,firmid)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>br_sbs <span class="ot">&lt;-</span> br[sbs_firms, nomatch<span class="ot">=</span><span class="dv">0</span>]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>br_sbs <span class="ot">&lt;-</span> sbs[br_sbs, on<span class="ot">=</span>.(firmid, year),nomatch<span class="ot">=</span><span class="cn">NA</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><span class="button"><a href="#sec-writing2">Back to main</a></span></p>
@@ -10783,87 +10814,87 @@ column(s) not removed because not found: [NSI_datafile]</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Version : R 1.1</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Function to export a given data file in a specific format and add an entry to the output description file.</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">#INPUTS</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">#output      : a data.table object</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co">#format      : (character) csv, RDS, txt, dta, xlsx, sas</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co">#output_name : (character) name of the file</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co">#output_path : (character) specified directories</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co">#desc_file   : name of the file that describes the output</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co">#output_type : (character) either 'sum_stat' for summary statistics, 'reg_tab' for regression table or 'other'</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co">#description : (string) allows further explanation of the output file</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co">#hier        : (booelan) set to TRUE if there are multiple levels of aggregation (child and parent nodes) in the input dataset</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">#hhfile      : if used in mdi_aggregate_h: name of hierarchy file used for aggregation       </span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co">#OUTPUT</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co">#Objects saved in specified directories.</span></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage</span></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="co"># export_db(</span></span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="co">#     output = datalist_num_firms[[nm]],</span></span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     format = "csv",</span></span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     output_name = paste0(CountryCode, "Coverage_Number_Firms", nm, MDIversion, sep="_"),</span></span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     output_path = dirOUTPUT,</span></span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="co">#     desc_file = Output_description.txt,</span></span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="co">#     output_type = 'sum_stat',</span></span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="co">#     description = 'Number of firms by datasource, industry (2 digit, 1 digit) and year',</span></span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="co">#     hier = TRUE,</span></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="co">#     hhfile = indHier)</span></span>
-<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>export_db <span class="ot">&lt;-</span></span>
-<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(output,format,output_name,output_path,desc_file,<span class="at">output_type=</span><span class="st">"sum_stat"</span>,<span class="at">description=</span><span class="cn">NULL</span>,<span class="at">hier=</span><span class="cn">FALSE</span>,<span class="at">hhfile=</span><span class="cn">NULL</span>) {</span>
-<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create entry in output description file</span></span>
-<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"sum_stat"</span>) {</span>
-<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>      <span class="co"># use attributes set in 'mdi_aggregate'</span></span>
-<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>      <span class="co">#vars &lt;- attr(output, "sumvars")</span></span>
-<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>      <span class="co">#bygroups &lt;- attr(output, "sorted")</span></span>
-<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>      <span class="co">#newentry &lt;- </span></span>
-<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>      <span class="co">#  paste(output_name,": Summary Statistics of",paste(vars, collapse = ''),"by",paste(bygroups, collapse = ' '),".",</span></span>
-<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>      <span class="co">#        description,"\n",sep = " "</span></span>
-<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>      <span class="co">#  )</span></span>
-<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>      newentry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_name, <span class="st">": Summary Statistics: "</span>, description, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"reg_tab"</span>) {</span>
-<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>      newentry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_name, <span class="st">": Regression table: "</span>, description, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"other"</span>) {</span>
-<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>      newentry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_name, <span class="st">": "</span>, description, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(newentry,<span class="at">append =</span> <span class="cn">TRUE</span>,<span class="at">file =</span> <span class="fu">paste0</span>(output_path, desc_file, <span class="st">".txt"</span>))</span>
-<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a>    <span class="co"># always check disclosure if output is type summary statistic</span></span>
-<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"sum_stat"</span>) {</span>
-<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a>      output <span class="ot">&lt;-</span> <span class="fu">disclose</span>(output,<span class="at">hier=</span>hier,<span class="at">hhfile=</span>hhfile)</span>
-<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># export file</span></span>
-<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>    file <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_path, output_name, <span class="st">"."</span>, format)</span>
-<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"csv"</span>) {</span>
-<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>      <span class="fu">fwrite</span>(output, file)</span>
-<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"RDS"</span>) {</span>
-<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a>      <span class="fu">saveRDS</span>(output, file)</span>
-<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"txt"</span>) {</span>
-<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a>      <span class="co">#To A Tab Delimited Text File</span></span>
-<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write.table</span>(output, file, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span>
-<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"dta"</span>) {</span>
-<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write_dta</span>(output, file)</span>
-<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"xlsx"</span>) {</span>
-<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write.xlsx</span>(output, file)</span>
-<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"sas"</span>) {</span>
-<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write_sas</span>(output, file)</span>
-<span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Version : R 1.1</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Function to export a given data file in a specific format and add an entry to the output description file.</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">#INPUTS</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co">#output      : a data.table object</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">#format      : (character) csv, RDS, txt, dta, xlsx, sas</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">#output_name : (character) name of the file</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co">#output_path : (character) specified directories</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">#desc_file   : name of the file that describes the output</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co">#output_type : (character) either 'sum_stat' for summary statistics, 'reg_tab' for regression table or 'other'</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">#description : (string) allows further explanation of the output file</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co">#hier        : (booelan) set to TRUE if there are multiple levels of aggregation (child and parent nodes) in the input dataset</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="co">#hhfile      : if used in mdi_aggregate_h: name of hierarchy file used for aggregation       </span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="co">#OUTPUT</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="co">#Objects saved in specified directories.</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># export_db(</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="co">#     output = datalist_num_firms[[nm]],</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="co">#     format = "csv",</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="co">#     output_name = paste0(CountryCode, "Coverage_Number_Firms", nm, MDIversion, sep="_"),</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="co">#     output_path = dirOUTPUT,</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a><span class="co">#     desc_file = Output_description.txt,</span></span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="co">#     output_type = 'sum_stat',</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="co">#     description = 'Number of firms by datasource, industry (2 digit, 1 digit) and year',</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="co">#     hier = TRUE,</span></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="co">#     hhfile = indHier)</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>export_db <span class="ot">&lt;-</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(output,format,output_name,output_path,desc_file,<span class="at">output_type=</span><span class="st">"sum_stat"</span>,<span class="at">description=</span><span class="cn">NULL</span>,<span class="at">hier=</span><span class="cn">FALSE</span>,<span class="at">hhfile=</span><span class="cn">NULL</span>) {</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create entry in output description file</span></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"sum_stat"</span>) {</span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>      <span class="co"># use attributes set in 'mdi_aggregate'</span></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>      <span class="co">#vars &lt;- attr(output, "sumvars")</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>      <span class="co">#bygroups &lt;- attr(output, "sorted")</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>      <span class="co">#newentry &lt;- </span></span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>      <span class="co">#  paste(output_name,": Summary Statistics of",paste(vars, collapse = ''),"by",paste(bygroups, collapse = ' '),".",</span></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>      <span class="co">#        description,"\n",sep = " "</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>      <span class="co">#  )</span></span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a>      newentry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_name, <span class="st">": Summary Statistics: "</span>, description, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"reg_tab"</span>) {</span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a>      newentry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_name, <span class="st">": Regression table: "</span>, description, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"other"</span>) {</span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a>      newentry <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_name, <span class="st">": "</span>, description, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(newentry,<span class="at">append =</span> <span class="cn">TRUE</span>,<span class="at">file =</span> <span class="fu">paste0</span>(output_path, desc_file, <span class="st">".txt"</span>))</span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a>    <span class="co"># always check disclosure if output is type summary statistic</span></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (output_type <span class="sc">==</span> <span class="st">"sum_stat"</span>) {</span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a>      output <span class="ot">&lt;-</span> <span class="fu">disclose</span>(output,<span class="at">hier=</span>hier,<span class="at">hhfile=</span>hhfile)</span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-65"><a href="#cb18-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># export file</span></span>
+<span id="cb18-66"><a href="#cb18-66" aria-hidden="true" tabindex="-1"></a>    file <span class="ot">&lt;-</span> <span class="fu">paste0</span>(output_path, output_name, <span class="st">"."</span>, format)</span>
+<span id="cb18-67"><a href="#cb18-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"csv"</span>) {</span>
+<span id="cb18-68"><a href="#cb18-68" aria-hidden="true" tabindex="-1"></a>      <span class="fu">fwrite</span>(output, file)</span>
+<span id="cb18-69"><a href="#cb18-69" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"RDS"</span>) {</span>
+<span id="cb18-70"><a href="#cb18-70" aria-hidden="true" tabindex="-1"></a>      <span class="fu">saveRDS</span>(output, file)</span>
+<span id="cb18-71"><a href="#cb18-71" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"txt"</span>) {</span>
+<span id="cb18-72"><a href="#cb18-72" aria-hidden="true" tabindex="-1"></a>      <span class="co">#To A Tab Delimited Text File</span></span>
+<span id="cb18-73"><a href="#cb18-73" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write.table</span>(output, file, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span>
+<span id="cb18-74"><a href="#cb18-74" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"dta"</span>) {</span>
+<span id="cb18-75"><a href="#cb18-75" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write_dta</span>(output, file)</span>
+<span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"xlsx"</span>) {</span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write.xlsx</span>(output, file)</span>
+<span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (format <span class="sc">==</span> <span class="st">"sas"</span>) {</span>
+<span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a>      <span class="fu">write_sas</span>(output, file)</span>
+<span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><span class="button"><a href="#sec-writing">Back to main</a></span></p>
