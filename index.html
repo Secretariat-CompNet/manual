@@ -518,82 +518,29 @@ Important
 <p><a href="https://compnet.shinyapps.io/mdi_metadata_tool_catalog_viewer_shiny/">Open the MDI Metadata Viewer</a></p>
 <iframe src="https://compnet.shinyapps.io/mdi_metadata_tool_catalog_viewer_shiny/" width="100%" height="700" frameborder="0" style="border: 1px solid #ddd; border-radius: 8px;">
 </iframe>
-<!-- ```{r} -->
-<!-- #| message: false -->
-<!-- #| warning: false -->
-<!-- available_countries <- list.files() -->
-<!-- available_countries <- available_countries[nchar(available_countries) <= 3] -->
-<!-- ui <- fluidPage( -->
-<!--   titlePanel("MD_dataset Explorer by Country"), -->
-<!--   sidebarLayout( -->
-<!--     sidebarPanel( -->
-<!--       selectInput("country", "Select Country Code:", choices = available_countries), -->
-<!--       uiOutput("dataset_selector") -->
-<!--     ), -->
-<!--     mainPanel( -->
-<!--       tableOutput("result_table") -->
-<!--     ) -->
-<!--   ) -->
-<!-- ) -->
-<!-- server <- function(input, output, session) { -->
-<!--   data_env <- reactiveValues(dt_files = NULL, dt_harmonize = NULL) -->
-<!--   observeEvent(input$country, { -->
-<!--     req(input$country) -->
-<!--     CountryCode <- input$country -->
-<!--     setwd('..') -->
-<!--     setwd('/rocket/NSImetadata') -->
-<!--     files_path <- paste0(dirROCKET, 'NSImetadata/', CountryCode, '/', CountryCode, "_datafiles.csv") -->
-<!--     setwd('..') -->
-<!--     setwd('/payload/Launch_v2.2') -->
-<!--     harm_path  <- paste0(dirMDMETA, CountryCode, "/", CountryCode, "_MD_conc.csv") -->
-<!--     data_env$dt_files <- fread(files_path) -->
-<!--     data_env$dt_harmonize <- fread(harm_path) -->
-<!--     updateSelectInput(session, "md_dataset", choices = unique(data_env$dt_harmonize$MD_dataset)) -->
-<!--   }) -->
-<!--   output$dataset_selector <- renderUI({ -->
-<!--     req(data_env$dt_harmonize) -->
-<!--     selectInput("md_dataset", "Select MD_dataset:", choices = unique(data_env$dt_harmonize$MD_dataset)) -->
-<!--   }) -->
-<!--   result_data <- reactive({ -->
-<!--     req(input$md_dataset) -->
-<!--     dt_files <- data_env$dt_files -->
-<!--     dt_harmonize <- data_env$dt_harmonize -->
-<!--     dt_harm_filt <- dt_harmonize[MD_dataset == input$md_dataset] -->
-<!--     possible_nsi_datasets <- unique(dt_harm_filt[, NSI_dataset]) -->
-<!--     dt_files_filt <- dt_files[NSI_dataset %in% possible_nsi_datasets] -->
-<!--     result <- dt_files_filt[, .( -->
-<!--       year_start = min(year_start), -->
-<!--       year_end = max(year_end) -->
-<!--     ), by = .(NSI_dataset, details, data_source, firm_sample)] -->
-<!--     result[, year_span := paste0(year_start, "–", year_end)] -->
-<!--     result[, .(NSI_dataset, details, data_source, firm_sample, year_span)] -->
-<!--   }) -->
-<!--   output$result_table <- renderTable({ -->
-<!--     result_data() -->
-<!--   }, striped = TRUE, spacing = "s", width = "100%") -->
-<!-- } -->
-<!-- shinyApp(ui = ui, server = server) -->
-<!-- ``` -->
+<p>Additionally, module writers can also look at information on data source, firm sample and other details (taken from the <a href="#nsi-datafiles">NSI_datafiles tables</a>) on the raw datafiles underlying each MD panel by using the interactive tool below:</p>
+<iframe src="https://compnet.shinyapps.io/datafiles_info_viewer/" width="100%" height="500" frameborder="0" style="border: 1px solid #ddd; border-radius: 8px;">
+</iframe>
 <p>Once the final selection of MD variable names has been made for the module, a file named <code>(res_group)_MDnames_select.csv</code> must be submitted to the MDI team. This file should include the following columns:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fzduhljapp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fzduhljapp table {
+<div id="maexrpyvld" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#maexrpyvld table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fzduhljapp thead, #fzduhljapp tbody, #fzduhljapp tfoot, #fzduhljapp tr, #fzduhljapp td, #fzduhljapp th {
+#maexrpyvld thead, #maexrpyvld tbody, #maexrpyvld tfoot, #maexrpyvld tr, #maexrpyvld td, #maexrpyvld th {
   border-style: none;
 }
 
-#fzduhljapp p {
+#maexrpyvld p {
   margin: 0;
   padding: 0;
 }
 
-#fzduhljapp .gt_table {
+#maexrpyvld .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -619,12 +566,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_caption {
+#maexrpyvld .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fzduhljapp .gt_title {
+#maexrpyvld .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -636,7 +583,7 @@ Important
   border-bottom-width: 0;
 }
 
-#fzduhljapp .gt_subtitle {
+#maexrpyvld .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -648,7 +595,7 @@ Important
   border-top-width: 0;
 }
 
-#fzduhljapp .gt_heading {
+#maexrpyvld .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -660,13 +607,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_bottom_border {
+#maexrpyvld .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_col_headings {
+#maexrpyvld .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -681,7 +628,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_col_heading {
+#maexrpyvld .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -701,7 +648,7 @@ Important
   overflow-x: hidden;
 }
 
-#fzduhljapp .gt_column_spanner_outer {
+#maexrpyvld .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -713,15 +660,15 @@ Important
   padding-right: 4px;
 }
 
-#fzduhljapp .gt_column_spanner_outer:first-child {
+#maexrpyvld .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fzduhljapp .gt_column_spanner_outer:last-child {
+#maexrpyvld .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fzduhljapp .gt_column_spanner {
+#maexrpyvld .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -733,11 +680,11 @@ Important
   width: 100%;
 }
 
-#fzduhljapp .gt_spanner_row {
+#maexrpyvld .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fzduhljapp .gt_group_heading {
+#maexrpyvld .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -763,7 +710,7 @@ Important
   text-align: left;
 }
 
-#fzduhljapp .gt_empty_group_heading {
+#maexrpyvld .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -778,15 +725,15 @@ Important
   vertical-align: middle;
 }
 
-#fzduhljapp .gt_from_md > :first-child {
+#maexrpyvld .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fzduhljapp .gt_from_md > :last-child {
+#maexrpyvld .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fzduhljapp .gt_row {
+#maexrpyvld .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -805,7 +752,7 @@ Important
   overflow-x: hidden;
 }
 
-#fzduhljapp .gt_stub {
+#maexrpyvld .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -818,7 +765,7 @@ Important
   padding-right: 5px;
 }
 
-#fzduhljapp .gt_stub_row_group {
+#maexrpyvld .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -832,15 +779,15 @@ Important
   vertical-align: top;
 }
 
-#fzduhljapp .gt_row_group_first td {
+#maexrpyvld .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fzduhljapp .gt_row_group_first th {
+#maexrpyvld .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fzduhljapp .gt_summary_row {
+#maexrpyvld .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -850,16 +797,16 @@ Important
   padding-right: 5px;
 }
 
-#fzduhljapp .gt_first_summary_row {
+#maexrpyvld .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_first_summary_row.thick {
+#maexrpyvld .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fzduhljapp .gt_last_summary_row {
+#maexrpyvld .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -869,7 +816,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_grand_summary_row {
+#maexrpyvld .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -879,7 +826,7 @@ Important
   padding-right: 5px;
 }
 
-#fzduhljapp .gt_first_grand_summary_row {
+#maexrpyvld .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -889,7 +836,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_last_grand_summary_row_top {
+#maexrpyvld .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -899,11 +846,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_striped {
+#maexrpyvld .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fzduhljapp .gt_table_body {
+#maexrpyvld .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -912,7 +859,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_footnotes {
+#maexrpyvld .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -926,7 +873,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_footnote {
+#maexrpyvld .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -935,7 +882,7 @@ Important
   padding-right: 5px;
 }
 
-#fzduhljapp .gt_sourcenotes {
+#maexrpyvld .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -949,7 +896,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#fzduhljapp .gt_sourcenote {
+#maexrpyvld .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -957,72 +904,72 @@ Important
   padding-right: 5px;
 }
 
-#fzduhljapp .gt_left {
+#maexrpyvld .gt_left {
   text-align: left;
 }
 
-#fzduhljapp .gt_center {
+#maexrpyvld .gt_center {
   text-align: center;
 }
 
-#fzduhljapp .gt_right {
+#maexrpyvld .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fzduhljapp .gt_font_normal {
+#maexrpyvld .gt_font_normal {
   font-weight: normal;
 }
 
-#fzduhljapp .gt_font_bold {
+#maexrpyvld .gt_font_bold {
   font-weight: bold;
 }
 
-#fzduhljapp .gt_font_italic {
+#maexrpyvld .gt_font_italic {
   font-style: italic;
 }
 
-#fzduhljapp .gt_super {
+#maexrpyvld .gt_super {
   font-size: 65%;
 }
 
-#fzduhljapp .gt_footnote_marks {
+#maexrpyvld .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fzduhljapp .gt_asterisk {
+#maexrpyvld .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fzduhljapp .gt_indent_1 {
+#maexrpyvld .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fzduhljapp .gt_indent_2 {
+#maexrpyvld .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fzduhljapp .gt_indent_3 {
+#maexrpyvld .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fzduhljapp .gt_indent_4 {
+#maexrpyvld .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fzduhljapp .gt_indent_5 {
+#maexrpyvld .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fzduhljapp .katex-display {
+#maexrpyvld .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fzduhljapp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#maexrpyvld div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1079,23 +1026,23 @@ List of currently used R libraries
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="tfqsuxhjbk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tfqsuxhjbk table {
+<div id="wrcxscjvqe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wrcxscjvqe table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tfqsuxhjbk thead, #tfqsuxhjbk tbody, #tfqsuxhjbk tfoot, #tfqsuxhjbk tr, #tfqsuxhjbk td, #tfqsuxhjbk th {
+#wrcxscjvqe thead, #wrcxscjvqe tbody, #wrcxscjvqe tfoot, #wrcxscjvqe tr, #wrcxscjvqe td, #wrcxscjvqe th {
   border-style: none;
 }
 
-#tfqsuxhjbk p {
+#wrcxscjvqe p {
   margin: 0;
   padding: 0;
 }
 
-#tfqsuxhjbk .gt_table {
+#wrcxscjvqe .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1121,12 +1068,12 @@ List of currently used R libraries
   border-left-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_caption {
+#wrcxscjvqe .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tfqsuxhjbk .gt_title {
+#wrcxscjvqe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1138,7 +1085,7 @@ List of currently used R libraries
   border-bottom-width: 0;
 }
 
-#tfqsuxhjbk .gt_subtitle {
+#wrcxscjvqe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1150,7 +1097,7 @@ List of currently used R libraries
   border-top-width: 0;
 }
 
-#tfqsuxhjbk .gt_heading {
+#wrcxscjvqe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1162,13 +1109,13 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_bottom_border {
+#wrcxscjvqe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_col_headings {
+#wrcxscjvqe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1183,7 +1130,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_col_heading {
+#wrcxscjvqe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1203,7 +1150,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#tfqsuxhjbk .gt_column_spanner_outer {
+#wrcxscjvqe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1215,15 +1162,15 @@ List of currently used R libraries
   padding-right: 4px;
 }
 
-#tfqsuxhjbk .gt_column_spanner_outer:first-child {
+#wrcxscjvqe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tfqsuxhjbk .gt_column_spanner_outer:last-child {
+#wrcxscjvqe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tfqsuxhjbk .gt_column_spanner {
+#wrcxscjvqe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1235,11 +1182,11 @@ List of currently used R libraries
   width: 100%;
 }
 
-#tfqsuxhjbk .gt_spanner_row {
+#wrcxscjvqe .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tfqsuxhjbk .gt_group_heading {
+#wrcxscjvqe .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1265,7 +1212,7 @@ List of currently used R libraries
   text-align: left;
 }
 
-#tfqsuxhjbk .gt_empty_group_heading {
+#wrcxscjvqe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1280,15 +1227,15 @@ List of currently used R libraries
   vertical-align: middle;
 }
 
-#tfqsuxhjbk .gt_from_md > :first-child {
+#wrcxscjvqe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tfqsuxhjbk .gt_from_md > :last-child {
+#wrcxscjvqe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tfqsuxhjbk .gt_row {
+#wrcxscjvqe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1307,7 +1254,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#tfqsuxhjbk .gt_stub {
+#wrcxscjvqe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1320,7 +1267,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#tfqsuxhjbk .gt_stub_row_group {
+#wrcxscjvqe .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1334,15 +1281,15 @@ List of currently used R libraries
   vertical-align: top;
 }
 
-#tfqsuxhjbk .gt_row_group_first td {
+#wrcxscjvqe .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tfqsuxhjbk .gt_row_group_first th {
+#wrcxscjvqe .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tfqsuxhjbk .gt_summary_row {
+#wrcxscjvqe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1352,16 +1299,16 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#tfqsuxhjbk .gt_first_summary_row {
+#wrcxscjvqe .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_first_summary_row.thick {
+#wrcxscjvqe .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tfqsuxhjbk .gt_last_summary_row {
+#wrcxscjvqe .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1371,7 +1318,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_grand_summary_row {
+#wrcxscjvqe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1381,7 +1328,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#tfqsuxhjbk .gt_first_grand_summary_row {
+#wrcxscjvqe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1391,7 +1338,7 @@ List of currently used R libraries
   border-top-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_last_grand_summary_row_top {
+#wrcxscjvqe .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1401,11 +1348,11 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_striped {
+#wrcxscjvqe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tfqsuxhjbk .gt_table_body {
+#wrcxscjvqe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1414,7 +1361,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_footnotes {
+#wrcxscjvqe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1428,7 +1375,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_footnote {
+#wrcxscjvqe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1437,7 +1384,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#tfqsuxhjbk .gt_sourcenotes {
+#wrcxscjvqe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1451,7 +1398,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#tfqsuxhjbk .gt_sourcenote {
+#wrcxscjvqe .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1459,72 +1406,72 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#tfqsuxhjbk .gt_left {
+#wrcxscjvqe .gt_left {
   text-align: left;
 }
 
-#tfqsuxhjbk .gt_center {
+#wrcxscjvqe .gt_center {
   text-align: center;
 }
 
-#tfqsuxhjbk .gt_right {
+#wrcxscjvqe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tfqsuxhjbk .gt_font_normal {
+#wrcxscjvqe .gt_font_normal {
   font-weight: normal;
 }
 
-#tfqsuxhjbk .gt_font_bold {
+#wrcxscjvqe .gt_font_bold {
   font-weight: bold;
 }
 
-#tfqsuxhjbk .gt_font_italic {
+#wrcxscjvqe .gt_font_italic {
   font-style: italic;
 }
 
-#tfqsuxhjbk .gt_super {
+#wrcxscjvqe .gt_super {
   font-size: 65%;
 }
 
-#tfqsuxhjbk .gt_footnote_marks {
+#wrcxscjvqe .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tfqsuxhjbk .gt_asterisk {
+#wrcxscjvqe .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tfqsuxhjbk .gt_indent_1 {
+#wrcxscjvqe .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tfqsuxhjbk .gt_indent_2 {
+#wrcxscjvqe .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tfqsuxhjbk .gt_indent_3 {
+#wrcxscjvqe .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tfqsuxhjbk .gt_indent_4 {
+#wrcxscjvqe .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tfqsuxhjbk .gt_indent_5 {
+#wrcxscjvqe .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tfqsuxhjbk .katex-display {
+#wrcxscjvqe .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tfqsuxhjbk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wrcxscjvqe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2857,23 +2804,23 @@ Learn more
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="gizyuiqglp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gizyuiqglp table {
+<div id="fxymnnpwcw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fxymnnpwcw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gizyuiqglp thead, #gizyuiqglp tbody, #gizyuiqglp tfoot, #gizyuiqglp tr, #gizyuiqglp td, #gizyuiqglp th {
+#fxymnnpwcw thead, #fxymnnpwcw tbody, #fxymnnpwcw tfoot, #fxymnnpwcw tr, #fxymnnpwcw td, #fxymnnpwcw th {
   border-style: none;
 }
 
-#gizyuiqglp p {
+#fxymnnpwcw p {
   margin: 0;
   padding: 0;
 }
 
-#gizyuiqglp .gt_table {
+#fxymnnpwcw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2899,12 +2846,12 @@ Learn more
   border-left-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_caption {
+#fxymnnpwcw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gizyuiqglp .gt_title {
+#fxymnnpwcw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2916,7 +2863,7 @@ Learn more
   border-bottom-width: 0;
 }
 
-#gizyuiqglp .gt_subtitle {
+#fxymnnpwcw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2928,7 +2875,7 @@ Learn more
   border-top-width: 0;
 }
 
-#gizyuiqglp .gt_heading {
+#fxymnnpwcw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2940,13 +2887,13 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_bottom_border {
+#fxymnnpwcw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_col_headings {
+#fxymnnpwcw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2961,7 +2908,7 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_col_heading {
+#fxymnnpwcw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2981,7 +2928,7 @@ Learn more
   overflow-x: hidden;
 }
 
-#gizyuiqglp .gt_column_spanner_outer {
+#fxymnnpwcw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2993,15 +2940,15 @@ Learn more
   padding-right: 4px;
 }
 
-#gizyuiqglp .gt_column_spanner_outer:first-child {
+#fxymnnpwcw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gizyuiqglp .gt_column_spanner_outer:last-child {
+#fxymnnpwcw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gizyuiqglp .gt_column_spanner {
+#fxymnnpwcw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3013,11 +2960,11 @@ Learn more
   width: 100%;
 }
 
-#gizyuiqglp .gt_spanner_row {
+#fxymnnpwcw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gizyuiqglp .gt_group_heading {
+#fxymnnpwcw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3043,7 +2990,7 @@ Learn more
   text-align: left;
 }
 
-#gizyuiqglp .gt_empty_group_heading {
+#fxymnnpwcw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3058,15 +3005,15 @@ Learn more
   vertical-align: middle;
 }
 
-#gizyuiqglp .gt_from_md > :first-child {
+#fxymnnpwcw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gizyuiqglp .gt_from_md > :last-child {
+#fxymnnpwcw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gizyuiqglp .gt_row {
+#fxymnnpwcw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3085,7 +3032,7 @@ Learn more
   overflow-x: hidden;
 }
 
-#gizyuiqglp .gt_stub {
+#fxymnnpwcw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3098,7 +3045,7 @@ Learn more
   padding-right: 5px;
 }
 
-#gizyuiqglp .gt_stub_row_group {
+#fxymnnpwcw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3112,15 +3059,15 @@ Learn more
   vertical-align: top;
 }
 
-#gizyuiqglp .gt_row_group_first td {
+#fxymnnpwcw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gizyuiqglp .gt_row_group_first th {
+#fxymnnpwcw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gizyuiqglp .gt_summary_row {
+#fxymnnpwcw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3130,16 +3077,16 @@ Learn more
   padding-right: 5px;
 }
 
-#gizyuiqglp .gt_first_summary_row {
+#fxymnnpwcw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_first_summary_row.thick {
+#fxymnnpwcw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gizyuiqglp .gt_last_summary_row {
+#fxymnnpwcw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3149,7 +3096,7 @@ Learn more
   border-bottom-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_grand_summary_row {
+#fxymnnpwcw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3159,7 +3106,7 @@ Learn more
   padding-right: 5px;
 }
 
-#gizyuiqglp .gt_first_grand_summary_row {
+#fxymnnpwcw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3169,7 +3116,7 @@ Learn more
   border-top-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_last_grand_summary_row_top {
+#fxymnnpwcw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3179,11 +3126,11 @@ Learn more
   border-bottom-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_striped {
+#fxymnnpwcw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gizyuiqglp .gt_table_body {
+#fxymnnpwcw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3192,7 +3139,7 @@ Learn more
   border-bottom-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_footnotes {
+#fxymnnpwcw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3206,7 +3153,7 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_footnote {
+#fxymnnpwcw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3215,7 +3162,7 @@ Learn more
   padding-right: 5px;
 }
 
-#gizyuiqglp .gt_sourcenotes {
+#fxymnnpwcw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3229,7 +3176,7 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#gizyuiqglp .gt_sourcenote {
+#fxymnnpwcw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3237,72 +3184,72 @@ Learn more
   padding-right: 5px;
 }
 
-#gizyuiqglp .gt_left {
+#fxymnnpwcw .gt_left {
   text-align: left;
 }
 
-#gizyuiqglp .gt_center {
+#fxymnnpwcw .gt_center {
   text-align: center;
 }
 
-#gizyuiqglp .gt_right {
+#fxymnnpwcw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gizyuiqglp .gt_font_normal {
+#fxymnnpwcw .gt_font_normal {
   font-weight: normal;
 }
 
-#gizyuiqglp .gt_font_bold {
+#fxymnnpwcw .gt_font_bold {
   font-weight: bold;
 }
 
-#gizyuiqglp .gt_font_italic {
+#fxymnnpwcw .gt_font_italic {
   font-style: italic;
 }
 
-#gizyuiqglp .gt_super {
+#fxymnnpwcw .gt_super {
   font-size: 65%;
 }
 
-#gizyuiqglp .gt_footnote_marks {
+#fxymnnpwcw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gizyuiqglp .gt_asterisk {
+#fxymnnpwcw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gizyuiqglp .gt_indent_1 {
+#fxymnnpwcw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gizyuiqglp .gt_indent_2 {
+#fxymnnpwcw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gizyuiqglp .gt_indent_3 {
+#fxymnnpwcw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gizyuiqglp .gt_indent_4 {
+#fxymnnpwcw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gizyuiqglp .gt_indent_5 {
+#fxymnnpwcw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gizyuiqglp .katex-display {
+#fxymnnpwcw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gizyuiqglp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fxymnnpwcw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3860,23 +3807,23 @@ Click here to see the entire countdown.R script
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code> and <code>details</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="hoqmczeiii" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hoqmczeiii table {
+<div id="rfwhtwhjws" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rfwhtwhjws table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hoqmczeiii thead, #hoqmczeiii tbody, #hoqmczeiii tfoot, #hoqmczeiii tr, #hoqmczeiii td, #hoqmczeiii th {
+#rfwhtwhjws thead, #rfwhtwhjws tbody, #rfwhtwhjws tfoot, #rfwhtwhjws tr, #rfwhtwhjws td, #rfwhtwhjws th {
   border-style: none;
 }
 
-#hoqmczeiii p {
+#rfwhtwhjws p {
   margin: 0;
   padding: 0;
 }
 
-#hoqmczeiii .gt_table {
+#rfwhtwhjws .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3902,12 +3849,12 @@ Click here to see the entire countdown.R script
   border-left-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_caption {
+#rfwhtwhjws .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hoqmczeiii .gt_title {
+#rfwhtwhjws .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3919,7 +3866,7 @@ Click here to see the entire countdown.R script
   border-bottom-width: 0;
 }
 
-#hoqmczeiii .gt_subtitle {
+#rfwhtwhjws .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3931,7 +3878,7 @@ Click here to see the entire countdown.R script
   border-top-width: 0;
 }
 
-#hoqmczeiii .gt_heading {
+#rfwhtwhjws .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3943,13 +3890,13 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_bottom_border {
+#rfwhtwhjws .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_col_headings {
+#rfwhtwhjws .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3964,7 +3911,7 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_col_heading {
+#rfwhtwhjws .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3984,7 +3931,7 @@ Click here to see the entire countdown.R script
   overflow-x: hidden;
 }
 
-#hoqmczeiii .gt_column_spanner_outer {
+#rfwhtwhjws .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3996,15 +3943,15 @@ Click here to see the entire countdown.R script
   padding-right: 4px;
 }
 
-#hoqmczeiii .gt_column_spanner_outer:first-child {
+#rfwhtwhjws .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hoqmczeiii .gt_column_spanner_outer:last-child {
+#rfwhtwhjws .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hoqmczeiii .gt_column_spanner {
+#rfwhtwhjws .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4016,11 +3963,11 @@ Click here to see the entire countdown.R script
   width: 100%;
 }
 
-#hoqmczeiii .gt_spanner_row {
+#rfwhtwhjws .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hoqmczeiii .gt_group_heading {
+#rfwhtwhjws .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4046,7 +3993,7 @@ Click here to see the entire countdown.R script
   text-align: left;
 }
 
-#hoqmczeiii .gt_empty_group_heading {
+#rfwhtwhjws .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4061,15 +4008,15 @@ Click here to see the entire countdown.R script
   vertical-align: middle;
 }
 
-#hoqmczeiii .gt_from_md > :first-child {
+#rfwhtwhjws .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hoqmczeiii .gt_from_md > :last-child {
+#rfwhtwhjws .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hoqmczeiii .gt_row {
+#rfwhtwhjws .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4088,7 +4035,7 @@ Click here to see the entire countdown.R script
   overflow-x: hidden;
 }
 
-#hoqmczeiii .gt_stub {
+#rfwhtwhjws .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4101,7 +4048,7 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#hoqmczeiii .gt_stub_row_group {
+#rfwhtwhjws .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4115,15 +4062,15 @@ Click here to see the entire countdown.R script
   vertical-align: top;
 }
 
-#hoqmczeiii .gt_row_group_first td {
+#rfwhtwhjws .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hoqmczeiii .gt_row_group_first th {
+#rfwhtwhjws .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hoqmczeiii .gt_summary_row {
+#rfwhtwhjws .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4133,16 +4080,16 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#hoqmczeiii .gt_first_summary_row {
+#rfwhtwhjws .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_first_summary_row.thick {
+#rfwhtwhjws .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hoqmczeiii .gt_last_summary_row {
+#rfwhtwhjws .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4152,7 +4099,7 @@ Click here to see the entire countdown.R script
   border-bottom-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_grand_summary_row {
+#rfwhtwhjws .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4162,7 +4109,7 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#hoqmczeiii .gt_first_grand_summary_row {
+#rfwhtwhjws .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4172,7 +4119,7 @@ Click here to see the entire countdown.R script
   border-top-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_last_grand_summary_row_top {
+#rfwhtwhjws .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4182,11 +4129,11 @@ Click here to see the entire countdown.R script
   border-bottom-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_striped {
+#rfwhtwhjws .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hoqmczeiii .gt_table_body {
+#rfwhtwhjws .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4195,7 +4142,7 @@ Click here to see the entire countdown.R script
   border-bottom-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_footnotes {
+#rfwhtwhjws .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4209,7 +4156,7 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_footnote {
+#rfwhtwhjws .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4218,7 +4165,7 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#hoqmczeiii .gt_sourcenotes {
+#rfwhtwhjws .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4232,7 +4179,7 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#hoqmczeiii .gt_sourcenote {
+#rfwhtwhjws .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4240,72 +4187,72 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#hoqmczeiii .gt_left {
+#rfwhtwhjws .gt_left {
   text-align: left;
 }
 
-#hoqmczeiii .gt_center {
+#rfwhtwhjws .gt_center {
   text-align: center;
 }
 
-#hoqmczeiii .gt_right {
+#rfwhtwhjws .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hoqmczeiii .gt_font_normal {
+#rfwhtwhjws .gt_font_normal {
   font-weight: normal;
 }
 
-#hoqmczeiii .gt_font_bold {
+#rfwhtwhjws .gt_font_bold {
   font-weight: bold;
 }
 
-#hoqmczeiii .gt_font_italic {
+#rfwhtwhjws .gt_font_italic {
   font-style: italic;
 }
 
-#hoqmczeiii .gt_super {
+#rfwhtwhjws .gt_super {
   font-size: 65%;
 }
 
-#hoqmczeiii .gt_footnote_marks {
+#rfwhtwhjws .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hoqmczeiii .gt_asterisk {
+#rfwhtwhjws .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hoqmczeiii .gt_indent_1 {
+#rfwhtwhjws .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hoqmczeiii .gt_indent_2 {
+#rfwhtwhjws .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hoqmczeiii .gt_indent_3 {
+#rfwhtwhjws .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hoqmczeiii .gt_indent_4 {
+#rfwhtwhjws .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hoqmczeiii .gt_indent_5 {
+#rfwhtwhjws .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hoqmczeiii .katex-display {
+#rfwhtwhjws .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hoqmczeiii div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rfwhtwhjws div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4617,23 +4564,23 @@ Click to see an abbreviated list of R date formats:
 <h5 data-number="3.4.1.2.3" class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames."><span class="header-section-number">3.4.1.2.3</span> Example: Netherlands (SBS, 2018): NL_varnames.</h5>
 <div class="cell">
 <div class="cell-output-display">
-<div id="dsujwtovof" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dsujwtovof table {
+<div id="pbdzkdkjmg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pbdzkdkjmg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dsujwtovof thead, #dsujwtovof tbody, #dsujwtovof tfoot, #dsujwtovof tr, #dsujwtovof td, #dsujwtovof th {
+#pbdzkdkjmg thead, #pbdzkdkjmg tbody, #pbdzkdkjmg tfoot, #pbdzkdkjmg tr, #pbdzkdkjmg td, #pbdzkdkjmg th {
   border-style: none;
 }
 
-#dsujwtovof p {
+#pbdzkdkjmg p {
   margin: 0;
   padding: 0;
 }
 
-#dsujwtovof .gt_table {
+#pbdzkdkjmg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4659,12 +4606,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_caption {
+#pbdzkdkjmg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dsujwtovof .gt_title {
+#pbdzkdkjmg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4676,7 +4623,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#dsujwtovof .gt_subtitle {
+#pbdzkdkjmg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4688,7 +4635,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#dsujwtovof .gt_heading {
+#pbdzkdkjmg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4700,13 +4647,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_bottom_border {
+#pbdzkdkjmg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_col_headings {
+#pbdzkdkjmg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4721,7 +4668,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_col_heading {
+#pbdzkdkjmg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4741,7 +4688,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#dsujwtovof .gt_column_spanner_outer {
+#pbdzkdkjmg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4753,15 +4700,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#dsujwtovof .gt_column_spanner_outer:first-child {
+#pbdzkdkjmg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dsujwtovof .gt_column_spanner_outer:last-child {
+#pbdzkdkjmg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dsujwtovof .gt_column_spanner {
+#pbdzkdkjmg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4773,11 +4720,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#dsujwtovof .gt_spanner_row {
+#pbdzkdkjmg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dsujwtovof .gt_group_heading {
+#pbdzkdkjmg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4803,7 +4750,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#dsujwtovof .gt_empty_group_heading {
+#pbdzkdkjmg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4818,15 +4765,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#dsujwtovof .gt_from_md > :first-child {
+#pbdzkdkjmg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dsujwtovof .gt_from_md > :last-child {
+#pbdzkdkjmg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dsujwtovof .gt_row {
+#pbdzkdkjmg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4845,7 +4792,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#dsujwtovof .gt_stub {
+#pbdzkdkjmg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4858,7 +4805,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#dsujwtovof .gt_stub_row_group {
+#pbdzkdkjmg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4872,15 +4819,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#dsujwtovof .gt_row_group_first td {
+#pbdzkdkjmg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dsujwtovof .gt_row_group_first th {
+#pbdzkdkjmg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dsujwtovof .gt_summary_row {
+#pbdzkdkjmg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4890,16 +4837,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#dsujwtovof .gt_first_summary_row {
+#pbdzkdkjmg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_first_summary_row.thick {
+#pbdzkdkjmg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dsujwtovof .gt_last_summary_row {
+#pbdzkdkjmg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4909,7 +4856,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_grand_summary_row {
+#pbdzkdkjmg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4919,7 +4866,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#dsujwtovof .gt_first_grand_summary_row {
+#pbdzkdkjmg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4929,7 +4876,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_last_grand_summary_row_top {
+#pbdzkdkjmg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4939,11 +4886,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_striped {
+#pbdzkdkjmg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dsujwtovof .gt_table_body {
+#pbdzkdkjmg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4952,7 +4899,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_footnotes {
+#pbdzkdkjmg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4966,7 +4913,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_footnote {
+#pbdzkdkjmg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4975,7 +4922,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#dsujwtovof .gt_sourcenotes {
+#pbdzkdkjmg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4989,7 +4936,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#dsujwtovof .gt_sourcenote {
+#pbdzkdkjmg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4997,72 +4944,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#dsujwtovof .gt_left {
+#pbdzkdkjmg .gt_left {
   text-align: left;
 }
 
-#dsujwtovof .gt_center {
+#pbdzkdkjmg .gt_center {
   text-align: center;
 }
 
-#dsujwtovof .gt_right {
+#pbdzkdkjmg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dsujwtovof .gt_font_normal {
+#pbdzkdkjmg .gt_font_normal {
   font-weight: normal;
 }
 
-#dsujwtovof .gt_font_bold {
+#pbdzkdkjmg .gt_font_bold {
   font-weight: bold;
 }
 
-#dsujwtovof .gt_font_italic {
+#pbdzkdkjmg .gt_font_italic {
   font-style: italic;
 }
 
-#dsujwtovof .gt_super {
+#pbdzkdkjmg .gt_super {
   font-size: 65%;
 }
 
-#dsujwtovof .gt_footnote_marks {
+#pbdzkdkjmg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dsujwtovof .gt_asterisk {
+#pbdzkdkjmg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dsujwtovof .gt_indent_1 {
+#pbdzkdkjmg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dsujwtovof .gt_indent_2 {
+#pbdzkdkjmg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dsujwtovof .gt_indent_3 {
+#pbdzkdkjmg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dsujwtovof .gt_indent_4 {
+#pbdzkdkjmg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dsujwtovof .gt_indent_5 {
+#pbdzkdkjmg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dsujwtovof .katex-display {
+#pbdzkdkjmg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dsujwtovof div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pbdzkdkjmg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5151,23 +5098,23 @@ Click to see an abbreviated list of R date formats:
 <p>An example below of the values occurring for the unit of measurement in the SI <code>PRODCOM</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="iitorqoiwo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iitorqoiwo table {
+<div id="elzikfvnid" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#elzikfvnid table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iitorqoiwo thead, #iitorqoiwo tbody, #iitorqoiwo tfoot, #iitorqoiwo tr, #iitorqoiwo td, #iitorqoiwo th {
+#elzikfvnid thead, #elzikfvnid tbody, #elzikfvnid tfoot, #elzikfvnid tr, #elzikfvnid td, #elzikfvnid th {
   border-style: none;
 }
 
-#iitorqoiwo p {
+#elzikfvnid p {
   margin: 0;
   padding: 0;
 }
 
-#iitorqoiwo .gt_table {
+#elzikfvnid .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5193,12 +5140,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_caption {
+#elzikfvnid .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iitorqoiwo .gt_title {
+#elzikfvnid .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5210,7 +5157,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#iitorqoiwo .gt_subtitle {
+#elzikfvnid .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5222,7 +5169,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#iitorqoiwo .gt_heading {
+#elzikfvnid .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5234,13 +5181,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_bottom_border {
+#elzikfvnid .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_col_headings {
+#elzikfvnid .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5255,7 +5202,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_col_heading {
+#elzikfvnid .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5275,7 +5222,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#iitorqoiwo .gt_column_spanner_outer {
+#elzikfvnid .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5287,15 +5234,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#iitorqoiwo .gt_column_spanner_outer:first-child {
+#elzikfvnid .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iitorqoiwo .gt_column_spanner_outer:last-child {
+#elzikfvnid .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iitorqoiwo .gt_column_spanner {
+#elzikfvnid .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5307,11 +5254,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#iitorqoiwo .gt_spanner_row {
+#elzikfvnid .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iitorqoiwo .gt_group_heading {
+#elzikfvnid .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5337,7 +5284,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#iitorqoiwo .gt_empty_group_heading {
+#elzikfvnid .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5352,15 +5299,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#iitorqoiwo .gt_from_md > :first-child {
+#elzikfvnid .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iitorqoiwo .gt_from_md > :last-child {
+#elzikfvnid .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iitorqoiwo .gt_row {
+#elzikfvnid .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5379,7 +5326,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#iitorqoiwo .gt_stub {
+#elzikfvnid .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5392,7 +5339,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#iitorqoiwo .gt_stub_row_group {
+#elzikfvnid .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5406,15 +5353,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#iitorqoiwo .gt_row_group_first td {
+#elzikfvnid .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iitorqoiwo .gt_row_group_first th {
+#elzikfvnid .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iitorqoiwo .gt_summary_row {
+#elzikfvnid .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5424,16 +5371,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#iitorqoiwo .gt_first_summary_row {
+#elzikfvnid .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_first_summary_row.thick {
+#elzikfvnid .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iitorqoiwo .gt_last_summary_row {
+#elzikfvnid .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5443,7 +5390,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_grand_summary_row {
+#elzikfvnid .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5453,7 +5400,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#iitorqoiwo .gt_first_grand_summary_row {
+#elzikfvnid .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5463,7 +5410,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_last_grand_summary_row_top {
+#elzikfvnid .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5473,11 +5420,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_striped {
+#elzikfvnid .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iitorqoiwo .gt_table_body {
+#elzikfvnid .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5486,7 +5433,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_footnotes {
+#elzikfvnid .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5500,7 +5447,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_footnote {
+#elzikfvnid .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5509,7 +5456,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#iitorqoiwo .gt_sourcenotes {
+#elzikfvnid .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5523,7 +5470,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#iitorqoiwo .gt_sourcenote {
+#elzikfvnid .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5531,72 +5478,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#iitorqoiwo .gt_left {
+#elzikfvnid .gt_left {
   text-align: left;
 }
 
-#iitorqoiwo .gt_center {
+#elzikfvnid .gt_center {
   text-align: center;
 }
 
-#iitorqoiwo .gt_right {
+#elzikfvnid .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iitorqoiwo .gt_font_normal {
+#elzikfvnid .gt_font_normal {
   font-weight: normal;
 }
 
-#iitorqoiwo .gt_font_bold {
+#elzikfvnid .gt_font_bold {
   font-weight: bold;
 }
 
-#iitorqoiwo .gt_font_italic {
+#elzikfvnid .gt_font_italic {
   font-style: italic;
 }
 
-#iitorqoiwo .gt_super {
+#elzikfvnid .gt_super {
   font-size: 65%;
 }
 
-#iitorqoiwo .gt_footnote_marks {
+#elzikfvnid .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iitorqoiwo .gt_asterisk {
+#elzikfvnid .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iitorqoiwo .gt_indent_1 {
+#elzikfvnid .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iitorqoiwo .gt_indent_2 {
+#elzikfvnid .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iitorqoiwo .gt_indent_3 {
+#elzikfvnid .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iitorqoiwo .gt_indent_4 {
+#elzikfvnid .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iitorqoiwo .gt_indent_5 {
+#elzikfvnid .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iitorqoiwo .katex-display {
+#elzikfvnid .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iitorqoiwo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#elzikfvnid div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5676,23 +5623,23 @@ Click to see an abbreviated list of R date formats:
 <p>An sample of rows from the table of PRODCOM codes (in this case some randomly selected rows from the list of codes of Finland):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tiybacckhb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tiybacckhb table {
+<div id="ozysowegfy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ozysowegfy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tiybacckhb thead, #tiybacckhb tbody, #tiybacckhb tfoot, #tiybacckhb tr, #tiybacckhb td, #tiybacckhb th {
+#ozysowegfy thead, #ozysowegfy tbody, #ozysowegfy tfoot, #ozysowegfy tr, #ozysowegfy td, #ozysowegfy th {
   border-style: none;
 }
 
-#tiybacckhb p {
+#ozysowegfy p {
   margin: 0;
   padding: 0;
 }
 
-#tiybacckhb .gt_table {
+#ozysowegfy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5718,12 +5665,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_caption {
+#ozysowegfy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tiybacckhb .gt_title {
+#ozysowegfy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5735,7 +5682,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#tiybacckhb .gt_subtitle {
+#ozysowegfy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5747,7 +5694,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#tiybacckhb .gt_heading {
+#ozysowegfy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5759,13 +5706,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_bottom_border {
+#ozysowegfy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_col_headings {
+#ozysowegfy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5780,7 +5727,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_col_heading {
+#ozysowegfy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5800,7 +5747,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#tiybacckhb .gt_column_spanner_outer {
+#ozysowegfy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5812,15 +5759,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#tiybacckhb .gt_column_spanner_outer:first-child {
+#ozysowegfy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tiybacckhb .gt_column_spanner_outer:last-child {
+#ozysowegfy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tiybacckhb .gt_column_spanner {
+#ozysowegfy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5832,11 +5779,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#tiybacckhb .gt_spanner_row {
+#ozysowegfy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tiybacckhb .gt_group_heading {
+#ozysowegfy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5862,7 +5809,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#tiybacckhb .gt_empty_group_heading {
+#ozysowegfy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5877,15 +5824,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#tiybacckhb .gt_from_md > :first-child {
+#ozysowegfy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tiybacckhb .gt_from_md > :last-child {
+#ozysowegfy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tiybacckhb .gt_row {
+#ozysowegfy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5904,7 +5851,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#tiybacckhb .gt_stub {
+#ozysowegfy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5917,7 +5864,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#tiybacckhb .gt_stub_row_group {
+#ozysowegfy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5931,15 +5878,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#tiybacckhb .gt_row_group_first td {
+#ozysowegfy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tiybacckhb .gt_row_group_first th {
+#ozysowegfy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tiybacckhb .gt_summary_row {
+#ozysowegfy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5949,16 +5896,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#tiybacckhb .gt_first_summary_row {
+#ozysowegfy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_first_summary_row.thick {
+#ozysowegfy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tiybacckhb .gt_last_summary_row {
+#ozysowegfy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5968,7 +5915,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_grand_summary_row {
+#ozysowegfy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5978,7 +5925,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#tiybacckhb .gt_first_grand_summary_row {
+#ozysowegfy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5988,7 +5935,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_last_grand_summary_row_top {
+#ozysowegfy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5998,11 +5945,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_striped {
+#ozysowegfy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tiybacckhb .gt_table_body {
+#ozysowegfy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6011,7 +5958,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_footnotes {
+#ozysowegfy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6025,7 +5972,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_footnote {
+#ozysowegfy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6034,7 +5981,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#tiybacckhb .gt_sourcenotes {
+#ozysowegfy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6048,7 +5995,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#tiybacckhb .gt_sourcenote {
+#ozysowegfy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6056,72 +6003,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#tiybacckhb .gt_left {
+#ozysowegfy .gt_left {
   text-align: left;
 }
 
-#tiybacckhb .gt_center {
+#ozysowegfy .gt_center {
   text-align: center;
 }
 
-#tiybacckhb .gt_right {
+#ozysowegfy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tiybacckhb .gt_font_normal {
+#ozysowegfy .gt_font_normal {
   font-weight: normal;
 }
 
-#tiybacckhb .gt_font_bold {
+#ozysowegfy .gt_font_bold {
   font-weight: bold;
 }
 
-#tiybacckhb .gt_font_italic {
+#ozysowegfy .gt_font_italic {
   font-style: italic;
 }
 
-#tiybacckhb .gt_super {
+#ozysowegfy .gt_super {
   font-size: 65%;
 }
 
-#tiybacckhb .gt_footnote_marks {
+#ozysowegfy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tiybacckhb .gt_asterisk {
+#ozysowegfy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tiybacckhb .gt_indent_1 {
+#ozysowegfy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tiybacckhb .gt_indent_2 {
+#ozysowegfy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tiybacckhb .gt_indent_3 {
+#ozysowegfy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tiybacckhb .gt_indent_4 {
+#ozysowegfy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tiybacckhb .gt_indent_5 {
+#ozysowegfy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tiybacckhb .katex-display {
+#ozysowegfy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tiybacckhb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ozysowegfy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6135,64 +6082,64 @@ Click to see an abbreviated list of R date formats:
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">23192330</td>
-<td class="gt_row gt_right" headers="year">2021</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">24102121</td>
-<td class="gt_row gt_right" headers="year">2019</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">25611230</td>
-<td class="gt_row gt_right" headers="year">2012</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">25733057</td>
-<td class="gt_row gt_right" headers="year">2012</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">2895125060</td>
-<td class="gt_row gt_right" headers="year">2010</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">28991200</td>
-<td class="gt_row gt_right" headers="year">2014</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">27123170</td>
-<td class="gt_row gt_right" headers="year">2008</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">28131453</td>
-<td class="gt_row gt_right" headers="year">2021</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">24103130</td>
-<td class="gt_row gt_right" headers="year">2014</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">31091300</td>
-<td class="gt_row gt_right" headers="year">2011</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">1103100030</td>
-<td class="gt_row gt_right" headers="year">2014</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">17543850</td>
-<td class="gt_row gt_right" headers="year">2004</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">10511142</td>
+<td class="gt_row gt_right" headers="code">10321600</td>
 <td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">17121410</td>
-<td class="gt_row gt_right" headers="year">2018</td>
+<td class="gt_row gt_right" headers="code">10861010</td>
+<td class="gt_row gt_right" headers="year">2013</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">28114200</td>
+<td class="gt_row gt_right" headers="code">32501200</td>
+<td class="gt_row gt_right" headers="year">2019</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">28945150</td>
+<td class="gt_row gt_right" headers="year">2015</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">29711550</td>
+<td class="gt_row gt_right" headers="year">2005</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">20136800</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">28131360</td>
+<td class="gt_row gt_right" headers="year">2017</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">33205383</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">28492150</td>
+<td class="gt_row gt_right" headers="year">2013</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">14133561</td>
 <td class="gt_row gt_right" headers="year">2011</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">26517015</td>
+<td class="gt_row gt_right" headers="year">2016</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">28731440</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">27512870</td>
+<td class="gt_row gt_right" headers="year">2011</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">10412310</td>
+<td class="gt_row gt_right" headers="year">2014</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">17231230</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 </tbody>
 </table>
@@ -6218,23 +6165,23 @@ Click to see an abbreviated list of R date formats:
 <p>For example, the following table displays how such table looks like for a subset of ITGS codes in PT:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vzpsnmffls" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vzpsnmffls table {
+<div id="eohdzjxvvz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eohdzjxvvz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vzpsnmffls thead, #vzpsnmffls tbody, #vzpsnmffls tfoot, #vzpsnmffls tr, #vzpsnmffls td, #vzpsnmffls th {
+#eohdzjxvvz thead, #eohdzjxvvz tbody, #eohdzjxvvz tfoot, #eohdzjxvvz tr, #eohdzjxvvz td, #eohdzjxvvz th {
   border-style: none;
 }
 
-#vzpsnmffls p {
+#eohdzjxvvz p {
   margin: 0;
   padding: 0;
 }
 
-#vzpsnmffls .gt_table {
+#eohdzjxvvz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6260,12 +6207,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_caption {
+#eohdzjxvvz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vzpsnmffls .gt_title {
+#eohdzjxvvz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -6277,7 +6224,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#vzpsnmffls .gt_subtitle {
+#eohdzjxvvz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -6289,7 +6236,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#vzpsnmffls .gt_heading {
+#eohdzjxvvz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -6301,13 +6248,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_bottom_border {
+#eohdzjxvvz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_col_headings {
+#eohdzjxvvz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6322,7 +6269,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_col_heading {
+#eohdzjxvvz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6342,7 +6289,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#vzpsnmffls .gt_column_spanner_outer {
+#eohdzjxvvz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6354,15 +6301,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#vzpsnmffls .gt_column_spanner_outer:first-child {
+#eohdzjxvvz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vzpsnmffls .gt_column_spanner_outer:last-child {
+#eohdzjxvvz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vzpsnmffls .gt_column_spanner {
+#eohdzjxvvz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6374,11 +6321,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#vzpsnmffls .gt_spanner_row {
+#eohdzjxvvz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vzpsnmffls .gt_group_heading {
+#eohdzjxvvz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6404,7 +6351,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#vzpsnmffls .gt_empty_group_heading {
+#eohdzjxvvz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6419,15 +6366,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#vzpsnmffls .gt_from_md > :first-child {
+#eohdzjxvvz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vzpsnmffls .gt_from_md > :last-child {
+#eohdzjxvvz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vzpsnmffls .gt_row {
+#eohdzjxvvz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6446,7 +6393,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#vzpsnmffls .gt_stub {
+#eohdzjxvvz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6459,7 +6406,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#vzpsnmffls .gt_stub_row_group {
+#eohdzjxvvz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6473,15 +6420,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#vzpsnmffls .gt_row_group_first td {
+#eohdzjxvvz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vzpsnmffls .gt_row_group_first th {
+#eohdzjxvvz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vzpsnmffls .gt_summary_row {
+#eohdzjxvvz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6491,16 +6438,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#vzpsnmffls .gt_first_summary_row {
+#eohdzjxvvz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_first_summary_row.thick {
+#eohdzjxvvz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vzpsnmffls .gt_last_summary_row {
+#eohdzjxvvz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6510,7 +6457,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_grand_summary_row {
+#eohdzjxvvz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6520,7 +6467,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#vzpsnmffls .gt_first_grand_summary_row {
+#eohdzjxvvz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6530,7 +6477,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_last_grand_summary_row_top {
+#eohdzjxvvz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6540,11 +6487,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_striped {
+#eohdzjxvvz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vzpsnmffls .gt_table_body {
+#eohdzjxvvz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6553,7 +6500,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_footnotes {
+#eohdzjxvvz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6567,7 +6514,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_footnote {
+#eohdzjxvvz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6576,7 +6523,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#vzpsnmffls .gt_sourcenotes {
+#eohdzjxvvz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6590,7 +6537,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#vzpsnmffls .gt_sourcenote {
+#eohdzjxvvz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6598,72 +6545,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#vzpsnmffls .gt_left {
+#eohdzjxvvz .gt_left {
   text-align: left;
 }
 
-#vzpsnmffls .gt_center {
+#eohdzjxvvz .gt_center {
   text-align: center;
 }
 
-#vzpsnmffls .gt_right {
+#eohdzjxvvz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vzpsnmffls .gt_font_normal {
+#eohdzjxvvz .gt_font_normal {
   font-weight: normal;
 }
 
-#vzpsnmffls .gt_font_bold {
+#eohdzjxvvz .gt_font_bold {
   font-weight: bold;
 }
 
-#vzpsnmffls .gt_font_italic {
+#eohdzjxvvz .gt_font_italic {
   font-style: italic;
 }
 
-#vzpsnmffls .gt_super {
+#eohdzjxvvz .gt_super {
   font-size: 65%;
 }
 
-#vzpsnmffls .gt_footnote_marks {
+#eohdzjxvvz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vzpsnmffls .gt_asterisk {
+#eohdzjxvvz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vzpsnmffls .gt_indent_1 {
+#eohdzjxvvz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vzpsnmffls .gt_indent_2 {
+#eohdzjxvvz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vzpsnmffls .gt_indent_3 {
+#eohdzjxvvz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vzpsnmffls .gt_indent_4 {
+#eohdzjxvvz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vzpsnmffls .gt_indent_5 {
+#eohdzjxvvz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vzpsnmffls .katex-display {
+#eohdzjxvvz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vzpsnmffls div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#eohdzjxvvz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6678,79 +6625,79 @@ Click to see an abbreviated list of R date formats:
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">85273920</td>
-<td class="gt_row gt_right" headers="right">85279900</td>
+<td class="gt_row gt_right" headers="left">84669195</td>
+<td class="gt_row gt_right" headers="right">85423110</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">8061021</td>
-<td class="gt_row gt_right" headers="right">8061010</td>
-<td class="gt_row gt_right" headers="year">1997</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">12149099</td>
-<td class="gt_row gt_right" headers="right">12149090</td>
+<td class="gt_row gt_right" headers="left">72101190</td>
+<td class="gt_row gt_right" headers="right">72101100</td>
 <td class="gt_row gt_right" headers="year">2003</td>
 </tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">74011000</td>
+<td class="gt_row gt_right" headers="right">74010000</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">8061091</td>
-<td class="gt_row gt_right" headers="right">8061093</td>
+<td class="gt_row gt_right" headers="left">85242310</td>
+<td class="gt_row gt_right" headers="right">85244010</td>
 <td class="gt_row gt_right" headers="year">1995</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">95061910</td>
-<td class="gt_row gt_right" headers="right">95061900</td>
-<td class="gt_row gt_right" headers="year">1994</td>
+<td class="gt_row gt_right" headers="left">2930 90 99</td>
+<td class="gt_row gt_right" headers="right">2930 90 98</td>
+<td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">20097030</td>
-<td class="gt_row gt_right" headers="right">20097110</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">29053990</td>
-<td class="gt_row gt_right" headers="right">29053920</td>
-<td class="gt_row gt_right" headers="year">1996</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">3042056</td>
-<td class="gt_row gt_right" headers="right">3042956</td>
+<td class="gt_row gt_right" headers="left">87089998</td>
+<td class="gt_row gt_right" headers="right">87089997</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">84138190</td>
-<td class="gt_row gt_right" headers="right">84138100</td>
-<td class="gt_row gt_right" headers="year">2005</td>
+<td class="gt_row gt_right" headers="left">29223000</td>
+<td class="gt_row gt_right" headers="right">29223900</td>
+<td class="gt_row gt_right" headers="year">2001</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">0304 99 10</td>
-<td class="gt_row gt_right" headers="right">0304 93 10</td>
-<td class="gt_row gt_right" headers="year">2016</td>
+<td class="gt_row gt_right" headers="left">9018 90 84</td>
+<td class="gt_row gt_right" headers="right">9018 90 84</td>
+<td class="gt_row gt_right" headers="year">2021</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">38239060</td>
-<td class="gt_row gt_right" headers="right">38249035</td>
-<td class="gt_row gt_right" headers="year">1995</td>
+<td class="gt_row gt_right" headers="left">85319010</td>
+<td class="gt_row gt_right" headers="right">85319020</td>
+<td class="gt_row gt_right" headers="year">1999</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">19053019</td>
-<td class="gt_row gt_right" headers="right">19053219</td>
+<td class="gt_row gt_right" headers="left">48041915</td>
+<td class="gt_row gt_right" headers="right">48041912</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">1060010</td>
+<td class="gt_row gt_right" headers="right">1061910</td>
+<td class="gt_row gt_right" headers="year">2001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">44121310</td>
+<td class="gt_row gt_right" headers="right">44083121</td>
 <td class="gt_row gt_right" headers="year">2001</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">8703 33 90</td>
-<td class="gt_row gt_right" headers="right">8703 33 90</td>
-<td class="gt_row gt_right" headers="year">2016</td>
+<td class="gt_row gt_right" headers="left">48041931</td>
+<td class="gt_row gt_right" headers="right">48041930</td>
+<td class="gt_row gt_right" headers="year">2009</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">8054000</td>
-<td class="gt_row gt_right" headers="right">8054090</td>
-<td class="gt_row gt_right" headers="year">1994</td>
+<td class="gt_row gt_right" headers="left">8548 90 20</td>
+<td class="gt_row gt_right" headers="right">8548 00 20</td>
+<td class="gt_row gt_right" headers="year">2021</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">90138010</td>
-<td class="gt_row gt_right" headers="right">90138030</td>
-<td class="gt_row gt_right" headers="year">1993</td>
+<td class="gt_row gt_right" headers="left">44079994</td>
+<td class="gt_row gt_right" headers="right">44079996</td>
+<td class="gt_row gt_right" headers="year">2001</td>
 </tr>
 </tbody>
 </table>
