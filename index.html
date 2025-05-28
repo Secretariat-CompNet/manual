@@ -127,11 +127,12 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#mdi-users" id="toc-mdi-users" class="nav-link" data-scroll-target="#mdi-users"><span class="header-section-number">2.1</span> MDI Users</a></li>
   <li><a href="#setup-for-researcher" id="toc-setup-for-researcher" class="nav-link" data-scroll-target="#setup-for-researcher"><span class="header-section-number">2.2</span> Setup for Researcher</a></li>
-  <li><a href="#workflow-for-writing-modules" id="toc-workflow-for-writing-modules" class="nav-link" data-scroll-target="#workflow-for-writing-modules"><span class="header-section-number">2.3</span> Workflow for writing modules</a></li>
-  <li><a href="#dealing-with-classifications" id="toc-dealing-with-classifications" class="nav-link" data-scroll-target="#dealing-with-classifications"><span class="header-section-number">2.4</span> Dealing with classifications</a></li>
-  <li><a href="#disclosure-criteria" id="toc-disclosure-criteria" class="nav-link" data-scroll-target="#disclosure-criteria"><span class="header-section-number">2.5</span> Disclosure Criteria</a></li>
-  <li><a href="#nuvolos-where-mdi-users-develop-and-test-their-codes" id="toc-nuvolos-where-mdi-users-develop-and-test-their-codes" class="nav-link" data-scroll-target="#nuvolos-where-mdi-users-develop-and-test-their-codes"><span class="header-section-number">2.6</span> Nuvolos: where MDI users develop and test their codes</a></li>
-  <li><a href="#the-complete-mdi-pipeline" id="toc-the-complete-mdi-pipeline" class="nav-link" data-scroll-target="#the-complete-mdi-pipeline"><span class="header-section-number">2.7</span> The complete MDI pipeline</a></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist"><span class="header-section-number">2.3</span> Checklist</a></li>
+  <li><a href="#workflow-for-writing-modules" id="toc-workflow-for-writing-modules" class="nav-link" data-scroll-target="#workflow-for-writing-modules"><span class="header-section-number">2.4</span> Workflow for writing modules</a></li>
+  <li><a href="#dealing-with-classifications" id="toc-dealing-with-classifications" class="nav-link" data-scroll-target="#dealing-with-classifications"><span class="header-section-number">2.5</span> Dealing with classifications</a></li>
+  <li><a href="#disclosure-criteria" id="toc-disclosure-criteria" class="nav-link" data-scroll-target="#disclosure-criteria"><span class="header-section-number">2.6</span> Disclosure Criteria</a></li>
+  <li><a href="#nuvolos-where-mdi-users-develop-and-test-their-codes" id="toc-nuvolos-where-mdi-users-develop-and-test-their-codes" class="nav-link" data-scroll-target="#nuvolos-where-mdi-users-develop-and-test-their-codes"><span class="header-section-number">2.7</span> Nuvolos: where MDI users develop and test their codes</a></li>
+  <li><a href="#the-complete-mdi-pipeline" id="toc-the-complete-mdi-pipeline" class="nav-link" data-scroll-target="#the-complete-mdi-pipeline"><span class="header-section-number">2.8</span> The complete MDI pipeline</a></li>
   </ul></li>
   <li><a href="#buil-mdi" id="toc-buil-mdi" class="nav-link" data-scroll-target="#buil-mdi"><span class="header-section-number">3</span> Building MDI</a>
   <ul class="collapse">
@@ -468,8 +469,51 @@ Click here to learn more
 <p>MDI modules are executed every three months through pre-scheduled launches. Accordingly, the MDI team communicates specific deadlines to all researchers for submitting their research modules.</p>
 </section>
 </section>
-<section id="workflow-for-writing-modules" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="workflow-for-writing-modules"><span class="header-section-number">2.3</span> Workflow for writing modules</h2>
+<section id="checklist" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="checklist"><span class="header-section-number">2.3</span> Checklist</h2>
+<p>Below are two ordered checklists for the main MDI workflows: executing the launch and writing a research module.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In countries with indirect data access, these steps are to be performed by the respective NSI, in case of direct access this is done by the MDI team.</p>
+</div>
+</div>
+<section id="launch" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="launch">Launch</h3>
+<p>Preparation</p>
+<ul class="task-list">
+<li><label><input type="checkbox">install R packages (check <code>rocket\Rtools\Rpackages\Rpackage_info_v2.2_.csv</code>)</label></li>
+<li><label><input type="checkbox">use metadata_checker (offline)</label></li>
+<li><label><input type="checkbox">update disclosure criteria</label></li>
+<li><label><input type="checkbox">copy the MDI folder to the local environment</label></li>
+<li><label><input type="checkbox">adjust the <a href="#countdown">countdown</a> to the local environment</label></li>
+<li><label><input type="checkbox">execute the <a href="#prelaunchchecker">pre_launch_checker</a></label></li>
+<li><label><input type="checkbox">solve all issues flagged by the pre_launch_checker Launch</label></li>
+<li><label><input type="checkbox">execute the liftoff</label></li>
+<li><label><input type="checkbox">revise post-harmonization checks</label></li>
+<li><label><input type="checkbox">execute modules</label></li>
+<li><label><input type="checkbox">export and upload/share the output files with the MDI team</label></li>
+</ul>
+</section>
+<section id="reseacher" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="reseacher">Reseacher</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">check the availability of variables in all countries were checked<a href="https://compnet.shinyapps.io/mdi_metadata_tool_catalog_viewer_shiny/">(view metadata catalogue)</a></label></li>
+<li><label><input type="checkbox">create/ update the <a href="#data-selection">MDnames_select</a></label></li>
+<li><label><input type="checkbox">upload script files/ auxiliary files in the modules’ folder (<code>../payload/Launch_vX.X/Rmodules/XX/</code>)</label></li>
+<li><label><input type="checkbox">test the module on Nuvolos</label></li>
+</ul>
+</section>
+</section>
+<section id="workflow-for-writing-modules" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="workflow-for-writing-modules"><span class="header-section-number">2.4</span> Workflow for writing modules</h2>
 <p>Writing modules for the MDI launch is an iterative process that moves from conceptualization to execution. It demands a solid understanding of the research objectives, data structure, and the technical features of the MDI environment.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -477,8 +521,8 @@ Click here to learn more
 <figcaption>MDI Module Writing workflow</figcaption>
 </figure>
 </div>
-<section id="define-your-research-question" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="define-your-research-question"><span class="header-section-number">2.3.1</span> Define your research question</h3>
+<section id="define-your-research-question" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="define-your-research-question"><span class="header-section-number">2.4.1</span> Define your research question</h3>
 <p>Every module begins with a clear and concise research question, designed to leverage MDI’s cross-country data and produce meaningful analytical insights.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -494,8 +538,8 @@ Important
 </div>
 </div>
 </section>
-<section id="data-selection" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="data-selection"><span class="header-section-number">2.3.2</span> Data selection</h3>
+<section id="data-selection" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="data-selection"><span class="header-section-number">2.4.2</span> Data selection</h3>
 <p>Use the MDI data catalog to identify and select the most relevant datasets and variables for your analysis.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -524,23 +568,23 @@ Important
 <p>Once the final selection of MD variable names has been made for the module, a file named <code>(res_group)_MDnames_select.csv</code> must be submitted to the MDI team. This file should include the following columns:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="maexrpyvld" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#maexrpyvld table {
+<div id="dbjrbgwpxt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dbjrbgwpxt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#maexrpyvld thead, #maexrpyvld tbody, #maexrpyvld tfoot, #maexrpyvld tr, #maexrpyvld td, #maexrpyvld th {
+#dbjrbgwpxt thead, #dbjrbgwpxt tbody, #dbjrbgwpxt tfoot, #dbjrbgwpxt tr, #dbjrbgwpxt td, #dbjrbgwpxt th {
   border-style: none;
 }
 
-#maexrpyvld p {
+#dbjrbgwpxt p {
   margin: 0;
   padding: 0;
 }
 
-#maexrpyvld .gt_table {
+#dbjrbgwpxt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -566,12 +610,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_caption {
+#dbjrbgwpxt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#maexrpyvld .gt_title {
+#dbjrbgwpxt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -583,7 +627,7 @@ Important
   border-bottom-width: 0;
 }
 
-#maexrpyvld .gt_subtitle {
+#dbjrbgwpxt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -595,7 +639,7 @@ Important
   border-top-width: 0;
 }
 
-#maexrpyvld .gt_heading {
+#dbjrbgwpxt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -607,13 +651,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_bottom_border {
+#dbjrbgwpxt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_col_headings {
+#dbjrbgwpxt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -628,7 +672,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_col_heading {
+#dbjrbgwpxt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -648,7 +692,7 @@ Important
   overflow-x: hidden;
 }
 
-#maexrpyvld .gt_column_spanner_outer {
+#dbjrbgwpxt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -660,15 +704,15 @@ Important
   padding-right: 4px;
 }
 
-#maexrpyvld .gt_column_spanner_outer:first-child {
+#dbjrbgwpxt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#maexrpyvld .gt_column_spanner_outer:last-child {
+#dbjrbgwpxt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#maexrpyvld .gt_column_spanner {
+#dbjrbgwpxt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -680,11 +724,11 @@ Important
   width: 100%;
 }
 
-#maexrpyvld .gt_spanner_row {
+#dbjrbgwpxt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#maexrpyvld .gt_group_heading {
+#dbjrbgwpxt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -710,7 +754,7 @@ Important
   text-align: left;
 }
 
-#maexrpyvld .gt_empty_group_heading {
+#dbjrbgwpxt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -725,15 +769,15 @@ Important
   vertical-align: middle;
 }
 
-#maexrpyvld .gt_from_md > :first-child {
+#dbjrbgwpxt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#maexrpyvld .gt_from_md > :last-child {
+#dbjrbgwpxt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#maexrpyvld .gt_row {
+#dbjrbgwpxt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -752,7 +796,7 @@ Important
   overflow-x: hidden;
 }
 
-#maexrpyvld .gt_stub {
+#dbjrbgwpxt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -765,7 +809,7 @@ Important
   padding-right: 5px;
 }
 
-#maexrpyvld .gt_stub_row_group {
+#dbjrbgwpxt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -779,15 +823,15 @@ Important
   vertical-align: top;
 }
 
-#maexrpyvld .gt_row_group_first td {
+#dbjrbgwpxt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#maexrpyvld .gt_row_group_first th {
+#dbjrbgwpxt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#maexrpyvld .gt_summary_row {
+#dbjrbgwpxt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -797,16 +841,16 @@ Important
   padding-right: 5px;
 }
 
-#maexrpyvld .gt_first_summary_row {
+#dbjrbgwpxt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_first_summary_row.thick {
+#dbjrbgwpxt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#maexrpyvld .gt_last_summary_row {
+#dbjrbgwpxt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -816,7 +860,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_grand_summary_row {
+#dbjrbgwpxt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -826,7 +870,7 @@ Important
   padding-right: 5px;
 }
 
-#maexrpyvld .gt_first_grand_summary_row {
+#dbjrbgwpxt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -836,7 +880,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_last_grand_summary_row_top {
+#dbjrbgwpxt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -846,11 +890,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_striped {
+#dbjrbgwpxt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#maexrpyvld .gt_table_body {
+#dbjrbgwpxt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -859,7 +903,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_footnotes {
+#dbjrbgwpxt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -873,7 +917,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_footnote {
+#dbjrbgwpxt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -882,7 +926,7 @@ Important
   padding-right: 5px;
 }
 
-#maexrpyvld .gt_sourcenotes {
+#dbjrbgwpxt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -896,7 +940,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#maexrpyvld .gt_sourcenote {
+#dbjrbgwpxt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -904,72 +948,72 @@ Important
   padding-right: 5px;
 }
 
-#maexrpyvld .gt_left {
+#dbjrbgwpxt .gt_left {
   text-align: left;
 }
 
-#maexrpyvld .gt_center {
+#dbjrbgwpxt .gt_center {
   text-align: center;
 }
 
-#maexrpyvld .gt_right {
+#dbjrbgwpxt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#maexrpyvld .gt_font_normal {
+#dbjrbgwpxt .gt_font_normal {
   font-weight: normal;
 }
 
-#maexrpyvld .gt_font_bold {
+#dbjrbgwpxt .gt_font_bold {
   font-weight: bold;
 }
 
-#maexrpyvld .gt_font_italic {
+#dbjrbgwpxt .gt_font_italic {
   font-style: italic;
 }
 
-#maexrpyvld .gt_super {
+#dbjrbgwpxt .gt_super {
   font-size: 65%;
 }
 
-#maexrpyvld .gt_footnote_marks {
+#dbjrbgwpxt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#maexrpyvld .gt_asterisk {
+#dbjrbgwpxt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#maexrpyvld .gt_indent_1 {
+#dbjrbgwpxt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#maexrpyvld .gt_indent_2 {
+#dbjrbgwpxt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#maexrpyvld .gt_indent_3 {
+#dbjrbgwpxt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#maexrpyvld .gt_indent_4 {
+#dbjrbgwpxt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#maexrpyvld .gt_indent_5 {
+#dbjrbgwpxt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#maexrpyvld .katex-display {
+#dbjrbgwpxt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#maexrpyvld div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dbjrbgwpxt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -990,13 +1034,13 @@ Important
 </div>
 <!--# ADD STUFF ON SAMPLE OF FIRMS!!! -->
 </section>
-<section id="analysis" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">2.3.3</span> Analysis</h3>
-<section id="libraries-packages-and-the-mdi-r-tools" class="level4" data-number="2.3.3.1">
-<h4 data-number="2.3.3.1" class="anchored" data-anchor-id="libraries-packages-and-the-mdi-r-tools"><span class="header-section-number">2.3.3.1</span> Libraries, packages and the MDI R tools</h4>
-<p>Make use of <a href="#rpack-management">MDI R-packages</a> and <a href="#mdi-tools">Rtools</a>: See the R-package libraries currently installed at NSIs and loaded at runtime of the launcher at <code>../rocket/Rtools/Rpackages/record_package_info.csv</code> or below</p>
+<section id="analysis" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">2.4.3</span> Analysis</h3>
+<section id="libraries-packages-and-the-mdi-r-tools" class="level4" data-number="2.4.3.1">
+<h4 data-number="2.4.3.1" class="anchored" data-anchor-id="libraries-packages-and-the-mdi-r-tools"><span class="header-section-number">2.4.3.1</span> Libraries, packages and the MDI R tools</h4>
+<p>Make use of MDI R-packages (see <code>../rocket/Rtools/Rpackages/Rpackage_info_v2.2_.csv</code>) and Rtools(see: <code>../docs/MDI_Rpackage_0.2.2.pdf</code>): See the R-package libraries currently installed at NSIs and loaded at runtime of the launcher at <code>../rocket/Rtools/Rpackages/record_package_info.csv</code> or below</p>
 <div class="callout callout-style-default callout-note callout-titled" title="PDF viewer of the `mdi` R library manual">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1005,7 +1049,7 @@ PDF viewer of the <code>mdi</code> R library manual
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <embed src="MDI_Rpackage_0.2.1.pdf" type="application/pdf" width="100%" height="600px">
 </div>
@@ -1013,7 +1057,7 @@ PDF viewer of the <code>mdi</code> R library manual
 </div>
 <p>If you need a package that is not part of the current list of R libraries, notify the MDI staff so it can be added to the NSI requirements. When preparing output, use standardized functions from the MDI Rtools (see directory <code>../rocket/Rtools/R</code>) whenever possible.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="List of currently used R libraries">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1022,27 +1066,27 @@ List of currently used R libraries
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="wrcxscjvqe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wrcxscjvqe table {
+<div id="epbycqdalc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#epbycqdalc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wrcxscjvqe thead, #wrcxscjvqe tbody, #wrcxscjvqe tfoot, #wrcxscjvqe tr, #wrcxscjvqe td, #wrcxscjvqe th {
+#epbycqdalc thead, #epbycqdalc tbody, #epbycqdalc tfoot, #epbycqdalc tr, #epbycqdalc td, #epbycqdalc th {
   border-style: none;
 }
 
-#wrcxscjvqe p {
+#epbycqdalc p {
   margin: 0;
   padding: 0;
 }
 
-#wrcxscjvqe .gt_table {
+#epbycqdalc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1068,12 +1112,12 @@ List of currently used R libraries
   border-left-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_caption {
+#epbycqdalc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wrcxscjvqe .gt_title {
+#epbycqdalc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1085,7 +1129,7 @@ List of currently used R libraries
   border-bottom-width: 0;
 }
 
-#wrcxscjvqe .gt_subtitle {
+#epbycqdalc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1097,7 +1141,7 @@ List of currently used R libraries
   border-top-width: 0;
 }
 
-#wrcxscjvqe .gt_heading {
+#epbycqdalc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1109,13 +1153,13 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_bottom_border {
+#epbycqdalc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_col_headings {
+#epbycqdalc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1130,7 +1174,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_col_heading {
+#epbycqdalc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1150,7 +1194,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#wrcxscjvqe .gt_column_spanner_outer {
+#epbycqdalc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1162,15 +1206,15 @@ List of currently used R libraries
   padding-right: 4px;
 }
 
-#wrcxscjvqe .gt_column_spanner_outer:first-child {
+#epbycqdalc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wrcxscjvqe .gt_column_spanner_outer:last-child {
+#epbycqdalc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wrcxscjvqe .gt_column_spanner {
+#epbycqdalc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1182,11 +1226,11 @@ List of currently used R libraries
   width: 100%;
 }
 
-#wrcxscjvqe .gt_spanner_row {
+#epbycqdalc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wrcxscjvqe .gt_group_heading {
+#epbycqdalc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1212,7 +1256,7 @@ List of currently used R libraries
   text-align: left;
 }
 
-#wrcxscjvqe .gt_empty_group_heading {
+#epbycqdalc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1227,15 +1271,15 @@ List of currently used R libraries
   vertical-align: middle;
 }
 
-#wrcxscjvqe .gt_from_md > :first-child {
+#epbycqdalc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wrcxscjvqe .gt_from_md > :last-child {
+#epbycqdalc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wrcxscjvqe .gt_row {
+#epbycqdalc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1254,7 +1298,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#wrcxscjvqe .gt_stub {
+#epbycqdalc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1267,7 +1311,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#wrcxscjvqe .gt_stub_row_group {
+#epbycqdalc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1281,15 +1325,15 @@ List of currently used R libraries
   vertical-align: top;
 }
 
-#wrcxscjvqe .gt_row_group_first td {
+#epbycqdalc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wrcxscjvqe .gt_row_group_first th {
+#epbycqdalc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wrcxscjvqe .gt_summary_row {
+#epbycqdalc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1299,16 +1343,16 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#wrcxscjvqe .gt_first_summary_row {
+#epbycqdalc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_first_summary_row.thick {
+#epbycqdalc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wrcxscjvqe .gt_last_summary_row {
+#epbycqdalc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1318,7 +1362,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_grand_summary_row {
+#epbycqdalc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1328,7 +1372,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#wrcxscjvqe .gt_first_grand_summary_row {
+#epbycqdalc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1338,7 +1382,7 @@ List of currently used R libraries
   border-top-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_last_grand_summary_row_top {
+#epbycqdalc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1348,11 +1392,11 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_striped {
+#epbycqdalc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wrcxscjvqe .gt_table_body {
+#epbycqdalc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1361,7 +1405,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_footnotes {
+#epbycqdalc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1375,7 +1419,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_footnote {
+#epbycqdalc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1384,7 +1428,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#wrcxscjvqe .gt_sourcenotes {
+#epbycqdalc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1398,7 +1442,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#wrcxscjvqe .gt_sourcenote {
+#epbycqdalc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1406,72 +1450,72 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#wrcxscjvqe .gt_left {
+#epbycqdalc .gt_left {
   text-align: left;
 }
 
-#wrcxscjvqe .gt_center {
+#epbycqdalc .gt_center {
   text-align: center;
 }
 
-#wrcxscjvqe .gt_right {
+#epbycqdalc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wrcxscjvqe .gt_font_normal {
+#epbycqdalc .gt_font_normal {
   font-weight: normal;
 }
 
-#wrcxscjvqe .gt_font_bold {
+#epbycqdalc .gt_font_bold {
   font-weight: bold;
 }
 
-#wrcxscjvqe .gt_font_italic {
+#epbycqdalc .gt_font_italic {
   font-style: italic;
 }
 
-#wrcxscjvqe .gt_super {
+#epbycqdalc .gt_super {
   font-size: 65%;
 }
 
-#wrcxscjvqe .gt_footnote_marks {
+#epbycqdalc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wrcxscjvqe .gt_asterisk {
+#epbycqdalc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wrcxscjvqe .gt_indent_1 {
+#epbycqdalc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wrcxscjvqe .gt_indent_2 {
+#epbycqdalc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wrcxscjvqe .gt_indent_3 {
+#epbycqdalc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wrcxscjvqe .gt_indent_4 {
+#epbycqdalc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wrcxscjvqe .gt_indent_5 {
+#epbycqdalc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wrcxscjvqe .katex-display {
+#epbycqdalc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wrcxscjvqe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#epbycqdalc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1734,7 +1778,7 @@ List of currently used R libraries
 <li>Installed R versions at each NSI, along with details on package installation policies. This information is available in <code>Rversions_countries.csv</code>, located in the <code>/MDI/docs/</code>.</li>
 </ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Country-specific R info">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1743,7 +1787,7 @@ Country-specific R info
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <details class="code-fold">
@@ -1936,8 +1980,8 @@ Country-specific R info
 <p>All tools are documented using Roxygen2 and exported as an R package. You can access documentation via the standard <code>?function()</code> syntax, or by clicking on the <code>mdi</code> package in the RStudio package tab to view the full list of available functions.</p>
 </section>
 </section>
-<section id="importing-data" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="importing-data"><span class="header-section-number">2.3.4</span> Importing data</h3>
+<section id="importing-data" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="importing-data"><span class="header-section-number">2.4.4</span> Importing data</h3>
 <p>The NSI metadata enables the creation of standardized microdata panels (MD), which are harmonized and managed by the Launcher based on the logic defined in <code>countdown.R</code>.</p>
 <p>MD datasets can be imported from the <code>dirTMPSAVE</code> folder, which is predefined in the environment. For example, the MD dataset <code>ITGS</code> can be imported using the following code snippet:</p>
 <div class="cell">
@@ -1947,7 +1991,7 @@ Country-specific R info
 </details>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Harmonizing data and importing them in a module">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1956,7 +2000,7 @@ Harmonizing data and importing them in a module
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>The NSI metadata includes all necessary concordances to build standardized microdata panels (MD). These panels are harmonized and stored by the Launcher, with key parameters defined in <code>../launchpad/countdown.R</code>. The folder path for saved MD panels is given by <code>dirTMPSAVE</code>, while the flags <code>ImportFlag = TRUE</code> and <code>cleanTMP = TRUE</code> control the logic for Rocket execution (see <a href="#writing-nuvoulos">steps to write and execute your codes</a>).</p></li>
@@ -1970,8 +2014,8 @@ Harmonizing data and importing them in a module
 </div>
 </div>
 </section>
-<section id="manipulating-data" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="manipulating-data"><span class="header-section-number">2.3.5</span> Manipulating data</h3>
+<section id="manipulating-data" class="level3" data-number="2.4.5">
+<h3 data-number="2.4.5" class="anchored" data-anchor-id="manipulating-data"><span class="header-section-number">2.4.5</span> Manipulating data</h3>
 <p>You can freely manipulate linked panels using R and its libraries, such as <code>data.table</code>, <code>dplyr</code>, and the broader <code>tidyverse</code>.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1988,15 +2032,15 @@ Managing firm units
 <p>To assist with this, the MDI toolkit includes a utility for aggregating or disaggregating between different key IDs. This tool is located in <code>rocket/Rtools/R/mdi_key_id_switch.R</code> and uses the metadata file <code>*NSI*_firmid_entgrp_conc.csv</code>.</p>
 </div>
 </div>
-<section id="working-with-classifications" class="level4" data-number="2.3.5.1">
-<h4 data-number="2.3.5.1" class="anchored" data-anchor-id="working-with-classifications"><span class="header-section-number">2.3.5.1</span> Working with classifications</h4>
+<section id="working-with-classifications" class="level4" data-number="2.4.5.1">
+<h4 data-number="2.4.5.1" class="anchored" data-anchor-id="working-with-classifications"><span class="header-section-number">2.4.5.1</span> Working with classifications</h4>
 <p>Classification variables, such as industry or product codes, are key in microdata work. We use tools that allow classification lists to be coherent over time.</p>
 <p><strong>In those harmonized MD datasets where a classification variable is present, be aware that the those inclide both the raw classification variable and the time-concorded one. Hence, make sure you keep this in mind when designing your code!</strong></p>
 <p>In particular, when you prepare your <code>(res_group)MDnames_select.csv</code>, please use the original MDnames for all classification variables, <strong>but feel free to use the concorded MDnames for the concorded classification variables</strong>.</p>
 <p>For more details, check the dedicated <a href="#dealing-with-classifications">section</a>.</p>
 </section>
-<section id="merging-data" class="level4" data-number="2.3.5.2">
-<h4 data-number="2.3.5.2" class="anchored" data-anchor-id="merging-data"><span class="header-section-number">2.3.5.2</span> Merging data</h4>
+<section id="merging-data" class="level4" data-number="2.4.5.2">
+<h4 data-number="2.4.5.2" class="anchored" data-anchor-id="merging-data"><span class="header-section-number">2.4.5.2</span> Merging data</h4>
 <p>Additionally, when merging data from two files, use the <code>mdi_mergeDTs()</code> function. This helps prevent memory issues and ensures that merges are performed correctly.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2021,8 +2065,8 @@ Tip
 <p>Last but not least, be a <strong>smart coder</strong>: clean up unnecessary datasets, and avoid writing code that calls the operating system, creates (sub)directories, or installs R packages.</p>
 </section>
 </section>
-<section id="analytical-tools" class="level3" data-number="2.3.6">
-<h3 data-number="2.3.6" class="anchored" data-anchor-id="analytical-tools"><span class="header-section-number">2.3.6</span> Analytical tools</h3>
+<section id="analytical-tools" class="level3" data-number="2.4.6">
+<h3 data-number="2.4.6" class="anchored" data-anchor-id="analytical-tools"><span class="header-section-number">2.4.6</span> Analytical tools</h3>
 <p>The MDI toolkit includes a set of functions designed to help researchers efficiently carry out common tasks in firm-level microdata research. In this section, we present some of the key tools available. For more details, please <a href="#libraries-packages-and-the-mdi-r-tools">refer to the MDI R tools section above</a> and consult the <code>mdi</code> library PDF.</p>
 <ul>
 <li><p><code>mdi_aggregate()</code><br>
@@ -2119,13 +2163,13 @@ Industry Aggregations
 </div>
 </div>
 </section>
-<section id="exporting-results" class="level3" data-number="2.3.7">
-<h3 data-number="2.3.7" class="anchored" data-anchor-id="exporting-results"><span class="header-section-number">2.3.7</span> Exporting results</h3>
+<section id="exporting-results" class="level3" data-number="2.4.7">
+<h3 data-number="2.4.7" class="anchored" data-anchor-id="exporting-results"><span class="header-section-number">2.4.7</span> Exporting results</h3>
 <p>Once a results table is generated, the researcher must extract the file at the end of the module. After the launch is fully executed in a given country, the country leader submits an export request to the NSI, which then verifies compliance with disclosure rules for each output file (see <a href="#disclosure-criteria">disclosure criteria</a> for details).</p>
 <p>The <code>mdi_export()</code> function facilitates this process by exporting a data.table to a specified file format and logging comprehensive metadata—including variables used, purpose, and dataset context—into a central description file (<code>OutputDescription.csv</code>), which is also extracted. The function includes optional disclosure checks for summary statistics.</p>
 <p>Below is a description of all parameters required for <code>mdi_export()</code>:</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Focus on `mdi_export()`">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2134,7 +2178,7 @@ Focus on <code>mdi_export()</code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>It is fundamental, for disclosure reasons, that the module writer fills in exhaustive information related to each output file when using function <code>mdi_export()</code>. In particular, please provide</p>
 <ol type="1">
@@ -2159,8 +2203,8 @@ A string providing additional explanation of the output file.</p></li>
 </div>
 </div>
 </section>
-<section id="consolidation-of-mdi-module-output" class="level3" data-number="2.3.8">
-<h3 data-number="2.3.8" class="anchored" data-anchor-id="consolidation-of-mdi-module-output"><span class="header-section-number">2.3.8</span> Consolidation of MDI Module Output</h3>
+<section id="consolidation-of-mdi-module-output" class="level3" data-number="2.4.8">
+<h3 data-number="2.4.8" class="anchored" data-anchor-id="consolidation-of-mdi-module-output"><span class="header-section-number">2.4.8</span> Consolidation of MDI Module Output</h3>
 <p>Once the files pass the disclosure checks:</p>
 <ul>
 <li><p>Country leaders/NSIs will upload each country’s output to their designated Teams folder.</p></li>
@@ -2170,8 +2214,8 @@ A string providing additional explanation of the output file.</p></li>
 </ul>
 </section>
 </section>
-<section id="dealing-with-classifications" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="dealing-with-classifications"><span class="header-section-number">2.4</span> Dealing with classifications</h2>
+<section id="dealing-with-classifications" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="dealing-with-classifications"><span class="header-section-number">2.5</span> Dealing with classifications</h2>
 <p>A key feature of firm-level research is the use of classifications, such as industry codes (NACE codes), product codes (PRODCOM codes) and trade codes (combined nomenclature codes). Given that the official set of codes in a classification can vary across the years, we developed some tools that allow us to have a consistent list of codes over time in each country. Specifically, we make use of two tools:</p>
 <ul>
 <li><p><code>make_conc()</code><br>
@@ -2189,14 +2233,14 @@ A string providing additional explanation of the output file.</p></li>
 <p>It will be possible, then, to add the MD NACE through the concordance table between NSI NACE codes and the MD NACE codes.</p></li>
 </ul>
 </section>
-<section id="disclosure-criteria" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="disclosure-criteria"><span class="header-section-number">2.5</span> Disclosure Criteria</h2>
-<section id="what-are-disclosure-criteria" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="what-are-disclosure-criteria"><span class="header-section-number">2.5.1</span> What are Disclosure Criteria</h3>
+<section id="disclosure-criteria" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="disclosure-criteria"><span class="header-section-number">2.6</span> Disclosure Criteria</h2>
+<section id="what-are-disclosure-criteria" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="what-are-disclosure-criteria"><span class="header-section-number">2.6.1</span> What are Disclosure Criteria</h3>
 <p>Disclosure criteria at National Statistical Institutes (NSIs) are rules designed to protect the confidentiality of firm-level data. They ensure that no output allows the identification of individual firms or the disclosure of sensitive information, even in aggregated form. These criteria are crucial for complying with national privacy and data protection regulations.</p>
 </section>
-<section id="how-disclosure-criteria-are-applied" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="how-disclosure-criteria-are-applied"><span class="header-section-number">2.5.2</span> How Disclosure Criteria Are Applied:</h3>
+<section id="how-disclosure-criteria-are-applied" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="how-disclosure-criteria-are-applied"><span class="header-section-number">2.6.2</span> How Disclosure Criteria Are Applied:</h3>
 <p>MDI tools automate disclosure control by applying primary and secondary confidentiality rules (such as minimum observation thresholds and dominance criteria) before any output is released. These rules ensure that sensitive data is suppressed or flagged, in line with the parameters defined in the <code>Countdown</code>.</p>
 <details>
 <summary>
@@ -2210,8 +2254,8 @@ Learn more how this is done
 <p>For example, a cell not meeting <code>NumObs</code> or exceeding <code>domPerc</code> is suppressed. Outputs violating these criteria are flagged or excluded from export.</p>
 <details>
 </details></details></section>
-<section id="components-of-disclosure-criteria-in-the-mdi" class="level3" data-number="2.5.3">
-<h3 data-number="2.5.3" class="anchored" data-anchor-id="components-of-disclosure-criteria-in-the-mdi"><span class="header-section-number">2.5.3</span> Components of Disclosure Criteria in the MDI:</h3>
+<section id="components-of-disclosure-criteria-in-the-mdi" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="components-of-disclosure-criteria-in-the-mdi"><span class="header-section-number">2.6.3</span> Components of Disclosure Criteria in the MDI:</h3>
 <p>Four main variables are created by MDI tools to assess diclosure criteria:</p>
 <details>
 <summary>
@@ -2262,8 +2306,8 @@ Hide or not hide values post-disclosure
 </ol>
 </details>
 </section>
-<section id="disclosure-criteria-in-mdi-countries" class="level3" data-number="2.5.4">
-<h3 data-number="2.5.4" class="anchored" data-anchor-id="disclosure-criteria-in-mdi-countries"><span class="header-section-number">2.5.4</span> Disclosure Criteria in MDI Countries</h3>
+<section id="disclosure-criteria-in-mdi-countries" class="level3" data-number="2.6.4">
+<h3 data-number="2.6.4" class="anchored" data-anchor-id="disclosure-criteria-in-mdi-countries"><span class="header-section-number">2.6.4</span> Disclosure Criteria in MDI Countries</h3>
 <p>Below is the disclosure criteria in MDI countries:</p>
 <div class="table-responsive">
 <table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true">
@@ -2354,8 +2398,8 @@ Hide or not hide values post-disclosure
 
 <p>Some countries apply additional disclosure criteria. For instance, the Netherlands (NL) and Slovenia (SI) require that all exported variables (not just employment (emp) and sales (nq)) comply with the dominance share criterion. In such cases, the parameter domVar is set to ‘var’ in the Countdown file. These disclosure parameters are configured during the execution of the infrastructure at an NSI, either by MDI or NSI staff.</p>
 </section>
-<section id="disclosure-tools-in-mdi" class="level3" data-number="2.5.5">
-<h3 data-number="2.5.5" class="anchored" data-anchor-id="disclosure-tools-in-mdi"><span class="header-section-number">2.5.5</span> Disclosure Tools in MDI</h3>
+<section id="disclosure-tools-in-mdi" class="level3" data-number="2.6.5">
+<h3 data-number="2.6.5" class="anchored" data-anchor-id="disclosure-tools-in-mdi"><span class="header-section-number">2.6.5</span> Disclosure Tools in MDI</h3>
 <p>The MDI tools listed below operate using the disclosure parameters defined by the user in the <code>Countdown</code> file.</p>
 <div class="table-responsive">
 <table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true">
@@ -2405,16 +2449,16 @@ Hide or not hide values post-disclosure
 
 <p>Module writers are strongly encouraged to use MDI tools to ensure compliance with the disclosure criteria of all countries where the module is intended to run.</p>
 </section>
-<section id="aux-files" class="level3" data-number="2.5.6">
-<h3 data-number="2.5.6" class="anchored" data-anchor-id="aux-files"><span class="header-section-number">2.5.6</span> Auxiliary Files</h3>
+<section id="aux-files" class="level3" data-number="2.6.6">
+<h3 data-number="2.6.6" class="anchored" data-anchor-id="aux-files"><span class="header-section-number">2.6.6</span> Auxiliary Files</h3>
 <p>Deflators are constructed using data extracted from Eurostat via the <code>eurostat</code> R package. These include deflators for value-added, capital depreciation, investment, GDP, and the harmonized consumer price index (HCPI), all normalized to a 2010 base year (set to 1). The underlying Eurostat datasets—nama_10_a64, nama_10_a64_p5, nama_10_gdp, prc_hicp_aind, and nama_10_nfa—cover national accounts and price indices. Industry codes are mapped to 4-digit NACE Rev.2 classifications to ensure compatibility with firm-level data, enabling application across economic analyses. The processed deflator file is structured by country code (<code>cc</code>), industry code (<code>ind</code>), and year (<code>year</code>), and includes columns for deflators such as value-added (<code>pnv</code>), capital depreciation (<code>pnc</code>), GDP (<code>pngdp</code>), and HCPI (<code>pnhcpi</code>). It also contains asset-specific deflators (e.g., construction, machinery, intellectual property) and includes growth and depreciation rates, offering a detailed dataset for robust analytical use.</p>
 </section>
 </section>
-<section id="nuvolos-where-mdi-users-develop-and-test-their-codes" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="nuvolos-where-mdi-users-develop-and-test-their-codes"><span class="header-section-number">2.6</span> Nuvolos: where MDI users develop and test their codes</h2>
+<section id="nuvolos-where-mdi-users-develop-and-test-their-codes" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="nuvolos-where-mdi-users-develop-and-test-their-codes"><span class="header-section-number">2.7</span> Nuvolos: where MDI users develop and test their codes</h2>
 <p>At present we are using the cloud server Nuvolos. This server replicates the environment of a national statistical institute and includes the MDI infrastructure. The Nuvolos server provides all the necessary tools, scripts, and libraries required to develop research modules. It also contains a mock dataset—a simulated version of real data that preserves the structure and functionality of actual data while excluding any sensitive details.</p>
-<section id="how-to-access" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="how-to-access"><span class="header-section-number">2.6.1</span> How to access</h3>
+<section id="how-to-access" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="how-to-access"><span class="header-section-number">2.7.1</span> How to access</h3>
 <p>Nuvolos is the server environment that we use for trainings, testing, developing and debugging. There are two seperate environments:</p>
 <ol type="1">
 <li><p>Nuvolos: MDI Training Environment</p></li>
@@ -2422,19 +2466,19 @@ Hide or not hide values post-disclosure
 </ol>
 <p>If you want to get access to either of the environments, reach out to <a href="mailto:johanna.weiss@iwhesl.onmicrosoft.com">Johanna</a> via email or Teams.</p>
 </section>
-<section id="mdi-trainning_env" class="level3" data-number="2.6.2">
-<h3 data-number="2.6.2" class="anchored" data-anchor-id="mdi-trainning_env"><span class="header-section-number">2.6.2</span> MDI Training Environment</h3>
+<section id="mdi-trainning_env" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="mdi-trainning_env"><span class="header-section-number">2.7.2</span> MDI Training Environment</h3>
 <p>This space is designed for training, practicing, and familiarizing with the MDI infrastructure. It’s intended mostly for external people, as it already contains all relevant files, ie. the whole MDI infrastucture, mockdata. It’s an environement in which externals can test their codes using the MDI infrastructure and mockdata. It is updated periodically, so doesn’t always reflect the latest version of the MDI. It is not intended for bug-fixing and working on the infrastrucutre, as it doesn’t link to Github.</p>
 </section>
-<section id="how-to-use" class="level3" data-number="2.6.3">
-<h3 data-number="2.6.3" class="anchored" data-anchor-id="how-to-use"><span class="header-section-number">2.6.3</span> How to use</h3>
+<section id="how-to-use" class="level3" data-number="2.7.3">
+<h3 data-number="2.7.3" class="anchored" data-anchor-id="how-to-use"><span class="header-section-number">2.7.3</span> How to use</h3>
 <p>You will find a <a href="#files-nuvoulos">folder structure</a> such as the one found in the NSI environments containing the actual microdata.</p>
 <details>
 <summary>
 Files structure
 </summary>
-<section id="files-nuvoulos" class="level4" data-number="2.6.3.1">
-<h4 data-number="2.6.3.1" class="anchored" data-anchor-id="files-nuvoulos"><span class="header-section-number">2.6.3.1</span> “Files” section</h4>
+<section id="files-nuvoulos" class="level4" data-number="2.7.3.1">
+<h4 data-number="2.7.3.1" class="anchored" data-anchor-id="files-nuvoulos"><span class="header-section-number">2.7.3.1</span> “Files” section</h4>
 <p>You’ll find the following folders:</p>
 <ul>
 <li>MDI: containing the MDI infrastructure</li>
@@ -2445,7 +2489,7 @@ Files structure
 </section></details>
 <p>To write their codes, users need to first follow <a href="#writing-nuvoulos">some steps</a> to load the environment. I.e., run some functions which import the mockdata and all the necessary auxiliary files mimicking the NSI environments.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2454,7 +2498,7 @@ Steps to write and execute your codes
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>go to the section “Applications” on the left navigation bar and open the RStudio application</p>
 <ul>
@@ -2479,8 +2523,8 @@ Steps to write and execute your codes
 </section>
 </section>
 </section>
-<section id="the-complete-mdi-pipeline" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="the-complete-mdi-pipeline"><span class="header-section-number">2.7</span> The complete MDI pipeline</h2>
+<section id="the-complete-mdi-pipeline" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="the-complete-mdi-pipeline"><span class="header-section-number">2.8</span> The complete MDI pipeline</h2>
 <p>Below is the complete MDI pipeline for your visualization:</p>
 <div class="cell" data-layout-align="default">
 <details class="code-fold">
@@ -2791,7 +2835,7 @@ Learn more
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="importing-to-and-exporting-from-the-nsi-site"><span class="header-section-number">3.1.1</span> Importing to, and exporting from, the NSI site</h3>
 <p>Whenever an import or export operation is required from or to an environment, it is important to consider both the time it takes and whether the operation incurs any monetary cost.</p>
 <div class="callout callout-style-simple callout-none no-icon callout-titled" title="💵 Click to view costs per country">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2800,27 +2844,27 @@ Learn more
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="fxymnnpwcw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fxymnnpwcw table {
+<div id="rfgcgvzjux" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rfgcgvzjux table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fxymnnpwcw thead, #fxymnnpwcw tbody, #fxymnnpwcw tfoot, #fxymnnpwcw tr, #fxymnnpwcw td, #fxymnnpwcw th {
+#rfgcgvzjux thead, #rfgcgvzjux tbody, #rfgcgvzjux tfoot, #rfgcgvzjux tr, #rfgcgvzjux td, #rfgcgvzjux th {
   border-style: none;
 }
 
-#fxymnnpwcw p {
+#rfgcgvzjux p {
   margin: 0;
   padding: 0;
 }
 
-#fxymnnpwcw .gt_table {
+#rfgcgvzjux .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2846,12 +2890,12 @@ Learn more
   border-left-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_caption {
+#rfgcgvzjux .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fxymnnpwcw .gt_title {
+#rfgcgvzjux .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2863,7 +2907,7 @@ Learn more
   border-bottom-width: 0;
 }
 
-#fxymnnpwcw .gt_subtitle {
+#rfgcgvzjux .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2875,7 +2919,7 @@ Learn more
   border-top-width: 0;
 }
 
-#fxymnnpwcw .gt_heading {
+#rfgcgvzjux .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2887,13 +2931,13 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_bottom_border {
+#rfgcgvzjux .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_col_headings {
+#rfgcgvzjux .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2908,7 +2952,7 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_col_heading {
+#rfgcgvzjux .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2928,7 +2972,7 @@ Learn more
   overflow-x: hidden;
 }
 
-#fxymnnpwcw .gt_column_spanner_outer {
+#rfgcgvzjux .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2940,15 +2984,15 @@ Learn more
   padding-right: 4px;
 }
 
-#fxymnnpwcw .gt_column_spanner_outer:first-child {
+#rfgcgvzjux .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fxymnnpwcw .gt_column_spanner_outer:last-child {
+#rfgcgvzjux .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fxymnnpwcw .gt_column_spanner {
+#rfgcgvzjux .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2960,11 +3004,11 @@ Learn more
   width: 100%;
 }
 
-#fxymnnpwcw .gt_spanner_row {
+#rfgcgvzjux .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fxymnnpwcw .gt_group_heading {
+#rfgcgvzjux .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2990,7 +3034,7 @@ Learn more
   text-align: left;
 }
 
-#fxymnnpwcw .gt_empty_group_heading {
+#rfgcgvzjux .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3005,15 +3049,15 @@ Learn more
   vertical-align: middle;
 }
 
-#fxymnnpwcw .gt_from_md > :first-child {
+#rfgcgvzjux .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fxymnnpwcw .gt_from_md > :last-child {
+#rfgcgvzjux .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fxymnnpwcw .gt_row {
+#rfgcgvzjux .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3032,7 +3076,7 @@ Learn more
   overflow-x: hidden;
 }
 
-#fxymnnpwcw .gt_stub {
+#rfgcgvzjux .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3045,7 +3089,7 @@ Learn more
   padding-right: 5px;
 }
 
-#fxymnnpwcw .gt_stub_row_group {
+#rfgcgvzjux .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3059,15 +3103,15 @@ Learn more
   vertical-align: top;
 }
 
-#fxymnnpwcw .gt_row_group_first td {
+#rfgcgvzjux .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fxymnnpwcw .gt_row_group_first th {
+#rfgcgvzjux .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fxymnnpwcw .gt_summary_row {
+#rfgcgvzjux .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3077,16 +3121,16 @@ Learn more
   padding-right: 5px;
 }
 
-#fxymnnpwcw .gt_first_summary_row {
+#rfgcgvzjux .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_first_summary_row.thick {
+#rfgcgvzjux .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fxymnnpwcw .gt_last_summary_row {
+#rfgcgvzjux .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3096,7 +3140,7 @@ Learn more
   border-bottom-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_grand_summary_row {
+#rfgcgvzjux .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3106,7 +3150,7 @@ Learn more
   padding-right: 5px;
 }
 
-#fxymnnpwcw .gt_first_grand_summary_row {
+#rfgcgvzjux .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3116,7 +3160,7 @@ Learn more
   border-top-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_last_grand_summary_row_top {
+#rfgcgvzjux .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3126,11 +3170,11 @@ Learn more
   border-bottom-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_striped {
+#rfgcgvzjux .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fxymnnpwcw .gt_table_body {
+#rfgcgvzjux .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3139,7 +3183,7 @@ Learn more
   border-bottom-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_footnotes {
+#rfgcgvzjux .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3153,7 +3197,7 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_footnote {
+#rfgcgvzjux .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3162,7 +3206,7 @@ Learn more
   padding-right: 5px;
 }
 
-#fxymnnpwcw .gt_sourcenotes {
+#rfgcgvzjux .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3176,7 +3220,7 @@ Learn more
   border-right-color: #D3D3D3;
 }
 
-#fxymnnpwcw .gt_sourcenote {
+#rfgcgvzjux .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3184,72 +3228,72 @@ Learn more
   padding-right: 5px;
 }
 
-#fxymnnpwcw .gt_left {
+#rfgcgvzjux .gt_left {
   text-align: left;
 }
 
-#fxymnnpwcw .gt_center {
+#rfgcgvzjux .gt_center {
   text-align: center;
 }
 
-#fxymnnpwcw .gt_right {
+#rfgcgvzjux .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fxymnnpwcw .gt_font_normal {
+#rfgcgvzjux .gt_font_normal {
   font-weight: normal;
 }
 
-#fxymnnpwcw .gt_font_bold {
+#rfgcgvzjux .gt_font_bold {
   font-weight: bold;
 }
 
-#fxymnnpwcw .gt_font_italic {
+#rfgcgvzjux .gt_font_italic {
   font-style: italic;
 }
 
-#fxymnnpwcw .gt_super {
+#rfgcgvzjux .gt_super {
   font-size: 65%;
 }
 
-#fxymnnpwcw .gt_footnote_marks {
+#rfgcgvzjux .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fxymnnpwcw .gt_asterisk {
+#rfgcgvzjux .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fxymnnpwcw .gt_indent_1 {
+#rfgcgvzjux .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fxymnnpwcw .gt_indent_2 {
+#rfgcgvzjux .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fxymnnpwcw .gt_indent_3 {
+#rfgcgvzjux .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fxymnnpwcw .gt_indent_4 {
+#rfgcgvzjux .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fxymnnpwcw .gt_indent_5 {
+#rfgcgvzjux .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fxymnnpwcw .katex-display {
+#rfgcgvzjux .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fxymnnpwcw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rfgcgvzjux div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3438,7 +3482,7 @@ Learn more
 <li><p>Fill in all the parameters needed in the file <code>launchpad/countdown.R</code>, including paths to relevant directories.</p></li>
 </ul>
 <div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3447,7 +3491,7 @@ The directories at the NSI site MDI installation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <section id="files-in-the-mdi-folder" class="level3 cell-output-display" data-number="3.2.1">
@@ -3535,7 +3579,7 @@ The directories at the NSI site MDI installation
 <li><code>MDIdomNr</code>: the X in top X firms.</li>
 </ul></li>
 </ul></li>
-<li><p>The program <code>pre_launch_checker.R</code> (run <code>countdown.R</code> and choose this program) needs to be run before anything else. It performs various checks on the NSI metadata to avoid errors later on. The results of the checks can be found in the file <code>pre_launch_checker_results.txt</code> in the output directory. It shows possible errors that should be adjusted in the NSI metadata. Additionally, two concordance files (NSI_pcc8t0_pcc8t1_conc.csv and NSI_MD_nace_conc.csv) are created using existing concordance files and updating them with the data at the NSI. These concordance table might contain empty values, if no value was previously defined. Missing values need to be filled in manually. When the concordance files are ready to be used, they need to be moved to the directory indicated in <code>pre_launch_checker_results.txt</code></p></li>
+<li><p>The program <code id="prelaunchchecker">pre_launch_checker.R</code> (run <code>countdown.R</code> and choose this program) needs to be run before anything else. It performs various checks on the NSI metadata to avoid errors later on. The results of the checks can be found in the file <code>pre_launch_checker_results.txt</code> in the output directory. It shows possible errors that should be adjusted in the NSI metadata. Additionally, two concordance files (NSI_pcc8t0_pcc8t1_conc.csv and NSI_MD_nace_conc.csv) are created using existing concordance files and updating them with the data at the NSI. These concordance table might contain empty values, if no value was previously defined. Missing values need to be filled in manually. When the concordance files are ready to be used, they need to be moved to the directory indicated in <code>pre_launch_checker_results.txt</code></p></li>
 <li><p>The program <code>liftoff.R</code>, chosen after running <code>countdown.R</code>, will run the MDI rocket and analytical modules. Iterations with the MDI staff may be needed for fixes and patches to the rocket and payload, until the final results are written to the <code>dirOUTPUT</code> directory.</p></li>
 <li><p>The files in <code>dirOUTPUT</code> need to be checked for disclosure</p></li>
 <li><p>The files in <code>dirOUTPUT</code> can be uploaded to the MDI Teams upload directory.</p></li>
@@ -3683,69 +3727,74 @@ Click here to see the entire countdown.R script
 <span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Flags to control execution     #</span></span>
 <span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
 <span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="co"># set debug = TRUE if you don't want to suppress logs, warnings and errors</span></span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>MDIdebug <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a><span class="do">## </span><span class="al">NOTE</span><span class="do"> EB: Nothing done at the moment with the imputeflag (was called inputeflag in early versions)</span></span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>MDIimputeFlag <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Flag to indicate whether this is a test run on the server with mock data</span></span>
-<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a>IsMOCK <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="co"># If isMOCK, temporary files are stored in CountryCode folder,</span></span>
-<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="co"># so that files arent overwritten when switching country</span></span>
-<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (IsMOCK) {</span>
-<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>  dirTMPSAVE <span class="ot">&lt;-</span> <span class="fu">paste0</span>(dirTMPSAVE, CountryCode, <span class="st">"/"</span>)</span>
-<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(dirTMPSAVE)) {</span>
-<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(dirTMPSAVE)</span>
-<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
-<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Liftoff                 #</span></span>
-<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Set MDImoduleRUN = TRUE if the post_harmonization script has been run and checked and modules are ready to be run.</span></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Should be set to FALSE when running the launch for the first time.</span></span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>MDImoduleRUN <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a><span class="co"># set debug = TRUE if you don't want to suppress logs, warnings and errors</span></span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>MDIdebug <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a><span class="do">## </span><span class="al">NOTE</span><span class="do"> EB: Nothing done at the moment with the imputeflag (was called inputeflag in early versions)</span></span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a>MDIimputeFlag <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="co"># Flag to indicate whether this is a test run on the server with mock data</span></span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>IsMOCK <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a><span class="co"># If isMOCK, temporary files are stored in CountryCode folder,</span></span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="co"># so that files arent overwritten when switching country</span></span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (IsMOCK) {</span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>  dirTMPSAVE <span class="ot">&lt;-</span> <span class="fu">paste0</span>(dirTMPSAVE, CountryCode, <span class="st">"/"</span>)</span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(dirTMPSAVE)) {</span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(dirTMPSAVE)</span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a><span class="co"># save the program countdown.R to your work directory.</span></span>
-<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the file to choose which program/feature to execute:</span></span>
-<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, pick the program to be executed</span></span>
-<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. run pre_launch_checker.R  to run after an update of MDI at NSI, to check and fix metadata</span></span>
-<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. run liftoff.R to run rocket: execute MD harmonizer and run payload modules</span></span>
-<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. run prepare_NSI.R to run things to aid in getting metadata in good shape</span></span>
-<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. run interactive_MDI.R to initialize environment to test/debug/explore/write module code.</span></span>
-<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a><span class="co"># ---&gt; Choose below with number of the selected program</span></span>
-<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the session is interactive (works both in RStudio and console)</span></span>
-<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
-<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Use select.list() for interactive selection</span></span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Liftoff                 #</span></span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="co"># save the program countdown.R to your work directory.</span></span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the file to choose which program/feature to execute:</span></span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, pick the program to be executed</span></span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. run pre_launch_checker.R  to run after an update of MDI at NSI, to check and fix metadata</span></span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. run liftoff.R to run rocket: execute MD harmonizer and run payload modules</span></span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. run prepare_NSI.R to run things to aid in getting metadata in good shape</span></span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. run interactive_MDI.R to initialize environment to test/debug/explore/write module code.</span></span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a><span class="co"># ---&gt; Choose below with number of the selected program</span></span>
 <span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">select.list</span>(<span class="fu">c</span>(<span class="st">"pre_launch_checker.R"</span>, <span class="st">"liftoff.R"</span>, <span class="st">"prepare_NSI.R"</span>, <span class="st">"interactive_MDI.R"</span>), <span class="at">title =</span> <span class="st">"Choose a program to run:"</span>)</span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the session is interactive (works both in RStudio and console)</span></span>
 <span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (user_input <span class="sc">!=</span> <span class="st">""</span>) {</span>
-<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
-<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, user_input))</span>
-<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"No selection made. Exiting.</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If not in an interactive session, use readline()</span></span>
-<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">readline</span>(<span class="at">prompt =</span> <span class="st">"Please enter an integer (1 for pre_launch_checker.R, 2 for liftoff.R, 3 prepare_NSI.R, 4 interactive_MDI.R): "</span>))</span>
-<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(user_input) <span class="sc">&amp;&amp;</span> user_input <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
-<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Map the user input to the corresponding script name</span></span>
-<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Use select.list() for interactive selection</span></span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">select.list</span>(<span class="fu">c</span>(<span class="st">"pre_launch_checker.R"</span>, <span class="st">"liftoff.R"</span>, <span class="st">"prepare_NSI.R"</span>, <span class="st">"interactive_MDI.R"</span>), <span class="at">title =</span> <span class="st">"Choose a program to run:"</span>)</span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (user_input <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, user_input))</span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"No selection made. Exiting.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If not in an interactive session, use readline()</span></span>
 <span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, user_input))</span>
-<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"Invalid input. Please enter a valid integer (1, 2, 3 or 4).</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">readline</span>(<span class="at">prompt =</span> <span class="st">"Please enter an integer (1 for pre_launch_checker.R, 2 for liftoff.R, 3 prepare_NSI.R, 4 interactive_MDI.R): "</span>))</span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(user_input) <span class="sc">&amp;&amp;</span> user_input <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Map the user input to the corresponding script name</span></span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, user_input))</span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"Invalid input. Please enter a valid integer (1, 2, 3 or 4).</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 </section>
@@ -3807,23 +3856,23 @@ Click here to see the entire countdown.R script
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code> and <code>details</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="rfwhtwhjws" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rfwhtwhjws table {
+<div id="avgbemoplf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#avgbemoplf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rfwhtwhjws thead, #rfwhtwhjws tbody, #rfwhtwhjws tfoot, #rfwhtwhjws tr, #rfwhtwhjws td, #rfwhtwhjws th {
+#avgbemoplf thead, #avgbemoplf tbody, #avgbemoplf tfoot, #avgbemoplf tr, #avgbemoplf td, #avgbemoplf th {
   border-style: none;
 }
 
-#rfwhtwhjws p {
+#avgbemoplf p {
   margin: 0;
   padding: 0;
 }
 
-#rfwhtwhjws .gt_table {
+#avgbemoplf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3849,12 +3898,12 @@ Click here to see the entire countdown.R script
   border-left-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_caption {
+#avgbemoplf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rfwhtwhjws .gt_title {
+#avgbemoplf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3866,7 +3915,7 @@ Click here to see the entire countdown.R script
   border-bottom-width: 0;
 }
 
-#rfwhtwhjws .gt_subtitle {
+#avgbemoplf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3878,7 +3927,7 @@ Click here to see the entire countdown.R script
   border-top-width: 0;
 }
 
-#rfwhtwhjws .gt_heading {
+#avgbemoplf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3890,13 +3939,13 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_bottom_border {
+#avgbemoplf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_col_headings {
+#avgbemoplf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3911,7 +3960,7 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_col_heading {
+#avgbemoplf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3931,7 +3980,7 @@ Click here to see the entire countdown.R script
   overflow-x: hidden;
 }
 
-#rfwhtwhjws .gt_column_spanner_outer {
+#avgbemoplf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3943,15 +3992,15 @@ Click here to see the entire countdown.R script
   padding-right: 4px;
 }
 
-#rfwhtwhjws .gt_column_spanner_outer:first-child {
+#avgbemoplf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rfwhtwhjws .gt_column_spanner_outer:last-child {
+#avgbemoplf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rfwhtwhjws .gt_column_spanner {
+#avgbemoplf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3963,11 +4012,11 @@ Click here to see the entire countdown.R script
   width: 100%;
 }
 
-#rfwhtwhjws .gt_spanner_row {
+#avgbemoplf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rfwhtwhjws .gt_group_heading {
+#avgbemoplf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3993,7 +4042,7 @@ Click here to see the entire countdown.R script
   text-align: left;
 }
 
-#rfwhtwhjws .gt_empty_group_heading {
+#avgbemoplf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4008,15 +4057,15 @@ Click here to see the entire countdown.R script
   vertical-align: middle;
 }
 
-#rfwhtwhjws .gt_from_md > :first-child {
+#avgbemoplf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rfwhtwhjws .gt_from_md > :last-child {
+#avgbemoplf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rfwhtwhjws .gt_row {
+#avgbemoplf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4035,7 +4084,7 @@ Click here to see the entire countdown.R script
   overflow-x: hidden;
 }
 
-#rfwhtwhjws .gt_stub {
+#avgbemoplf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4048,7 +4097,7 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#rfwhtwhjws .gt_stub_row_group {
+#avgbemoplf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4062,15 +4111,15 @@ Click here to see the entire countdown.R script
   vertical-align: top;
 }
 
-#rfwhtwhjws .gt_row_group_first td {
+#avgbemoplf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rfwhtwhjws .gt_row_group_first th {
+#avgbemoplf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rfwhtwhjws .gt_summary_row {
+#avgbemoplf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4080,16 +4129,16 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#rfwhtwhjws .gt_first_summary_row {
+#avgbemoplf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_first_summary_row.thick {
+#avgbemoplf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rfwhtwhjws .gt_last_summary_row {
+#avgbemoplf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4099,7 +4148,7 @@ Click here to see the entire countdown.R script
   border-bottom-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_grand_summary_row {
+#avgbemoplf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4109,7 +4158,7 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#rfwhtwhjws .gt_first_grand_summary_row {
+#avgbemoplf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4119,7 +4168,7 @@ Click here to see the entire countdown.R script
   border-top-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_last_grand_summary_row_top {
+#avgbemoplf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4129,11 +4178,11 @@ Click here to see the entire countdown.R script
   border-bottom-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_striped {
+#avgbemoplf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rfwhtwhjws .gt_table_body {
+#avgbemoplf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4142,7 +4191,7 @@ Click here to see the entire countdown.R script
   border-bottom-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_footnotes {
+#avgbemoplf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4156,7 +4205,7 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_footnote {
+#avgbemoplf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4165,7 +4214,7 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#rfwhtwhjws .gt_sourcenotes {
+#avgbemoplf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4179,7 +4228,7 @@ Click here to see the entire countdown.R script
   border-right-color: #D3D3D3;
 }
 
-#rfwhtwhjws .gt_sourcenote {
+#avgbemoplf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4187,72 +4236,72 @@ Click here to see the entire countdown.R script
   padding-right: 5px;
 }
 
-#rfwhtwhjws .gt_left {
+#avgbemoplf .gt_left {
   text-align: left;
 }
 
-#rfwhtwhjws .gt_center {
+#avgbemoplf .gt_center {
   text-align: center;
 }
 
-#rfwhtwhjws .gt_right {
+#avgbemoplf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rfwhtwhjws .gt_font_normal {
+#avgbemoplf .gt_font_normal {
   font-weight: normal;
 }
 
-#rfwhtwhjws .gt_font_bold {
+#avgbemoplf .gt_font_bold {
   font-weight: bold;
 }
 
-#rfwhtwhjws .gt_font_italic {
+#avgbemoplf .gt_font_italic {
   font-style: italic;
 }
 
-#rfwhtwhjws .gt_super {
+#avgbemoplf .gt_super {
   font-size: 65%;
 }
 
-#rfwhtwhjws .gt_footnote_marks {
+#avgbemoplf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rfwhtwhjws .gt_asterisk {
+#avgbemoplf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rfwhtwhjws .gt_indent_1 {
+#avgbemoplf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rfwhtwhjws .gt_indent_2 {
+#avgbemoplf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rfwhtwhjws .gt_indent_3 {
+#avgbemoplf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rfwhtwhjws .gt_indent_4 {
+#avgbemoplf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rfwhtwhjws .gt_indent_5 {
+#avgbemoplf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rfwhtwhjws .katex-display {
+#avgbemoplf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rfwhtwhjws div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#avgbemoplf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4417,7 +4466,7 @@ Click here to see the entire countdown.R script
 </div>
 </div>
 <div class="callout callout-style-simple callout-none no-icon callout-titled" title="Click to see an abbreviated list of R date formats:">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -4426,7 +4475,7 @@ Click to see an abbreviated list of R date formats:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -4564,23 +4613,23 @@ Click to see an abbreviated list of R date formats:
 <h5 data-number="3.4.1.2.3" class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames."><span class="header-section-number">3.4.1.2.3</span> Example: Netherlands (SBS, 2018): NL_varnames.</h5>
 <div class="cell">
 <div class="cell-output-display">
-<div id="pbdzkdkjmg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pbdzkdkjmg table {
+<div id="apiofxftcm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#apiofxftcm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pbdzkdkjmg thead, #pbdzkdkjmg tbody, #pbdzkdkjmg tfoot, #pbdzkdkjmg tr, #pbdzkdkjmg td, #pbdzkdkjmg th {
+#apiofxftcm thead, #apiofxftcm tbody, #apiofxftcm tfoot, #apiofxftcm tr, #apiofxftcm td, #apiofxftcm th {
   border-style: none;
 }
 
-#pbdzkdkjmg p {
+#apiofxftcm p {
   margin: 0;
   padding: 0;
 }
 
-#pbdzkdkjmg .gt_table {
+#apiofxftcm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4606,12 +4655,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_caption {
+#apiofxftcm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pbdzkdkjmg .gt_title {
+#apiofxftcm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4623,7 +4672,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#pbdzkdkjmg .gt_subtitle {
+#apiofxftcm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4635,7 +4684,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#pbdzkdkjmg .gt_heading {
+#apiofxftcm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4647,13 +4696,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_bottom_border {
+#apiofxftcm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_col_headings {
+#apiofxftcm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4668,7 +4717,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_col_heading {
+#apiofxftcm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4688,7 +4737,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#pbdzkdkjmg .gt_column_spanner_outer {
+#apiofxftcm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4700,15 +4749,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#pbdzkdkjmg .gt_column_spanner_outer:first-child {
+#apiofxftcm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pbdzkdkjmg .gt_column_spanner_outer:last-child {
+#apiofxftcm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pbdzkdkjmg .gt_column_spanner {
+#apiofxftcm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4720,11 +4769,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#pbdzkdkjmg .gt_spanner_row {
+#apiofxftcm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pbdzkdkjmg .gt_group_heading {
+#apiofxftcm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4750,7 +4799,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#pbdzkdkjmg .gt_empty_group_heading {
+#apiofxftcm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4765,15 +4814,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#pbdzkdkjmg .gt_from_md > :first-child {
+#apiofxftcm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pbdzkdkjmg .gt_from_md > :last-child {
+#apiofxftcm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pbdzkdkjmg .gt_row {
+#apiofxftcm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4792,7 +4841,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#pbdzkdkjmg .gt_stub {
+#apiofxftcm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4805,7 +4854,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#pbdzkdkjmg .gt_stub_row_group {
+#apiofxftcm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4819,15 +4868,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#pbdzkdkjmg .gt_row_group_first td {
+#apiofxftcm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pbdzkdkjmg .gt_row_group_first th {
+#apiofxftcm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pbdzkdkjmg .gt_summary_row {
+#apiofxftcm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4837,16 +4886,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#pbdzkdkjmg .gt_first_summary_row {
+#apiofxftcm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_first_summary_row.thick {
+#apiofxftcm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pbdzkdkjmg .gt_last_summary_row {
+#apiofxftcm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4856,7 +4905,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_grand_summary_row {
+#apiofxftcm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4866,7 +4915,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#pbdzkdkjmg .gt_first_grand_summary_row {
+#apiofxftcm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4876,7 +4925,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_last_grand_summary_row_top {
+#apiofxftcm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4886,11 +4935,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_striped {
+#apiofxftcm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pbdzkdkjmg .gt_table_body {
+#apiofxftcm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4899,7 +4948,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_footnotes {
+#apiofxftcm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4913,7 +4962,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_footnote {
+#apiofxftcm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4922,7 +4971,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#pbdzkdkjmg .gt_sourcenotes {
+#apiofxftcm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4936,7 +4985,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#pbdzkdkjmg .gt_sourcenote {
+#apiofxftcm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4944,72 +4993,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#pbdzkdkjmg .gt_left {
+#apiofxftcm .gt_left {
   text-align: left;
 }
 
-#pbdzkdkjmg .gt_center {
+#apiofxftcm .gt_center {
   text-align: center;
 }
 
-#pbdzkdkjmg .gt_right {
+#apiofxftcm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pbdzkdkjmg .gt_font_normal {
+#apiofxftcm .gt_font_normal {
   font-weight: normal;
 }
 
-#pbdzkdkjmg .gt_font_bold {
+#apiofxftcm .gt_font_bold {
   font-weight: bold;
 }
 
-#pbdzkdkjmg .gt_font_italic {
+#apiofxftcm .gt_font_italic {
   font-style: italic;
 }
 
-#pbdzkdkjmg .gt_super {
+#apiofxftcm .gt_super {
   font-size: 65%;
 }
 
-#pbdzkdkjmg .gt_footnote_marks {
+#apiofxftcm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pbdzkdkjmg .gt_asterisk {
+#apiofxftcm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pbdzkdkjmg .gt_indent_1 {
+#apiofxftcm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pbdzkdkjmg .gt_indent_2 {
+#apiofxftcm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pbdzkdkjmg .gt_indent_3 {
+#apiofxftcm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pbdzkdkjmg .gt_indent_4 {
+#apiofxftcm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pbdzkdkjmg .gt_indent_5 {
+#apiofxftcm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#pbdzkdkjmg .katex-display {
+#apiofxftcm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#pbdzkdkjmg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#apiofxftcm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5098,23 +5147,23 @@ Click to see an abbreviated list of R date formats:
 <p>An example below of the values occurring for the unit of measurement in the SI <code>PRODCOM</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="elzikfvnid" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#elzikfvnid table {
+<div id="jsbktdsugl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jsbktdsugl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#elzikfvnid thead, #elzikfvnid tbody, #elzikfvnid tfoot, #elzikfvnid tr, #elzikfvnid td, #elzikfvnid th {
+#jsbktdsugl thead, #jsbktdsugl tbody, #jsbktdsugl tfoot, #jsbktdsugl tr, #jsbktdsugl td, #jsbktdsugl th {
   border-style: none;
 }
 
-#elzikfvnid p {
+#jsbktdsugl p {
   margin: 0;
   padding: 0;
 }
 
-#elzikfvnid .gt_table {
+#jsbktdsugl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5140,12 +5189,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_caption {
+#jsbktdsugl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#elzikfvnid .gt_title {
+#jsbktdsugl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5157,7 +5206,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#elzikfvnid .gt_subtitle {
+#jsbktdsugl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5169,7 +5218,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#elzikfvnid .gt_heading {
+#jsbktdsugl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5181,13 +5230,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_bottom_border {
+#jsbktdsugl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_col_headings {
+#jsbktdsugl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5202,7 +5251,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_col_heading {
+#jsbktdsugl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5222,7 +5271,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#elzikfvnid .gt_column_spanner_outer {
+#jsbktdsugl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5234,15 +5283,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#elzikfvnid .gt_column_spanner_outer:first-child {
+#jsbktdsugl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#elzikfvnid .gt_column_spanner_outer:last-child {
+#jsbktdsugl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#elzikfvnid .gt_column_spanner {
+#jsbktdsugl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5254,11 +5303,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#elzikfvnid .gt_spanner_row {
+#jsbktdsugl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#elzikfvnid .gt_group_heading {
+#jsbktdsugl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5284,7 +5333,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#elzikfvnid .gt_empty_group_heading {
+#jsbktdsugl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5299,15 +5348,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#elzikfvnid .gt_from_md > :first-child {
+#jsbktdsugl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#elzikfvnid .gt_from_md > :last-child {
+#jsbktdsugl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#elzikfvnid .gt_row {
+#jsbktdsugl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5326,7 +5375,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#elzikfvnid .gt_stub {
+#jsbktdsugl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5339,7 +5388,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#elzikfvnid .gt_stub_row_group {
+#jsbktdsugl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5353,15 +5402,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#elzikfvnid .gt_row_group_first td {
+#jsbktdsugl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#elzikfvnid .gt_row_group_first th {
+#jsbktdsugl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#elzikfvnid .gt_summary_row {
+#jsbktdsugl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5371,16 +5420,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#elzikfvnid .gt_first_summary_row {
+#jsbktdsugl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_first_summary_row.thick {
+#jsbktdsugl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#elzikfvnid .gt_last_summary_row {
+#jsbktdsugl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5390,7 +5439,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_grand_summary_row {
+#jsbktdsugl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5400,7 +5449,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#elzikfvnid .gt_first_grand_summary_row {
+#jsbktdsugl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5410,7 +5459,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_last_grand_summary_row_top {
+#jsbktdsugl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5420,11 +5469,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_striped {
+#jsbktdsugl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#elzikfvnid .gt_table_body {
+#jsbktdsugl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5433,7 +5482,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_footnotes {
+#jsbktdsugl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5447,7 +5496,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_footnote {
+#jsbktdsugl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5456,7 +5505,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#elzikfvnid .gt_sourcenotes {
+#jsbktdsugl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5470,7 +5519,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#elzikfvnid .gt_sourcenote {
+#jsbktdsugl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5478,72 +5527,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#elzikfvnid .gt_left {
+#jsbktdsugl .gt_left {
   text-align: left;
 }
 
-#elzikfvnid .gt_center {
+#jsbktdsugl .gt_center {
   text-align: center;
 }
 
-#elzikfvnid .gt_right {
+#jsbktdsugl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#elzikfvnid .gt_font_normal {
+#jsbktdsugl .gt_font_normal {
   font-weight: normal;
 }
 
-#elzikfvnid .gt_font_bold {
+#jsbktdsugl .gt_font_bold {
   font-weight: bold;
 }
 
-#elzikfvnid .gt_font_italic {
+#jsbktdsugl .gt_font_italic {
   font-style: italic;
 }
 
-#elzikfvnid .gt_super {
+#jsbktdsugl .gt_super {
   font-size: 65%;
 }
 
-#elzikfvnid .gt_footnote_marks {
+#jsbktdsugl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#elzikfvnid .gt_asterisk {
+#jsbktdsugl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#elzikfvnid .gt_indent_1 {
+#jsbktdsugl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#elzikfvnid .gt_indent_2 {
+#jsbktdsugl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#elzikfvnid .gt_indent_3 {
+#jsbktdsugl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#elzikfvnid .gt_indent_4 {
+#jsbktdsugl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#elzikfvnid .gt_indent_5 {
+#jsbktdsugl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#elzikfvnid .katex-display {
+#jsbktdsugl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#elzikfvnid div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jsbktdsugl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5623,23 +5672,23 @@ Click to see an abbreviated list of R date formats:
 <p>An sample of rows from the table of PRODCOM codes (in this case some randomly selected rows from the list of codes of Finland):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ozysowegfy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ozysowegfy table {
+<div id="dgniljzoer" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dgniljzoer table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ozysowegfy thead, #ozysowegfy tbody, #ozysowegfy tfoot, #ozysowegfy tr, #ozysowegfy td, #ozysowegfy th {
+#dgniljzoer thead, #dgniljzoer tbody, #dgniljzoer tfoot, #dgniljzoer tr, #dgniljzoer td, #dgniljzoer th {
   border-style: none;
 }
 
-#ozysowegfy p {
+#dgniljzoer p {
   margin: 0;
   padding: 0;
 }
 
-#ozysowegfy .gt_table {
+#dgniljzoer .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5665,12 +5714,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_caption {
+#dgniljzoer .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ozysowegfy .gt_title {
+#dgniljzoer .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5682,7 +5731,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#ozysowegfy .gt_subtitle {
+#dgniljzoer .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5694,7 +5743,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#ozysowegfy .gt_heading {
+#dgniljzoer .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5706,13 +5755,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_bottom_border {
+#dgniljzoer .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_col_headings {
+#dgniljzoer .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5727,7 +5776,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_col_heading {
+#dgniljzoer .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5747,7 +5796,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#ozysowegfy .gt_column_spanner_outer {
+#dgniljzoer .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5759,15 +5808,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#ozysowegfy .gt_column_spanner_outer:first-child {
+#dgniljzoer .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ozysowegfy .gt_column_spanner_outer:last-child {
+#dgniljzoer .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ozysowegfy .gt_column_spanner {
+#dgniljzoer .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5779,11 +5828,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#ozysowegfy .gt_spanner_row {
+#dgniljzoer .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ozysowegfy .gt_group_heading {
+#dgniljzoer .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5809,7 +5858,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#ozysowegfy .gt_empty_group_heading {
+#dgniljzoer .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5824,15 +5873,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#ozysowegfy .gt_from_md > :first-child {
+#dgniljzoer .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ozysowegfy .gt_from_md > :last-child {
+#dgniljzoer .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ozysowegfy .gt_row {
+#dgniljzoer .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5851,7 +5900,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#ozysowegfy .gt_stub {
+#dgniljzoer .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5864,7 +5913,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#ozysowegfy .gt_stub_row_group {
+#dgniljzoer .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5878,15 +5927,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#ozysowegfy .gt_row_group_first td {
+#dgniljzoer .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ozysowegfy .gt_row_group_first th {
+#dgniljzoer .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ozysowegfy .gt_summary_row {
+#dgniljzoer .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5896,16 +5945,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#ozysowegfy .gt_first_summary_row {
+#dgniljzoer .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_first_summary_row.thick {
+#dgniljzoer .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ozysowegfy .gt_last_summary_row {
+#dgniljzoer .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5915,7 +5964,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_grand_summary_row {
+#dgniljzoer .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5925,7 +5974,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#ozysowegfy .gt_first_grand_summary_row {
+#dgniljzoer .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5935,7 +5984,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_last_grand_summary_row_top {
+#dgniljzoer .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5945,11 +5994,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_striped {
+#dgniljzoer .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ozysowegfy .gt_table_body {
+#dgniljzoer .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5958,7 +6007,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_footnotes {
+#dgniljzoer .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5972,7 +6021,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_footnote {
+#dgniljzoer .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5981,7 +6030,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#ozysowegfy .gt_sourcenotes {
+#dgniljzoer .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5995,7 +6044,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#ozysowegfy .gt_sourcenote {
+#dgniljzoer .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6003,72 +6052,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#ozysowegfy .gt_left {
+#dgniljzoer .gt_left {
   text-align: left;
 }
 
-#ozysowegfy .gt_center {
+#dgniljzoer .gt_center {
   text-align: center;
 }
 
-#ozysowegfy .gt_right {
+#dgniljzoer .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ozysowegfy .gt_font_normal {
+#dgniljzoer .gt_font_normal {
   font-weight: normal;
 }
 
-#ozysowegfy .gt_font_bold {
+#dgniljzoer .gt_font_bold {
   font-weight: bold;
 }
 
-#ozysowegfy .gt_font_italic {
+#dgniljzoer .gt_font_italic {
   font-style: italic;
 }
 
-#ozysowegfy .gt_super {
+#dgniljzoer .gt_super {
   font-size: 65%;
 }
 
-#ozysowegfy .gt_footnote_marks {
+#dgniljzoer .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ozysowegfy .gt_asterisk {
+#dgniljzoer .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ozysowegfy .gt_indent_1 {
+#dgniljzoer .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ozysowegfy .gt_indent_2 {
+#dgniljzoer .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ozysowegfy .gt_indent_3 {
+#dgniljzoer .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ozysowegfy .gt_indent_4 {
+#dgniljzoer .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ozysowegfy .gt_indent_5 {
+#dgniljzoer .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ozysowegfy .katex-display {
+#dgniljzoer .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ozysowegfy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dgniljzoer div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6082,64 +6131,64 @@ Click to see an abbreviated list of R date formats:
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">10321600</td>
-<td class="gt_row gt_right" headers="year">2016</td>
+<td class="gt_row gt_right" headers="code">24201490</td>
+<td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">10861010</td>
-<td class="gt_row gt_right" headers="year">2013</td>
+<td class="gt_row gt_right" headers="code">14194270</td>
+<td class="gt_row gt_right" headers="year">2012</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">32501200</td>
-<td class="gt_row gt_right" headers="year">2019</td>
+<td class="gt_row gt_right" headers="code">17123100</td>
+<td class="gt_row gt_right" headers="year">2011</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">28945150</td>
+<td class="gt_row gt_right" headers="code">20413260</td>
 <td class="gt_row gt_right" headers="year">2015</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">29711550</td>
-<td class="gt_row gt_right" headers="year">2005</td>
+<td class="gt_row gt_right" headers="code">10514030</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">20136800</td>
-<td class="gt_row gt_right" headers="year">2020</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">28131360</td>
-<td class="gt_row gt_right" headers="year">2017</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">33205383</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">28492150</td>
-<td class="gt_row gt_right" headers="year">2013</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">14133561</td>
-<td class="gt_row gt_right" headers="year">2011</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">26517015</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">28731440</td>
-<td class="gt_row gt_right" headers="year">2006</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">27512870</td>
-<td class="gt_row gt_right" headers="year">2011</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">10412310</td>
+<td class="gt_row gt_right" headers="code">13921355</td>
 <td class="gt_row gt_right" headers="year">2014</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">17231230</td>
+<td class="gt_row gt_right" headers="code">20143420</td>
+<td class="gt_row gt_right" headers="year">2013</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">27331310</td>
 <td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">26516210</td>
+<td class="gt_row gt_right" headers="year">2010</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">17221230</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">20145280</td>
+<td class="gt_row gt_right" headers="year">2017</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">21201160</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">31011100</td>
+<td class="gt_row gt_right" headers="year">2016</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">32504130</td>
+<td class="gt_row gt_right" headers="year">2018</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">26516210</td>
+<td class="gt_row gt_right" headers="year">2011</td>
 </tr>
 </tbody>
 </table>
@@ -6165,23 +6214,23 @@ Click to see an abbreviated list of R date formats:
 <p>For example, the following table displays how such table looks like for a subset of ITGS codes in PT:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="eohdzjxvvz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eohdzjxvvz table {
+<div id="sycwzlnljk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sycwzlnljk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eohdzjxvvz thead, #eohdzjxvvz tbody, #eohdzjxvvz tfoot, #eohdzjxvvz tr, #eohdzjxvvz td, #eohdzjxvvz th {
+#sycwzlnljk thead, #sycwzlnljk tbody, #sycwzlnljk tfoot, #sycwzlnljk tr, #sycwzlnljk td, #sycwzlnljk th {
   border-style: none;
 }
 
-#eohdzjxvvz p {
+#sycwzlnljk p {
   margin: 0;
   padding: 0;
 }
 
-#eohdzjxvvz .gt_table {
+#sycwzlnljk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6207,12 +6256,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_caption {
+#sycwzlnljk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eohdzjxvvz .gt_title {
+#sycwzlnljk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -6224,7 +6273,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#eohdzjxvvz .gt_subtitle {
+#sycwzlnljk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -6236,7 +6285,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#eohdzjxvvz .gt_heading {
+#sycwzlnljk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -6248,13 +6297,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_bottom_border {
+#sycwzlnljk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_col_headings {
+#sycwzlnljk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6269,7 +6318,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_col_heading {
+#sycwzlnljk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6289,7 +6338,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#eohdzjxvvz .gt_column_spanner_outer {
+#sycwzlnljk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6301,15 +6350,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#eohdzjxvvz .gt_column_spanner_outer:first-child {
+#sycwzlnljk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eohdzjxvvz .gt_column_spanner_outer:last-child {
+#sycwzlnljk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eohdzjxvvz .gt_column_spanner {
+#sycwzlnljk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6321,11 +6370,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#eohdzjxvvz .gt_spanner_row {
+#sycwzlnljk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eohdzjxvvz .gt_group_heading {
+#sycwzlnljk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6351,7 +6400,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#eohdzjxvvz .gt_empty_group_heading {
+#sycwzlnljk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6366,15 +6415,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#eohdzjxvvz .gt_from_md > :first-child {
+#sycwzlnljk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eohdzjxvvz .gt_from_md > :last-child {
+#sycwzlnljk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eohdzjxvvz .gt_row {
+#sycwzlnljk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6393,7 +6442,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#eohdzjxvvz .gt_stub {
+#sycwzlnljk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6406,7 +6455,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#eohdzjxvvz .gt_stub_row_group {
+#sycwzlnljk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6420,15 +6469,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#eohdzjxvvz .gt_row_group_first td {
+#sycwzlnljk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eohdzjxvvz .gt_row_group_first th {
+#sycwzlnljk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eohdzjxvvz .gt_summary_row {
+#sycwzlnljk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6438,16 +6487,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#eohdzjxvvz .gt_first_summary_row {
+#sycwzlnljk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_first_summary_row.thick {
+#sycwzlnljk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eohdzjxvvz .gt_last_summary_row {
+#sycwzlnljk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6457,7 +6506,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_grand_summary_row {
+#sycwzlnljk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6467,7 +6516,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#eohdzjxvvz .gt_first_grand_summary_row {
+#sycwzlnljk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6477,7 +6526,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_last_grand_summary_row_top {
+#sycwzlnljk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6487,11 +6536,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_striped {
+#sycwzlnljk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eohdzjxvvz .gt_table_body {
+#sycwzlnljk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6500,7 +6549,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_footnotes {
+#sycwzlnljk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6514,7 +6563,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_footnote {
+#sycwzlnljk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6523,7 +6572,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#eohdzjxvvz .gt_sourcenotes {
+#sycwzlnljk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6537,7 +6586,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#eohdzjxvvz .gt_sourcenote {
+#sycwzlnljk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6545,72 +6594,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#eohdzjxvvz .gt_left {
+#sycwzlnljk .gt_left {
   text-align: left;
 }
 
-#eohdzjxvvz .gt_center {
+#sycwzlnljk .gt_center {
   text-align: center;
 }
 
-#eohdzjxvvz .gt_right {
+#sycwzlnljk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eohdzjxvvz .gt_font_normal {
+#sycwzlnljk .gt_font_normal {
   font-weight: normal;
 }
 
-#eohdzjxvvz .gt_font_bold {
+#sycwzlnljk .gt_font_bold {
   font-weight: bold;
 }
 
-#eohdzjxvvz .gt_font_italic {
+#sycwzlnljk .gt_font_italic {
   font-style: italic;
 }
 
-#eohdzjxvvz .gt_super {
+#sycwzlnljk .gt_super {
   font-size: 65%;
 }
 
-#eohdzjxvvz .gt_footnote_marks {
+#sycwzlnljk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eohdzjxvvz .gt_asterisk {
+#sycwzlnljk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eohdzjxvvz .gt_indent_1 {
+#sycwzlnljk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eohdzjxvvz .gt_indent_2 {
+#sycwzlnljk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eohdzjxvvz .gt_indent_3 {
+#sycwzlnljk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eohdzjxvvz .gt_indent_4 {
+#sycwzlnljk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eohdzjxvvz .gt_indent_5 {
+#sycwzlnljk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#eohdzjxvvz .katex-display {
+#sycwzlnljk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#eohdzjxvvz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#sycwzlnljk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6625,79 +6674,79 @@ Click to see an abbreviated list of R date formats:
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">84669195</td>
-<td class="gt_row gt_right" headers="right">85423110</td>
-<td class="gt_row gt_right" headers="year">2006</td>
+<td class="gt_row gt_right" headers="left">85392110</td>
+<td class="gt_row gt_right" headers="right">85392198</td>
+<td class="gt_row gt_right" headers="year">1995</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">72101190</td>
-<td class="gt_row gt_right" headers="right">72101100</td>
-<td class="gt_row gt_right" headers="year">2003</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">74011000</td>
-<td class="gt_row gt_right" headers="right">74010000</td>
-<td class="gt_row gt_right" headers="year">2006</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">85242310</td>
-<td class="gt_row gt_right" headers="right">85244010</td>
+<td class="gt_row gt_right" headers="left">72145039</td>
+<td class="gt_row gt_right" headers="right">72149969</td>
 <td class="gt_row gt_right" headers="year">1995</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">2930 90 99</td>
-<td class="gt_row gt_right" headers="right">2930 90 98</td>
+<td class="gt_row gt_right" headers="left">2844 40 10</td>
+<td class="gt_row gt_right" headers="right">2844 43 10</td>
+<td class="gt_row gt_right" headers="year">2021</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">90301010</td>
+<td class="gt_row gt_right" headers="right">90301000</td>
+<td class="gt_row gt_right" headers="year">2005</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">87089992</td>
+<td class="gt_row gt_right" headers="right">87085055</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">64011090</td>
+<td class="gt_row gt_right" headers="right">64011000</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">68131000</td>
+<td class="gt_row gt_right" headers="right">68132000</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">35079000</td>
+<td class="gt_row gt_right" headers="right">35079010</td>
+<td class="gt_row gt_right" headers="year">1996</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">84313990</td>
+<td class="gt_row gt_right" headers="right">84869090</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">85281069</td>
+<td class="gt_row gt_right" headers="right">85281049</td>
+<td class="gt_row gt_right" headers="year">1992</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">86072100</td>
+<td class="gt_row gt_right" headers="right">86072190</td>
+<td class="gt_row gt_right" headers="year">1989</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">84471200</td>
+<td class="gt_row gt_right" headers="right">84471210</td>
+<td class="gt_row gt_right" headers="year">1993</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">7318 15 10</td>
+<td class="gt_row gt_right" headers="right">7318 15 58</td>
 <td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">87089998</td>
-<td class="gt_row gt_right" headers="right">87089997</td>
+<td class="gt_row gt_right" headers="left">29033036</td>
+<td class="gt_row gt_right" headers="right">29033100</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">29223000</td>
-<td class="gt_row gt_right" headers="right">29223900</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">9018 90 84</td>
-<td class="gt_row gt_right" headers="right">9018 90 84</td>
-<td class="gt_row gt_right" headers="year">2021</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">85319010</td>
-<td class="gt_row gt_right" headers="right">85319020</td>
-<td class="gt_row gt_right" headers="year">1999</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">48041915</td>
-<td class="gt_row gt_right" headers="right">48041912</td>
+<td class="gt_row gt_right" headers="left">22042110</td>
+<td class="gt_row gt_right" headers="right">22042108</td>
 <td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">1060010</td>
-<td class="gt_row gt_right" headers="right">1061910</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">44121310</td>
-<td class="gt_row gt_right" headers="right">44083121</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">48041931</td>
-<td class="gt_row gt_right" headers="right">48041930</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">8548 90 20</td>
-<td class="gt_row gt_right" headers="right">8548 00 20</td>
-<td class="gt_row gt_right" headers="year">2021</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">44079994</td>
-<td class="gt_row gt_right" headers="right">44079996</td>
-<td class="gt_row gt_right" headers="year">2001</td>
 </tr>
 </tbody>
 </table>
@@ -11564,7 +11613,7 @@ NSI_datafile preprocessing routines guide
 <colgroup>
 <col style="width: 26%">
 <col style="width: 31%">
-<col style="width: 42%">
+<col style="width: 41%">
 </colgroup>
 <thead>
 <tr class="header">
