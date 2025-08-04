@@ -19,3 +19,9 @@ h4 {
 h5 {
   font-size: 0.9em;
 }
+
+h4 > .header-section-number,
+h5 > .header-section-number,
+h6 > .header-section-number {
+  display: none;
+}
