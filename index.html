@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eric Bartelsman and MDI team">
-<meta name="dcterms.date" content="2025-10-24">
+<meta name="dcterms.date" content="2025-11-04">
 
 <title>MDI Manual</title>
 <style>
@@ -139,7 +139,7 @@ window.Quarto = {
   <li><a href="#nuvolos-where-mdi-users-develop-and-test-their-codes" id="toc-nuvolos-where-mdi-users-develop-and-test-their-codes" class="nav-link" data-scroll-target="#nuvolos-where-mdi-users-develop-and-test-their-codes"><span class="header-section-number">2.8</span> Nuvolos: where MDI users develop and test their codes</a></li>
   <li><a href="#the-complete-mdi-pipeline" id="toc-the-complete-mdi-pipeline" class="nav-link" data-scroll-target="#the-complete-mdi-pipeline"><span class="header-section-number">2.9</span> The complete MDI pipeline</a></li>
   </ul></li>
-  <li><a href="#build-mdi" id="toc-build-mdi" class="nav-link" data-scroll-target="#build-mdi"><span class="header-section-number">3</span> Building MDI</a>
+  <li><a href="#build-mdi" id="toc-build-mdi" class="nav-link" data-scroll-target="#build-mdi"><span class="header-section-number">3</span> Setting up the MDI</a>
   <ul class="collapse">
   <li><a href="#introduction-setup-to-mdi-infrastructure" id="toc-introduction-setup-to-mdi-infrastructure" class="nav-link" data-scroll-target="#introduction-setup-to-mdi-infrastructure"><span class="header-section-number">3.1</span> Introduction &amp; Setup to MDI Infrastructure</a></li>
   <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">3.2</span> Metadata</a></li>
@@ -155,7 +155,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">MDI Manual</h1>
-<p class="subtitle lead">The never-finished manual of the Micro Data Infrastructure</p>
+<p class="subtitle lead">Comprehensive guidance for everyone who builds and uses the Micro Data Infrastructure</p>
 </div>
 
 
@@ -168,7 +168,7 @@ window.Quarto = {
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
-            Vrije Universiteit Amsterdam;Tinbergen Institute
+            Vrije Universiteit Amsterdam;Tinbergen Institute;Halle Institute for Economic Research (IWH);Competitiveness Research Network (CompNet); Bocconi University; Centre for Business and Productivity Dynamics (CBPD)
           </p>
       </div>
   </div>
@@ -179,7 +179,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2025</p>
+      <p class="date">November 4, 2025</p>
     </div>
   </div>
   
@@ -193,7 +193,7 @@ window.Quarto = {
 
 <section id="introduction-to-mdi" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction to MDI</h1>
-<p>This user guide provides users of the Micro Data Infrastructure (MDI) with all the necessary information to <a href="#use-mdi">use</a> and <a href="#buil-mdi">build</a> the infrastructure.</p>
+<p>This user guide provides users of the Micro Data Infrastructure (MDI) with all the necessary information to conduct <a href="#use-mdi">research by using the mdi set up</a> and <a href="#build-mdi">setting up the MDI or developing the infrastructure</a>.</p>
 <ul>
 <li>If you are interested in running your research on MDI, do not miss section <a href="#use-mdi">2</a> (mainly 2.1, 2.2., 2.4, and 2.7).</li>
 <li>If you have access to a given country firm-level data and need to build MDI, do not miss section <a href="#buil-mdi">3</a>, 2.3, 2.5, 2.6, and 2.8.</li>
@@ -202,7 +202,7 @@ window.Quarto = {
 <section id="what" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="what"><span class="header-section-number">1.1</span> What</h2>
 <p>The Microdata Infrastructure (MDI) is a platform for cross-country microdata access, developed by CompNet in collaboration with European National Statistical Institutes (NSIs), National Statistical Systems (NSS) and other partners.</p>
-<p>The MDI began in 2018, as described in <a href="https://www.comp-net.org/fileadmin/_compnet/user_upload/MICROPROD_-_Handbook_for_Micro-data_linking.pdf">“Creating an EU-wide Micro Data Infrastructure (MDI): a handbook for Micro-Data Linking”.</a> Since then, pilots evolved into a maintained infrastructure that is periodically launched at NSIs. This manual provides operational guidance for current and future MDI launches, defining a medium-term horizon of continuous improvement within each 3–6 month d</p>
+<p>The MDI began in 2018, as described in <a href="https://www.comp-net.org/fileadmin/_compnet/user_upload/MICROPROD_-_Handbook_for_Micro-data_linking.pdf">“Creating an EU-wide Micro Data Infrastructure (MDI): a handbook for Micro-Data Linking”.</a> Since then, pilots evolved into a maintained infrastructure that is periodically launched at NSIs. This manual provides operational guidance for current and future MDI launches, building the infrastructure in new countries and defining a medium-term horizon of continuous improvement within each 3–6 month deployment cycle.</p>
 <p>The MDI is designed with a dual objective: to harmonize firm-level data across countries and to streamline the research process for conducting cross-country analyses on a wide range of topics.</p>
 <p>At its core, MDI provides a standardized environment that enables researchers to perform identical analyses across multiple countries. It ensures microdata comparability and accessibility within a unified framework. The infrastructure supports functions ranging from data importation and harmonization to advanced analytical outputs, all within a secure environment that safeguards data confidentiality. In a nutshell, MDI does the following:</p>
 <p><strong>Raw data</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Data harmonization</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Comparable cross-country microdata</strong></p>
@@ -416,7 +416,7 @@ Stakeholders in the MDI Ecosystem
 </section>
 <section id="how" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="how"><span class="header-section-number">1.3</span> How</h2>
-<p>The MDI infrastructure is a continuously evolving codebase, known as <em>Rocket</em>, that is periodically deployed within the secure environments of NSIs. Its main function is to process and harmonize raw data, execute research code (<em>modules</em>) , and export results, all while strictly complying with NSIs’ disclosure rules. This process, referred to as a <em>launch</em>. The process occurs every 4 to 6 months depending on country readiness. Please see below the MDI launch pipeline:</p>
+<p>The MDI infrastructure is a continuously evolving codebase, known as <em>Rocket</em>, that is periodically deployed within the secure environments of NSIs. Its main function is to process and harmonize raw data, execute research code (<em>modules</em>) , and export results, all while strictly complying with NSIs’ disclosure rules. This process, is referred as a <em>launch</em>. The process occurs every 4 to 6 months depending on country readiness. Please see below the MDI launch pipeline:</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -491,6 +491,7 @@ Glossary
 </section>
 <section id="use-mdi" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Using MDI</h1>
+<p>This section focuses on using the MDI and is meant primarily for research groups and module writers. It outlines all steps involved in conducting research with the MDI - from formulating a research question to selecting variables and preparing data files. It also provides information about launches, including the research execution process and the overall timeline.</p>
 <section id="mdi-users" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="mdi-users"><span class="header-section-number">2.1</span> MDI Users</h2>
 <p>MDI users (or module writers) include productivity boards, external academic and policy researchers, and MDI ‘Theme’ research staff. They are responsible for developing research modules that leverage MDI’s infrastructure for data analysis.</p>
@@ -509,7 +510,7 @@ Glossary
 </figure>
 </div>
 <p><strong>Deadlines and launch schedules</strong></p>
-<p>MDI modules are executed every three months through pre-scheduled launches. Accordingly, the MDI team communicates specific deadlines to all researchers for submitting their research modules.</p>
+<p>MDI modules are executed every four months through pre-scheduled launches. Accordingly, the MDI team communicates specific deadlines to all researchers for submitting their research modules and alerts the NSI staff accordingly.</p>
 <p>The following table contains an estimate of the duration of a whole launch (between brackets, in the first column, a reference to the items in the diagram above):</p>
 <table class="caption-top table">
 <colgroup>
@@ -587,23 +588,23 @@ Important
 <p>Once the final selection of MD variable names has been made for the module, a file named <code>(res_group)_MDnames_select.csv</code> (see example below) must be submitted to the MDI team. This needs to have the column names as shown below.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="hunfuvxfdl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hunfuvxfdl table {
+<div id="keggnspjqg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#keggnspjqg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hunfuvxfdl thead, #hunfuvxfdl tbody, #hunfuvxfdl tfoot, #hunfuvxfdl tr, #hunfuvxfdl td, #hunfuvxfdl th {
+#keggnspjqg thead, #keggnspjqg tbody, #keggnspjqg tfoot, #keggnspjqg tr, #keggnspjqg td, #keggnspjqg th {
   border-style: none;
 }
 
-#hunfuvxfdl p {
+#keggnspjqg p {
   margin: 0;
   padding: 0;
 }
 
-#hunfuvxfdl .gt_table {
+#keggnspjqg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -629,12 +630,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_caption {
+#keggnspjqg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hunfuvxfdl .gt_title {
+#keggnspjqg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -646,7 +647,7 @@ Important
   border-bottom-width: 0;
 }
 
-#hunfuvxfdl .gt_subtitle {
+#keggnspjqg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -658,7 +659,7 @@ Important
   border-top-width: 0;
 }
 
-#hunfuvxfdl .gt_heading {
+#keggnspjqg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -670,13 +671,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_bottom_border {
+#keggnspjqg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_col_headings {
+#keggnspjqg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -691,7 +692,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_col_heading {
+#keggnspjqg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -711,7 +712,7 @@ Important
   overflow-x: hidden;
 }
 
-#hunfuvxfdl .gt_column_spanner_outer {
+#keggnspjqg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -723,15 +724,15 @@ Important
   padding-right: 4px;
 }
 
-#hunfuvxfdl .gt_column_spanner_outer:first-child {
+#keggnspjqg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hunfuvxfdl .gt_column_spanner_outer:last-child {
+#keggnspjqg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hunfuvxfdl .gt_column_spanner {
+#keggnspjqg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -743,11 +744,11 @@ Important
   width: 100%;
 }
 
-#hunfuvxfdl .gt_spanner_row {
+#keggnspjqg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hunfuvxfdl .gt_group_heading {
+#keggnspjqg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -773,7 +774,7 @@ Important
   text-align: left;
 }
 
-#hunfuvxfdl .gt_empty_group_heading {
+#keggnspjqg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -788,15 +789,15 @@ Important
   vertical-align: middle;
 }
 
-#hunfuvxfdl .gt_from_md > :first-child {
+#keggnspjqg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hunfuvxfdl .gt_from_md > :last-child {
+#keggnspjqg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hunfuvxfdl .gt_row {
+#keggnspjqg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -815,7 +816,7 @@ Important
   overflow-x: hidden;
 }
 
-#hunfuvxfdl .gt_stub {
+#keggnspjqg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -828,7 +829,7 @@ Important
   padding-right: 5px;
 }
 
-#hunfuvxfdl .gt_stub_row_group {
+#keggnspjqg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -842,15 +843,15 @@ Important
   vertical-align: top;
 }
 
-#hunfuvxfdl .gt_row_group_first td {
+#keggnspjqg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hunfuvxfdl .gt_row_group_first th {
+#keggnspjqg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hunfuvxfdl .gt_summary_row {
+#keggnspjqg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -860,16 +861,16 @@ Important
   padding-right: 5px;
 }
 
-#hunfuvxfdl .gt_first_summary_row {
+#keggnspjqg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_first_summary_row.thick {
+#keggnspjqg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hunfuvxfdl .gt_last_summary_row {
+#keggnspjqg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -879,7 +880,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_grand_summary_row {
+#keggnspjqg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -889,7 +890,7 @@ Important
   padding-right: 5px;
 }
 
-#hunfuvxfdl .gt_first_grand_summary_row {
+#keggnspjqg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -899,7 +900,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_last_grand_summary_row_top {
+#keggnspjqg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -909,11 +910,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_striped {
+#keggnspjqg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hunfuvxfdl .gt_table_body {
+#keggnspjqg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -922,7 +923,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_footnotes {
+#keggnspjqg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -936,7 +937,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_footnote {
+#keggnspjqg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -945,7 +946,7 @@ Important
   padding-right: 5px;
 }
 
-#hunfuvxfdl .gt_sourcenotes {
+#keggnspjqg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -959,7 +960,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#hunfuvxfdl .gt_sourcenote {
+#keggnspjqg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -967,72 +968,72 @@ Important
   padding-right: 5px;
 }
 
-#hunfuvxfdl .gt_left {
+#keggnspjqg .gt_left {
   text-align: left;
 }
 
-#hunfuvxfdl .gt_center {
+#keggnspjqg .gt_center {
   text-align: center;
 }
 
-#hunfuvxfdl .gt_right {
+#keggnspjqg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hunfuvxfdl .gt_font_normal {
+#keggnspjqg .gt_font_normal {
   font-weight: normal;
 }
 
-#hunfuvxfdl .gt_font_bold {
+#keggnspjqg .gt_font_bold {
   font-weight: bold;
 }
 
-#hunfuvxfdl .gt_font_italic {
+#keggnspjqg .gt_font_italic {
   font-style: italic;
 }
 
-#hunfuvxfdl .gt_super {
+#keggnspjqg .gt_super {
   font-size: 65%;
 }
 
-#hunfuvxfdl .gt_footnote_marks {
+#keggnspjqg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hunfuvxfdl .gt_asterisk {
+#keggnspjqg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hunfuvxfdl .gt_indent_1 {
+#keggnspjqg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hunfuvxfdl .gt_indent_2 {
+#keggnspjqg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hunfuvxfdl .gt_indent_3 {
+#keggnspjqg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hunfuvxfdl .gt_indent_4 {
+#keggnspjqg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hunfuvxfdl .gt_indent_5 {
+#keggnspjqg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hunfuvxfdl .katex-display {
+#keggnspjqg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hunfuvxfdl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#keggnspjqg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1097,23 +1098,23 @@ List of currently used R libraries
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="zzfzlcxemz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zzfzlcxemz table {
+<div id="qfabzvmgdd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qfabzvmgdd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zzfzlcxemz thead, #zzfzlcxemz tbody, #zzfzlcxemz tfoot, #zzfzlcxemz tr, #zzfzlcxemz td, #zzfzlcxemz th {
+#qfabzvmgdd thead, #qfabzvmgdd tbody, #qfabzvmgdd tfoot, #qfabzvmgdd tr, #qfabzvmgdd td, #qfabzvmgdd th {
   border-style: none;
 }
 
-#zzfzlcxemz p {
+#qfabzvmgdd p {
   margin: 0;
   padding: 0;
 }
 
-#zzfzlcxemz .gt_table {
+#qfabzvmgdd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1139,12 +1140,12 @@ List of currently used R libraries
   border-left-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_caption {
+#qfabzvmgdd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zzfzlcxemz .gt_title {
+#qfabzvmgdd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1156,7 +1157,7 @@ List of currently used R libraries
   border-bottom-width: 0;
 }
 
-#zzfzlcxemz .gt_subtitle {
+#qfabzvmgdd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1168,7 +1169,7 @@ List of currently used R libraries
   border-top-width: 0;
 }
 
-#zzfzlcxemz .gt_heading {
+#qfabzvmgdd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1180,13 +1181,13 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_bottom_border {
+#qfabzvmgdd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_col_headings {
+#qfabzvmgdd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1201,7 +1202,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_col_heading {
+#qfabzvmgdd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1221,7 +1222,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#zzfzlcxemz .gt_column_spanner_outer {
+#qfabzvmgdd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1233,15 +1234,15 @@ List of currently used R libraries
   padding-right: 4px;
 }
 
-#zzfzlcxemz .gt_column_spanner_outer:first-child {
+#qfabzvmgdd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zzfzlcxemz .gt_column_spanner_outer:last-child {
+#qfabzvmgdd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zzfzlcxemz .gt_column_spanner {
+#qfabzvmgdd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1253,11 +1254,11 @@ List of currently used R libraries
   width: 100%;
 }
 
-#zzfzlcxemz .gt_spanner_row {
+#qfabzvmgdd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zzfzlcxemz .gt_group_heading {
+#qfabzvmgdd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1283,7 +1284,7 @@ List of currently used R libraries
   text-align: left;
 }
 
-#zzfzlcxemz .gt_empty_group_heading {
+#qfabzvmgdd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1298,15 +1299,15 @@ List of currently used R libraries
   vertical-align: middle;
 }
 
-#zzfzlcxemz .gt_from_md > :first-child {
+#qfabzvmgdd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zzfzlcxemz .gt_from_md > :last-child {
+#qfabzvmgdd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zzfzlcxemz .gt_row {
+#qfabzvmgdd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1325,7 +1326,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#zzfzlcxemz .gt_stub {
+#qfabzvmgdd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1338,7 +1339,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#zzfzlcxemz .gt_stub_row_group {
+#qfabzvmgdd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1352,15 +1353,15 @@ List of currently used R libraries
   vertical-align: top;
 }
 
-#zzfzlcxemz .gt_row_group_first td {
+#qfabzvmgdd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zzfzlcxemz .gt_row_group_first th {
+#qfabzvmgdd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zzfzlcxemz .gt_summary_row {
+#qfabzvmgdd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1370,16 +1371,16 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#zzfzlcxemz .gt_first_summary_row {
+#qfabzvmgdd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_first_summary_row.thick {
+#qfabzvmgdd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zzfzlcxemz .gt_last_summary_row {
+#qfabzvmgdd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1389,7 +1390,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_grand_summary_row {
+#qfabzvmgdd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1399,7 +1400,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#zzfzlcxemz .gt_first_grand_summary_row {
+#qfabzvmgdd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1409,7 +1410,7 @@ List of currently used R libraries
   border-top-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_last_grand_summary_row_top {
+#qfabzvmgdd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1419,11 +1420,11 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_striped {
+#qfabzvmgdd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zzfzlcxemz .gt_table_body {
+#qfabzvmgdd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1432,7 +1433,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_footnotes {
+#qfabzvmgdd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1446,7 +1447,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_footnote {
+#qfabzvmgdd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1455,7 +1456,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#zzfzlcxemz .gt_sourcenotes {
+#qfabzvmgdd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1469,7 +1470,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#zzfzlcxemz .gt_sourcenote {
+#qfabzvmgdd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1477,72 +1478,72 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#zzfzlcxemz .gt_left {
+#qfabzvmgdd .gt_left {
   text-align: left;
 }
 
-#zzfzlcxemz .gt_center {
+#qfabzvmgdd .gt_center {
   text-align: center;
 }
 
-#zzfzlcxemz .gt_right {
+#qfabzvmgdd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zzfzlcxemz .gt_font_normal {
+#qfabzvmgdd .gt_font_normal {
   font-weight: normal;
 }
 
-#zzfzlcxemz .gt_font_bold {
+#qfabzvmgdd .gt_font_bold {
   font-weight: bold;
 }
 
-#zzfzlcxemz .gt_font_italic {
+#qfabzvmgdd .gt_font_italic {
   font-style: italic;
 }
 
-#zzfzlcxemz .gt_super {
+#qfabzvmgdd .gt_super {
   font-size: 65%;
 }
 
-#zzfzlcxemz .gt_footnote_marks {
+#qfabzvmgdd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zzfzlcxemz .gt_asterisk {
+#qfabzvmgdd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zzfzlcxemz .gt_indent_1 {
+#qfabzvmgdd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zzfzlcxemz .gt_indent_2 {
+#qfabzvmgdd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zzfzlcxemz .gt_indent_3 {
+#qfabzvmgdd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zzfzlcxemz .gt_indent_4 {
+#qfabzvmgdd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zzfzlcxemz .gt_indent_5 {
+#qfabzvmgdd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zzfzlcxemz .katex-display {
+#qfabzvmgdd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zzfzlcxemz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qfabzvmgdd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3153,15 +3154,13 @@ Hide or not hide values post-disclosure
 <section id="how-to-access" class="level3" data-number="2.8.1">
 <h3 data-number="2.8.1" class="anchored" data-anchor-id="how-to-access"><span class="header-section-number">2.8.1</span> How to access</h3>
 <p>Nuvolos is the server environment that we use for trainings, testing, developing and debugging. There are three separate environments:</p>
-<ol type="1">
-<li></li>
-<li></li>
-<li></li>
-</ol>
+<p>1.<a href="#mdi-training-environment">MDI Training Environment</a>: this space is meant for MDI users, module writers who want to test their scripts and people who want to learn about the MDI</p>
+<p>2.<a href="#nuvolos-developer-space">Nuvolos Developer Space</a>: this space is meant for the MDI infra team to develop and test the MDI infrastructure</p>
+<p>3.<a href="#portugal-data-access-space">Portugal Data Access Space</a>: this is a space exclusively for people who have data access to the Portuguese data. This is where the MDI for PTx is executed by the MDI team.</p>
 <p>If you want to get access to either of the environments, reach out to <a href="mailto:johanna.weiss@iwhesl.onmicrosoft.com">Johanna</a> via email or Teams.</p>
 <section id="mdi-trainning_env" class="level4" data-number="2.8.1.1">
 <h4 data-number="2.8.1.1" class="anchored" data-anchor-id="mdi-trainning_env"><span class="header-section-number">2.8.1.1</span> MDI Training Environment</h4>
-<p>This space is designed for training, practicing, and familiarizing with the MDI infrastructure. It’s intended mostly for external people, as it already contains all relevant files, ie. the whole MDI infrastucture, mockdata. It’s an environement in which externals can test their codes using the MDI infrastructure and mockdata. It is updated periodically, so doesn’t always reflect the latest version of the MDI. It is not intended for bug-fixing and working on the infrastrucutre, as it doesn’t link to Github.</p>
+<p>This space is designed for training, practicing, and familiarizing with the MDI infrastructure. It’s intended mostly for external people, as it already contains all relevant files, ie. the whole MDI infrastructure, mock data. It’s an environment in which externals can test their codes using the MDI infrastructure and mock data. It is updated periodically, so doesn’t always reflect the latest version of the MDI. It is not intended for bug-fixing and working on the infrastructure, as it doesn’t link to Github.</p>
 <p>As this is a practice space, module writers can import or write their scripts, develop their module, run it as part of the MDI and export their files it if needed. The final module needs to be sent to the MDI team before each launch.</p>
 <p>In the training space each user has a separate copy of the MDI and data files. That means, if scripts are altered moved or added, this is only reflected in the user’s space, i.e.&nbsp;deleting a file will not affect any other user and no other user can see your modifications.</p>
 </section>
@@ -3517,7 +3516,8 @@ style G5 fill:#F5F5F5,stroke:#ffffff
 </section>
 
 <section id="build-mdi" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Building MDI</h1>
+<h1 data-number="3"><span class="header-section-number">3</span> Setting up the MDI</h1>
+<p>This section covers the technical details of the MDI - including preparation for implementation in a new country, the modifications required for a launch, and how to develop the infrastructure further. It provides information for the MDI team and the country leads responsible for setting up the MDI in their respective countries.</p>
 <section id="introduction-setup-to-mdi-infrastructure" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="introduction-setup-to-mdi-infrastructure"><span class="header-section-number">3.1</span> Introduction &amp; Setup to MDI Infrastructure</h2>
 <p>This section explains how your module runs inside an NSI environment. It aims to orient new users and reduce friction.</p>
@@ -3668,23 +3668,23 @@ The directories at the NSI site MDI installation
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="xyujdzcjoy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xyujdzcjoy table {
+<div id="ipaooygkkp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ipaooygkkp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xyujdzcjoy thead, #xyujdzcjoy tbody, #xyujdzcjoy tfoot, #xyujdzcjoy tr, #xyujdzcjoy td, #xyujdzcjoy th {
+#ipaooygkkp thead, #ipaooygkkp tbody, #ipaooygkkp tfoot, #ipaooygkkp tr, #ipaooygkkp td, #ipaooygkkp th {
   border-style: none;
 }
 
-#xyujdzcjoy p {
+#ipaooygkkp p {
   margin: 0;
   padding: 0;
 }
 
-#xyujdzcjoy .gt_table {
+#ipaooygkkp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3710,12 +3710,12 @@ The directories at the NSI site MDI installation
   border-left-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_caption {
+#ipaooygkkp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xyujdzcjoy .gt_title {
+#ipaooygkkp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3727,7 +3727,7 @@ The directories at the NSI site MDI installation
   border-bottom-width: 0;
 }
 
-#xyujdzcjoy .gt_subtitle {
+#ipaooygkkp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3739,7 +3739,7 @@ The directories at the NSI site MDI installation
   border-top-width: 0;
 }
 
-#xyujdzcjoy .gt_heading {
+#ipaooygkkp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3751,13 +3751,13 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_bottom_border {
+#ipaooygkkp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_col_headings {
+#ipaooygkkp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3772,7 +3772,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_col_heading {
+#ipaooygkkp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3792,7 +3792,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#xyujdzcjoy .gt_column_spanner_outer {
+#ipaooygkkp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3804,15 +3804,15 @@ The directories at the NSI site MDI installation
   padding-right: 4px;
 }
 
-#xyujdzcjoy .gt_column_spanner_outer:first-child {
+#ipaooygkkp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xyujdzcjoy .gt_column_spanner_outer:last-child {
+#ipaooygkkp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xyujdzcjoy .gt_column_spanner {
+#ipaooygkkp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3824,11 +3824,11 @@ The directories at the NSI site MDI installation
   width: 100%;
 }
 
-#xyujdzcjoy .gt_spanner_row {
+#ipaooygkkp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xyujdzcjoy .gt_group_heading {
+#ipaooygkkp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3854,7 +3854,7 @@ The directories at the NSI site MDI installation
   text-align: left;
 }
 
-#xyujdzcjoy .gt_empty_group_heading {
+#ipaooygkkp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3869,15 +3869,15 @@ The directories at the NSI site MDI installation
   vertical-align: middle;
 }
 
-#xyujdzcjoy .gt_from_md > :first-child {
+#ipaooygkkp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xyujdzcjoy .gt_from_md > :last-child {
+#ipaooygkkp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xyujdzcjoy .gt_row {
+#ipaooygkkp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3896,7 +3896,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#xyujdzcjoy .gt_stub {
+#ipaooygkkp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3909,7 +3909,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#xyujdzcjoy .gt_stub_row_group {
+#ipaooygkkp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3923,15 +3923,15 @@ The directories at the NSI site MDI installation
   vertical-align: top;
 }
 
-#xyujdzcjoy .gt_row_group_first td {
+#ipaooygkkp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xyujdzcjoy .gt_row_group_first th {
+#ipaooygkkp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xyujdzcjoy .gt_summary_row {
+#ipaooygkkp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3941,16 +3941,16 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#xyujdzcjoy .gt_first_summary_row {
+#ipaooygkkp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_first_summary_row.thick {
+#ipaooygkkp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xyujdzcjoy .gt_last_summary_row {
+#ipaooygkkp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3960,7 +3960,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_grand_summary_row {
+#ipaooygkkp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3970,7 +3970,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#xyujdzcjoy .gt_first_grand_summary_row {
+#ipaooygkkp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3980,7 +3980,7 @@ The directories at the NSI site MDI installation
   border-top-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_last_grand_summary_row_top {
+#ipaooygkkp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3990,11 +3990,11 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_striped {
+#ipaooygkkp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xyujdzcjoy .gt_table_body {
+#ipaooygkkp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4003,7 +4003,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_footnotes {
+#ipaooygkkp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4017,7 +4017,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_footnote {
+#ipaooygkkp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4026,7 +4026,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#xyujdzcjoy .gt_sourcenotes {
+#ipaooygkkp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4040,7 +4040,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#xyujdzcjoy .gt_sourcenote {
+#ipaooygkkp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4048,72 +4048,72 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#xyujdzcjoy .gt_left {
+#ipaooygkkp .gt_left {
   text-align: left;
 }
 
-#xyujdzcjoy .gt_center {
+#ipaooygkkp .gt_center {
   text-align: center;
 }
 
-#xyujdzcjoy .gt_right {
+#ipaooygkkp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xyujdzcjoy .gt_font_normal {
+#ipaooygkkp .gt_font_normal {
   font-weight: normal;
 }
 
-#xyujdzcjoy .gt_font_bold {
+#ipaooygkkp .gt_font_bold {
   font-weight: bold;
 }
 
-#xyujdzcjoy .gt_font_italic {
+#ipaooygkkp .gt_font_italic {
   font-style: italic;
 }
 
-#xyujdzcjoy .gt_super {
+#ipaooygkkp .gt_super {
   font-size: 65%;
 }
 
-#xyujdzcjoy .gt_footnote_marks {
+#ipaooygkkp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xyujdzcjoy .gt_asterisk {
+#ipaooygkkp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xyujdzcjoy .gt_indent_1 {
+#ipaooygkkp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xyujdzcjoy .gt_indent_2 {
+#ipaooygkkp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xyujdzcjoy .gt_indent_3 {
+#ipaooygkkp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xyujdzcjoy .gt_indent_4 {
+#ipaooygkkp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xyujdzcjoy .gt_indent_5 {
+#ipaooygkkp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xyujdzcjoy .katex-display {
+#ipaooygkkp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xyujdzcjoy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ipaooygkkp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4269,23 +4269,23 @@ The directories at the NSI site MDI installation
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code> and <code>details</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="qrcyrkspot" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qrcyrkspot table {
+<div id="mztiubenjn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mztiubenjn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qrcyrkspot thead, #qrcyrkspot tbody, #qrcyrkspot tfoot, #qrcyrkspot tr, #qrcyrkspot td, #qrcyrkspot th {
+#mztiubenjn thead, #mztiubenjn tbody, #mztiubenjn tfoot, #mztiubenjn tr, #mztiubenjn td, #mztiubenjn th {
   border-style: none;
 }
 
-#qrcyrkspot p {
+#mztiubenjn p {
   margin: 0;
   padding: 0;
 }
 
-#qrcyrkspot .gt_table {
+#mztiubenjn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4311,12 +4311,12 @@ The directories at the NSI site MDI installation
   border-left-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_caption {
+#mztiubenjn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qrcyrkspot .gt_title {
+#mztiubenjn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4328,7 +4328,7 @@ The directories at the NSI site MDI installation
   border-bottom-width: 0;
 }
 
-#qrcyrkspot .gt_subtitle {
+#mztiubenjn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4340,7 +4340,7 @@ The directories at the NSI site MDI installation
   border-top-width: 0;
 }
 
-#qrcyrkspot .gt_heading {
+#mztiubenjn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4352,13 +4352,13 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_bottom_border {
+#mztiubenjn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_col_headings {
+#mztiubenjn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4373,7 +4373,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_col_heading {
+#mztiubenjn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4393,7 +4393,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#qrcyrkspot .gt_column_spanner_outer {
+#mztiubenjn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4405,15 +4405,15 @@ The directories at the NSI site MDI installation
   padding-right: 4px;
 }
 
-#qrcyrkspot .gt_column_spanner_outer:first-child {
+#mztiubenjn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qrcyrkspot .gt_column_spanner_outer:last-child {
+#mztiubenjn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qrcyrkspot .gt_column_spanner {
+#mztiubenjn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4425,11 +4425,11 @@ The directories at the NSI site MDI installation
   width: 100%;
 }
 
-#qrcyrkspot .gt_spanner_row {
+#mztiubenjn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qrcyrkspot .gt_group_heading {
+#mztiubenjn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4455,7 +4455,7 @@ The directories at the NSI site MDI installation
   text-align: left;
 }
 
-#qrcyrkspot .gt_empty_group_heading {
+#mztiubenjn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4470,15 +4470,15 @@ The directories at the NSI site MDI installation
   vertical-align: middle;
 }
 
-#qrcyrkspot .gt_from_md > :first-child {
+#mztiubenjn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qrcyrkspot .gt_from_md > :last-child {
+#mztiubenjn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qrcyrkspot .gt_row {
+#mztiubenjn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4497,7 +4497,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#qrcyrkspot .gt_stub {
+#mztiubenjn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4510,7 +4510,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#qrcyrkspot .gt_stub_row_group {
+#mztiubenjn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4524,15 +4524,15 @@ The directories at the NSI site MDI installation
   vertical-align: top;
 }
 
-#qrcyrkspot .gt_row_group_first td {
+#mztiubenjn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qrcyrkspot .gt_row_group_first th {
+#mztiubenjn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qrcyrkspot .gt_summary_row {
+#mztiubenjn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4542,16 +4542,16 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#qrcyrkspot .gt_first_summary_row {
+#mztiubenjn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_first_summary_row.thick {
+#mztiubenjn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qrcyrkspot .gt_last_summary_row {
+#mztiubenjn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4561,7 +4561,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_grand_summary_row {
+#mztiubenjn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4571,7 +4571,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#qrcyrkspot .gt_first_grand_summary_row {
+#mztiubenjn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4581,7 +4581,7 @@ The directories at the NSI site MDI installation
   border-top-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_last_grand_summary_row_top {
+#mztiubenjn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4591,11 +4591,11 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_striped {
+#mztiubenjn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qrcyrkspot .gt_table_body {
+#mztiubenjn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4604,7 +4604,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_footnotes {
+#mztiubenjn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4618,7 +4618,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_footnote {
+#mztiubenjn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4627,7 +4627,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#qrcyrkspot .gt_sourcenotes {
+#mztiubenjn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4641,7 +4641,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#qrcyrkspot .gt_sourcenote {
+#mztiubenjn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4649,72 +4649,72 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#qrcyrkspot .gt_left {
+#mztiubenjn .gt_left {
   text-align: left;
 }
 
-#qrcyrkspot .gt_center {
+#mztiubenjn .gt_center {
   text-align: center;
 }
 
-#qrcyrkspot .gt_right {
+#mztiubenjn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qrcyrkspot .gt_font_normal {
+#mztiubenjn .gt_font_normal {
   font-weight: normal;
 }
 
-#qrcyrkspot .gt_font_bold {
+#mztiubenjn .gt_font_bold {
   font-weight: bold;
 }
 
-#qrcyrkspot .gt_font_italic {
+#mztiubenjn .gt_font_italic {
   font-style: italic;
 }
 
-#qrcyrkspot .gt_super {
+#mztiubenjn .gt_super {
   font-size: 65%;
 }
 
-#qrcyrkspot .gt_footnote_marks {
+#mztiubenjn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qrcyrkspot .gt_asterisk {
+#mztiubenjn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qrcyrkspot .gt_indent_1 {
+#mztiubenjn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qrcyrkspot .gt_indent_2 {
+#mztiubenjn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qrcyrkspot .gt_indent_3 {
+#mztiubenjn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qrcyrkspot .gt_indent_4 {
+#mztiubenjn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qrcyrkspot .gt_indent_5 {
+#mztiubenjn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qrcyrkspot .katex-display {
+#mztiubenjn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qrcyrkspot div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mztiubenjn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5026,23 +5026,23 @@ Click to see an abbreviated list of R date formats:
 <h5 data-number="3.2.1.2.3" class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames."><span class="header-section-number">3.2.1.2.3</span> Example: Netherlands (SBS, 2018): NL_varnames.</h5>
 <div class="cell">
 <div class="cell-output-display">
-<div id="hjwytcpwdg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hjwytcpwdg table {
+<div id="iwkxowamum" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iwkxowamum table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hjwytcpwdg thead, #hjwytcpwdg tbody, #hjwytcpwdg tfoot, #hjwytcpwdg tr, #hjwytcpwdg td, #hjwytcpwdg th {
+#iwkxowamum thead, #iwkxowamum tbody, #iwkxowamum tfoot, #iwkxowamum tr, #iwkxowamum td, #iwkxowamum th {
   border-style: none;
 }
 
-#hjwytcpwdg p {
+#iwkxowamum p {
   margin: 0;
   padding: 0;
 }
 
-#hjwytcpwdg .gt_table {
+#iwkxowamum .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5068,12 +5068,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_caption {
+#iwkxowamum .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hjwytcpwdg .gt_title {
+#iwkxowamum .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5085,7 +5085,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#hjwytcpwdg .gt_subtitle {
+#iwkxowamum .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5097,7 +5097,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#hjwytcpwdg .gt_heading {
+#iwkxowamum .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5109,13 +5109,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_bottom_border {
+#iwkxowamum .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_col_headings {
+#iwkxowamum .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5130,7 +5130,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_col_heading {
+#iwkxowamum .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5150,7 +5150,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#hjwytcpwdg .gt_column_spanner_outer {
+#iwkxowamum .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5162,15 +5162,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#hjwytcpwdg .gt_column_spanner_outer:first-child {
+#iwkxowamum .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hjwytcpwdg .gt_column_spanner_outer:last-child {
+#iwkxowamum .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hjwytcpwdg .gt_column_spanner {
+#iwkxowamum .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5182,11 +5182,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#hjwytcpwdg .gt_spanner_row {
+#iwkxowamum .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hjwytcpwdg .gt_group_heading {
+#iwkxowamum .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5212,7 +5212,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#hjwytcpwdg .gt_empty_group_heading {
+#iwkxowamum .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5227,15 +5227,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#hjwytcpwdg .gt_from_md > :first-child {
+#iwkxowamum .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hjwytcpwdg .gt_from_md > :last-child {
+#iwkxowamum .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hjwytcpwdg .gt_row {
+#iwkxowamum .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5254,7 +5254,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#hjwytcpwdg .gt_stub {
+#iwkxowamum .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5267,7 +5267,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#hjwytcpwdg .gt_stub_row_group {
+#iwkxowamum .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5281,15 +5281,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#hjwytcpwdg .gt_row_group_first td {
+#iwkxowamum .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hjwytcpwdg .gt_row_group_first th {
+#iwkxowamum .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hjwytcpwdg .gt_summary_row {
+#iwkxowamum .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5299,16 +5299,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#hjwytcpwdg .gt_first_summary_row {
+#iwkxowamum .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_first_summary_row.thick {
+#iwkxowamum .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hjwytcpwdg .gt_last_summary_row {
+#iwkxowamum .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5318,7 +5318,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_grand_summary_row {
+#iwkxowamum .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5328,7 +5328,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#hjwytcpwdg .gt_first_grand_summary_row {
+#iwkxowamum .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5338,7 +5338,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_last_grand_summary_row_top {
+#iwkxowamum .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5348,11 +5348,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_striped {
+#iwkxowamum .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hjwytcpwdg .gt_table_body {
+#iwkxowamum .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5361,7 +5361,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_footnotes {
+#iwkxowamum .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5375,7 +5375,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_footnote {
+#iwkxowamum .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5384,7 +5384,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#hjwytcpwdg .gt_sourcenotes {
+#iwkxowamum .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5398,7 +5398,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#hjwytcpwdg .gt_sourcenote {
+#iwkxowamum .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5406,72 +5406,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#hjwytcpwdg .gt_left {
+#iwkxowamum .gt_left {
   text-align: left;
 }
 
-#hjwytcpwdg .gt_center {
+#iwkxowamum .gt_center {
   text-align: center;
 }
 
-#hjwytcpwdg .gt_right {
+#iwkxowamum .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hjwytcpwdg .gt_font_normal {
+#iwkxowamum .gt_font_normal {
   font-weight: normal;
 }
 
-#hjwytcpwdg .gt_font_bold {
+#iwkxowamum .gt_font_bold {
   font-weight: bold;
 }
 
-#hjwytcpwdg .gt_font_italic {
+#iwkxowamum .gt_font_italic {
   font-style: italic;
 }
 
-#hjwytcpwdg .gt_super {
+#iwkxowamum .gt_super {
   font-size: 65%;
 }
 
-#hjwytcpwdg .gt_footnote_marks {
+#iwkxowamum .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hjwytcpwdg .gt_asterisk {
+#iwkxowamum .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hjwytcpwdg .gt_indent_1 {
+#iwkxowamum .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hjwytcpwdg .gt_indent_2 {
+#iwkxowamum .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hjwytcpwdg .gt_indent_3 {
+#iwkxowamum .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hjwytcpwdg .gt_indent_4 {
+#iwkxowamum .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hjwytcpwdg .gt_indent_5 {
+#iwkxowamum .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hjwytcpwdg .katex-display {
+#iwkxowamum .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hjwytcpwdg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#iwkxowamum div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5724,23 +5724,23 @@ Dealing with the year column
 <p>An example below of the values occurring for the unit of measurement in the SI <code>PRODCOM</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fboafxfhcz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fboafxfhcz table {
+<div id="kxwxfpbpcb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kxwxfpbpcb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fboafxfhcz thead, #fboafxfhcz tbody, #fboafxfhcz tfoot, #fboafxfhcz tr, #fboafxfhcz td, #fboafxfhcz th {
+#kxwxfpbpcb thead, #kxwxfpbpcb tbody, #kxwxfpbpcb tfoot, #kxwxfpbpcb tr, #kxwxfpbpcb td, #kxwxfpbpcb th {
   border-style: none;
 }
 
-#fboafxfhcz p {
+#kxwxfpbpcb p {
   margin: 0;
   padding: 0;
 }
 
-#fboafxfhcz .gt_table {
+#kxwxfpbpcb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5766,12 +5766,12 @@ Dealing with the year column
   border-left-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_caption {
+#kxwxfpbpcb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fboafxfhcz .gt_title {
+#kxwxfpbpcb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5783,7 +5783,7 @@ Dealing with the year column
   border-bottom-width: 0;
 }
 
-#fboafxfhcz .gt_subtitle {
+#kxwxfpbpcb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5795,7 +5795,7 @@ Dealing with the year column
   border-top-width: 0;
 }
 
-#fboafxfhcz .gt_heading {
+#kxwxfpbpcb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5807,13 +5807,13 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_bottom_border {
+#kxwxfpbpcb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_col_headings {
+#kxwxfpbpcb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5828,7 +5828,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_col_heading {
+#kxwxfpbpcb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5848,7 +5848,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#fboafxfhcz .gt_column_spanner_outer {
+#kxwxfpbpcb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5860,15 +5860,15 @@ Dealing with the year column
   padding-right: 4px;
 }
 
-#fboafxfhcz .gt_column_spanner_outer:first-child {
+#kxwxfpbpcb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fboafxfhcz .gt_column_spanner_outer:last-child {
+#kxwxfpbpcb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fboafxfhcz .gt_column_spanner {
+#kxwxfpbpcb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5880,11 +5880,11 @@ Dealing with the year column
   width: 100%;
 }
 
-#fboafxfhcz .gt_spanner_row {
+#kxwxfpbpcb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fboafxfhcz .gt_group_heading {
+#kxwxfpbpcb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5910,7 +5910,7 @@ Dealing with the year column
   text-align: left;
 }
 
-#fboafxfhcz .gt_empty_group_heading {
+#kxwxfpbpcb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5925,15 +5925,15 @@ Dealing with the year column
   vertical-align: middle;
 }
 
-#fboafxfhcz .gt_from_md > :first-child {
+#kxwxfpbpcb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fboafxfhcz .gt_from_md > :last-child {
+#kxwxfpbpcb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fboafxfhcz .gt_row {
+#kxwxfpbpcb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5952,7 +5952,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#fboafxfhcz .gt_stub {
+#kxwxfpbpcb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5965,7 +5965,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#fboafxfhcz .gt_stub_row_group {
+#kxwxfpbpcb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5979,15 +5979,15 @@ Dealing with the year column
   vertical-align: top;
 }
 
-#fboafxfhcz .gt_row_group_first td {
+#kxwxfpbpcb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fboafxfhcz .gt_row_group_first th {
+#kxwxfpbpcb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fboafxfhcz .gt_summary_row {
+#kxwxfpbpcb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5997,16 +5997,16 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#fboafxfhcz .gt_first_summary_row {
+#kxwxfpbpcb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_first_summary_row.thick {
+#kxwxfpbpcb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fboafxfhcz .gt_last_summary_row {
+#kxwxfpbpcb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6016,7 +6016,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_grand_summary_row {
+#kxwxfpbpcb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6026,7 +6026,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#fboafxfhcz .gt_first_grand_summary_row {
+#kxwxfpbpcb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6036,7 +6036,7 @@ Dealing with the year column
   border-top-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_last_grand_summary_row_top {
+#kxwxfpbpcb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6046,11 +6046,11 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_striped {
+#kxwxfpbpcb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fboafxfhcz .gt_table_body {
+#kxwxfpbpcb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6059,7 +6059,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_footnotes {
+#kxwxfpbpcb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6073,7 +6073,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_footnote {
+#kxwxfpbpcb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6082,7 +6082,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#fboafxfhcz .gt_sourcenotes {
+#kxwxfpbpcb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6096,7 +6096,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#fboafxfhcz .gt_sourcenote {
+#kxwxfpbpcb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6104,72 +6104,72 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#fboafxfhcz .gt_left {
+#kxwxfpbpcb .gt_left {
   text-align: left;
 }
 
-#fboafxfhcz .gt_center {
+#kxwxfpbpcb .gt_center {
   text-align: center;
 }
 
-#fboafxfhcz .gt_right {
+#kxwxfpbpcb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fboafxfhcz .gt_font_normal {
+#kxwxfpbpcb .gt_font_normal {
   font-weight: normal;
 }
 
-#fboafxfhcz .gt_font_bold {
+#kxwxfpbpcb .gt_font_bold {
   font-weight: bold;
 }
 
-#fboafxfhcz .gt_font_italic {
+#kxwxfpbpcb .gt_font_italic {
   font-style: italic;
 }
 
-#fboafxfhcz .gt_super {
+#kxwxfpbpcb .gt_super {
   font-size: 65%;
 }
 
-#fboafxfhcz .gt_footnote_marks {
+#kxwxfpbpcb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fboafxfhcz .gt_asterisk {
+#kxwxfpbpcb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fboafxfhcz .gt_indent_1 {
+#kxwxfpbpcb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fboafxfhcz .gt_indent_2 {
+#kxwxfpbpcb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fboafxfhcz .gt_indent_3 {
+#kxwxfpbpcb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fboafxfhcz .gt_indent_4 {
+#kxwxfpbpcb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fboafxfhcz .gt_indent_5 {
+#kxwxfpbpcb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fboafxfhcz .katex-display {
+#kxwxfpbpcb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fboafxfhcz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kxwxfpbpcb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6249,23 +6249,23 @@ Dealing with the year column
 <p>An sample of rows from the table of PRODCOM codes (in this case some randomly selected rows from the list of codes of Finland):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="petofggjhz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#petofggjhz table {
+<div id="afszlyahod" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#afszlyahod table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#petofggjhz thead, #petofggjhz tbody, #petofggjhz tfoot, #petofggjhz tr, #petofggjhz td, #petofggjhz th {
+#afszlyahod thead, #afszlyahod tbody, #afszlyahod tfoot, #afszlyahod tr, #afszlyahod td, #afszlyahod th {
   border-style: none;
 }
 
-#petofggjhz p {
+#afszlyahod p {
   margin: 0;
   padding: 0;
 }
 
-#petofggjhz .gt_table {
+#afszlyahod .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6291,12 +6291,12 @@ Dealing with the year column
   border-left-color: #D3D3D3;
 }
 
-#petofggjhz .gt_caption {
+#afszlyahod .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#petofggjhz .gt_title {
+#afszlyahod .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -6308,7 +6308,7 @@ Dealing with the year column
   border-bottom-width: 0;
 }
 
-#petofggjhz .gt_subtitle {
+#afszlyahod .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -6320,7 +6320,7 @@ Dealing with the year column
   border-top-width: 0;
 }
 
-#petofggjhz .gt_heading {
+#afszlyahod .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -6332,13 +6332,13 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#petofggjhz .gt_bottom_border {
+#afszlyahod .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#petofggjhz .gt_col_headings {
+#afszlyahod .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6353,7 +6353,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#petofggjhz .gt_col_heading {
+#afszlyahod .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6373,7 +6373,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#petofggjhz .gt_column_spanner_outer {
+#afszlyahod .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6385,15 +6385,15 @@ Dealing with the year column
   padding-right: 4px;
 }
 
-#petofggjhz .gt_column_spanner_outer:first-child {
+#afszlyahod .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#petofggjhz .gt_column_spanner_outer:last-child {
+#afszlyahod .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#petofggjhz .gt_column_spanner {
+#afszlyahod .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6405,11 +6405,11 @@ Dealing with the year column
   width: 100%;
 }
 
-#petofggjhz .gt_spanner_row {
+#afszlyahod .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#petofggjhz .gt_group_heading {
+#afszlyahod .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6435,7 +6435,7 @@ Dealing with the year column
   text-align: left;
 }
 
-#petofggjhz .gt_empty_group_heading {
+#afszlyahod .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6450,15 +6450,15 @@ Dealing with the year column
   vertical-align: middle;
 }
 
-#petofggjhz .gt_from_md > :first-child {
+#afszlyahod .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#petofggjhz .gt_from_md > :last-child {
+#afszlyahod .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#petofggjhz .gt_row {
+#afszlyahod .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6477,7 +6477,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#petofggjhz .gt_stub {
+#afszlyahod .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6490,7 +6490,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#petofggjhz .gt_stub_row_group {
+#afszlyahod .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6504,15 +6504,15 @@ Dealing with the year column
   vertical-align: top;
 }
 
-#petofggjhz .gt_row_group_first td {
+#afszlyahod .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#petofggjhz .gt_row_group_first th {
+#afszlyahod .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#petofggjhz .gt_summary_row {
+#afszlyahod .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6522,16 +6522,16 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#petofggjhz .gt_first_summary_row {
+#afszlyahod .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#petofggjhz .gt_first_summary_row.thick {
+#afszlyahod .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#petofggjhz .gt_last_summary_row {
+#afszlyahod .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6541,7 +6541,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#petofggjhz .gt_grand_summary_row {
+#afszlyahod .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6551,7 +6551,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#petofggjhz .gt_first_grand_summary_row {
+#afszlyahod .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6561,7 +6561,7 @@ Dealing with the year column
   border-top-color: #D3D3D3;
 }
 
-#petofggjhz .gt_last_grand_summary_row_top {
+#afszlyahod .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6571,11 +6571,11 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#petofggjhz .gt_striped {
+#afszlyahod .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#petofggjhz .gt_table_body {
+#afszlyahod .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6584,7 +6584,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#petofggjhz .gt_footnotes {
+#afszlyahod .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6598,7 +6598,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#petofggjhz .gt_footnote {
+#afszlyahod .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6607,7 +6607,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#petofggjhz .gt_sourcenotes {
+#afszlyahod .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6621,7 +6621,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#petofggjhz .gt_sourcenote {
+#afszlyahod .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6629,72 +6629,72 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#petofggjhz .gt_left {
+#afszlyahod .gt_left {
   text-align: left;
 }
 
-#petofggjhz .gt_center {
+#afszlyahod .gt_center {
   text-align: center;
 }
 
-#petofggjhz .gt_right {
+#afszlyahod .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#petofggjhz .gt_font_normal {
+#afszlyahod .gt_font_normal {
   font-weight: normal;
 }
 
-#petofggjhz .gt_font_bold {
+#afszlyahod .gt_font_bold {
   font-weight: bold;
 }
 
-#petofggjhz .gt_font_italic {
+#afszlyahod .gt_font_italic {
   font-style: italic;
 }
 
-#petofggjhz .gt_super {
+#afszlyahod .gt_super {
   font-size: 65%;
 }
 
-#petofggjhz .gt_footnote_marks {
+#afszlyahod .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#petofggjhz .gt_asterisk {
+#afszlyahod .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#petofggjhz .gt_indent_1 {
+#afszlyahod .gt_indent_1 {
   text-indent: 5px;
 }
 
-#petofggjhz .gt_indent_2 {
+#afszlyahod .gt_indent_2 {
   text-indent: 10px;
 }
 
-#petofggjhz .gt_indent_3 {
+#afszlyahod .gt_indent_3 {
   text-indent: 15px;
 }
 
-#petofggjhz .gt_indent_4 {
+#afszlyahod .gt_indent_4 {
   text-indent: 20px;
 }
 
-#petofggjhz .gt_indent_5 {
+#afszlyahod .gt_indent_5 {
   text-indent: 25px;
 }
 
-#petofggjhz .katex-display {
+#afszlyahod .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#petofggjhz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#afszlyahod div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6702,70 +6702,70 @@ Dealing with the year column
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_col_headings header">
-<th id="code" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">code</th>
+<th id="code" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">code</th>
 <th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">29203090</td>
-<td class="gt_row gt_right" headers="year">2020</td>
+<td class="gt_row gt_left" headers="code">20141371</td>
+<td class="gt_row gt_right" headers="year">2012</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">21125455</td>
-<td class="gt_row gt_right" headers="year">2004</td>
+<td class="gt_row gt_left" headers="code">27112670</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">29104200</td>
+<td class="gt_row gt_left" headers="code">24421200</td>
 <td class="gt_row gt_right" headers="year">2018</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">35121393</td>
-<td class="gt_row gt_right" headers="year">2004</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">10131575</td>
+<td class="gt_row gt_left" headers="code">26516430</td>
 <td class="gt_row gt_right" headers="year">2020</td>
 </tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="code">22213010</td>
+<td class="gt_row gt_right" headers="year">2012</td>
+</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">29411155</td>
-<td class="gt_row gt_right" headers="year">2006</td>
+<td class="gt_row gt_left" headers="code">29102330</td>
+<td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">2219810010</td>
-<td class="gt_row gt_right" headers="year">2017</td>
+<td class="gt_row gt_left" headers="code">0990180090</td>
+<td class="gt_row gt_right" headers="year">2008</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">23131150</td>
+<td class="gt_row gt_left" headers="code">28491340</td>
 <td class="gt_row gt_right" headers="year">2018</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">25992600</td>
-<td class="gt_row gt_right" headers="year">2015</td>
+<td class="gt_row gt_left" headers="code">23201233</td>
+<td class="gt_row gt_right" headers="year">2019</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">27312057</td>
-<td class="gt_row gt_right" headers="year">2006</td>
+<td class="gt_row gt_left" headers="code">20142375</td>
+<td class="gt_row gt_right" headers="year">2014</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">24422230</td>
-<td class="gt_row gt_right" headers="year">2015</td>
+<td class="gt_row gt_left" headers="code">25242407B</td>
+<td class="gt_row gt_right" headers="year">2004</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">13204500</td>
+<td class="gt_row gt_left" headers="code">28142000</td>
+<td class="gt_row gt_right" headers="year">2010</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="code">25736018</td>
 <td class="gt_row gt_right" headers="year">2013</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">20414350</td>
-<td class="gt_row gt_right" headers="year">2020</td>
-</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">20134320</td>
-<td class="gt_row gt_right" headers="year">2021</td>
+<td class="gt_row gt_left" headers="code">15851150</td>
+<td class="gt_row gt_right" headers="year">2007</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">17231375</td>
-<td class="gt_row gt_right" headers="year">2009</td>
+<td class="gt_row gt_left" headers="code">18121930</td>
+<td class="gt_row gt_right" headers="year">2014</td>
 </tr>
 </tbody>
 </table>
@@ -6929,23 +6929,23 @@ Importance of the history of each code
 <p>For example, the following table displays how such table looks like for a subset of ITGS codes in PT:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="piamesebuh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#piamesebuh table {
+<div id="xwnjatgwlh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xwnjatgwlh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#piamesebuh thead, #piamesebuh tbody, #piamesebuh tfoot, #piamesebuh tr, #piamesebuh td, #piamesebuh th {
+#xwnjatgwlh thead, #xwnjatgwlh tbody, #xwnjatgwlh tfoot, #xwnjatgwlh tr, #xwnjatgwlh td, #xwnjatgwlh th {
   border-style: none;
 }
 
-#piamesebuh p {
+#xwnjatgwlh p {
   margin: 0;
   padding: 0;
 }
 
-#piamesebuh .gt_table {
+#xwnjatgwlh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6971,12 +6971,12 @@ Importance of the history of each code
   border-left-color: #D3D3D3;
 }
 
-#piamesebuh .gt_caption {
+#xwnjatgwlh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#piamesebuh .gt_title {
+#xwnjatgwlh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -6988,7 +6988,7 @@ Importance of the history of each code
   border-bottom-width: 0;
 }
 
-#piamesebuh .gt_subtitle {
+#xwnjatgwlh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -7000,7 +7000,7 @@ Importance of the history of each code
   border-top-width: 0;
 }
 
-#piamesebuh .gt_heading {
+#xwnjatgwlh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -7012,13 +7012,13 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#piamesebuh .gt_bottom_border {
+#xwnjatgwlh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#piamesebuh .gt_col_headings {
+#xwnjatgwlh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7033,7 +7033,7 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#piamesebuh .gt_col_heading {
+#xwnjatgwlh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7053,7 +7053,7 @@ Importance of the history of each code
   overflow-x: hidden;
 }
 
-#piamesebuh .gt_column_spanner_outer {
+#xwnjatgwlh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7065,15 +7065,15 @@ Importance of the history of each code
   padding-right: 4px;
 }
 
-#piamesebuh .gt_column_spanner_outer:first-child {
+#xwnjatgwlh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#piamesebuh .gt_column_spanner_outer:last-child {
+#xwnjatgwlh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#piamesebuh .gt_column_spanner {
+#xwnjatgwlh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -7085,11 +7085,11 @@ Importance of the history of each code
   width: 100%;
 }
 
-#piamesebuh .gt_spanner_row {
+#xwnjatgwlh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#piamesebuh .gt_group_heading {
+#xwnjatgwlh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7115,7 +7115,7 @@ Importance of the history of each code
   text-align: left;
 }
 
-#piamesebuh .gt_empty_group_heading {
+#xwnjatgwlh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -7130,15 +7130,15 @@ Importance of the history of each code
   vertical-align: middle;
 }
 
-#piamesebuh .gt_from_md > :first-child {
+#xwnjatgwlh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#piamesebuh .gt_from_md > :last-child {
+#xwnjatgwlh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#piamesebuh .gt_row {
+#xwnjatgwlh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7157,7 +7157,7 @@ Importance of the history of each code
   overflow-x: hidden;
 }
 
-#piamesebuh .gt_stub {
+#xwnjatgwlh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7170,7 +7170,7 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#piamesebuh .gt_stub_row_group {
+#xwnjatgwlh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7184,15 +7184,15 @@ Importance of the history of each code
   vertical-align: top;
 }
 
-#piamesebuh .gt_row_group_first td {
+#xwnjatgwlh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#piamesebuh .gt_row_group_first th {
+#xwnjatgwlh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#piamesebuh .gt_summary_row {
+#xwnjatgwlh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -7202,16 +7202,16 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#piamesebuh .gt_first_summary_row {
+#xwnjatgwlh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#piamesebuh .gt_first_summary_row.thick {
+#xwnjatgwlh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#piamesebuh .gt_last_summary_row {
+#xwnjatgwlh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7221,7 +7221,7 @@ Importance of the history of each code
   border-bottom-color: #D3D3D3;
 }
 
-#piamesebuh .gt_grand_summary_row {
+#xwnjatgwlh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -7231,7 +7231,7 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#piamesebuh .gt_first_grand_summary_row {
+#xwnjatgwlh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7241,7 +7241,7 @@ Importance of the history of each code
   border-top-color: #D3D3D3;
 }
 
-#piamesebuh .gt_last_grand_summary_row_top {
+#xwnjatgwlh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7251,11 +7251,11 @@ Importance of the history of each code
   border-bottom-color: #D3D3D3;
 }
 
-#piamesebuh .gt_striped {
+#xwnjatgwlh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#piamesebuh .gt_table_body {
+#xwnjatgwlh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7264,7 +7264,7 @@ Importance of the history of each code
   border-bottom-color: #D3D3D3;
 }
 
-#piamesebuh .gt_footnotes {
+#xwnjatgwlh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -7278,7 +7278,7 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#piamesebuh .gt_footnote {
+#xwnjatgwlh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -7287,7 +7287,7 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#piamesebuh .gt_sourcenotes {
+#xwnjatgwlh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -7301,7 +7301,7 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#piamesebuh .gt_sourcenote {
+#xwnjatgwlh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -7309,72 +7309,72 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#piamesebuh .gt_left {
+#xwnjatgwlh .gt_left {
   text-align: left;
 }
 
-#piamesebuh .gt_center {
+#xwnjatgwlh .gt_center {
   text-align: center;
 }
 
-#piamesebuh .gt_right {
+#xwnjatgwlh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#piamesebuh .gt_font_normal {
+#xwnjatgwlh .gt_font_normal {
   font-weight: normal;
 }
 
-#piamesebuh .gt_font_bold {
+#xwnjatgwlh .gt_font_bold {
   font-weight: bold;
 }
 
-#piamesebuh .gt_font_italic {
+#xwnjatgwlh .gt_font_italic {
   font-style: italic;
 }
 
-#piamesebuh .gt_super {
+#xwnjatgwlh .gt_super {
   font-size: 65%;
 }
 
-#piamesebuh .gt_footnote_marks {
+#xwnjatgwlh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#piamesebuh .gt_asterisk {
+#xwnjatgwlh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#piamesebuh .gt_indent_1 {
+#xwnjatgwlh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#piamesebuh .gt_indent_2 {
+#xwnjatgwlh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#piamesebuh .gt_indent_3 {
+#xwnjatgwlh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#piamesebuh .gt_indent_4 {
+#xwnjatgwlh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#piamesebuh .gt_indent_5 {
+#xwnjatgwlh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#piamesebuh .katex-display {
+#xwnjatgwlh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#piamesebuh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xwnjatgwlh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -7389,79 +7389,79 @@ Importance of the history of each code
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">4407 19 20</td>
-<td class="gt_row gt_right" headers="right">4407 13 00</td>
-<td class="gt_row gt_right" headers="year">2021</td>
+<td class="gt_row gt_right" headers="left">3056980</td>
+<td class="gt_row gt_right" headers="right">3057900</td>
+<td class="gt_row gt_right" headers="year">2011</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">91029100</td>
-<td class="gt_row gt_right" headers="right">91029100</td>
-<td class="gt_row gt_right" headers="year">1995</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">8421 39 20</td>
-<td class="gt_row gt_right" headers="right">8421 39 15</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">0802 90 50</td>
-<td class="gt_row gt_right" headers="right">0802 92 00</td>
+<td class="gt_row gt_right" headers="left">8474 90 90</td>
+<td class="gt_row gt_right" headers="right">8474 90 90</td>
 <td class="gt_row gt_right" headers="year">2021</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">72084593</td>
-<td class="gt_row gt_right" headers="right">72084590</td>
-<td class="gt_row gt_right" headers="year">1990</td>
+<td class="gt_row gt_right" headers="left">82100090</td>
+<td class="gt_row gt_right" headers="right">82100000</td>
+<td class="gt_row gt_right" headers="year">1994</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">29182950</td>
-<td class="gt_row gt_right" headers="right">29182980</td>
-<td class="gt_row gt_right" headers="year">2003</td>
+<td class="gt_row gt_right" headers="left">83111090</td>
+<td class="gt_row gt_right" headers="right">83111000</td>
+<td class="gt_row gt_right" headers="year">2010</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">3042029</td>
-<td class="gt_row gt_right" headers="right">3042929</td>
+<td class="gt_row gt_right" headers="left">84734019</td>
+<td class="gt_row gt_right" headers="right">85423210</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">85049090</td>
-<td class="gt_row gt_right" headers="right">85049091</td>
-<td class="gt_row gt_right" headers="year">1997</td>
+<td class="gt_row gt_right" headers="left">12079910</td>
+<td class="gt_row gt_right" headers="right">12079920</td>
+<td class="gt_row gt_right" headers="year">2001</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">3026986</td>
-<td class="gt_row gt_right" headers="right">3026982</td>
-<td class="gt_row gt_right" headers="year">2009</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">90109000</td>
-<td class="gt_row gt_right" headers="right">90109090</td>
-<td class="gt_row gt_right" headers="year">1997</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">10062090</td>
-<td class="gt_row gt_right" headers="right">10062017</td>
-<td class="gt_row gt_right" headers="year">1988</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">85281061</td>
-<td class="gt_row gt_right" headers="right">85281031</td>
+<td class="gt_row gt_right" headers="left">16025090</td>
+<td class="gt_row gt_right" headers="right">16025039</td>
 <td class="gt_row gt_right" headers="year">1992</td>
 </tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">70052110</td>
+<td class="gt_row gt_right" headers="right">70052125</td>
+<td class="gt_row gt_right" headers="year">1995</td>
+</tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">0307 92 00</td>
-<td class="gt_row gt_right" headers="right">0307 92 00</td>
-<td class="gt_row gt_right" headers="year">2021</td>
+<td class="gt_row gt_right" headers="left">48103100</td>
+<td class="gt_row gt_right" headers="right">48103100</td>
+<td class="gt_row gt_right" headers="year">2001</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">72101211</td>
-<td class="gt_row gt_right" headers="right">72101220</td>
-<td class="gt_row gt_right" headers="year">2003</td>
+<td class="gt_row gt_right" headers="left">8703 32 90</td>
+<td class="gt_row gt_right" headers="right">8703 50 00</td>
+<td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">3824 73 00</td>
-<td class="gt_row gt_right" headers="right">3827 12 00</td>
-<td class="gt_row gt_right" headers="year">2021</td>
+<td class="gt_row gt_right" headers="left">29334030</td>
+<td class="gt_row gt_right" headers="right">29334930</td>
+<td class="gt_row gt_right" headers="year">2001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">9042031</td>
+<td class="gt_row gt_right" headers="right">9042030</td>
+<td class="gt_row gt_right" headers="year">2000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">3824 90 20</td>
+<td class="gt_row gt_right" headers="right">3824 99 20</td>
+<td class="gt_row gt_right" headers="year">2016</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">29339910</td>
+<td class="gt_row gt_right" headers="right">29339980</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">8424 81 30</td>
+<td class="gt_row gt_right" headers="right">8424 82 90</td>
+<td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 </tbody>
 </table>
@@ -14163,8 +14163,8 @@ Click here to see the entire countdown.R script
 <p>The script performs the following checks on the :</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 34%">
-<col style="width: 65%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -14242,8 +14242,8 @@ Click here to see the entire countdown.R script
 <p><strong>Variable Class Check Table</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 34%">
-<col style="width: 65%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -14277,8 +14277,8 @@ Click here to see the entire countdown.R script
 <p><strong>Date Format &amp; Class Check Table</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 34%">
-<col style="width: 65%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -14368,8 +14368,8 @@ Click here to see the entire countdown.R script
 <p><strong>Break Summary Table (PDF)</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 34%">
-<col style="width: 65%">
+<col style="width: 36%">
+<col style="width: 63%">
 </colgroup>
 <thead>
 <tr class="header">
