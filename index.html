@@ -144,9 +144,9 @@ window.Quarto = {
   <li><a href="#introduction-setup-to-mdi-infrastructure" id="toc-introduction-setup-to-mdi-infrastructure" class="nav-link" data-scroll-target="#introduction-setup-to-mdi-infrastructure"><span class="header-section-number">3.1</span> Introduction &amp; Setup to MDI Infrastructure</a></li>
   <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">3.2</span> Metadata</a></li>
   <li><a href="#run-mdi-harmonization-modules" id="toc-run-mdi-harmonization-modules" class="nav-link" data-scroll-target="#run-mdi-harmonization-modules"><span class="header-section-number">3.3</span> Run MDI: Harmonization &amp; Modules</a></li>
-  <li><a href="#developing-testing" id="toc-developing-testing" class="nav-link" data-scroll-target="#developing-testing"><span class="header-section-number">3.4</span> Developing &amp; Testing</a></li>
+  <li><a href="#developing-testing" id="toc-developing-testing" class="nav-link" data-scroll-target="#developing-testing"><span class="header-section-number">5.1</span> Developing &amp; Testing</a></li>
   </ul></li>
-  <li><a href="#acknowledgement" id="toc-acknowledgement" class="nav-link" data-scroll-target="#acknowledgement"><span class="header-section-number">4</span> Acknowledgement</a></li>
+  <li><a href="#acknowledgement" id="toc-acknowledgement" class="nav-link" data-scroll-target="#acknowledgement"><span class="header-section-number">6</span> Acknowledgement</a></li>
   </ul>
 </nav>
 </div>
@@ -411,13 +411,13 @@ Glossary
 <li>Datafiles: Lists all available NSI firm-level data files, including their names and years covered.</li>
 <li>Disclosure Criteria: Rules designed by the NSIs to protect the confidentiality of firm-level data, ensuring that no output allows the identification of individual firms or the disclosure of sensitive information, even in aggregated form.</li>
 <li>Hierarchy: a table that maps a classification at different aggregation levels. E.g., Nace 4d: 6491 is equivalent to Nace 3d 649, Nace 2d, 64 and industry K.</li>
-<li>MD metadata: standardized set of variable names (MD_varname, i.e., firmid, capital, etc.) and respective definitions that forms microdata (MD) panels, or the MD_dataset (i.e., BS, SBS, ENER, etc.) set by the MDI team.</li>
+<li>MD metadata: standardized set of variable names (<code>MD_varname</code>, i.e., <code>firmid</code>, capital, etc.) and respective definitions that forms microdata (MD) panels, or the <code>MD_dataset</code> (i.e., BS, SBS, ENER, etc.) set by the MDI team.</li>
 <li>MDI: Microdata Infrastructure.</li>
 <li>MDI data catalogue: catalog containing all variables and their year range availability by country.</li>
 <li>MDI launch: process of running the modules within the rocket every 4 to 6 months.</li>
 <li>MDI tools: set of R functions created by the MDI team to generate the MD_datasets, manipulate them and execute modules.</li>
 <li>Module: research code.</li>
-<li>Modules names are defined with an acronym (“res_group”). For example, a module about firm dynamics is called FD (res_group=FD).</li>
+<li>Modules names are defined with an acronym (“<code>res_group</code>”). For example, a module about firm dynamics is called FD (<code>res_group</code>=FD).</li>
 <li>NSS: The coordinated institutional and technical framework encompassing the NSI and associated data centers.</li>
 <li>NSIs: National Statistical Institutes. These are the public authorities responsible for official statistics in each country. They host the confidential microdata, set legal rules, run disclosure control, and provide the secure environments where MDI operates.</li>
 <li>Nuvolos: cloud server platform where MDI users develop and test their codes. This space is designed for training, practicing, and familiarizing with the MDI infrastructure. MDI infrastructure: some terms</li>
@@ -528,23 +528,23 @@ Important
 <p>Once the final selection of MD variable names has been made for the module, a file named <code>(res_group)_MDnames_select.csv</code> (see example below) must be submitted to the MDI team. This needs to have the column names as shown below.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="qvmylafhee" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qvmylafhee table {
+<div id="hhnknqruxr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hhnknqruxr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qvmylafhee thead, #qvmylafhee tbody, #qvmylafhee tfoot, #qvmylafhee tr, #qvmylafhee td, #qvmylafhee th {
+#hhnknqruxr thead, #hhnknqruxr tbody, #hhnknqruxr tfoot, #hhnknqruxr tr, #hhnknqruxr td, #hhnknqruxr th {
   border-style: none;
 }
 
-#qvmylafhee p {
+#hhnknqruxr p {
   margin: 0;
   padding: 0;
 }
 
-#qvmylafhee .gt_table {
+#hhnknqruxr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -570,12 +570,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_caption {
+#hhnknqruxr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qvmylafhee .gt_title {
+#hhnknqruxr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -587,7 +587,7 @@ Important
   border-bottom-width: 0;
 }
 
-#qvmylafhee .gt_subtitle {
+#hhnknqruxr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -599,7 +599,7 @@ Important
   border-top-width: 0;
 }
 
-#qvmylafhee .gt_heading {
+#hhnknqruxr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -611,13 +611,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_bottom_border {
+#hhnknqruxr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_col_headings {
+#hhnknqruxr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -632,7 +632,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_col_heading {
+#hhnknqruxr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -652,7 +652,7 @@ Important
   overflow-x: hidden;
 }
 
-#qvmylafhee .gt_column_spanner_outer {
+#hhnknqruxr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -664,15 +664,15 @@ Important
   padding-right: 4px;
 }
 
-#qvmylafhee .gt_column_spanner_outer:first-child {
+#hhnknqruxr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qvmylafhee .gt_column_spanner_outer:last-child {
+#hhnknqruxr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qvmylafhee .gt_column_spanner {
+#hhnknqruxr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -684,11 +684,11 @@ Important
   width: 100%;
 }
 
-#qvmylafhee .gt_spanner_row {
+#hhnknqruxr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qvmylafhee .gt_group_heading {
+#hhnknqruxr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -714,7 +714,7 @@ Important
   text-align: left;
 }
 
-#qvmylafhee .gt_empty_group_heading {
+#hhnknqruxr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -729,15 +729,15 @@ Important
   vertical-align: middle;
 }
 
-#qvmylafhee .gt_from_md > :first-child {
+#hhnknqruxr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qvmylafhee .gt_from_md > :last-child {
+#hhnknqruxr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qvmylafhee .gt_row {
+#hhnknqruxr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -756,7 +756,7 @@ Important
   overflow-x: hidden;
 }
 
-#qvmylafhee .gt_stub {
+#hhnknqruxr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -769,7 +769,7 @@ Important
   padding-right: 5px;
 }
 
-#qvmylafhee .gt_stub_row_group {
+#hhnknqruxr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -783,15 +783,15 @@ Important
   vertical-align: top;
 }
 
-#qvmylafhee .gt_row_group_first td {
+#hhnknqruxr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qvmylafhee .gt_row_group_first th {
+#hhnknqruxr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qvmylafhee .gt_summary_row {
+#hhnknqruxr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -801,16 +801,16 @@ Important
   padding-right: 5px;
 }
 
-#qvmylafhee .gt_first_summary_row {
+#hhnknqruxr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_first_summary_row.thick {
+#hhnknqruxr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qvmylafhee .gt_last_summary_row {
+#hhnknqruxr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -820,7 +820,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_grand_summary_row {
+#hhnknqruxr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -830,7 +830,7 @@ Important
   padding-right: 5px;
 }
 
-#qvmylafhee .gt_first_grand_summary_row {
+#hhnknqruxr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -840,7 +840,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_last_grand_summary_row_top {
+#hhnknqruxr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -850,11 +850,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_striped {
+#hhnknqruxr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qvmylafhee .gt_table_body {
+#hhnknqruxr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -863,7 +863,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_footnotes {
+#hhnknqruxr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -877,7 +877,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_footnote {
+#hhnknqruxr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -886,7 +886,7 @@ Important
   padding-right: 5px;
 }
 
-#qvmylafhee .gt_sourcenotes {
+#hhnknqruxr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -900,7 +900,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#qvmylafhee .gt_sourcenote {
+#hhnknqruxr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -908,72 +908,72 @@ Important
   padding-right: 5px;
 }
 
-#qvmylafhee .gt_left {
+#hhnknqruxr .gt_left {
   text-align: left;
 }
 
-#qvmylafhee .gt_center {
+#hhnknqruxr .gt_center {
   text-align: center;
 }
 
-#qvmylafhee .gt_right {
+#hhnknqruxr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qvmylafhee .gt_font_normal {
+#hhnknqruxr .gt_font_normal {
   font-weight: normal;
 }
 
-#qvmylafhee .gt_font_bold {
+#hhnknqruxr .gt_font_bold {
   font-weight: bold;
 }
 
-#qvmylafhee .gt_font_italic {
+#hhnknqruxr .gt_font_italic {
   font-style: italic;
 }
 
-#qvmylafhee .gt_super {
+#hhnknqruxr .gt_super {
   font-size: 65%;
 }
 
-#qvmylafhee .gt_footnote_marks {
+#hhnknqruxr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qvmylafhee .gt_asterisk {
+#hhnknqruxr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qvmylafhee .gt_indent_1 {
+#hhnknqruxr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qvmylafhee .gt_indent_2 {
+#hhnknqruxr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qvmylafhee .gt_indent_3 {
+#hhnknqruxr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qvmylafhee .gt_indent_4 {
+#hhnknqruxr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qvmylafhee .gt_indent_5 {
+#hhnknqruxr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qvmylafhee .katex-display {
+#hhnknqruxr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qvmylafhee div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hhnknqruxr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1021,7 +1021,7 @@ K_{i,t} = (1 - \delta_{j,t-1}) K_{i,t-1} + I_{i,t-1},<br>
 $$</p>
 <p>where <span class="math inline">\(K_{i,t}\)</span> denotes the capital stock of firm <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span>, <span class="math inline">\(I_{i,t-1}\)</span> is firm-level investment, and <span class="math inline">\(\delta_{j,t-1}\)</span> is the depreciation rate corresponding to industry <span class="math inline">\(j\)</span> (to which firm <span class="math inline">\(i\)</span> belongs) in the previous period. The initial condition <span class="math inline">\(K_{i,t_0}\)</span> is given by the imputed capital stock based on industry-level capital per employee.</p>
 <p>The estimation is carried out over firm-specific time intervals where information on initial capital, investment, and depreciation is jointly available. The resulting variable provides a consistent panel of firm-level capital stock estimates that combines firm-level dynamics with industry-level parameters.</p>
-<p>The new variable called <code>K_pim</code> is stored in MD_dataset SBS and is available in all countries where <code>ni_tan</code> is available.</p>
+<p>The new variable called <code>K_pim</code> is stored in <code>MD_dataset</code> SBS and is available in all countries where <code>ni_tan</code> is available.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1074,23 +1074,23 @@ List of currently used R libraries
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="bxrfpahvsr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bxrfpahvsr table {
+<div id="mgtqzmmeps" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mgtqzmmeps table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bxrfpahvsr thead, #bxrfpahvsr tbody, #bxrfpahvsr tfoot, #bxrfpahvsr tr, #bxrfpahvsr td, #bxrfpahvsr th {
+#mgtqzmmeps thead, #mgtqzmmeps tbody, #mgtqzmmeps tfoot, #mgtqzmmeps tr, #mgtqzmmeps td, #mgtqzmmeps th {
   border-style: none;
 }
 
-#bxrfpahvsr p {
+#mgtqzmmeps p {
   margin: 0;
   padding: 0;
 }
 
-#bxrfpahvsr .gt_table {
+#mgtqzmmeps .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1116,12 +1116,12 @@ List of currently used R libraries
   border-left-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_caption {
+#mgtqzmmeps .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bxrfpahvsr .gt_title {
+#mgtqzmmeps .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1133,7 +1133,7 @@ List of currently used R libraries
   border-bottom-width: 0;
 }
 
-#bxrfpahvsr .gt_subtitle {
+#mgtqzmmeps .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1145,7 +1145,7 @@ List of currently used R libraries
   border-top-width: 0;
 }
 
-#bxrfpahvsr .gt_heading {
+#mgtqzmmeps .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1157,13 +1157,13 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_bottom_border {
+#mgtqzmmeps .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_col_headings {
+#mgtqzmmeps .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1178,7 +1178,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_col_heading {
+#mgtqzmmeps .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1198,7 +1198,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#bxrfpahvsr .gt_column_spanner_outer {
+#mgtqzmmeps .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1210,15 +1210,15 @@ List of currently used R libraries
   padding-right: 4px;
 }
 
-#bxrfpahvsr .gt_column_spanner_outer:first-child {
+#mgtqzmmeps .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bxrfpahvsr .gt_column_spanner_outer:last-child {
+#mgtqzmmeps .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bxrfpahvsr .gt_column_spanner {
+#mgtqzmmeps .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1230,11 +1230,11 @@ List of currently used R libraries
   width: 100%;
 }
 
-#bxrfpahvsr .gt_spanner_row {
+#mgtqzmmeps .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bxrfpahvsr .gt_group_heading {
+#mgtqzmmeps .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1260,7 +1260,7 @@ List of currently used R libraries
   text-align: left;
 }
 
-#bxrfpahvsr .gt_empty_group_heading {
+#mgtqzmmeps .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1275,15 +1275,15 @@ List of currently used R libraries
   vertical-align: middle;
 }
 
-#bxrfpahvsr .gt_from_md > :first-child {
+#mgtqzmmeps .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bxrfpahvsr .gt_from_md > :last-child {
+#mgtqzmmeps .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bxrfpahvsr .gt_row {
+#mgtqzmmeps .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1302,7 +1302,7 @@ List of currently used R libraries
   overflow-x: hidden;
 }
 
-#bxrfpahvsr .gt_stub {
+#mgtqzmmeps .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1315,7 +1315,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#bxrfpahvsr .gt_stub_row_group {
+#mgtqzmmeps .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1329,15 +1329,15 @@ List of currently used R libraries
   vertical-align: top;
 }
 
-#bxrfpahvsr .gt_row_group_first td {
+#mgtqzmmeps .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bxrfpahvsr .gt_row_group_first th {
+#mgtqzmmeps .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bxrfpahvsr .gt_summary_row {
+#mgtqzmmeps .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1347,16 +1347,16 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#bxrfpahvsr .gt_first_summary_row {
+#mgtqzmmeps .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_first_summary_row.thick {
+#mgtqzmmeps .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bxrfpahvsr .gt_last_summary_row {
+#mgtqzmmeps .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1366,7 +1366,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_grand_summary_row {
+#mgtqzmmeps .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1376,7 +1376,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#bxrfpahvsr .gt_first_grand_summary_row {
+#mgtqzmmeps .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1386,7 +1386,7 @@ List of currently used R libraries
   border-top-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_last_grand_summary_row_top {
+#mgtqzmmeps .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1396,11 +1396,11 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_striped {
+#mgtqzmmeps .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bxrfpahvsr .gt_table_body {
+#mgtqzmmeps .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1409,7 +1409,7 @@ List of currently used R libraries
   border-bottom-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_footnotes {
+#mgtqzmmeps .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1423,7 +1423,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_footnote {
+#mgtqzmmeps .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1432,7 +1432,7 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#bxrfpahvsr .gt_sourcenotes {
+#mgtqzmmeps .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1446,7 +1446,7 @@ List of currently used R libraries
   border-right-color: #D3D3D3;
 }
 
-#bxrfpahvsr .gt_sourcenote {
+#mgtqzmmeps .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1454,72 +1454,72 @@ List of currently used R libraries
   padding-right: 5px;
 }
 
-#bxrfpahvsr .gt_left {
+#mgtqzmmeps .gt_left {
   text-align: left;
 }
 
-#bxrfpahvsr .gt_center {
+#mgtqzmmeps .gt_center {
   text-align: center;
 }
 
-#bxrfpahvsr .gt_right {
+#mgtqzmmeps .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bxrfpahvsr .gt_font_normal {
+#mgtqzmmeps .gt_font_normal {
   font-weight: normal;
 }
 
-#bxrfpahvsr .gt_font_bold {
+#mgtqzmmeps .gt_font_bold {
   font-weight: bold;
 }
 
-#bxrfpahvsr .gt_font_italic {
+#mgtqzmmeps .gt_font_italic {
   font-style: italic;
 }
 
-#bxrfpahvsr .gt_super {
+#mgtqzmmeps .gt_super {
   font-size: 65%;
 }
 
-#bxrfpahvsr .gt_footnote_marks {
+#mgtqzmmeps .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bxrfpahvsr .gt_asterisk {
+#mgtqzmmeps .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bxrfpahvsr .gt_indent_1 {
+#mgtqzmmeps .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bxrfpahvsr .gt_indent_2 {
+#mgtqzmmeps .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bxrfpahvsr .gt_indent_3 {
+#mgtqzmmeps .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bxrfpahvsr .gt_indent_4 {
+#mgtqzmmeps .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bxrfpahvsr .gt_indent_5 {
+#mgtqzmmeps .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bxrfpahvsr .katex-display {
+#mgtqzmmeps .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bxrfpahvsr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mgtqzmmeps div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2580,7 +2580,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When working with MD_dataset <code>CIS</code>, given that the data comes from bi-yearly surveys, it is suggested to always merge <code>CIS</code> with <code>BR</code>, like</p>
+<p>When working with <code>MD_dataset</code> <code>CIS</code>, given that the data comes from bi-yearly surveys, it is suggested to always merge <code>CIS</code> with <code>BR</code>, like</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -2715,7 +2715,7 @@ Character string specifying the format of the export (‘csv’, ‘RDS’, ‘t
 <li><p><strong>output_name</strong><br>
 The name of the file to be created, <strong>without the file extension and the country code</strong>.</p></li>
 <li><p><strong>datasets_used</strong><br>
-The name of the MD_dataset(s) used for the analysis.</p></li>
+The name of the <code>MD_dataset</code>(s) used for the analysis.</p></li>
 <li><p><strong>purpose</strong><br>
 Describe the research purpose of the analysis.</p></li>
 <li><p><strong>share_0_1</strong><br>
@@ -2745,7 +2745,7 @@ A string providing additional explanation of the output file.</p></li>
 <section id="procedure-to-stack-mdi-module-output" class="level4" data-number="2.3.8.1">
 <h4 data-number="2.3.8.1" class="anchored" data-anchor-id="procedure-to-stack-mdi-module-output"><span class="header-section-number">2.3.8.1</span> Procedure to stack MDI Module Output</h4>
 <p>For cross-country analysis, the individual country exports need to be identified, and consolidated into combined stacked datasets per module.</p>
-<p>This is accomplished in <strong>three steps</strong>, using a sequence of scripts that are stored in <strong>dirROCKET/MDIprogs</strong>.</p>
+<p>This is accomplished in <strong>three steps</strong>, using a sequence of scripts that are stored in <strong><code>dirROCKET</code>/MDIprogs</strong>.</p>
 <ol type="1">
 <li>Step 1: <strong>get_output_file_list.R</strong> Generate Country-Specific File Lists</li>
 </ol>
@@ -3514,7 +3514,7 @@ style G5 fill:#F5F5F5,stroke:#ffffff
 </div>
 </div>
 </div>
-<p>Note. This scheme shows how to initialize and run MDI. Start launchpad/countdown.R, set country, paths, and disclosure parameters. Choose one of four programs: pre_launch_checker to validate metadata and varnames. liftoff to load libraries, import metadata and raw data, harmonize using four methods (revalue, recode/reclass, redefine, remap), then execute modules and extract results after disclosure checks. interactive_mdi to explore the environment. prepare_NSI for first-time setup and metadata updates. Boxes indicate steps. Arrows indicate control and data flow.</p>
+<p>Note. This scheme shows how to initialize and run MDI. Start launchpad/<code>countdown.R</code>, set country, paths, and disclosure parameters. Choose one of four programs: pre_launch_checker to validate metadata and varnames. liftoff to load libraries, import metadata and raw data, harmonize using four methods (revalue, recode/reclass, redefine, remap), then execute modules and extract results after disclosure checks. interactive_mdi to explore the environment. prepare_NSI for first-time setup and metadata updates. Boxes indicate steps. Arrows indicate control and data flow.</p>
 </section>
 </section>
 <section id="build-mdi" class="level1" data-number="3">
@@ -3525,7 +3525,7 @@ style G5 fill:#F5F5F5,stroke:#ffffff
 <p>The MDI (Microdata Infrastructure) provides a unified research environment implemented identically at all national statistical institutes (NSIs), including the mock data site. This consistent setup allows researchers to analyze standardized microdata (MD) panels, constructed from diverse national sources.</p>
 <p>These MD panels are harmonized through detailed metadata, which ensures legal compliance, transparency, and comparability of statistical outputs across countries. For each NSI, the metadata specifies the available source files, variables, and classification lists, and maps them to the shared MD format. As a result, the datasets are syntactically identical across countries, even when the underlying data differs.</p>
 <p>NSIs vary in their legal frameworks, technical setups, and the types of data they maintain—from registers and surveys to administrative sources. The MDI infrastructure addresses this heterogeneity by applying a common structure and metadata standard across all participating institutes.</p>
-<p>To execute research, individual researchers write analysis modules—typically in R—the <strong><code>payload</code></strong>. This payload is executed inside the secure MDI environment. During a launch, the rocket reads the metadata and data, harmonizes them, constructs the MD panels, and then runs the payload modules. The outputs comply with disclosure rules, enabling valid cross-country comparisons.</p>
+<p>To execute research, individual researchers write analysis modules—typically in R—the <strong>payload</strong>. This payload is executed inside the secure MDI environment. During a launch, the rocket reads the metadata and data, harmonizes them, constructs the MD panels, and then runs the payload modules. The outputs comply with disclosure rules, enabling valid cross-country comparisons.</p>
 <section id="launch-preparation-by-the-mdi-team" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="launch-preparation-by-the-mdi-team"><span class="header-section-number">3.1.1</span> Launch Preparation by the MDI team</h3>
 <p>These are the steps the MDI team must follow in this order before each launch.</p>
@@ -3547,7 +3547,7 @@ style G5 fill:#F5F5F5,stroke:#ffffff
 Copy the complete MDI folder from the country Teams directory into a local working directory of your choice. Ensure that both the user and R have read access to the raw data files in that location.</p></li>
 <li><p><strong>Configure Countdown Script</strong><br>
 Open <code>launchpad/countdown.R</code> and update the required parameters to match your site-specific setup. Find details and explanations <a href="#countdown">here</a></p></li>
-<li><p><strong>Run pre_launch_checker.R</strong><br>
+<li><p><strong>Run <code>pre_launch_checker.R</code></strong><br>
 Begin by running <code>countdown.R</code> from your working directory and selecting the <code>pre_launch_checker.R</code> option. This checks for inconsistencies between the metadata expected by MDI and the actual metadata at the NSI site. It generates concordance files and a report listing issues to fix. Find details and explanations <a href="#pre-launch-checker">here</a></p></li>
 <li><p><strong>Run the Post-Harmonization Checker</strong><br>
 In the <code>countdown.R</code> set the option <code>MDImoduleRUN = FALSE</code> and run the countdown again, selecting <code>liftoff.R</code>. This executes the full MDI rocket <em>without</em> running the analytical modules. During this phase, the Post-Harmonization Checker (PHC) is triggered to validate the harmonized data. The PHC script performs quality checks on the harmonized microdata, such as detecting duplicates, format mismatches, date inconsistencies, and structural breaks. The results of these checks are saved to two files: <code>&lt;CountryCode&gt;_phc_results.txt</code> and <code>breaks_report.pdf</code> (in <code>dirTMPSAVE</code> ) . These files must be reviewed and issues resolved before proceeding. Please have a look at the <a href="#post-harmonization-quality-checks">detailed section</a> on post harmonization checks for instructions for country leaders.</p></li>
@@ -3659,23 +3659,23 @@ The directories at the NSI site MDI installation
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="pbqcxujibq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pbqcxujibq table {
+<div id="cgpqtkcvot" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cgpqtkcvot table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pbqcxujibq thead, #pbqcxujibq tbody, #pbqcxujibq tfoot, #pbqcxujibq tr, #pbqcxujibq td, #pbqcxujibq th {
+#cgpqtkcvot thead, #cgpqtkcvot tbody, #cgpqtkcvot tfoot, #cgpqtkcvot tr, #cgpqtkcvot td, #cgpqtkcvot th {
   border-style: none;
 }
 
-#pbqcxujibq p {
+#cgpqtkcvot p {
   margin: 0;
   padding: 0;
 }
 
-#pbqcxujibq .gt_table {
+#cgpqtkcvot .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3701,12 +3701,12 @@ The directories at the NSI site MDI installation
   border-left-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_caption {
+#cgpqtkcvot .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pbqcxujibq .gt_title {
+#cgpqtkcvot .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3718,7 +3718,7 @@ The directories at the NSI site MDI installation
   border-bottom-width: 0;
 }
 
-#pbqcxujibq .gt_subtitle {
+#cgpqtkcvot .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3730,7 +3730,7 @@ The directories at the NSI site MDI installation
   border-top-width: 0;
 }
 
-#pbqcxujibq .gt_heading {
+#cgpqtkcvot .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3742,13 +3742,13 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_bottom_border {
+#cgpqtkcvot .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_col_headings {
+#cgpqtkcvot .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3763,7 +3763,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_col_heading {
+#cgpqtkcvot .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3783,7 +3783,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#pbqcxujibq .gt_column_spanner_outer {
+#cgpqtkcvot .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3795,15 +3795,15 @@ The directories at the NSI site MDI installation
   padding-right: 4px;
 }
 
-#pbqcxujibq .gt_column_spanner_outer:first-child {
+#cgpqtkcvot .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pbqcxujibq .gt_column_spanner_outer:last-child {
+#cgpqtkcvot .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pbqcxujibq .gt_column_spanner {
+#cgpqtkcvot .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3815,11 +3815,11 @@ The directories at the NSI site MDI installation
   width: 100%;
 }
 
-#pbqcxujibq .gt_spanner_row {
+#cgpqtkcvot .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pbqcxujibq .gt_group_heading {
+#cgpqtkcvot .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3845,7 +3845,7 @@ The directories at the NSI site MDI installation
   text-align: left;
 }
 
-#pbqcxujibq .gt_empty_group_heading {
+#cgpqtkcvot .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3860,15 +3860,15 @@ The directories at the NSI site MDI installation
   vertical-align: middle;
 }
 
-#pbqcxujibq .gt_from_md > :first-child {
+#cgpqtkcvot .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pbqcxujibq .gt_from_md > :last-child {
+#cgpqtkcvot .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pbqcxujibq .gt_row {
+#cgpqtkcvot .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3887,7 +3887,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#pbqcxujibq .gt_stub {
+#cgpqtkcvot .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3900,7 +3900,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#pbqcxujibq .gt_stub_row_group {
+#cgpqtkcvot .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3914,15 +3914,15 @@ The directories at the NSI site MDI installation
   vertical-align: top;
 }
 
-#pbqcxujibq .gt_row_group_first td {
+#cgpqtkcvot .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pbqcxujibq .gt_row_group_first th {
+#cgpqtkcvot .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pbqcxujibq .gt_summary_row {
+#cgpqtkcvot .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3932,16 +3932,16 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#pbqcxujibq .gt_first_summary_row {
+#cgpqtkcvot .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_first_summary_row.thick {
+#cgpqtkcvot .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pbqcxujibq .gt_last_summary_row {
+#cgpqtkcvot .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3951,7 +3951,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_grand_summary_row {
+#cgpqtkcvot .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3961,7 +3961,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#pbqcxujibq .gt_first_grand_summary_row {
+#cgpqtkcvot .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3971,7 +3971,7 @@ The directories at the NSI site MDI installation
   border-top-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_last_grand_summary_row_top {
+#cgpqtkcvot .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3981,11 +3981,11 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_striped {
+#cgpqtkcvot .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pbqcxujibq .gt_table_body {
+#cgpqtkcvot .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3994,7 +3994,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_footnotes {
+#cgpqtkcvot .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4008,7 +4008,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_footnote {
+#cgpqtkcvot .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4017,7 +4017,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#pbqcxujibq .gt_sourcenotes {
+#cgpqtkcvot .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4031,7 +4031,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#pbqcxujibq .gt_sourcenote {
+#cgpqtkcvot .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4039,72 +4039,72 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#pbqcxujibq .gt_left {
+#cgpqtkcvot .gt_left {
   text-align: left;
 }
 
-#pbqcxujibq .gt_center {
+#cgpqtkcvot .gt_center {
   text-align: center;
 }
 
-#pbqcxujibq .gt_right {
+#cgpqtkcvot .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pbqcxujibq .gt_font_normal {
+#cgpqtkcvot .gt_font_normal {
   font-weight: normal;
 }
 
-#pbqcxujibq .gt_font_bold {
+#cgpqtkcvot .gt_font_bold {
   font-weight: bold;
 }
 
-#pbqcxujibq .gt_font_italic {
+#cgpqtkcvot .gt_font_italic {
   font-style: italic;
 }
 
-#pbqcxujibq .gt_super {
+#cgpqtkcvot .gt_super {
   font-size: 65%;
 }
 
-#pbqcxujibq .gt_footnote_marks {
+#cgpqtkcvot .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pbqcxujibq .gt_asterisk {
+#cgpqtkcvot .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pbqcxujibq .gt_indent_1 {
+#cgpqtkcvot .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pbqcxujibq .gt_indent_2 {
+#cgpqtkcvot .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pbqcxujibq .gt_indent_3 {
+#cgpqtkcvot .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pbqcxujibq .gt_indent_4 {
+#cgpqtkcvot .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pbqcxujibq .gt_indent_5 {
+#cgpqtkcvot .gt_indent_5 {
   text-indent: 25px;
 }
 
-#pbqcxujibq .katex-display {
+#cgpqtkcvot .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#pbqcxujibq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cgpqtkcvot div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4197,7 +4197,7 @@ The directories at the NSI site MDI installation
 </div>
 </div>
 </div>
-<p>In general, files to be downloaded from MDI to an NSI are stored in a <code>TEAMS</code> directory accessible to the respective NSI team. These files are located in the <code>download</code> folder of a SharePoint directory, which can be synced to your local machine. For example: <code>../OneDrive-SharedLibraries-IWHEconomicStudiesLab/MDI Data Providers Forum - PT</code>. Each NSI also has an MDI TEAMS ‘upload’ directory, used to upload output generated by the <code>rocket</code>.</p>
+<p>In general, files to be downloaded from MDI to an NSI are stored in a <code>TEAMS</code> directory accessible to the respective NSI team. These files are located in the <code>download</code> folder of a SharePoint directory, which can be synced to your local machine. For example: <code>../OneDrive-SharedLibraries-IWHEconomicStudiesLab/MDI Data Providers Forum - PT</code>. Each NSI also has an MDI TEAMS ‘upload’ directory, used to upload output generated by the rocket.</p>
 </div>
 </div>
 </div>
@@ -4239,7 +4239,7 @@ The directories at the NSI site MDI installation
 <li><p><code>year_start</code> is the starting year of the data file.</p></li>
 <li><p><code>year_end</code> is the last year of the data file</p></li>
 <li><p><code>format</code> is the file extension (csv, sas, stata, etc) of the file (i.e.&nbsp;also the storage format of the data). The special value <code>oracle</code> is reserved for tables stored in an Oracle relational database — see the <a href="#nsi_datafile-oracle-guide">dedicated box on Oracle datafiles</a>.</p></li>
-<li><p><code>path</code> indicates path of the datafile relative to the NSI data directory (given by the parameter <code>dirINPUTDATA</code> in launchpad/countdown.R). When <code>format = oracle</code>, this column instead stores the <strong>DSN name</strong> of the Oracle data source — see the <a href="#nsi_datafile-oracle-guide">dedicated box on Oracle datafiles</a>.</p></li>
+<li><p><code>path</code> indicates path of the datafile relative to the NSI data directory (given by the parameter <code>dirINPUTDATA</code> in launchpad/<code>countdown.R</code>). When <code>format = oracle</code>, this column instead stores the <strong>DSN name</strong> of the Oracle data source — see the <a href="#nsi_datafile-oracle-guide">dedicated box on Oracle datafiles</a>.</p></li>
 <li><p><code>details</code> contains additional notes on the file.</p></li>
 <li><p><code>firm_unit</code> indicates the type of firm observation unit. There can be four types of units. Below we provide a definition for each, taken from the <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Thematic_glossaries">Eurostat glossary</a>, hierarchically ordered, i.e.</p>
 <ul>
@@ -4260,23 +4260,23 @@ The directories at the NSI site MDI installation
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code> and <code>details</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="kpybqidesr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kpybqidesr table {
+<div id="fyjeqsofvo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fyjeqsofvo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kpybqidesr thead, #kpybqidesr tbody, #kpybqidesr tfoot, #kpybqidesr tr, #kpybqidesr td, #kpybqidesr th {
+#fyjeqsofvo thead, #fyjeqsofvo tbody, #fyjeqsofvo tfoot, #fyjeqsofvo tr, #fyjeqsofvo td, #fyjeqsofvo th {
   border-style: none;
 }
 
-#kpybqidesr p {
+#fyjeqsofvo p {
   margin: 0;
   padding: 0;
 }
 
-#kpybqidesr .gt_table {
+#fyjeqsofvo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4302,12 +4302,12 @@ The directories at the NSI site MDI installation
   border-left-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_caption {
+#fyjeqsofvo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kpybqidesr .gt_title {
+#fyjeqsofvo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4319,7 +4319,7 @@ The directories at the NSI site MDI installation
   border-bottom-width: 0;
 }
 
-#kpybqidesr .gt_subtitle {
+#fyjeqsofvo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4331,7 +4331,7 @@ The directories at the NSI site MDI installation
   border-top-width: 0;
 }
 
-#kpybqidesr .gt_heading {
+#fyjeqsofvo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4343,13 +4343,13 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_bottom_border {
+#fyjeqsofvo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_col_headings {
+#fyjeqsofvo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4364,7 +4364,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_col_heading {
+#fyjeqsofvo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4384,7 +4384,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#kpybqidesr .gt_column_spanner_outer {
+#fyjeqsofvo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4396,15 +4396,15 @@ The directories at the NSI site MDI installation
   padding-right: 4px;
 }
 
-#kpybqidesr .gt_column_spanner_outer:first-child {
+#fyjeqsofvo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kpybqidesr .gt_column_spanner_outer:last-child {
+#fyjeqsofvo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kpybqidesr .gt_column_spanner {
+#fyjeqsofvo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4416,11 +4416,11 @@ The directories at the NSI site MDI installation
   width: 100%;
 }
 
-#kpybqidesr .gt_spanner_row {
+#fyjeqsofvo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kpybqidesr .gt_group_heading {
+#fyjeqsofvo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4446,7 +4446,7 @@ The directories at the NSI site MDI installation
   text-align: left;
 }
 
-#kpybqidesr .gt_empty_group_heading {
+#fyjeqsofvo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4461,15 +4461,15 @@ The directories at the NSI site MDI installation
   vertical-align: middle;
 }
 
-#kpybqidesr .gt_from_md > :first-child {
+#fyjeqsofvo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kpybqidesr .gt_from_md > :last-child {
+#fyjeqsofvo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kpybqidesr .gt_row {
+#fyjeqsofvo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4488,7 +4488,7 @@ The directories at the NSI site MDI installation
   overflow-x: hidden;
 }
 
-#kpybqidesr .gt_stub {
+#fyjeqsofvo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4501,7 +4501,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#kpybqidesr .gt_stub_row_group {
+#fyjeqsofvo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4515,15 +4515,15 @@ The directories at the NSI site MDI installation
   vertical-align: top;
 }
 
-#kpybqidesr .gt_row_group_first td {
+#fyjeqsofvo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kpybqidesr .gt_row_group_first th {
+#fyjeqsofvo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kpybqidesr .gt_summary_row {
+#fyjeqsofvo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4533,16 +4533,16 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#kpybqidesr .gt_first_summary_row {
+#fyjeqsofvo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_first_summary_row.thick {
+#fyjeqsofvo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kpybqidesr .gt_last_summary_row {
+#fyjeqsofvo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4552,7 +4552,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_grand_summary_row {
+#fyjeqsofvo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4562,7 +4562,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#kpybqidesr .gt_first_grand_summary_row {
+#fyjeqsofvo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4572,7 +4572,7 @@ The directories at the NSI site MDI installation
   border-top-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_last_grand_summary_row_top {
+#fyjeqsofvo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4582,11 +4582,11 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_striped {
+#fyjeqsofvo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kpybqidesr .gt_table_body {
+#fyjeqsofvo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4595,7 +4595,7 @@ The directories at the NSI site MDI installation
   border-bottom-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_footnotes {
+#fyjeqsofvo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4609,7 +4609,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_footnote {
+#fyjeqsofvo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4618,7 +4618,7 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#kpybqidesr .gt_sourcenotes {
+#fyjeqsofvo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4632,7 +4632,7 @@ The directories at the NSI site MDI installation
   border-right-color: #D3D3D3;
 }
 
-#kpybqidesr .gt_sourcenote {
+#fyjeqsofvo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4640,72 +4640,72 @@ The directories at the NSI site MDI installation
   padding-right: 5px;
 }
 
-#kpybqidesr .gt_left {
+#fyjeqsofvo .gt_left {
   text-align: left;
 }
 
-#kpybqidesr .gt_center {
+#fyjeqsofvo .gt_center {
   text-align: center;
 }
 
-#kpybqidesr .gt_right {
+#fyjeqsofvo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kpybqidesr .gt_font_normal {
+#fyjeqsofvo .gt_font_normal {
   font-weight: normal;
 }
 
-#kpybqidesr .gt_font_bold {
+#fyjeqsofvo .gt_font_bold {
   font-weight: bold;
 }
 
-#kpybqidesr .gt_font_italic {
+#fyjeqsofvo .gt_font_italic {
   font-style: italic;
 }
 
-#kpybqidesr .gt_super {
+#fyjeqsofvo .gt_super {
   font-size: 65%;
 }
 
-#kpybqidesr .gt_footnote_marks {
+#fyjeqsofvo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kpybqidesr .gt_asterisk {
+#fyjeqsofvo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kpybqidesr .gt_indent_1 {
+#fyjeqsofvo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kpybqidesr .gt_indent_2 {
+#fyjeqsofvo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kpybqidesr .gt_indent_3 {
+#fyjeqsofvo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kpybqidesr .gt_indent_4 {
+#fyjeqsofvo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kpybqidesr .gt_indent_5 {
+#fyjeqsofvo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kpybqidesr .katex-display {
+#fyjeqsofvo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kpybqidesr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fyjeqsofvo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5051,23 +5051,23 @@ Click to see an abbreviated list of R date formats:
 <h5 data-number="3.2.1.2.3" class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames."><span class="header-section-number">3.2.1.2.3</span> Example: Netherlands (SBS, 2018): NL_varnames.</h5>
 <div class="cell">
 <div class="cell-output-display">
-<div id="momvbelnlk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#momvbelnlk table {
+<div id="lxpkaapiuy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lxpkaapiuy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#momvbelnlk thead, #momvbelnlk tbody, #momvbelnlk tfoot, #momvbelnlk tr, #momvbelnlk td, #momvbelnlk th {
+#lxpkaapiuy thead, #lxpkaapiuy tbody, #lxpkaapiuy tfoot, #lxpkaapiuy tr, #lxpkaapiuy td, #lxpkaapiuy th {
   border-style: none;
 }
 
-#momvbelnlk p {
+#lxpkaapiuy p {
   margin: 0;
   padding: 0;
 }
 
-#momvbelnlk .gt_table {
+#lxpkaapiuy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5093,12 +5093,12 @@ Click to see an abbreviated list of R date formats:
   border-left-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_caption {
+#lxpkaapiuy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#momvbelnlk .gt_title {
+#lxpkaapiuy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5110,7 +5110,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-width: 0;
 }
 
-#momvbelnlk .gt_subtitle {
+#lxpkaapiuy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5122,7 +5122,7 @@ Click to see an abbreviated list of R date formats:
   border-top-width: 0;
 }
 
-#momvbelnlk .gt_heading {
+#lxpkaapiuy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5134,13 +5134,13 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_bottom_border {
+#lxpkaapiuy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_col_headings {
+#lxpkaapiuy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5155,7 +5155,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_col_heading {
+#lxpkaapiuy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5175,7 +5175,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#momvbelnlk .gt_column_spanner_outer {
+#lxpkaapiuy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5187,15 +5187,15 @@ Click to see an abbreviated list of R date formats:
   padding-right: 4px;
 }
 
-#momvbelnlk .gt_column_spanner_outer:first-child {
+#lxpkaapiuy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#momvbelnlk .gt_column_spanner_outer:last-child {
+#lxpkaapiuy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#momvbelnlk .gt_column_spanner {
+#lxpkaapiuy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5207,11 +5207,11 @@ Click to see an abbreviated list of R date formats:
   width: 100%;
 }
 
-#momvbelnlk .gt_spanner_row {
+#lxpkaapiuy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#momvbelnlk .gt_group_heading {
+#lxpkaapiuy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5237,7 +5237,7 @@ Click to see an abbreviated list of R date formats:
   text-align: left;
 }
 
-#momvbelnlk .gt_empty_group_heading {
+#lxpkaapiuy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5252,15 +5252,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: middle;
 }
 
-#momvbelnlk .gt_from_md > :first-child {
+#lxpkaapiuy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#momvbelnlk .gt_from_md > :last-child {
+#lxpkaapiuy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#momvbelnlk .gt_row {
+#lxpkaapiuy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5279,7 +5279,7 @@ Click to see an abbreviated list of R date formats:
   overflow-x: hidden;
 }
 
-#momvbelnlk .gt_stub {
+#lxpkaapiuy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5292,7 +5292,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#momvbelnlk .gt_stub_row_group {
+#lxpkaapiuy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5306,15 +5306,15 @@ Click to see an abbreviated list of R date formats:
   vertical-align: top;
 }
 
-#momvbelnlk .gt_row_group_first td {
+#lxpkaapiuy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#momvbelnlk .gt_row_group_first th {
+#lxpkaapiuy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#momvbelnlk .gt_summary_row {
+#lxpkaapiuy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5324,16 +5324,16 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#momvbelnlk .gt_first_summary_row {
+#lxpkaapiuy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_first_summary_row.thick {
+#lxpkaapiuy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#momvbelnlk .gt_last_summary_row {
+#lxpkaapiuy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5343,7 +5343,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_grand_summary_row {
+#lxpkaapiuy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5353,7 +5353,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#momvbelnlk .gt_first_grand_summary_row {
+#lxpkaapiuy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5363,7 +5363,7 @@ Click to see an abbreviated list of R date formats:
   border-top-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_last_grand_summary_row_top {
+#lxpkaapiuy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5373,11 +5373,11 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_striped {
+#lxpkaapiuy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#momvbelnlk .gt_table_body {
+#lxpkaapiuy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5386,7 +5386,7 @@ Click to see an abbreviated list of R date formats:
   border-bottom-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_footnotes {
+#lxpkaapiuy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5400,7 +5400,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_footnote {
+#lxpkaapiuy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5409,7 +5409,7 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#momvbelnlk .gt_sourcenotes {
+#lxpkaapiuy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5423,7 +5423,7 @@ Click to see an abbreviated list of R date formats:
   border-right-color: #D3D3D3;
 }
 
-#momvbelnlk .gt_sourcenote {
+#lxpkaapiuy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5431,72 +5431,72 @@ Click to see an abbreviated list of R date formats:
   padding-right: 5px;
 }
 
-#momvbelnlk .gt_left {
+#lxpkaapiuy .gt_left {
   text-align: left;
 }
 
-#momvbelnlk .gt_center {
+#lxpkaapiuy .gt_center {
   text-align: center;
 }
 
-#momvbelnlk .gt_right {
+#lxpkaapiuy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#momvbelnlk .gt_font_normal {
+#lxpkaapiuy .gt_font_normal {
   font-weight: normal;
 }
 
-#momvbelnlk .gt_font_bold {
+#lxpkaapiuy .gt_font_bold {
   font-weight: bold;
 }
 
-#momvbelnlk .gt_font_italic {
+#lxpkaapiuy .gt_font_italic {
   font-style: italic;
 }
 
-#momvbelnlk .gt_super {
+#lxpkaapiuy .gt_super {
   font-size: 65%;
 }
 
-#momvbelnlk .gt_footnote_marks {
+#lxpkaapiuy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#momvbelnlk .gt_asterisk {
+#lxpkaapiuy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#momvbelnlk .gt_indent_1 {
+#lxpkaapiuy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#momvbelnlk .gt_indent_2 {
+#lxpkaapiuy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#momvbelnlk .gt_indent_3 {
+#lxpkaapiuy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#momvbelnlk .gt_indent_4 {
+#lxpkaapiuy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#momvbelnlk .gt_indent_5 {
+#lxpkaapiuy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#momvbelnlk .katex-display {
+#lxpkaapiuy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#momvbelnlk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lxpkaapiuy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5568,7 +5568,7 @@ Click to see an abbreviated list of R date formats:
 </section>
 <section id="nsi-codebook" class="level4" data-number="3.2.1.3">
 <h4 data-number="3.2.1.3" class="anchored" data-anchor-id="nsi-codebook"><span class="header-section-number">3.2.1.3</span> Codebook for categorical variables – <em>NSI</em>_codebook.csv</h4>
-<p>This file contains the possible values of a categorical variable and the description that belongs to that value. There rows give the possible values occuring in firm data for a particular <code>NSI_datafile</code> and <code>NSI_varname</code>. The name of the codebook should be given in the ‘domain’ columnn of NSI_varnames for the relevant categorical variable.</p>
+<p>This file contains the possible values of a categorical variable and the description that belongs to that value. There rows give the possible values occuring in firm data for a particular <code>NSI_datafile</code> and <code>NSI_varname</code>. The name of the codebook should be given in the ‘domain’ column of <code>NSI_varnames.csv</code> for the relevant categorical variable.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NSI_dataset,NSI_varname,year,code,description</code></pre>
@@ -5592,7 +5592,7 @@ Dealing with the year column
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>As mentioned, <strong>if a specific mapping holds for all years available of a specific NSI_dataset</strong>, then the <code>year</code> column for that mapping needs to be empty. For instance, say that we have raw NSI_dataset <code>data_ictec</code> with NSI_varname <code>var112</code> being a categorical variable taking values ‘0’, ‘2’, ‘999’, referring to ‘no’, ‘yes’, ‘not available’ for all years. In this case, the NSI_codebook will contain <strong>only three rows</strong> for these three mapping without any reference to the years. In practice:</p>
+<p>As mentioned, <strong>if a specific mapping holds for all years available of a specific <code>NSI_dataset</code></strong>, then the <code>year</code> column for that mapping needs to be empty. For instance, say that we have raw <code>NSI_dataset</code> <code>data_ictec</code> with <code>NSI_varname</code> <code>var112</code> being a categorical variable taking values ‘0’, ‘2’, ‘999’, referring to ‘no’, ‘yes’, ‘not available’ for all years. In this case, the NSI_codebook will contain <strong>only three rows</strong> for these three mapping without any reference to the years. In practice:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -5627,7 +5627,7 @@ Dealing with the year column
 </tr>
 </tbody>
 </table>
-<p>That said, <strong>if a mapping is not constant across all years of an NSI_dataset</strong>, then the <code>year</code> column needs to have a value for all mappings reported. In this context, there can two cases:</p>
+<p>That said, <strong>if a mapping is not constant across all years of an <code>NSI_dataset</code></strong>, then the <code>year</code> column needs to have a value for all mappings reported. In this context, there can two cases:</p>
 <ol type="1">
 <li><strong>The codes differ by year for the same variable</strong>: This means that <code>var_112</code> takes values, say, ‘0’, ‘2’, ‘999’, referring to ‘no’, ‘yes’, ‘not available’ for 2006 and in 2007 the mapping changes to ‘1’, ‘2’, ‘9’, for ‘no’, ‘yes’, ‘not available’, respectively. Hence, we need to indicate year-specific mappings in the codebook table:</li>
 </ol>
@@ -5687,7 +5687,7 @@ Dealing with the year column
 </tbody>
 </table>
 <ol start="2" type="1">
-<li><strong>The NSI_varname isn’t available for all years</strong>: As an example, let <code>var_112</code> be only available in 2005 and 2006 but it’s dropped or has a different name in the other years. Then, we need to include it for both 2005 and 2006, regardless of whether the codes are identical or not:</li>
+<li><strong>The <code>NSI_varname</code> isn’t available for all years</strong>: As an example, let <code>var_112</code> be only available in 2005 and 2006 but it’s dropped or has a different name in the other years. Then, we need to include it for both 2005 and 2006, regardless of whether the codes are identical or not:</li>
 </ol>
 <table class="caption-top table">
 <thead>
@@ -5749,23 +5749,23 @@ Dealing with the year column
 <p>An example below of the values occurring for the unit of measurement in the SI <code>PRODCOM</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="oiqgfuzgsq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#oiqgfuzgsq table {
+<div id="etcvgehovz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#etcvgehovz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#oiqgfuzgsq thead, #oiqgfuzgsq tbody, #oiqgfuzgsq tfoot, #oiqgfuzgsq tr, #oiqgfuzgsq td, #oiqgfuzgsq th {
+#etcvgehovz thead, #etcvgehovz tbody, #etcvgehovz tfoot, #etcvgehovz tr, #etcvgehovz td, #etcvgehovz th {
   border-style: none;
 }
 
-#oiqgfuzgsq p {
+#etcvgehovz p {
   margin: 0;
   padding: 0;
 }
 
-#oiqgfuzgsq .gt_table {
+#etcvgehovz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5791,12 +5791,12 @@ Dealing with the year column
   border-left-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_caption {
+#etcvgehovz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#oiqgfuzgsq .gt_title {
+#etcvgehovz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5808,7 +5808,7 @@ Dealing with the year column
   border-bottom-width: 0;
 }
 
-#oiqgfuzgsq .gt_subtitle {
+#etcvgehovz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5820,7 +5820,7 @@ Dealing with the year column
   border-top-width: 0;
 }
 
-#oiqgfuzgsq .gt_heading {
+#etcvgehovz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5832,13 +5832,13 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_bottom_border {
+#etcvgehovz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_col_headings {
+#etcvgehovz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5853,7 +5853,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_col_heading {
+#etcvgehovz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5873,7 +5873,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#oiqgfuzgsq .gt_column_spanner_outer {
+#etcvgehovz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5885,15 +5885,15 @@ Dealing with the year column
   padding-right: 4px;
 }
 
-#oiqgfuzgsq .gt_column_spanner_outer:first-child {
+#etcvgehovz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oiqgfuzgsq .gt_column_spanner_outer:last-child {
+#etcvgehovz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oiqgfuzgsq .gt_column_spanner {
+#etcvgehovz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5905,11 +5905,11 @@ Dealing with the year column
   width: 100%;
 }
 
-#oiqgfuzgsq .gt_spanner_row {
+#etcvgehovz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#oiqgfuzgsq .gt_group_heading {
+#etcvgehovz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5935,7 +5935,7 @@ Dealing with the year column
   text-align: left;
 }
 
-#oiqgfuzgsq .gt_empty_group_heading {
+#etcvgehovz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5950,15 +5950,15 @@ Dealing with the year column
   vertical-align: middle;
 }
 
-#oiqgfuzgsq .gt_from_md > :first-child {
+#etcvgehovz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oiqgfuzgsq .gt_from_md > :last-child {
+#etcvgehovz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oiqgfuzgsq .gt_row {
+#etcvgehovz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5977,7 +5977,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#oiqgfuzgsq .gt_stub {
+#etcvgehovz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5990,7 +5990,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#oiqgfuzgsq .gt_stub_row_group {
+#etcvgehovz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6004,15 +6004,15 @@ Dealing with the year column
   vertical-align: top;
 }
 
-#oiqgfuzgsq .gt_row_group_first td {
+#etcvgehovz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#oiqgfuzgsq .gt_row_group_first th {
+#etcvgehovz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#oiqgfuzgsq .gt_summary_row {
+#etcvgehovz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6022,16 +6022,16 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#oiqgfuzgsq .gt_first_summary_row {
+#etcvgehovz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_first_summary_row.thick {
+#etcvgehovz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#oiqgfuzgsq .gt_last_summary_row {
+#etcvgehovz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6041,7 +6041,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_grand_summary_row {
+#etcvgehovz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6051,7 +6051,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#oiqgfuzgsq .gt_first_grand_summary_row {
+#etcvgehovz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6061,7 +6061,7 @@ Dealing with the year column
   border-top-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_last_grand_summary_row_top {
+#etcvgehovz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6071,11 +6071,11 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_striped {
+#etcvgehovz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oiqgfuzgsq .gt_table_body {
+#etcvgehovz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6084,7 +6084,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_footnotes {
+#etcvgehovz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6098,7 +6098,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_footnote {
+#etcvgehovz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6107,7 +6107,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#oiqgfuzgsq .gt_sourcenotes {
+#etcvgehovz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6121,7 +6121,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#oiqgfuzgsq .gt_sourcenote {
+#etcvgehovz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6129,72 +6129,72 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#oiqgfuzgsq .gt_left {
+#etcvgehovz .gt_left {
   text-align: left;
 }
 
-#oiqgfuzgsq .gt_center {
+#etcvgehovz .gt_center {
   text-align: center;
 }
 
-#oiqgfuzgsq .gt_right {
+#etcvgehovz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oiqgfuzgsq .gt_font_normal {
+#etcvgehovz .gt_font_normal {
   font-weight: normal;
 }
 
-#oiqgfuzgsq .gt_font_bold {
+#etcvgehovz .gt_font_bold {
   font-weight: bold;
 }
 
-#oiqgfuzgsq .gt_font_italic {
+#etcvgehovz .gt_font_italic {
   font-style: italic;
 }
 
-#oiqgfuzgsq .gt_super {
+#etcvgehovz .gt_super {
   font-size: 65%;
 }
 
-#oiqgfuzgsq .gt_footnote_marks {
+#etcvgehovz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#oiqgfuzgsq .gt_asterisk {
+#etcvgehovz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#oiqgfuzgsq .gt_indent_1 {
+#etcvgehovz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#oiqgfuzgsq .gt_indent_2 {
+#etcvgehovz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#oiqgfuzgsq .gt_indent_3 {
+#etcvgehovz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#oiqgfuzgsq .gt_indent_4 {
+#etcvgehovz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#oiqgfuzgsq .gt_indent_5 {
+#etcvgehovz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#oiqgfuzgsq .katex-display {
+#etcvgehovz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#oiqgfuzgsq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#etcvgehovz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6268,29 +6268,29 @@ Dealing with the year column
 <p>where:</p>
 <ul>
 <li><p><code>code</code> is the list values of the classification variable observed in the data.</p></li>
-<li><p><code>year</code> is the related year. If the mapping is not changing across all years available for that NSI_varname, then the <code>year</code> column will be filled with <code>NA</code>.</p></li>
+<li><p><code>year</code> is the related year. If the mapping is not changing across all years available for that <code>NSI_varname</code>, then the <code>year</code> column will be filled with <code>NA</code>.</p></li>
 <li><p><code>description</code> gives the description for each code value.</p></li>
 </ul>
 <p>An sample of rows from the table of PRODCOM codes (in this case some randomly selected rows from the list of codes of Finland):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="cyynhxjpiu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cyynhxjpiu table {
+<div id="illbqovnfp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#illbqovnfp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cyynhxjpiu thead, #cyynhxjpiu tbody, #cyynhxjpiu tfoot, #cyynhxjpiu tr, #cyynhxjpiu td, #cyynhxjpiu th {
+#illbqovnfp thead, #illbqovnfp tbody, #illbqovnfp tfoot, #illbqovnfp tr, #illbqovnfp td, #illbqovnfp th {
   border-style: none;
 }
 
-#cyynhxjpiu p {
+#illbqovnfp p {
   margin: 0;
   padding: 0;
 }
 
-#cyynhxjpiu .gt_table {
+#illbqovnfp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6316,12 +6316,12 @@ Dealing with the year column
   border-left-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_caption {
+#illbqovnfp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cyynhxjpiu .gt_title {
+#illbqovnfp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -6333,7 +6333,7 @@ Dealing with the year column
   border-bottom-width: 0;
 }
 
-#cyynhxjpiu .gt_subtitle {
+#illbqovnfp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -6345,7 +6345,7 @@ Dealing with the year column
   border-top-width: 0;
 }
 
-#cyynhxjpiu .gt_heading {
+#illbqovnfp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -6357,13 +6357,13 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_bottom_border {
+#illbqovnfp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_col_headings {
+#illbqovnfp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6378,7 +6378,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_col_heading {
+#illbqovnfp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6398,7 +6398,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#cyynhxjpiu .gt_column_spanner_outer {
+#illbqovnfp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6410,15 +6410,15 @@ Dealing with the year column
   padding-right: 4px;
 }
 
-#cyynhxjpiu .gt_column_spanner_outer:first-child {
+#illbqovnfp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cyynhxjpiu .gt_column_spanner_outer:last-child {
+#illbqovnfp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cyynhxjpiu .gt_column_spanner {
+#illbqovnfp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6430,11 +6430,11 @@ Dealing with the year column
   width: 100%;
 }
 
-#cyynhxjpiu .gt_spanner_row {
+#illbqovnfp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cyynhxjpiu .gt_group_heading {
+#illbqovnfp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6460,7 +6460,7 @@ Dealing with the year column
   text-align: left;
 }
 
-#cyynhxjpiu .gt_empty_group_heading {
+#illbqovnfp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6475,15 +6475,15 @@ Dealing with the year column
   vertical-align: middle;
 }
 
-#cyynhxjpiu .gt_from_md > :first-child {
+#illbqovnfp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cyynhxjpiu .gt_from_md > :last-child {
+#illbqovnfp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cyynhxjpiu .gt_row {
+#illbqovnfp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6502,7 +6502,7 @@ Dealing with the year column
   overflow-x: hidden;
 }
 
-#cyynhxjpiu .gt_stub {
+#illbqovnfp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6515,7 +6515,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#cyynhxjpiu .gt_stub_row_group {
+#illbqovnfp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6529,15 +6529,15 @@ Dealing with the year column
   vertical-align: top;
 }
 
-#cyynhxjpiu .gt_row_group_first td {
+#illbqovnfp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cyynhxjpiu .gt_row_group_first th {
+#illbqovnfp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cyynhxjpiu .gt_summary_row {
+#illbqovnfp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6547,16 +6547,16 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#cyynhxjpiu .gt_first_summary_row {
+#illbqovnfp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_first_summary_row.thick {
+#illbqovnfp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cyynhxjpiu .gt_last_summary_row {
+#illbqovnfp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6566,7 +6566,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_grand_summary_row {
+#illbqovnfp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6576,7 +6576,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#cyynhxjpiu .gt_first_grand_summary_row {
+#illbqovnfp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6586,7 +6586,7 @@ Dealing with the year column
   border-top-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_last_grand_summary_row_top {
+#illbqovnfp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6596,11 +6596,11 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_striped {
+#illbqovnfp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cyynhxjpiu .gt_table_body {
+#illbqovnfp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6609,7 +6609,7 @@ Dealing with the year column
   border-bottom-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_footnotes {
+#illbqovnfp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6623,7 +6623,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_footnote {
+#illbqovnfp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6632,7 +6632,7 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#cyynhxjpiu .gt_sourcenotes {
+#illbqovnfp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6646,7 +6646,7 @@ Dealing with the year column
   border-right-color: #D3D3D3;
 }
 
-#cyynhxjpiu .gt_sourcenote {
+#illbqovnfp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6654,72 +6654,72 @@ Dealing with the year column
   padding-right: 5px;
 }
 
-#cyynhxjpiu .gt_left {
+#illbqovnfp .gt_left {
   text-align: left;
 }
 
-#cyynhxjpiu .gt_center {
+#illbqovnfp .gt_center {
   text-align: center;
 }
 
-#cyynhxjpiu .gt_right {
+#illbqovnfp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cyynhxjpiu .gt_font_normal {
+#illbqovnfp .gt_font_normal {
   font-weight: normal;
 }
 
-#cyynhxjpiu .gt_font_bold {
+#illbqovnfp .gt_font_bold {
   font-weight: bold;
 }
 
-#cyynhxjpiu .gt_font_italic {
+#illbqovnfp .gt_font_italic {
   font-style: italic;
 }
 
-#cyynhxjpiu .gt_super {
+#illbqovnfp .gt_super {
   font-size: 65%;
 }
 
-#cyynhxjpiu .gt_footnote_marks {
+#illbqovnfp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cyynhxjpiu .gt_asterisk {
+#illbqovnfp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cyynhxjpiu .gt_indent_1 {
+#illbqovnfp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cyynhxjpiu .gt_indent_2 {
+#illbqovnfp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cyynhxjpiu .gt_indent_3 {
+#illbqovnfp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cyynhxjpiu .gt_indent_4 {
+#illbqovnfp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cyynhxjpiu .gt_indent_5 {
+#illbqovnfp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cyynhxjpiu .katex-display {
+#illbqovnfp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cyynhxjpiu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#illbqovnfp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6733,64 +6733,64 @@ Dealing with the year column
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">13301210</td>
-<td class="gt_row gt_right" headers="year">2019</td>
+<td class="gt_row gt_right" headers="code">14122250</td>
+<td class="gt_row gt_right" headers="year">2017</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">29323061</td>
+<td class="gt_row gt_right" headers="code">10612300</td>
+<td class="gt_row gt_right" headers="year">2021</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">13991170</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">28221460</td>
+<td class="gt_row gt_right" headers="year">2015</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">2540110020</td>
+<td class="gt_row gt_right" headers="year">2009</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">15201237</td>
 <td class="gt_row gt_right" headers="year">2020</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">24311020</td>
-<td class="gt_row gt_right" headers="year">2016</td>
+<td class="gt_row gt_right" headers="code">1532101540</td>
+<td class="gt_row gt_right" headers="year">2004</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">25721250</td>
-<td class="gt_row gt_right" headers="year">2018</td>
+<td class="gt_row gt_right" headers="code">15112100</td>
+<td class="gt_row gt_right" headers="year">2012</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">25301250</td>
-<td class="gt_row gt_right" headers="year">2010</td>
+<td class="gt_row gt_right" headers="code">26515383</td>
+<td class="gt_row gt_right" headers="year">2012</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">29423233</td>
+<td class="gt_row gt_right" headers="code">24311040</td>
+<td class="gt_row gt_right" headers="year">2015</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">28141313</td>
+<td class="gt_row gt_right" headers="year">2015</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="code">14133115</td>
+<td class="gt_row gt_right" headers="year">2020</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="code">29231440</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">29431287</td>
-<td class="gt_row gt_right" headers="year">2007</td>
-</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="code">28291100</td>
-<td class="gt_row gt_right" headers="year">2012</td>
+<td class="gt_row gt_right" headers="code">25112330</td>
+<td class="gt_row gt_right" headers="year">2011</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="code">30121970</td>
+<td class="gt_row gt_right" headers="code">16241135</td>
 <td class="gt_row gt_right" headers="year">2018</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">23621090</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">25991127</td>
-<td class="gt_row gt_right" headers="year">2012</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">27113270</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">33131900</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="code">28961095</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="code">10114400</td>
-<td class="gt_row gt_right" headers="year">2015</td>
 </tr>
 </tbody>
 </table>
@@ -6954,23 +6954,23 @@ Importance of the history of each code
 <p>For example, the following table displays how such table looks like for a subset of ITGS codes in PT:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="eodtjwrycs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eodtjwrycs table {
+<div id="znlxluqlvx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#znlxluqlvx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eodtjwrycs thead, #eodtjwrycs tbody, #eodtjwrycs tfoot, #eodtjwrycs tr, #eodtjwrycs td, #eodtjwrycs th {
+#znlxluqlvx thead, #znlxluqlvx tbody, #znlxluqlvx tfoot, #znlxluqlvx tr, #znlxluqlvx td, #znlxluqlvx th {
   border-style: none;
 }
 
-#eodtjwrycs p {
+#znlxluqlvx p {
   margin: 0;
   padding: 0;
 }
 
-#eodtjwrycs .gt_table {
+#znlxluqlvx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6996,12 +6996,12 @@ Importance of the history of each code
   border-left-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_caption {
+#znlxluqlvx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eodtjwrycs .gt_title {
+#znlxluqlvx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -7013,7 +7013,7 @@ Importance of the history of each code
   border-bottom-width: 0;
 }
 
-#eodtjwrycs .gt_subtitle {
+#znlxluqlvx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -7025,7 +7025,7 @@ Importance of the history of each code
   border-top-width: 0;
 }
 
-#eodtjwrycs .gt_heading {
+#znlxluqlvx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -7037,13 +7037,13 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_bottom_border {
+#znlxluqlvx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_col_headings {
+#znlxluqlvx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7058,7 +7058,7 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_col_heading {
+#znlxluqlvx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7078,7 +7078,7 @@ Importance of the history of each code
   overflow-x: hidden;
 }
 
-#eodtjwrycs .gt_column_spanner_outer {
+#znlxluqlvx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7090,15 +7090,15 @@ Importance of the history of each code
   padding-right: 4px;
 }
 
-#eodtjwrycs .gt_column_spanner_outer:first-child {
+#znlxluqlvx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eodtjwrycs .gt_column_spanner_outer:last-child {
+#znlxluqlvx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eodtjwrycs .gt_column_spanner {
+#znlxluqlvx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -7110,11 +7110,11 @@ Importance of the history of each code
   width: 100%;
 }
 
-#eodtjwrycs .gt_spanner_row {
+#znlxluqlvx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eodtjwrycs .gt_group_heading {
+#znlxluqlvx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7140,7 +7140,7 @@ Importance of the history of each code
   text-align: left;
 }
 
-#eodtjwrycs .gt_empty_group_heading {
+#znlxluqlvx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -7155,15 +7155,15 @@ Importance of the history of each code
   vertical-align: middle;
 }
 
-#eodtjwrycs .gt_from_md > :first-child {
+#znlxluqlvx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eodtjwrycs .gt_from_md > :last-child {
+#znlxluqlvx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eodtjwrycs .gt_row {
+#znlxluqlvx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7182,7 +7182,7 @@ Importance of the history of each code
   overflow-x: hidden;
 }
 
-#eodtjwrycs .gt_stub {
+#znlxluqlvx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7195,7 +7195,7 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#eodtjwrycs .gt_stub_row_group {
+#znlxluqlvx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7209,15 +7209,15 @@ Importance of the history of each code
   vertical-align: top;
 }
 
-#eodtjwrycs .gt_row_group_first td {
+#znlxluqlvx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eodtjwrycs .gt_row_group_first th {
+#znlxluqlvx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eodtjwrycs .gt_summary_row {
+#znlxluqlvx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -7227,16 +7227,16 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#eodtjwrycs .gt_first_summary_row {
+#znlxluqlvx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_first_summary_row.thick {
+#znlxluqlvx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eodtjwrycs .gt_last_summary_row {
+#znlxluqlvx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7246,7 +7246,7 @@ Importance of the history of each code
   border-bottom-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_grand_summary_row {
+#znlxluqlvx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -7256,7 +7256,7 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#eodtjwrycs .gt_first_grand_summary_row {
+#znlxluqlvx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7266,7 +7266,7 @@ Importance of the history of each code
   border-top-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_last_grand_summary_row_top {
+#znlxluqlvx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7276,11 +7276,11 @@ Importance of the history of each code
   border-bottom-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_striped {
+#znlxluqlvx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eodtjwrycs .gt_table_body {
+#znlxluqlvx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7289,7 +7289,7 @@ Importance of the history of each code
   border-bottom-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_footnotes {
+#znlxluqlvx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -7303,7 +7303,7 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_footnote {
+#znlxluqlvx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -7312,7 +7312,7 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#eodtjwrycs .gt_sourcenotes {
+#znlxluqlvx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -7326,7 +7326,7 @@ Importance of the history of each code
   border-right-color: #D3D3D3;
 }
 
-#eodtjwrycs .gt_sourcenote {
+#znlxluqlvx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -7334,72 +7334,72 @@ Importance of the history of each code
   padding-right: 5px;
 }
 
-#eodtjwrycs .gt_left {
+#znlxluqlvx .gt_left {
   text-align: left;
 }
 
-#eodtjwrycs .gt_center {
+#znlxluqlvx .gt_center {
   text-align: center;
 }
 
-#eodtjwrycs .gt_right {
+#znlxluqlvx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eodtjwrycs .gt_font_normal {
+#znlxluqlvx .gt_font_normal {
   font-weight: normal;
 }
 
-#eodtjwrycs .gt_font_bold {
+#znlxluqlvx .gt_font_bold {
   font-weight: bold;
 }
 
-#eodtjwrycs .gt_font_italic {
+#znlxluqlvx .gt_font_italic {
   font-style: italic;
 }
 
-#eodtjwrycs .gt_super {
+#znlxluqlvx .gt_super {
   font-size: 65%;
 }
 
-#eodtjwrycs .gt_footnote_marks {
+#znlxluqlvx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eodtjwrycs .gt_asterisk {
+#znlxluqlvx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eodtjwrycs .gt_indent_1 {
+#znlxluqlvx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eodtjwrycs .gt_indent_2 {
+#znlxluqlvx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eodtjwrycs .gt_indent_3 {
+#znlxluqlvx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eodtjwrycs .gt_indent_4 {
+#znlxluqlvx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eodtjwrycs .gt_indent_5 {
+#znlxluqlvx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#eodtjwrycs .katex-display {
+#znlxluqlvx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#eodtjwrycs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#znlxluqlvx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -7414,79 +7414,79 @@ Importance of the history of each code
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">72135089</td>
-<td class="gt_row gt_right" headers="right">72139190</td>
-<td class="gt_row gt_right" headers="year">1995</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">2903 39 11</td>
-<td class="gt_row gt_right" headers="right">2903 61 00</td>
+<td class="gt_row gt_right" headers="left">6116 99 00</td>
+<td class="gt_row gt_right" headers="right">6116 10 80</td>
 <td class="gt_row gt_right" headers="year">2021</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">85261013</td>
-<td class="gt_row gt_right" headers="right">85261010</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">8092060</td>
+<td class="gt_row gt_right" headers="right">8092011</td>
 <td class="gt_row gt_right" headers="year">1994</td>
 </tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">29209090</td>
+<td class="gt_row gt_right" headers="right">29209030</td>
+<td class="gt_row gt_right" headers="year">1989</td>
+</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">44111910</td>
-<td class="gt_row gt_right" headers="right">44111390</td>
+<td class="gt_row gt_right" headers="left">48045990</td>
+<td class="gt_row gt_right" headers="right">48239090</td>
+<td class="gt_row gt_right" headers="year">2001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">85061910</td>
+<td class="gt_row gt_right" headers="right">85061919</td>
+<td class="gt_row gt_right" headers="year">1991</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">65069110</td>
+<td class="gt_row gt_right" headers="right">65069100</td>
+<td class="gt_row gt_right" headers="year">1994</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">60029900</td>
+<td class="gt_row gt_right" headers="right">60069000</td>
+<td class="gt_row gt_right" headers="year">2001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">85421175</td>
+<td class="gt_row gt_right" headers="right">85421155</td>
+<td class="gt_row gt_right" headers="year">1994</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="left">84484100</td>
+<td class="gt_row gt_right" headers="right">84484900</td>
 <td class="gt_row gt_right" headers="year">2006</td>
 </tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">17011190</td>
+<td class="gt_row gt_right" headers="right">17011390</td>
+<td class="gt_row gt_right" headers="year">2011</td>
+</tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">8523 80 93</td>
-<td class="gt_row gt_right" headers="right">8523 80 90</td>
+<td class="gt_row gt_right" headers="left">20059050</td>
+<td class="gt_row gt_right" headers="right">20059930</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="left">0305 64 00</td>
+<td class="gt_row gt_right" headers="right">0305 64 00</td>
 <td class="gt_row gt_right" headers="year">2016</td>
 </tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">39191051</td>
-<td class="gt_row gt_right" headers="right">39191061</td>
-<td class="gt_row gt_right" headers="year">1993</td>
-</tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">85073098</td>
-<td class="gt_row gt_right" headers="right">85481020</td>
-<td class="gt_row gt_right" headers="year">1995</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">28342950</td>
-<td class="gt_row gt_right" headers="right">28342920</td>
-<td class="gt_row gt_right" headers="year">1998</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">48052290</td>
-<td class="gt_row gt_right" headers="right">48026990</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">52061510</td>
-<td class="gt_row gt_right" headers="right">52061500</td>
-<td class="gt_row gt_right" headers="year">2004</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">3808 91 30</td>
-<td class="gt_row gt_right" headers="right">3808 61 00</td>
-<td class="gt_row gt_right" headers="year">2016</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="left">4407 19 20</td>
-<td class="gt_row gt_right" headers="right">4407 19 20</td>
+<td class="gt_row gt_right" headers="left">8548 10 29</td>
+<td class="gt_row gt_right" headers="right">8549 14 20</td>
 <td class="gt_row gt_right" headers="year">2021</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="left">44072985</td>
-<td class="gt_row gt_right" headers="right">44072985</td>
-<td class="gt_row gt_right" headers="year">2001</td>
-</tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="left">70109043</td>
-<td class="gt_row gt_right" headers="right">70109221</td>
+<td class="gt_row gt_right" headers="left">84719220</td>
+<td class="gt_row gt_right" headers="right">84714990</td>
 <td class="gt_row gt_right" headers="year">1995</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="left">3034931</td>
-<td class="gt_row gt_right" headers="right">3034930</td>
-<td class="gt_row gt_right" headers="year">2009</td>
+<td class="gt_row gt_right" headers="left">8432 30 11</td>
+<td class="gt_row gt_right" headers="right">8432 31 00</td>
+<td class="gt_row gt_right" headers="year">2016</td>
 </tr>
 </tbody>
 </table>
@@ -8261,7 +8261,7 @@ Note
 </table>
 </div>
 </div>
-<p>Below is a sample of 5 rows of the file MD_varnames with harmonized MD variables</p>
+<p>Below is a sample of 5 rows of the file <code>MD_varnames.csv</code> with harmonized MD variables</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="rjlbjvltnq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -10295,12 +10295,6 @@ Note
 <td class="gt_row gt_right" headers="code">0</td>
 <td class="gt_row gt_left" headers="description">”No demographic relation in ref. year”</td>
 </tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="MD_dataset">BR</td>
-<td class="gt_row gt_left" headers="MD_varname">demo</td>
-<td class="gt_row gt_right" headers="code">1</td>
-<td class="gt_row gt_left" headers="description">”Receiving employment from other enterprise in ref. year”</td>
-</tr>
 </tbody><tfoot class="gt_sourcenotes">
 <tr class="odd">
 <td colspan="4" class="gt_sourcenote">*Note: Only 5 rows are displayed.</td>
@@ -11537,8 +11531,8 @@ Usually equivalent to <code>weighted_alloc</code> in implementation.</p></li>
 <div class="callout-important{}">
 <p><strong>Storing an MDvarname in an MD panel</strong></p>
 <p>Only <code>remap</code> and <code>redefine</code> rows store columns in the final MD panel. Hence, for a MD variable to be present in the output data, one of the two methods needs to be used.</p>
-<p>The reason for this is that <code>revalue</code>, <code>recode</code> and <code>reclass</code> only change the content of the NSI_varname, given that the NSI_varname on which the operation has been applied to could be use for multiple mappings, be it a <code>remap</code> or a <code>redefine</code>, in the same concordance year.</p>
-<p>Therefore, if you would like to store an MD_varname after a <code>revalue</code>, <code>recode</code> or <code>reclass</code> operation, <strong>make sure you add a row for the same NSI_varname-MD_varname mapping with method=<code>remap</code></strong>.</p>
+<p>The reason for this is that <code>revalue</code>, <code>recode</code> and <code>reclass</code> only change the content of the <code>NSI_varname</code>, given that the <code>NSI_varname</code> on which the operation has been applied to could be use for multiple mappings, be it a <code>remap</code> or a <code>redefine</code>, in the same concordance year.</p>
+<p>Therefore, if you would like to store an <code>MD_varname</code> after a <code>revalue</code>, <code>recode</code> or <code>reclass</code> operation, <strong>make sure you add a row for the same <code>NSI_varname</code>-<code>MD_varname</code> mapping with method=<code>remap</code></strong>.</p>
 </div>
 <section id="nsi-md-conc" class="level4" data-number="3.2.3.1">
 <h4 data-number="3.2.3.1" class="anchored" data-anchor-id="nsi-md-conc"><span class="header-section-number">3.2.3.1</span> Concordance file – <em>NSI</em>_MD_conc.csv</h4>
@@ -11560,10 +11554,10 @@ Usually equivalent to <code>weighted_alloc</code> in implementation.</p></li>
 <li><code>revalue</code> The values of the variable are changed using an R function and parameters in the column <code>detail</code> and possibly from the <code>class</code> and <code>domains</code> variable from the relevant <code>_varnames</code> files.</li>
 <li><code>recode</code> The values of the variable are changed using a codebook concordance, whose name is given in de <code>details</code> column, e.g.&nbsp;‘NSI_filename_MD_dataset_codeconc.csv’. Only values that need to be changed require a row in the <code>_codeconc</code>.</li>
 <li><code>reclass</code> The values of the variable are changed using a classification concordance, whose name is given in the <code>details</code> column, ‘NSI_classname_MD_classname_classconc.csv’. This is used to reclassify e.g.&nbsp;industry, region classifications.</li>
-<li><code>remap</code> The name of the variable is changed, in a one-to-one mapping from NSI_varname to <code>MD_varname</code>.</li>
-<li><code>redefine</code> The MD variable is generated as a linear combination of the NSI variable. The column detail specifies the linear combination, i.e ‘+’ or ‘-’) in the many-to-one NSI_varname to MD_varname mapping.</li>
+<li><code>remap</code> The name of the variable is changed, in a one-to-one mapping from <code>NSI_varname</code> to <code>MD_varname</code>.</li>
+<li><code>redefine</code> The MD variable is generated as a linear combination of the NSI variable. The column detail specifies the linear combination, i.e ‘+’ or ‘-’) in the many-to-one <code>NSI_varname</code> to <code>MD_varname</code> mapping.</li>
 </ul></li>
-<li><p><code>detail</code> contains the function for revalue, the concordance for codebook or classification for recode and remap, and the linear operations for redefine. For revalue, any valid operation operating on the NSI_varname (referred to as <code>x</code>) is good. If the domains of the variable in NSI data is 1000 and in MD data 1, then the NSI value is multiplied by 1000, so detail = <code>x*1000</code>. If the NSI value is in an R date-value, say <code>%d%m%Y</code>, an R date function is used convert to the required R date-value, format(as.Date(x,“%d%m%Y”),“%Y”)</p></li>
+<li><p><code>detail</code> contains the function for revalue, the concordance for codebook or classification for recode and remap, and the linear operations for redefine. For revalue, any valid operation operating on the <code>NSI_varname</code> (referred to as <code>x</code>) is good. If the domains of the variable in NSI data is 1000 and in MD data 1, then the NSI value is multiplied by 1000, so detail = <code>x*1000</code>. If the NSI value is in an R date-value, say <code>%d%m%Y</code>, an R date function is used convert to the required R date-value, format(as.Date(x,“%d%m%Y”),“%Y”)</p></li>
 <li><p><code>NSI_datafile</code> is the name of the raw dataset from where the <code>NSI_variable</code> is taken from</p></li>
 <li><p><code>year</code> is the reference year for that specific row, which will be used to construct the MD-cross section for that year</p></li>
 </ul>
@@ -11573,11 +11567,11 @@ Usually equivalent to <code>weighted_alloc</code> in implementation.</p></li>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Storing the year MD_varname in the data
+Storing the year <code>MD_varname</code> in the data
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The year variable for each MD_dataset is automatically mapped to the harmonized data based on the metadata and the year value assigned for the corresponding concordance table rows. Hence, <strong>please do not add any row in the concordance table where <code>MD_varname = 'year'</code>.</strong></p>
+<p>The year variable for each <code>MD_dataset</code> is automatically mapped to the harmonized data based on the metadata and the year value assigned for the corresponding concordance table rows. Hence, <strong>please do not add any row in the concordance table where <code>MD_varname = 'year'</code>.</strong></p>
 </div>
 </div>
 <section id="section" class="level5" data-number="3.2.3.1.1">
@@ -11592,7 +11586,7 @@ Data preprocessing
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Given that some raw datafiles require specific preprocessing, in very special cases some NSI_varnames might end up be different than those appearing in file <code>NSI_varnames</code>. Hence, in case you would like to concord some of the variables from a dataset for which preprocessing is needed – which you can verify by looking at column <code>preprocessing</code> of that datafile in <code>NSI_datafiles</code> – please keep that in mind. For more information, check out the <a href="#nsi_datafile-preprocessing-routines-guide">box on datafile preprocessing</a> or get in touch with the MDI team.</p>
+<p>Given that some raw datafiles require specific preprocessing, in very special cases some NSI_varnames might end up be different than those appearing in file <code>NSI_varnames.csv</code>. Hence, in case you would like to concord some of the variables from a dataset for which preprocessing is needed – which you can verify by looking at column <code>preprocessing</code> of that datafile in <code>NSI_datafiles</code> – please keep that in mind. For more information, check out the <a href="#nsi_datafile-preprocessing-routines-guide">box on datafile preprocessing</a> or get in touch with the MDI team.</p>
 </div>
 </div>
 </section>
@@ -12401,7 +12395,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If the mapping of a categorical variable already corresponds to that of the objective MD_varname, then there’s no need to add the related row in the codeconc. For instance, say that we have raw NSI_dataset <code>data_ictec</code> with NSI_varname <code>var112</code> being a categorical variable taking values ‘0’ referring to ‘no’. Then let the variable be mapped to MD_varname <code>IACC</code> from MD_dataset <code>ICTEC</code>. Given that, as indicated in the MD metadata, code ‘0’ is linked to ‘no’ for this MD_varname, we don’t need to add any row for this specific mapping.</p>
+<p>If the mapping of a categorical variable already corresponds to that of the objective <code>MD_varname</code>, then there’s no need to add the related row in the codeconc. For instance, say that we have raw <code>NSI_dataset</code> <code>data_ictec</code> with <code>NSI_varname</code> <code>var112</code> being a categorical variable taking values ‘0’ referring to ‘no’. Then let the variable be mapped to <code>MD_varname</code> <code>IACC</code> from <code>MD_dataset</code> <code>ICTEC</code>. Given that, as indicated in the MD metadata, code ‘0’ is linked to ‘no’ for this <code>MD_varname</code>, we don’t need to add any row for this specific mapping.</p>
 <p>However, if the other mappings don’t correspond, <strong>the rows in the codeconc file need to be present for those!</strong></p>
 </div>
 </div>
@@ -12415,8 +12409,8 @@ Dealing with the year column
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>As mentioned, <strong>if a specific mapping holds for all years available of a specific NSI_dataset</strong>, then the <code>year</code> column for that mapping needs to be empty.</p>
-<p>For instance, say that we have raw NSI_dataset <code>data_ictec</code> with NSI_varname <code>var112</code> being a categorical variable taking values ‘0’, ‘2’, ‘999’, referring to ‘no’, ‘yes’, ‘not available’ for all years. This variable will be harmonized to <code>IACC</code> of the MD_dataset <code>ICTEC</code>. In this case, the NSI_MD_codeconc will contain <strong>only three rows</strong> for these three mapping without any reference to the years. In practice:</p>
+<p>As mentioned, <strong>if a specific mapping holds for all years available of a specific <code>NSI_dataset</code></strong>, then the <code>year</code> column for that mapping needs to be empty.</p>
+<p>For instance, say that we have raw <code>NSI_dataset</code> <code>data_ictec</code> with <code>NSI_varname</code> <code>var112</code> being a categorical variable taking values ‘0’, ‘2’, ‘999’, referring to ‘no’, ‘yes’, ‘not available’ for all years. This variable will be harmonized to <code>IACC</code> of the <code>MD_dataset</code> <code>ICTEC</code>. In this case, the NSI_MD_codeconc will contain <strong>only three rows</strong> for these three mapping without any reference to the years. In practice:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -12460,7 +12454,7 @@ Dealing with the year column
 </tbody>
 </table>
 <p><em>Note that the mapping for</em> ‘0’ - ‘no’ <em>is missing given that it already corresponds to the objective MD mapping.</em></p>
-<p>That said, <strong>if a mapping is not constant across all years of an NSI_dataset</strong>, then the <code>year</code> column needs to have a value for all mappings reported. In this context, there can two cases:</p>
+<p>That said, <strong>if a mapping is not constant across all years of an <code>NSI_dataset</code></strong>, then the <code>year</code> column needs to have a value for all mappings reported. In this context, there can two cases:</p>
 <ol type="1">
 <li><strong>The codes differ by year for the same variable</strong>: This means that <code>var_112</code> takes values, say, ‘0’, ‘2’, ‘999’, referring to ‘no’, ‘yes’, ‘not available’ for 2006 and in 2007 the mapping changes to ‘1’, ‘2’, ‘9’, for ‘no’, ‘yes’, ‘not available’, respectively. Hence, we need to indicate year-specific mappings in the codebook table:</li>
 </ol>
@@ -12534,7 +12528,7 @@ Dealing with the year column
 </tbody>
 </table>
 <ol start="2" type="1">
-<li><strong>The NSI_varname isn’t available for all years</strong>: As an example, let <code>var_112</code> be only available in 2005 and 2006 but it’s dropped or has a different name in the other years. Then, we need to include it for both 2005 and 2006, regardless of whether the codes are identical or not:</li>
+<li><strong>The <code>NSI_varname</code> isn’t available for all years</strong>: As an example, let <code>var_112</code> be only available in 2005 and 2006 but it’s dropped or has a different name in the other years. Then, we need to include it for both 2005 and 2006, regardless of whether the codes are identical or not:</li>
 </ol>
 <table class="caption-top table">
 <colgroup>
@@ -13679,7 +13673,7 @@ Missing codebook entry in MD_codebook
 <td><strong>II</strong></td>
 <td><ul>
 <li><p>Phase I</p></li>
-<li><p>NSI_varnames</p></li>
+<li><p><code>NSI_varnames.csv</code></p></li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -13928,7 +13922,7 @@ The following columns are created but left empty (<code>NA</code>). They must be
 <li><strong>Years</strong>: the script extracts all 4-digit numbers from the filename and assigns the minimum to <code>year_start</code> and the maximum to <code>year_end</code>.<br>
 ⚠️ Always verify that these values match the actual time coverage of the dataset. For example, <code>bd2018</code> will yield both <code>year_start=2018</code> and <code>year_end=2018</code>, which may or may not be correct.<br>
 </li>
-<li><strong>NSI_dataset</strong>: confirm that the generic dataset name is harmonised and consistent across files.</li>
+<li><strong><code>NSI_dataset</code></strong>: confirm that the generic dataset name is harmonised and consistent across files.</li>
 </ul></li>
 <li><strong>Export</strong><br>
 The script writes the CSV into: <code>/NSImetadata/_datafiles.csv</code></li>
@@ -14783,7 +14777,7 @@ These flags influence how the MDI scripts run and how much output is produced.</
 </ul>
 <details>
 <summary>
-Click here to see the entire countdown.R script
+Click here to see the entire <code>countdown.R</code> script
 </summary>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This file is used to work start MDI</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># fill in all the parameters and save this file: countdown.R</span></span>
@@ -15036,35 +15030,39 @@ Click here to see the entire countdown.R script
 <p><strong>Variable Class Check Table</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
+<col style="width: 21%">
+<col style="width: 73%">
+<col style="width: 4%">
 </colgroup>
-<thead>
-<tr class="header">
-<th>Column Name</th>
-<th>Description</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td><code>dataset</code></td>
-<td>MD Dataset</td>
+<td rowspan="2"><h1 id="column-name" data-number="4"><span class="header-section-number">4</span> Column Name</h1>
+<p><code>dataset</code></p></td>
+<td rowspan="2"><h1 id="description" data-number="5"><span class="header-section-number">5</span> Description</h1>
+<p>MD Dataset</p></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
+</tr>
+<tr class="odd">
 <td><code>variable</code></td>
 <td>Variable name being checked</td>
-</tr>
-<tr class="odd">
-<td><code>expected_class</code></td>
-<td>Class assigned to this variable in the metadata (<code>MD_varnames</code>)</td>
+<td></td>
 </tr>
 <tr class="even">
-<td><code>actual_class</code></td>
-<td>Actual class detected in the harmonized <code>.RDS</code> file</td>
+<td><code>expected_class</code></td>
+<td colspan="2">Class assigned to this variable in the metadata (<code>MD_varnames.csv</code>)</td>
 </tr>
 <tr class="odd">
+<td><code>actual_class</code></td>
+<td>Actual class detected in the harmonized <code>.RDS</code> file</td>
+<td></td>
+</tr>
+<tr class="even">
 <td><code>class_match</code></td>
 <td><code>TRUE</code> if expected and actual class match, <code>FALSE</code> otherwise</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -15195,8 +15193,8 @@ Click here to see the entire countdown.R script
 </table>
 <hr>
 </section>
-<section id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors" class="level4" data-number="3.3.3.2">
-<h4 data-number="3.3.3.2" class="anchored" data-anchor-id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors"><span class="header-section-number">3.3.3.2</span> Instructions for Country Leaders for Reviewing and Fixing PHC Errors</h4>
+<section id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors" class="level4" data-number="5.0.0.1">
+<h4 data-number="5.0.0.1" class="anchored" data-anchor-id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors"><span class="header-section-number">5.0.0.1</span> Instructions for Country Leaders for Reviewing and Fixing PHC Errors</h4>
 <ol type="1">
 <li>Duplicate Check</li>
 </ol>
@@ -15267,10 +15265,10 @@ Note
 </section>
 </section>
 </section>
-<section id="developing-testing" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="developing-testing"><span class="header-section-number">3.4</span> Developing &amp; Testing</h2>
-<section id="nuvolos-developer-space" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="nuvolos-developer-space"><span class="header-section-number">3.4.1</span> Nuvolos Developer Space</h3>
+<section id="developing-testing" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="developing-testing"><span class="header-section-number">5.1</span> Developing &amp; Testing</h2>
+<section id="nuvolos-developer-space" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="nuvolos-developer-space"><span class="header-section-number">5.1.1</span> Nuvolos Developer Space</h3>
 <p>This space is intended for code development, module creation, and script testing on mock data. It is designed for MDI team members and module writers who are familiar with the MDI infrastructure and have access to the MDI GitHub repository. (More information on <a href="#nuvolos-where-mdi-users-develop-and-test-their-codes">Nuvolos: where MDI users develop and test their codes</a>)</p>
 <p>Each user must <a href="#connect-github">connect their Github account</a> to enable pushing and pulling changes. Note the following:</p>
 <ul>
@@ -15323,8 +15321,8 @@ First time users: How to connect Github
 </div>
 </div>
 </section>
-<section id="general-workflow-with-git" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="general-workflow-with-git"><span class="header-section-number">3.4.2</span> General Workflow with Git</h3>
+<section id="general-workflow-with-git" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="general-workflow-with-git"><span class="header-section-number">5.1.2</span> General Workflow with Git</h3>
 <p>If you’re in the right branch and your repository is up-to-date, this is the normal workflow:</p>
 <ol type="1">
 <li>You change a file/ add a module/ add metadata.</li>
@@ -15361,23 +15359,23 @@ First time users: How to connect Github
 <p><code>On branch branch_name Your branch is up to date with 'origin/branch_name'.  nothing to commit, working tree clean</code></p></li>
 </ol>
 </section>
-<section id="how-to-add-your-research-module-to-the-mdi-infrastructure" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="how-to-add-your-research-module-to-the-mdi-infrastructure"><span class="header-section-number">3.4.3</span> How to add your research module to the MDI infrastructure</h3>
+<section id="how-to-add-your-research-module-to-the-mdi-infrastructure" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="how-to-add-your-research-module-to-the-mdi-infrastructure"><span class="header-section-number">5.1.3</span> How to add your research module to the MDI infrastructure</h3>
 <p>If you want to add your module to the MDI infrastructure via the Nuvolos Developer Space you need to have access to the MDI GitHub repository and set up your GitHub account in Nuvolos (see:<a href="#connect-github">first time users</a>) Then open RStudio in the Developer Space and follow these steps to add your module:</p>
 <ol type="1">
 <li><p>Add a module folder</p>
 <p>In the files section on the right, navigate to the folder <code>MDI/payload/Launch_vX.X/Rmodules/</code> (Replace X.X with the current launch version). In that folder create a new folder with a two-character name, abbreviating your research module, eg. “XY”.</p></li>
 <li><p>Add your MDnames_select file</p>
-<p>Inside your module folder add the MDnames_select file. This file contains a list of the variables that your module uses (<a href="#data-selection">more information here</a>) and it needs to be named like this: <code>(res_group)_MDnames_select.csv</code> where res_group is your module abbreviation, eg. <code>XY_MDnames_select.csv</code></p></li>
+<p>Inside your module folder add the MDnames_select file. This file contains a list of the variables that your module uses (<a href="#data-selection">more information here</a>) and it needs to be named like this: <code>(res_group)_MDnames_select.csv</code> where <code>res_group</code> is your module abbreviation, eg. <code>XY_MDnames_select.csv</code></p></li>
 <li><p>Add your main script</p>
-<p>Inside your module folder add your main script. This script needs to be named the following way: <code>Launch_X.X_(res_group).R</code> where X.X is the current launch version and res_group is your module abbreviation. Eg. <code>Launch_2.3_XY.R</code>. This scripts will be executed by the code when your module is run. That does not mean all your code needs to be in that one script. You can add as many scripts as you like and call them using <code>source(path/to/your/script/)</code>.</p></li>
+<p>Inside your module folder add your main script. This script needs to be named the following way: <code>Launch_X.X_(res_group).R</code> where X.X is the current launch version and <code>res_group</code> is your module abbreviation. Eg. <code>Launch_2.3_XY.R</code>. This scripts will be executed by the code when your module is run. That does not mean all your code needs to be in that one script. You can add as many scripts as you like and call them using <code>source(path/to/your/script/)</code>.</p></li>
 <li><p>Add any other scripts/files/ folders</p>
 <p>If you need any additional scripts or files place them in your module folder.</p></li>
 </ol>
 <p>This is an example of a module folder: <img src="images/ex_module_folder.png" class="img-fluid"> The folder has the module abbreviation <code>CN</code> and contains the main script <code>Launch_2.3_CN.R</code>, the <code>CN_MDnames_select.csv</code> file and two additional files <code>EU_countries.csv</code> and <code>Questionnaire.xlsx</code>.</p>
 </section>
-<section id="test-module" class="level3" data-number="3.4.4">
-<h3 data-number="3.4.4" class="anchored" data-anchor-id="test-module"><span class="header-section-number">3.4.4</span> How to develop and test your module using (mock) data</h3>
+<section id="test-module" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="test-module"><span class="header-section-number">5.1.4</span> How to develop and test your module using (mock) data</h3>
 <p>To develop your module you first need to adjust and run the countdown. This will import all libraries and variables you might want to use in your module. To do so, navigate to <code>launchpad/countdown.R</code>.<br>
 The countdown script functions as a configuration file that, for example, sets up paths and flags for the MDI execution. You need to adjust the parameters in the script to fit your needs. For example, set the flag <code>isMOCK</code> to TRUE if you’re working with mock data, or set <code>dirTMP</code> to the directory where the harmonized mock data is stored (<code>space_mounts/mockdata/TMP/</code>). You can find all parameters and flags in the <a href="#countdown">countdown section</a> of this manual.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
@@ -15400,13 +15398,13 @@ Best Practice
 <p><img src="images/ex_environment.png" class="img-fluid"></p>
 <p>If you want to mimic a launch as it would happen at an NSI, set the flag <code>MDIimportFlag</code> to FALSE and <code>MDImoduleRUN</code> to TRUE. Then run the countdown and select option 2 “liftoff”. This will set up the environment and run all modules with the selected mock data.</p>
 </section>
-<section id="mockdata" class="level3" data-number="3.4.5">
-<h3 data-number="3.4.5" class="anchored" data-anchor-id="mockdata"><span class="header-section-number">3.4.5</span> Mockdata</h3>
+<section id="mockdata" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="mockdata"><span class="header-section-number">5.1.5</span> Mockdata</h3>
 <p>To ensure robustness, consistency, and functionality across the MDI infrastructure, the development and use of mock data is essential.</p>
 <ul>
 <li><p>Specifications for mock data.</p>
 <ul>
-<li>All files from <code>NSI_datafiles.csv</code> are covered, with all years as given by <code>NSI_varnames</code>.</li>
+<li>All files from <code>NSI_datafiles.csv</code> are covered, with all years as given by <code>NSI_varnames.csv</code>.</li>
 <li>All variables from all NSI files must be represented with the correct format and domain, including classifications, codebooks, and value labels.</li>
 </ul></li>
 <li><p>Underlying ‘firm’ datasets.</p>
@@ -15467,8 +15465,8 @@ Workflow for mock data simulation
 </section>
 </section>
 </section>
-<section id="acknowledgement" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Acknowledgement</h1>
+<section id="acknowledgement" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Acknowledgement</h1>
 <p>We gratefully acknowledge the support of the European Union, whose funding made this project possible. We also thank all National Statistical Institutes (NSIs), National Statistical Systems, National Productivity Boards (NPBs), and other collaborators for their valuable contributions to the development of the MDI project and this manual.</p>
 </section>
 
