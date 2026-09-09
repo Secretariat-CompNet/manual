@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eric Bartelsman and MDI team">
-<meta name="dcterms.date" content="2026-09-08">
+<meta name="dcterms.date" content="2026-09-09">
 
 <title>MDI Manual</title>
 <style>
@@ -190,7 +190,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2026</p>
+      <p class="date">September 9, 2026</p>
     </div>
   </div>
   
@@ -428,7 +428,7 @@ class STAKE,REMOTE,OUT whitebg;
 <li>MDI launch: process of running the modules within the rocket every 4 to 6 months.</li>
 <li>MDI tools: set of R functions created by the MDI team to generate the MD_datasets, manipulate them and execute modules.</li>
 <li>Module: research code.</li>
-<li>Modules names are defined with an acronym (“<code>res_group</code>”). For example, a module about firm dynamics is called FD (<code>res_group</code>=FD).</li>
+<li>Modules names are defined with a 4-letter acronym (“<code>res_group</code>”). For example, the CompNet module is called CPNT (<code>res_group</code>=CPNT).</li>
 <li>NSS: The coordinated institutional and technical framework encompassing the NSI and associated data centers.</li>
 <li>NSIs: National Statistical Institutes. These are the public authorities responsible for official statistics in each country. They host the confidential microdata, set legal rules, run disclosure control, and provide the secure environments where MDI operates.</li>
 <li>Nuvolos: cloud server platform where MDI users develop and test their codes. This space is designed for training, practicing, and familiarizing with the MDI infrastructure. MDI infrastructure: some terms</li>
@@ -509,7 +509,7 @@ class STAKE,REMOTE,OUT whitebg;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Before writing the analytical code, you must define a research acronym for your module (specified as <code>res_group &lt;- '(some 2-letter string)'</code>) and communicate it to the MDI team.</p>
+<p>Before writing the analytical code, you must define a research acronym for your module (specified as <code>res_group &lt;- '(some 4-letter string)'</code>) and communicate it to the MDI team.</p>
 </div>
 </div>
 </section>
@@ -539,23 +539,23 @@ class STAKE,REMOTE,OUT whitebg;
 <p>Once the final selection of MD variable names has been made for the module, a file named <code>(res_group)_MDnames_select.csv</code> (see example below) must be submitted to the MDI team. This needs to have the column names as shown below.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ckkqkecdob" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ckkqkecdob table {
+<div id="wtinptinvx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wtinptinvx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ckkqkecdob thead, #ckkqkecdob tbody, #ckkqkecdob tfoot, #ckkqkecdob tr, #ckkqkecdob td, #ckkqkecdob th {
+#wtinptinvx thead, #wtinptinvx tbody, #wtinptinvx tfoot, #wtinptinvx tr, #wtinptinvx td, #wtinptinvx th {
   border-style: none;
 }
 
-#ckkqkecdob p {
+#wtinptinvx p {
   margin: 0;
   padding: 0;
 }
 
-#ckkqkecdob .gt_table {
+#wtinptinvx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -581,12 +581,12 @@ class STAKE,REMOTE,OUT whitebg;
   border-left-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_caption {
+#wtinptinvx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ckkqkecdob .gt_title {
+#wtinptinvx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -598,7 +598,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-width: 0;
 }
 
-#ckkqkecdob .gt_subtitle {
+#wtinptinvx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -610,7 +610,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-top-width: 0;
 }
 
-#ckkqkecdob .gt_heading {
+#wtinptinvx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -622,13 +622,13 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_bottom_border {
+#wtinptinvx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_col_headings {
+#wtinptinvx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -643,7 +643,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_col_heading {
+#wtinptinvx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -663,7 +663,7 @@ class STAKE,REMOTE,OUT whitebg;
   overflow-x: hidden;
 }
 
-#ckkqkecdob .gt_column_spanner_outer {
+#wtinptinvx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -675,15 +675,15 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 4px;
 }
 
-#ckkqkecdob .gt_column_spanner_outer:first-child {
+#wtinptinvx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ckkqkecdob .gt_column_spanner_outer:last-child {
+#wtinptinvx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ckkqkecdob .gt_column_spanner {
+#wtinptinvx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -695,11 +695,11 @@ class STAKE,REMOTE,OUT whitebg;
   width: 100%;
 }
 
-#ckkqkecdob .gt_spanner_row {
+#wtinptinvx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ckkqkecdob .gt_group_heading {
+#wtinptinvx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -725,7 +725,7 @@ class STAKE,REMOTE,OUT whitebg;
   text-align: left;
 }
 
-#ckkqkecdob .gt_empty_group_heading {
+#wtinptinvx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -740,15 +740,15 @@ class STAKE,REMOTE,OUT whitebg;
   vertical-align: middle;
 }
 
-#ckkqkecdob .gt_from_md > :first-child {
+#wtinptinvx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ckkqkecdob .gt_from_md > :last-child {
+#wtinptinvx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ckkqkecdob .gt_row {
+#wtinptinvx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -767,7 +767,7 @@ class STAKE,REMOTE,OUT whitebg;
   overflow-x: hidden;
 }
 
-#ckkqkecdob .gt_stub {
+#wtinptinvx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -780,7 +780,7 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ckkqkecdob .gt_stub_row_group {
+#wtinptinvx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -794,15 +794,15 @@ class STAKE,REMOTE,OUT whitebg;
   vertical-align: top;
 }
 
-#ckkqkecdob .gt_row_group_first td {
+#wtinptinvx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ckkqkecdob .gt_row_group_first th {
+#wtinptinvx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ckkqkecdob .gt_summary_row {
+#wtinptinvx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -812,16 +812,16 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ckkqkecdob .gt_first_summary_row {
+#wtinptinvx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_first_summary_row.thick {
+#wtinptinvx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ckkqkecdob .gt_last_summary_row {
+#wtinptinvx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -831,7 +831,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_grand_summary_row {
+#wtinptinvx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -841,7 +841,7 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ckkqkecdob .gt_first_grand_summary_row {
+#wtinptinvx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -851,7 +851,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-top-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_last_grand_summary_row_top {
+#wtinptinvx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -861,11 +861,11 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_striped {
+#wtinptinvx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ckkqkecdob .gt_table_body {
+#wtinptinvx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -874,7 +874,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_footnotes {
+#wtinptinvx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -888,7 +888,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_footnote {
+#wtinptinvx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -897,7 +897,7 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ckkqkecdob .gt_sourcenotes {
+#wtinptinvx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -911,7 +911,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ckkqkecdob .gt_sourcenote {
+#wtinptinvx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -919,72 +919,72 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ckkqkecdob .gt_left {
+#wtinptinvx .gt_left {
   text-align: left;
 }
 
-#ckkqkecdob .gt_center {
+#wtinptinvx .gt_center {
   text-align: center;
 }
 
-#ckkqkecdob .gt_right {
+#wtinptinvx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ckkqkecdob .gt_font_normal {
+#wtinptinvx .gt_font_normal {
   font-weight: normal;
 }
 
-#ckkqkecdob .gt_font_bold {
+#wtinptinvx .gt_font_bold {
   font-weight: bold;
 }
 
-#ckkqkecdob .gt_font_italic {
+#wtinptinvx .gt_font_italic {
   font-style: italic;
 }
 
-#ckkqkecdob .gt_super {
+#wtinptinvx .gt_super {
   font-size: 65%;
 }
 
-#ckkqkecdob .gt_footnote_marks {
+#wtinptinvx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ckkqkecdob .gt_asterisk {
+#wtinptinvx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ckkqkecdob .gt_indent_1 {
+#wtinptinvx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ckkqkecdob .gt_indent_2 {
+#wtinptinvx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ckkqkecdob .gt_indent_3 {
+#wtinptinvx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ckkqkecdob .gt_indent_4 {
+#wtinptinvx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ckkqkecdob .gt_indent_5 {
+#wtinptinvx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ckkqkecdob .katex-display {
+#wtinptinvx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ckkqkecdob div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wtinptinvx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1085,23 +1085,23 @@ $$</p>
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="semsmnisjf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#semsmnisjf table {
+<div id="kscnjdehlc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kscnjdehlc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#semsmnisjf thead, #semsmnisjf tbody, #semsmnisjf tfoot, #semsmnisjf tr, #semsmnisjf td, #semsmnisjf th {
+#kscnjdehlc thead, #kscnjdehlc tbody, #kscnjdehlc tfoot, #kscnjdehlc tr, #kscnjdehlc td, #kscnjdehlc th {
   border-style: none;
 }
 
-#semsmnisjf p {
+#kscnjdehlc p {
   margin: 0;
   padding: 0;
 }
 
-#semsmnisjf .gt_table {
+#kscnjdehlc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1127,12 +1127,12 @@ $$</p>
   border-left-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_caption {
+#kscnjdehlc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#semsmnisjf .gt_title {
+#kscnjdehlc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1144,7 +1144,7 @@ $$</p>
   border-bottom-width: 0;
 }
 
-#semsmnisjf .gt_subtitle {
+#kscnjdehlc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1156,7 +1156,7 @@ $$</p>
   border-top-width: 0;
 }
 
-#semsmnisjf .gt_heading {
+#kscnjdehlc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1168,13 +1168,13 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_bottom_border {
+#kscnjdehlc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_col_headings {
+#kscnjdehlc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1189,7 +1189,7 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_col_heading {
+#kscnjdehlc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1209,7 +1209,7 @@ $$</p>
   overflow-x: hidden;
 }
 
-#semsmnisjf .gt_column_spanner_outer {
+#kscnjdehlc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1221,15 +1221,15 @@ $$</p>
   padding-right: 4px;
 }
 
-#semsmnisjf .gt_column_spanner_outer:first-child {
+#kscnjdehlc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#semsmnisjf .gt_column_spanner_outer:last-child {
+#kscnjdehlc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#semsmnisjf .gt_column_spanner {
+#kscnjdehlc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1241,11 +1241,11 @@ $$</p>
   width: 100%;
 }
 
-#semsmnisjf .gt_spanner_row {
+#kscnjdehlc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#semsmnisjf .gt_group_heading {
+#kscnjdehlc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1271,7 +1271,7 @@ $$</p>
   text-align: left;
 }
 
-#semsmnisjf .gt_empty_group_heading {
+#kscnjdehlc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1286,15 +1286,15 @@ $$</p>
   vertical-align: middle;
 }
 
-#semsmnisjf .gt_from_md > :first-child {
+#kscnjdehlc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#semsmnisjf .gt_from_md > :last-child {
+#kscnjdehlc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#semsmnisjf .gt_row {
+#kscnjdehlc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1313,7 +1313,7 @@ $$</p>
   overflow-x: hidden;
 }
 
-#semsmnisjf .gt_stub {
+#kscnjdehlc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1326,7 +1326,7 @@ $$</p>
   padding-right: 5px;
 }
 
-#semsmnisjf .gt_stub_row_group {
+#kscnjdehlc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1340,15 +1340,15 @@ $$</p>
   vertical-align: top;
 }
 
-#semsmnisjf .gt_row_group_first td {
+#kscnjdehlc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#semsmnisjf .gt_row_group_first th {
+#kscnjdehlc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#semsmnisjf .gt_summary_row {
+#kscnjdehlc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1358,16 +1358,16 @@ $$</p>
   padding-right: 5px;
 }
 
-#semsmnisjf .gt_first_summary_row {
+#kscnjdehlc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_first_summary_row.thick {
+#kscnjdehlc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#semsmnisjf .gt_last_summary_row {
+#kscnjdehlc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1377,7 +1377,7 @@ $$</p>
   border-bottom-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_grand_summary_row {
+#kscnjdehlc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1387,7 +1387,7 @@ $$</p>
   padding-right: 5px;
 }
 
-#semsmnisjf .gt_first_grand_summary_row {
+#kscnjdehlc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1397,7 +1397,7 @@ $$</p>
   border-top-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_last_grand_summary_row_top {
+#kscnjdehlc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1407,11 +1407,11 @@ $$</p>
   border-bottom-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_striped {
+#kscnjdehlc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#semsmnisjf .gt_table_body {
+#kscnjdehlc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1420,7 +1420,7 @@ $$</p>
   border-bottom-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_footnotes {
+#kscnjdehlc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1434,7 +1434,7 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_footnote {
+#kscnjdehlc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1443,7 +1443,7 @@ $$</p>
   padding-right: 5px;
 }
 
-#semsmnisjf .gt_sourcenotes {
+#kscnjdehlc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1457,7 +1457,7 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#semsmnisjf .gt_sourcenote {
+#kscnjdehlc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1465,72 +1465,72 @@ $$</p>
   padding-right: 5px;
 }
 
-#semsmnisjf .gt_left {
+#kscnjdehlc .gt_left {
   text-align: left;
 }
 
-#semsmnisjf .gt_center {
+#kscnjdehlc .gt_center {
   text-align: center;
 }
 
-#semsmnisjf .gt_right {
+#kscnjdehlc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#semsmnisjf .gt_font_normal {
+#kscnjdehlc .gt_font_normal {
   font-weight: normal;
 }
 
-#semsmnisjf .gt_font_bold {
+#kscnjdehlc .gt_font_bold {
   font-weight: bold;
 }
 
-#semsmnisjf .gt_font_italic {
+#kscnjdehlc .gt_font_italic {
   font-style: italic;
 }
 
-#semsmnisjf .gt_super {
+#kscnjdehlc .gt_super {
   font-size: 65%;
 }
 
-#semsmnisjf .gt_footnote_marks {
+#kscnjdehlc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#semsmnisjf .gt_asterisk {
+#kscnjdehlc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#semsmnisjf .gt_indent_1 {
+#kscnjdehlc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#semsmnisjf .gt_indent_2 {
+#kscnjdehlc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#semsmnisjf .gt_indent_3 {
+#kscnjdehlc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#semsmnisjf .gt_indent_4 {
+#kscnjdehlc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#semsmnisjf .gt_indent_5 {
+#kscnjdehlc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#semsmnisjf .katex-display {
+#kscnjdehlc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#semsmnisjf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kscnjdehlc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3679,23 +3679,23 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="psdyeqsuxg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#psdyeqsuxg table {
+<div id="zfbulzisln" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zfbulzisln table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#psdyeqsuxg thead, #psdyeqsuxg tbody, #psdyeqsuxg tfoot, #psdyeqsuxg tr, #psdyeqsuxg td, #psdyeqsuxg th {
+#zfbulzisln thead, #zfbulzisln tbody, #zfbulzisln tfoot, #zfbulzisln tr, #zfbulzisln td, #zfbulzisln th {
   border-style: none;
 }
 
-#psdyeqsuxg p {
+#zfbulzisln p {
   margin: 0;
   padding: 0;
 }
 
-#psdyeqsuxg .gt_table {
+#zfbulzisln .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3721,12 +3721,12 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-left-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_caption {
+#zfbulzisln .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#psdyeqsuxg .gt_title {
+#zfbulzisln .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3738,7 +3738,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-width: 0;
 }
 
-#psdyeqsuxg .gt_subtitle {
+#zfbulzisln .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3750,7 +3750,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-width: 0;
 }
 
-#psdyeqsuxg .gt_heading {
+#zfbulzisln .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3762,13 +3762,13 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_bottom_border {
+#zfbulzisln .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_col_headings {
+#zfbulzisln .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3783,7 +3783,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_col_heading {
+#zfbulzisln .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3803,7 +3803,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#psdyeqsuxg .gt_column_spanner_outer {
+#zfbulzisln .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3815,15 +3815,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 4px;
 }
 
-#psdyeqsuxg .gt_column_spanner_outer:first-child {
+#zfbulzisln .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#psdyeqsuxg .gt_column_spanner_outer:last-child {
+#zfbulzisln .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#psdyeqsuxg .gt_column_spanner {
+#zfbulzisln .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3835,11 +3835,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   width: 100%;
 }
 
-#psdyeqsuxg .gt_spanner_row {
+#zfbulzisln .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#psdyeqsuxg .gt_group_heading {
+#zfbulzisln .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3865,7 +3865,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   text-align: left;
 }
 
-#psdyeqsuxg .gt_empty_group_heading {
+#zfbulzisln .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3880,15 +3880,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: middle;
 }
 
-#psdyeqsuxg .gt_from_md > :first-child {
+#zfbulzisln .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#psdyeqsuxg .gt_from_md > :last-child {
+#zfbulzisln .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#psdyeqsuxg .gt_row {
+#zfbulzisln .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3907,7 +3907,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#psdyeqsuxg .gt_stub {
+#zfbulzisln .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3920,7 +3920,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#psdyeqsuxg .gt_stub_row_group {
+#zfbulzisln .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3934,15 +3934,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: top;
 }
 
-#psdyeqsuxg .gt_row_group_first td {
+#zfbulzisln .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#psdyeqsuxg .gt_row_group_first th {
+#zfbulzisln .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#psdyeqsuxg .gt_summary_row {
+#zfbulzisln .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3952,16 +3952,16 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#psdyeqsuxg .gt_first_summary_row {
+#zfbulzisln .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_first_summary_row.thick {
+#zfbulzisln .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#psdyeqsuxg .gt_last_summary_row {
+#zfbulzisln .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3971,7 +3971,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_grand_summary_row {
+#zfbulzisln .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3981,7 +3981,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#psdyeqsuxg .gt_first_grand_summary_row {
+#zfbulzisln .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3991,7 +3991,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_last_grand_summary_row_top {
+#zfbulzisln .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4001,11 +4001,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_striped {
+#zfbulzisln .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#psdyeqsuxg .gt_table_body {
+#zfbulzisln .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4014,7 +4014,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_footnotes {
+#zfbulzisln .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4028,7 +4028,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_footnote {
+#zfbulzisln .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4037,7 +4037,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#psdyeqsuxg .gt_sourcenotes {
+#zfbulzisln .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4051,7 +4051,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#psdyeqsuxg .gt_sourcenote {
+#zfbulzisln .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4059,72 +4059,72 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#psdyeqsuxg .gt_left {
+#zfbulzisln .gt_left {
   text-align: left;
 }
 
-#psdyeqsuxg .gt_center {
+#zfbulzisln .gt_center {
   text-align: center;
 }
 
-#psdyeqsuxg .gt_right {
+#zfbulzisln .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#psdyeqsuxg .gt_font_normal {
+#zfbulzisln .gt_font_normal {
   font-weight: normal;
 }
 
-#psdyeqsuxg .gt_font_bold {
+#zfbulzisln .gt_font_bold {
   font-weight: bold;
 }
 
-#psdyeqsuxg .gt_font_italic {
+#zfbulzisln .gt_font_italic {
   font-style: italic;
 }
 
-#psdyeqsuxg .gt_super {
+#zfbulzisln .gt_super {
   font-size: 65%;
 }
 
-#psdyeqsuxg .gt_footnote_marks {
+#zfbulzisln .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#psdyeqsuxg .gt_asterisk {
+#zfbulzisln .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#psdyeqsuxg .gt_indent_1 {
+#zfbulzisln .gt_indent_1 {
   text-indent: 5px;
 }
 
-#psdyeqsuxg .gt_indent_2 {
+#zfbulzisln .gt_indent_2 {
   text-indent: 10px;
 }
 
-#psdyeqsuxg .gt_indent_3 {
+#zfbulzisln .gt_indent_3 {
   text-indent: 15px;
 }
 
-#psdyeqsuxg .gt_indent_4 {
+#zfbulzisln .gt_indent_4 {
   text-indent: 20px;
 }
 
-#psdyeqsuxg .gt_indent_5 {
+#zfbulzisln .gt_indent_5 {
   text-indent: 25px;
 }
 
-#psdyeqsuxg .katex-display {
+#zfbulzisln .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#psdyeqsuxg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#zfbulzisln div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4280,23 +4280,23 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code>, <code>details</code> and <code>firm_sample</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tlmomskska" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tlmomskska table {
+<div id="fkllojcjtk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fkllojcjtk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tlmomskska thead, #tlmomskska tbody, #tlmomskska tfoot, #tlmomskska tr, #tlmomskska td, #tlmomskska th {
+#fkllojcjtk thead, #fkllojcjtk tbody, #fkllojcjtk tfoot, #fkllojcjtk tr, #fkllojcjtk td, #fkllojcjtk th {
   border-style: none;
 }
 
-#tlmomskska p {
+#fkllojcjtk p {
   margin: 0;
   padding: 0;
 }
 
-#tlmomskska .gt_table {
+#fkllojcjtk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4322,12 +4322,12 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-left-color: #D3D3D3;
 }
 
-#tlmomskska .gt_caption {
+#fkllojcjtk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tlmomskska .gt_title {
+#fkllojcjtk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4339,7 +4339,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-width: 0;
 }
 
-#tlmomskska .gt_subtitle {
+#fkllojcjtk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4351,7 +4351,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-width: 0;
 }
 
-#tlmomskska .gt_heading {
+#fkllojcjtk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4363,13 +4363,13 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#tlmomskska .gt_bottom_border {
+#fkllojcjtk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tlmomskska .gt_col_headings {
+#fkllojcjtk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4384,7 +4384,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#tlmomskska .gt_col_heading {
+#fkllojcjtk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4404,7 +4404,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#tlmomskska .gt_column_spanner_outer {
+#fkllojcjtk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4416,15 +4416,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 4px;
 }
 
-#tlmomskska .gt_column_spanner_outer:first-child {
+#fkllojcjtk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tlmomskska .gt_column_spanner_outer:last-child {
+#fkllojcjtk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tlmomskska .gt_column_spanner {
+#fkllojcjtk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4436,11 +4436,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   width: 100%;
 }
 
-#tlmomskska .gt_spanner_row {
+#fkllojcjtk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tlmomskska .gt_group_heading {
+#fkllojcjtk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4466,7 +4466,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   text-align: left;
 }
 
-#tlmomskska .gt_empty_group_heading {
+#fkllojcjtk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4481,15 +4481,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: middle;
 }
 
-#tlmomskska .gt_from_md > :first-child {
+#fkllojcjtk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tlmomskska .gt_from_md > :last-child {
+#fkllojcjtk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tlmomskska .gt_row {
+#fkllojcjtk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4508,7 +4508,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#tlmomskska .gt_stub {
+#fkllojcjtk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4521,7 +4521,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#tlmomskska .gt_stub_row_group {
+#fkllojcjtk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4535,15 +4535,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: top;
 }
 
-#tlmomskska .gt_row_group_first td {
+#fkllojcjtk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tlmomskska .gt_row_group_first th {
+#fkllojcjtk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tlmomskska .gt_summary_row {
+#fkllojcjtk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4553,16 +4553,16 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#tlmomskska .gt_first_summary_row {
+#fkllojcjtk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tlmomskska .gt_first_summary_row.thick {
+#fkllojcjtk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tlmomskska .gt_last_summary_row {
+#fkllojcjtk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4572,7 +4572,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#tlmomskska .gt_grand_summary_row {
+#fkllojcjtk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4582,7 +4582,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#tlmomskska .gt_first_grand_summary_row {
+#fkllojcjtk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4592,7 +4592,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-color: #D3D3D3;
 }
 
-#tlmomskska .gt_last_grand_summary_row_top {
+#fkllojcjtk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4602,11 +4602,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#tlmomskska .gt_striped {
+#fkllojcjtk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tlmomskska .gt_table_body {
+#fkllojcjtk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4615,7 +4615,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#tlmomskska .gt_footnotes {
+#fkllojcjtk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4629,7 +4629,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#tlmomskska .gt_footnote {
+#fkllojcjtk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4638,7 +4638,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#tlmomskska .gt_sourcenotes {
+#fkllojcjtk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4652,7 +4652,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#tlmomskska .gt_sourcenote {
+#fkllojcjtk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4660,72 +4660,72 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#tlmomskska .gt_left {
+#fkllojcjtk .gt_left {
   text-align: left;
 }
 
-#tlmomskska .gt_center {
+#fkllojcjtk .gt_center {
   text-align: center;
 }
 
-#tlmomskska .gt_right {
+#fkllojcjtk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tlmomskska .gt_font_normal {
+#fkllojcjtk .gt_font_normal {
   font-weight: normal;
 }
 
-#tlmomskska .gt_font_bold {
+#fkllojcjtk .gt_font_bold {
   font-weight: bold;
 }
 
-#tlmomskska .gt_font_italic {
+#fkllojcjtk .gt_font_italic {
   font-style: italic;
 }
 
-#tlmomskska .gt_super {
+#fkllojcjtk .gt_super {
   font-size: 65%;
 }
 
-#tlmomskska .gt_footnote_marks {
+#fkllojcjtk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tlmomskska .gt_asterisk {
+#fkllojcjtk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tlmomskska .gt_indent_1 {
+#fkllojcjtk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tlmomskska .gt_indent_2 {
+#fkllojcjtk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tlmomskska .gt_indent_3 {
+#fkllojcjtk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tlmomskska .gt_indent_4 {
+#fkllojcjtk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tlmomskska .gt_indent_5 {
+#fkllojcjtk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tlmomskska .katex-display {
+#fkllojcjtk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tlmomskska div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fkllojcjtk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5062,23 +5062,23 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 <h5 data-number="3.3.1.2.3" class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames"><span class="header-section-number">3.3.1.2.3</span> Example: Netherlands (SBS, 2018): NL_varnames</h5>
 <div class="cell">
 <div class="cell-output-display">
-<div id="kuqiisrvce" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kuqiisrvce table {
+<div id="uitvkoocah" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uitvkoocah table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kuqiisrvce thead, #kuqiisrvce tbody, #kuqiisrvce tfoot, #kuqiisrvce tr, #kuqiisrvce td, #kuqiisrvce th {
+#uitvkoocah thead, #uitvkoocah tbody, #uitvkoocah tfoot, #uitvkoocah tr, #uitvkoocah td, #uitvkoocah th {
   border-style: none;
 }
 
-#kuqiisrvce p {
+#uitvkoocah p {
   margin: 0;
   padding: 0;
 }
 
-#kuqiisrvce .gt_table {
+#uitvkoocah .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5104,12 +5104,12 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-left-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_caption {
+#uitvkoocah .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kuqiisrvce .gt_title {
+#uitvkoocah .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5121,7 +5121,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-width: 0;
 }
 
-#kuqiisrvce .gt_subtitle {
+#uitvkoocah .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5133,7 +5133,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-width: 0;
 }
 
-#kuqiisrvce .gt_heading {
+#uitvkoocah .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5145,13 +5145,13 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_bottom_border {
+#uitvkoocah .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_col_headings {
+#uitvkoocah .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5166,7 +5166,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_col_heading {
+#uitvkoocah .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5186,7 +5186,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#kuqiisrvce .gt_column_spanner_outer {
+#uitvkoocah .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5198,15 +5198,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 4px;
 }
 
-#kuqiisrvce .gt_column_spanner_outer:first-child {
+#uitvkoocah .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kuqiisrvce .gt_column_spanner_outer:last-child {
+#uitvkoocah .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kuqiisrvce .gt_column_spanner {
+#uitvkoocah .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5218,11 +5218,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   width: 100%;
 }
 
-#kuqiisrvce .gt_spanner_row {
+#uitvkoocah .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kuqiisrvce .gt_group_heading {
+#uitvkoocah .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5248,7 +5248,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   text-align: left;
 }
 
-#kuqiisrvce .gt_empty_group_heading {
+#uitvkoocah .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5263,15 +5263,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: middle;
 }
 
-#kuqiisrvce .gt_from_md > :first-child {
+#uitvkoocah .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kuqiisrvce .gt_from_md > :last-child {
+#uitvkoocah .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kuqiisrvce .gt_row {
+#uitvkoocah .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5290,7 +5290,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#kuqiisrvce .gt_stub {
+#uitvkoocah .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5303,7 +5303,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#kuqiisrvce .gt_stub_row_group {
+#uitvkoocah .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5317,15 +5317,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: top;
 }
 
-#kuqiisrvce .gt_row_group_first td {
+#uitvkoocah .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kuqiisrvce .gt_row_group_first th {
+#uitvkoocah .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kuqiisrvce .gt_summary_row {
+#uitvkoocah .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5335,16 +5335,16 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#kuqiisrvce .gt_first_summary_row {
+#uitvkoocah .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_first_summary_row.thick {
+#uitvkoocah .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kuqiisrvce .gt_last_summary_row {
+#uitvkoocah .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5354,7 +5354,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_grand_summary_row {
+#uitvkoocah .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5364,7 +5364,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#kuqiisrvce .gt_first_grand_summary_row {
+#uitvkoocah .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5374,7 +5374,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_last_grand_summary_row_top {
+#uitvkoocah .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5384,11 +5384,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_striped {
+#uitvkoocah .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kuqiisrvce .gt_table_body {
+#uitvkoocah .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5397,7 +5397,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_footnotes {
+#uitvkoocah .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5411,7 +5411,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_footnote {
+#uitvkoocah .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5420,7 +5420,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#kuqiisrvce .gt_sourcenotes {
+#uitvkoocah .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5434,7 +5434,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#kuqiisrvce .gt_sourcenote {
+#uitvkoocah .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5442,72 +5442,72 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#kuqiisrvce .gt_left {
+#uitvkoocah .gt_left {
   text-align: left;
 }
 
-#kuqiisrvce .gt_center {
+#uitvkoocah .gt_center {
   text-align: center;
 }
 
-#kuqiisrvce .gt_right {
+#uitvkoocah .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kuqiisrvce .gt_font_normal {
+#uitvkoocah .gt_font_normal {
   font-weight: normal;
 }
 
-#kuqiisrvce .gt_font_bold {
+#uitvkoocah .gt_font_bold {
   font-weight: bold;
 }
 
-#kuqiisrvce .gt_font_italic {
+#uitvkoocah .gt_font_italic {
   font-style: italic;
 }
 
-#kuqiisrvce .gt_super {
+#uitvkoocah .gt_super {
   font-size: 65%;
 }
 
-#kuqiisrvce .gt_footnote_marks {
+#uitvkoocah .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kuqiisrvce .gt_asterisk {
+#uitvkoocah .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kuqiisrvce .gt_indent_1 {
+#uitvkoocah .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kuqiisrvce .gt_indent_2 {
+#uitvkoocah .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kuqiisrvce .gt_indent_3 {
+#uitvkoocah .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kuqiisrvce .gt_indent_4 {
+#uitvkoocah .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kuqiisrvce .gt_indent_5 {
+#uitvkoocah .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kuqiisrvce .katex-display {
+#uitvkoocah .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kuqiisrvce div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uitvkoocah div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5760,23 +5760,23 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 <p>An example below of the values occurring for the unit of measurement in the SI <code>PRODCOM</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="rrurtxbfhc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rrurtxbfhc table {
+<div id="gfafwwllza" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gfafwwllza table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rrurtxbfhc thead, #rrurtxbfhc tbody, #rrurtxbfhc tfoot, #rrurtxbfhc tr, #rrurtxbfhc td, #rrurtxbfhc th {
+#gfafwwllza thead, #gfafwwllza tbody, #gfafwwllza tfoot, #gfafwwllza tr, #gfafwwllza td, #gfafwwllza th {
   border-style: none;
 }
 
-#rrurtxbfhc p {
+#gfafwwllza p {
   margin: 0;
   padding: 0;
 }
 
-#rrurtxbfhc .gt_table {
+#gfafwwllza .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5802,12 +5802,12 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-left-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_caption {
+#gfafwwllza .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rrurtxbfhc .gt_title {
+#gfafwwllza .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5819,7 +5819,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-width: 0;
 }
 
-#rrurtxbfhc .gt_subtitle {
+#gfafwwllza .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5831,7 +5831,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-width: 0;
 }
 
-#rrurtxbfhc .gt_heading {
+#gfafwwllza .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5843,13 +5843,13 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_bottom_border {
+#gfafwwllza .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_col_headings {
+#gfafwwllza .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5864,7 +5864,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_col_heading {
+#gfafwwllza .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5884,7 +5884,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#rrurtxbfhc .gt_column_spanner_outer {
+#gfafwwllza .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5896,15 +5896,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 4px;
 }
 
-#rrurtxbfhc .gt_column_spanner_outer:first-child {
+#gfafwwllza .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rrurtxbfhc .gt_column_spanner_outer:last-child {
+#gfafwwllza .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rrurtxbfhc .gt_column_spanner {
+#gfafwwllza .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5916,11 +5916,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   width: 100%;
 }
 
-#rrurtxbfhc .gt_spanner_row {
+#gfafwwllza .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rrurtxbfhc .gt_group_heading {
+#gfafwwllza .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5946,7 +5946,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   text-align: left;
 }
 
-#rrurtxbfhc .gt_empty_group_heading {
+#gfafwwllza .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5961,15 +5961,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: middle;
 }
 
-#rrurtxbfhc .gt_from_md > :first-child {
+#gfafwwllza .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rrurtxbfhc .gt_from_md > :last-child {
+#gfafwwllza .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rrurtxbfhc .gt_row {
+#gfafwwllza .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5988,7 +5988,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#rrurtxbfhc .gt_stub {
+#gfafwwllza .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6001,7 +6001,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#rrurtxbfhc .gt_stub_row_group {
+#gfafwwllza .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6015,15 +6015,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: top;
 }
 
-#rrurtxbfhc .gt_row_group_first td {
+#gfafwwllza .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rrurtxbfhc .gt_row_group_first th {
+#gfafwwllza .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rrurtxbfhc .gt_summary_row {
+#gfafwwllza .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6033,16 +6033,16 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#rrurtxbfhc .gt_first_summary_row {
+#gfafwwllza .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_first_summary_row.thick {
+#gfafwwllza .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rrurtxbfhc .gt_last_summary_row {
+#gfafwwllza .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6052,7 +6052,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_grand_summary_row {
+#gfafwwllza .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6062,7 +6062,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#rrurtxbfhc .gt_first_grand_summary_row {
+#gfafwwllza .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6072,7 +6072,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_last_grand_summary_row_top {
+#gfafwwllza .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6082,11 +6082,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_striped {
+#gfafwwllza .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rrurtxbfhc .gt_table_body {
+#gfafwwllza .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6095,7 +6095,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_footnotes {
+#gfafwwllza .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6109,7 +6109,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_footnote {
+#gfafwwllza .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6118,7 +6118,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#rrurtxbfhc .gt_sourcenotes {
+#gfafwwllza .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6132,7 +6132,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#rrurtxbfhc .gt_sourcenote {
+#gfafwwllza .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6140,72 +6140,72 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#rrurtxbfhc .gt_left {
+#gfafwwllza .gt_left {
   text-align: left;
 }
 
-#rrurtxbfhc .gt_center {
+#gfafwwllza .gt_center {
   text-align: center;
 }
 
-#rrurtxbfhc .gt_right {
+#gfafwwllza .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rrurtxbfhc .gt_font_normal {
+#gfafwwllza .gt_font_normal {
   font-weight: normal;
 }
 
-#rrurtxbfhc .gt_font_bold {
+#gfafwwllza .gt_font_bold {
   font-weight: bold;
 }
 
-#rrurtxbfhc .gt_font_italic {
+#gfafwwllza .gt_font_italic {
   font-style: italic;
 }
 
-#rrurtxbfhc .gt_super {
+#gfafwwllza .gt_super {
   font-size: 65%;
 }
 
-#rrurtxbfhc .gt_footnote_marks {
+#gfafwwllza .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rrurtxbfhc .gt_asterisk {
+#gfafwwllza .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rrurtxbfhc .gt_indent_1 {
+#gfafwwllza .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rrurtxbfhc .gt_indent_2 {
+#gfafwwllza .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rrurtxbfhc .gt_indent_3 {
+#gfafwwllza .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rrurtxbfhc .gt_indent_4 {
+#gfafwwllza .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rrurtxbfhc .gt_indent_5 {
+#gfafwwllza .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rrurtxbfhc .katex-display {
+#gfafwwllza .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rrurtxbfhc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gfafwwllza div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -13715,7 +13715,7 @@ Example:<br>
 <li>harmonize BR, BS (if available), SBS</li>
 <li>import
 <ul>
-<li>MDI CN module and execute it on BR, BS (if available) and SBS in R</li>
+<li>MDI CPNT module and execute it on BR, BS (if available) and SBS in R</li>
 <li>Stata packages</li>
 <li>questionnaire for the CompNet variables</li>
 <li>country file</li>
@@ -13762,9 +13762,9 @@ Example:<br>
 <li><p><strong>Unique keys</strong>: the uniquely identifying columns of each raw file (see the <a href="#sec-file-specific-metadata----nsi_varnames.csv">NSI_varnames section</a>)</p></li>
 <li><p><strong>Disclosure rules</strong>: detailed description of the disclosure routines in place in the NSI</p></li>
 <li><p><strong>import script that harmonizes variables</strong>: after <em>Phase IV</em>, given that the NSI_MD_conc file mappings for BR, BS (if available) and SBS are ready, those files can be harmonized. To do so, we don’t import the whole infrastructure (yet) but we provide you with a code that does that by reading your metadata files and relevant raw data and produces the MD panels.</p></li>
-<li><p><strong>upload MDI CN module and execute it on BR, BS and SBS</strong> and importing the CompNet-related files (Phase V): After having harmonized BR, BS (if available) and SBS, we ask you to import a few more files.</p>
+<li><p><strong>upload MDI CPNT module and execute it on BR, BS and SBS</strong> and importing the CompNet-related files (Phase V): After having harmonized BR, BS (if available) and SBS, we ask you to import a few more files.</p>
 <ul>
-<li><p><em>CN module</em>: This script produces some files under a specific directory</p></li>
+<li><p><em>CPNT module</em>: This script produces some files under a specific directory</p></li>
 <li><p><em>questionnaire</em>: The Questionnaire is an Excel file that contains:</p>
 <ol type="1">
 <li>paths</li>
@@ -13778,7 +13778,7 @@ Example:<br>
 <li>some additional measures from public sources (e.g.&nbsp;10year government bond yields from Eurostat)</li>
 <li>one predefined measures from us (i.e.&nbsp;not from public sources; if this is an issue we could leave it out)</li>
 </ol></li>
-<li><p><em>Stata files for CompNet</em>: The Stata (<code>.do</code>) files take as input in the output of the CN module, the questionnaire and the country file and produce a limited first version of some CompNet indicators</p></li>
+<li><p><em>Stata files for CompNet</em>: The Stata (<code>.do</code>) files take as input in the output of the CPNT module, the questionnaire and the country file and produce a limited first version of some CompNet indicators</p></li>
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -15436,15 +15436,15 @@ Click here to see the entire <code>countdown.R</code> script
 <p>If you want to add your module to the MDI infrastructure via the Nuvolos Developer Space you need to have access to the MDI GitHub repository and set up your GitHub account in Nuvolos (see:<a href="#connect-github">first time users</a>) Then open RStudio in the Developer Space and follow these steps to add your module:</p>
 <ol type="1">
 <li><p>Add a module folder</p>
-<p>In the files section on the right, navigate to the folder <code>MDI/payload/Launch_vX.X/Rmodules/</code> (Replace X.X with the current launch version). In that folder create a new folder with a two-character name, abbreviating your research module, eg. “XY”.</p></li>
+<p>In the files section on the right, navigate to the folder <code>MDI/payload/Launch_vX.X/Rmodules/</code> (Replace X.X with the current launch version). In that folder create a new folder with a four-letter name, abbreviating your research module, eg. “ABCD”.</p></li>
 <li><p>Add your MDnames_select file</p>
-<p>Inside your module folder add the MDnames_select file. This file contains a list of the variables that your module uses (<a href="#data-selection">more information here</a>) and it needs to be named like this: <code>(res_group)_MDnames_select.csv</code> where <code>res_group</code> is your module abbreviation, eg. <code>XY_MDnames_select.csv</code></p></li>
+<p>Inside your module folder add the MDnames_select file. This file contains a list of the variables that your module uses (<a href="#data-selection">more information here</a>) and it needs to be named like this: <code>(res_group)_MDnames_select.csv</code> where <code>res_group</code> is your module abbreviation, eg. <code>ABCD_MDnames_select.csv</code></p></li>
 <li><p>Add your main script</p>
-<p>Inside your module folder add your main script. This script needs to be named the following way: <code>Launch_X.X_(res_group).R</code> where X.X is the current launch version and <code>res_group</code> is your module abbreviation. Eg. <code>Launch_2.3_XY.R</code>. This scripts will be executed by the code when your module is run. That does not mean all your code needs to be in that one script. You can add as many scripts as you like and call them using <code>source(path/to/your/script/)</code>.</p></li>
+<p>Inside your module folder add your main script. This script needs to be named the following way: <code>Launch_X.X_(res_group).R</code> where X.X is the current launch version and <code>res_group</code> is your module abbreviation. Eg. <code>Launch_2.4_ABCD.R</code>. This scripts will be executed by the code when your module is run. That does not mean all your code needs to be in that one script. You can add as many scripts as you like and call them using <code>source(path/to/your/script/)</code>.</p></li>
 <li><p>Add any other scripts/files/ folders</p>
 <p>If you need any additional scripts or files place them in your module folder.</p></li>
 </ol>
-<p>This is an example of a module folder: <img src="images/ex_module_folder.png" class="img-fluid"> The folder has the module abbreviation <code>CN</code> and contains the main script <code>Launch_2.3_CN.R</code>, the <code>CN_MDnames_select.csv</code> file and two additional files <code>EU_countries.csv</code> and <code>Questionnaire.xlsx</code>.</p>
+<p>This is an example of a module folder: <img src="images/ex_module_folder.png" class="img-fluid"> The folder has the module abbreviation <code>CPNT</code> and contains the main script <code>Launch_2.4_CPNT.R</code>, the <code>CPNT_MDnames_select.csv</code> file and two additional files <code>EU_countries.csv</code> and <code>Questionnaire.xlsx</code>. <em>(The screenshot still shows the pre-v2.4 two-letter <code>CN</code> naming.)</em></p>
 </section>
 <section id="test-module" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="test-module"><span class="header-section-number">4.4</span> How to develop and test your module using (mock) data</h2>
@@ -15466,7 +15466,7 @@ The countdown script functions as a configuration file that, for example, sets u
 </div>
 </div>
 </div>
-<p>After adjusting the parameters, run the countdown script and select option 4 “Interactive MDI”. This will set up the environment for you to develop and test your module, but it will not run any MDI module. You can then run your module script (e.g.&nbsp;<code>Launch_2.3_XY.R</code>) to test your module using the mock data or develop it further using the libraries and variables/data that are loaded by the countdown script (eg. deflators). You can find the imported variables in the environment pane of RStudio.</p>
+<p>After adjusting the parameters, run the countdown script and select option 4 “Interactive MDI”. This will set up the environment for you to develop and test your module, but it will not run any MDI module. You can then run your module script (e.g.&nbsp;<code>Launch_2.4_ABCD.R</code>) to test your module using the mock data or develop it further using the libraries and variables/data that are loaded by the countdown script (eg. deflators). You can find the imported variables in the environment pane of RStudio.</p>
 <p><img src="images/ex_environment.png" class="img-fluid"></p>
 <p>If you want to mimic a launch as it would happen at an NSI, set the flag <code>MDIimportFlag</code> to FALSE and <code>MDImoduleRUN</code> to TRUE. Then run the countdown and select option 2 “liftoff”. This will set up the environment and run all modules with the selected mock data.</p>
 <section id="mockdata" class="level3" data-number="4.4.1">
