@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Eric Bartelsman and MDI team">
-<meta name="dcterms.date" content="2026-09-24">
+<meta name="dcterms.date" content="2026-10-08">
 
 <title>MDI Manual</title>
 <style>
@@ -148,16 +148,16 @@ window.Quarto = {
   <li><a href="#the-complete-mdi-pipeline" id="toc-the-complete-mdi-pipeline" class="nav-link" data-scroll-target="#the-complete-mdi-pipeline"><span class="header-section-number">3.1</span> The complete MDI pipeline</a></li>
   <li><a href="#introduction-setup-to-mdi-infrastructure" id="toc-introduction-setup-to-mdi-infrastructure" class="nav-link" data-scroll-target="#introduction-setup-to-mdi-infrastructure"><span class="header-section-number">3.2</span> Introduction &amp; Setup to MDI Infrastructure</a></li>
   <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">3.3</span> Metadata</a></li>
-  <li><a href="#run-mdi-harmonization-modules" id="toc-run-mdi-harmonization-modules" class="nav-link" data-scroll-target="#run-mdi-harmonization-modules"><span class="header-section-number">3.4</span> Run MDI: Harmonization &amp; Modules</a></li>
+  <li><a href="#run-mdi-harmonization-modules" id="toc-run-mdi-harmonization-modules" class="nav-link" data-scroll-target="#run-mdi-harmonization-modules"><span class="header-section-number">6.1</span> Run MDI: Harmonization &amp; Modules</a></li>
   </ul></li>
-  <li><a href="#developing-testing" id="toc-developing-testing" class="nav-link" data-scroll-target="#developing-testing"><span class="header-section-number">4</span> Developing &amp; Testing</a>
+  <li><a href="#developing-testing" id="toc-developing-testing" class="nav-link" data-scroll-target="#developing-testing"><span class="header-section-number">7</span> Developing &amp; Testing</a>
   <ul class="collapse">
-  <li><a href="#nuvolos-developer-space" id="toc-nuvolos-developer-space" class="nav-link" data-scroll-target="#nuvolos-developer-space"><span class="header-section-number">4.1</span> Nuvolos Developer Space</a></li>
-  <li><a href="#general-workflow-with-git" id="toc-general-workflow-with-git" class="nav-link" data-scroll-target="#general-workflow-with-git"><span class="header-section-number">4.2</span> General Workflow with Git</a></li>
-  <li><a href="#how-to-add-your-research-module-to-the-mdi-infrastructure" id="toc-how-to-add-your-research-module-to-the-mdi-infrastructure" class="nav-link" data-scroll-target="#how-to-add-your-research-module-to-the-mdi-infrastructure"><span class="header-section-number">4.3</span> How to add your research module to the MDI infrastructure</a></li>
-  <li><a href="#test-module" id="toc-test-module" class="nav-link" data-scroll-target="#test-module"><span class="header-section-number">4.4</span> How to develop and test your module using (mock) data</a></li>
+  <li><a href="#nuvolos-developer-space" id="toc-nuvolos-developer-space" class="nav-link" data-scroll-target="#nuvolos-developer-space"><span class="header-section-number">7.1</span> Nuvolos Developer Space</a></li>
+  <li><a href="#general-workflow-with-git" id="toc-general-workflow-with-git" class="nav-link" data-scroll-target="#general-workflow-with-git"><span class="header-section-number">7.2</span> General Workflow with Git</a></li>
+  <li><a href="#how-to-add-your-research-module-to-the-mdi-infrastructure" id="toc-how-to-add-your-research-module-to-the-mdi-infrastructure" class="nav-link" data-scroll-target="#how-to-add-your-research-module-to-the-mdi-infrastructure"><span class="header-section-number">7.3</span> How to add your research module to the MDI infrastructure</a></li>
+  <li><a href="#test-module" id="toc-test-module" class="nav-link" data-scroll-target="#test-module"><span class="header-section-number">7.4</span> How to develop and test your module using (mock) data</a></li>
   </ul></li>
-  <li><a href="#acknowledgement" id="toc-acknowledgement" class="nav-link" data-scroll-target="#acknowledgement"><span class="header-section-number">5</span> Acknowledgement</a></li>
+  <li><a href="#acknowledgement" id="toc-acknowledgement" class="nav-link" data-scroll-target="#acknowledgement"><span class="header-section-number">8</span> Acknowledgement</a></li>
   </ul>
 </nav>
 </div>
@@ -190,7 +190,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 24, 2026</p>
+      <p class="date">October 8, 2026</p>
     </div>
   </div>
   
@@ -533,28 +533,41 @@ class STAKE,REMOTE,OUT whitebg;
 <p><strong>Check the <a href="#dealing-with-classifications">dedicated section</a> below for more details.</strong></p>
 </div>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Sampling weights (<code>weights_&lt;dataset&gt;_nsi</code>)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Where an MD dataset combines several NSI datasets (e.g.&nbsp;DE’s SBS and BS, MT’s SBS), <code>weights_&lt;dataset&gt;_nsi</code> is 1 for every row: each source comes with its own sampling design, so their weights can’t be combined. Results weighted by it are unweighted there.</p>
+</div>
+</div>
 <p><a href="https://compnet.shinyapps.io/mdi_metadata_tool_catalog_viewer_shiny/">Open the MDI Metadata Viewer</a></p>
 <p>Additionally, module writers can also look at information on data source, firm sample and other details (taken from the <a href="#nsi-datafiles">NSI_datafiles tables</a>) on the raw datafiles underlying each MD panel by using the interactive tool <a href="https://compnet.shinyapps.io/datafiles_info_viewer/">Datafiles Info Viewer</a></p>
 <p>Once the final selection of MD variable names has been made for the module, a file named <code>(res_group)_MDnames_select.csv</code> (see example below) must be submitted to the MDI team. This needs to have the column names as shown below.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ywbarjonkb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ywbarjonkb table {
+<div id="dxwuymgxmh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dxwuymgxmh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ywbarjonkb thead, #ywbarjonkb tbody, #ywbarjonkb tfoot, #ywbarjonkb tr, #ywbarjonkb td, #ywbarjonkb th {
+#dxwuymgxmh thead, #dxwuymgxmh tbody, #dxwuymgxmh tfoot, #dxwuymgxmh tr, #dxwuymgxmh td, #dxwuymgxmh th {
   border-style: none;
 }
 
-#ywbarjonkb p {
+#dxwuymgxmh p {
   margin: 0;
   padding: 0;
 }
 
-#ywbarjonkb .gt_table {
+#dxwuymgxmh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -580,12 +593,12 @@ class STAKE,REMOTE,OUT whitebg;
   border-left-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_caption {
+#dxwuymgxmh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ywbarjonkb .gt_title {
+#dxwuymgxmh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -597,7 +610,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-width: 0;
 }
 
-#ywbarjonkb .gt_subtitle {
+#dxwuymgxmh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -609,7 +622,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-top-width: 0;
 }
 
-#ywbarjonkb .gt_heading {
+#dxwuymgxmh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -621,13 +634,13 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_bottom_border {
+#dxwuymgxmh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_col_headings {
+#dxwuymgxmh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -642,7 +655,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_col_heading {
+#dxwuymgxmh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -662,7 +675,7 @@ class STAKE,REMOTE,OUT whitebg;
   overflow-x: hidden;
 }
 
-#ywbarjonkb .gt_column_spanner_outer {
+#dxwuymgxmh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -674,15 +687,15 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 4px;
 }
 
-#ywbarjonkb .gt_column_spanner_outer:first-child {
+#dxwuymgxmh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ywbarjonkb .gt_column_spanner_outer:last-child {
+#dxwuymgxmh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ywbarjonkb .gt_column_spanner {
+#dxwuymgxmh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -694,11 +707,11 @@ class STAKE,REMOTE,OUT whitebg;
   width: 100%;
 }
 
-#ywbarjonkb .gt_spanner_row {
+#dxwuymgxmh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ywbarjonkb .gt_group_heading {
+#dxwuymgxmh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -724,7 +737,7 @@ class STAKE,REMOTE,OUT whitebg;
   text-align: left;
 }
 
-#ywbarjonkb .gt_empty_group_heading {
+#dxwuymgxmh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -739,15 +752,15 @@ class STAKE,REMOTE,OUT whitebg;
   vertical-align: middle;
 }
 
-#ywbarjonkb .gt_from_md > :first-child {
+#dxwuymgxmh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ywbarjonkb .gt_from_md > :last-child {
+#dxwuymgxmh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ywbarjonkb .gt_row {
+#dxwuymgxmh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -766,7 +779,7 @@ class STAKE,REMOTE,OUT whitebg;
   overflow-x: hidden;
 }
 
-#ywbarjonkb .gt_stub {
+#dxwuymgxmh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -779,7 +792,7 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ywbarjonkb .gt_stub_row_group {
+#dxwuymgxmh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -793,15 +806,15 @@ class STAKE,REMOTE,OUT whitebg;
   vertical-align: top;
 }
 
-#ywbarjonkb .gt_row_group_first td {
+#dxwuymgxmh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ywbarjonkb .gt_row_group_first th {
+#dxwuymgxmh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ywbarjonkb .gt_summary_row {
+#dxwuymgxmh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -811,16 +824,16 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ywbarjonkb .gt_first_summary_row {
+#dxwuymgxmh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_first_summary_row.thick {
+#dxwuymgxmh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ywbarjonkb .gt_last_summary_row {
+#dxwuymgxmh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -830,7 +843,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_grand_summary_row {
+#dxwuymgxmh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -840,7 +853,7 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ywbarjonkb .gt_first_grand_summary_row {
+#dxwuymgxmh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -850,7 +863,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-top-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_last_grand_summary_row_top {
+#dxwuymgxmh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -860,11 +873,11 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_striped {
+#dxwuymgxmh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ywbarjonkb .gt_table_body {
+#dxwuymgxmh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -873,7 +886,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-bottom-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_footnotes {
+#dxwuymgxmh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -887,7 +900,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_footnote {
+#dxwuymgxmh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -896,7 +909,7 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ywbarjonkb .gt_sourcenotes {
+#dxwuymgxmh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -910,7 +923,7 @@ class STAKE,REMOTE,OUT whitebg;
   border-right-color: #D3D3D3;
 }
 
-#ywbarjonkb .gt_sourcenote {
+#dxwuymgxmh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -918,72 +931,72 @@ class STAKE,REMOTE,OUT whitebg;
   padding-right: 5px;
 }
 
-#ywbarjonkb .gt_left {
+#dxwuymgxmh .gt_left {
   text-align: left;
 }
 
-#ywbarjonkb .gt_center {
+#dxwuymgxmh .gt_center {
   text-align: center;
 }
 
-#ywbarjonkb .gt_right {
+#dxwuymgxmh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ywbarjonkb .gt_font_normal {
+#dxwuymgxmh .gt_font_normal {
   font-weight: normal;
 }
 
-#ywbarjonkb .gt_font_bold {
+#dxwuymgxmh .gt_font_bold {
   font-weight: bold;
 }
 
-#ywbarjonkb .gt_font_italic {
+#dxwuymgxmh .gt_font_italic {
   font-style: italic;
 }
 
-#ywbarjonkb .gt_super {
+#dxwuymgxmh .gt_super {
   font-size: 65%;
 }
 
-#ywbarjonkb .gt_footnote_marks {
+#dxwuymgxmh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ywbarjonkb .gt_asterisk {
+#dxwuymgxmh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ywbarjonkb .gt_indent_1 {
+#dxwuymgxmh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ywbarjonkb .gt_indent_2 {
+#dxwuymgxmh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ywbarjonkb .gt_indent_3 {
+#dxwuymgxmh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ywbarjonkb .gt_indent_4 {
+#dxwuymgxmh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ywbarjonkb .gt_indent_5 {
+#dxwuymgxmh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ywbarjonkb .katex-display {
+#dxwuymgxmh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ywbarjonkb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dxwuymgxmh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1052,9 +1065,9 @@ $$</p>
 <h3 data-number="2.3.3" class="anchored" data-anchor-id="analysis"><span class="header-section-number">2.3.3</span> Analysis</h3>
 <section id="libraries-packages-and-the-mdi-r-tools" class="level4" data-number="2.3.3.1">
 <h4 data-number="2.3.3.1" class="anchored" data-anchor-id="libraries-packages-and-the-mdi-r-tools"><span class="header-section-number">2.3.3.1</span> Libraries, packages and the MDI R tools</h4>
-<p>Make use of MDI R-packages (see <code>../rocket/Rtools/Rpackages/Rpackage_info_v2.3_.csv</code>) and Rtools (see: <code>../docs/MDI_Rpackage_1.0.0.pdf</code>): See the R-package libraries currently installed at NSIs and loaded at runtime of the launcher at <code>../rocket/Rtools/Rpackages/Rpackage_info_v2.3_.csv</code> or below</p>
+<p>Make use of MDI R-packages (see <code>../rocket/Rpackages/Rpackage_info_v2.3_.csv</code>) and Rtools (see: <code>../docs/MDI_Rpackage_1.0.0.pdf</code>): See the R-package libraries currently installed at NSIs and loaded at runtime of the launcher at <code>../rocket/Rpackages/Rpackage_info_v2.3_.csv</code> or below</p>
 <div class="callout callout-style-default callout-note callout-titled" title="PDF viewer of the `mdi` R library manual">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1063,7 +1076,7 @@ $$</p>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <embed src="MDI_Rpackage_1.0.0.pdf" type="application/pdf" width="100%" height="600px">
 </div>
@@ -1071,7 +1084,7 @@ $$</p>
 </div>
 <p>If you need a package that is not part of the current list of R libraries, notify the MDI staff so it can be added to the NSI requirements. When preparing output, use standardized functions from the MDI Rtools (see directory <code>../rocket/Rtools/R</code>) whenever possible.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="List of currently used R libraries">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1080,27 +1093,27 @@ $$</p>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="ohyetvxnkc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ohyetvxnkc table {
+<div id="hcpyoqygmg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hcpyoqygmg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ohyetvxnkc thead, #ohyetvxnkc tbody, #ohyetvxnkc tfoot, #ohyetvxnkc tr, #ohyetvxnkc td, #ohyetvxnkc th {
+#hcpyoqygmg thead, #hcpyoqygmg tbody, #hcpyoqygmg tfoot, #hcpyoqygmg tr, #hcpyoqygmg td, #hcpyoqygmg th {
   border-style: none;
 }
 
-#ohyetvxnkc p {
+#hcpyoqygmg p {
   margin: 0;
   padding: 0;
 }
 
-#ohyetvxnkc .gt_table {
+#hcpyoqygmg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1126,12 +1139,12 @@ $$</p>
   border-left-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_caption {
+#hcpyoqygmg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ohyetvxnkc .gt_title {
+#hcpyoqygmg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1143,7 +1156,7 @@ $$</p>
   border-bottom-width: 0;
 }
 
-#ohyetvxnkc .gt_subtitle {
+#hcpyoqygmg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1155,7 +1168,7 @@ $$</p>
   border-top-width: 0;
 }
 
-#ohyetvxnkc .gt_heading {
+#hcpyoqygmg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1167,13 +1180,13 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_bottom_border {
+#hcpyoqygmg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_col_headings {
+#hcpyoqygmg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1188,7 +1201,7 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_col_heading {
+#hcpyoqygmg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1208,7 +1221,7 @@ $$</p>
   overflow-x: hidden;
 }
 
-#ohyetvxnkc .gt_column_spanner_outer {
+#hcpyoqygmg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1220,15 +1233,15 @@ $$</p>
   padding-right: 4px;
 }
 
-#ohyetvxnkc .gt_column_spanner_outer:first-child {
+#hcpyoqygmg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ohyetvxnkc .gt_column_spanner_outer:last-child {
+#hcpyoqygmg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ohyetvxnkc .gt_column_spanner {
+#hcpyoqygmg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1240,11 +1253,11 @@ $$</p>
   width: 100%;
 }
 
-#ohyetvxnkc .gt_spanner_row {
+#hcpyoqygmg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ohyetvxnkc .gt_group_heading {
+#hcpyoqygmg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1270,7 +1283,7 @@ $$</p>
   text-align: left;
 }
 
-#ohyetvxnkc .gt_empty_group_heading {
+#hcpyoqygmg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1285,15 +1298,15 @@ $$</p>
   vertical-align: middle;
 }
 
-#ohyetvxnkc .gt_from_md > :first-child {
+#hcpyoqygmg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ohyetvxnkc .gt_from_md > :last-child {
+#hcpyoqygmg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ohyetvxnkc .gt_row {
+#hcpyoqygmg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1312,7 +1325,7 @@ $$</p>
   overflow-x: hidden;
 }
 
-#ohyetvxnkc .gt_stub {
+#hcpyoqygmg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1325,7 +1338,7 @@ $$</p>
   padding-right: 5px;
 }
 
-#ohyetvxnkc .gt_stub_row_group {
+#hcpyoqygmg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1339,15 +1352,15 @@ $$</p>
   vertical-align: top;
 }
 
-#ohyetvxnkc .gt_row_group_first td {
+#hcpyoqygmg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ohyetvxnkc .gt_row_group_first th {
+#hcpyoqygmg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ohyetvxnkc .gt_summary_row {
+#hcpyoqygmg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1357,16 +1370,16 @@ $$</p>
   padding-right: 5px;
 }
 
-#ohyetvxnkc .gt_first_summary_row {
+#hcpyoqygmg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_first_summary_row.thick {
+#hcpyoqygmg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ohyetvxnkc .gt_last_summary_row {
+#hcpyoqygmg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1376,7 +1389,7 @@ $$</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_grand_summary_row {
+#hcpyoqygmg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1386,7 +1399,7 @@ $$</p>
   padding-right: 5px;
 }
 
-#ohyetvxnkc .gt_first_grand_summary_row {
+#hcpyoqygmg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1396,7 +1409,7 @@ $$</p>
   border-top-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_last_grand_summary_row_top {
+#hcpyoqygmg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1406,11 +1419,11 @@ $$</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_striped {
+#hcpyoqygmg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ohyetvxnkc .gt_table_body {
+#hcpyoqygmg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1419,7 +1432,7 @@ $$</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_footnotes {
+#hcpyoqygmg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1433,7 +1446,7 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_footnote {
+#hcpyoqygmg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1442,7 +1455,7 @@ $$</p>
   padding-right: 5px;
 }
 
-#ohyetvxnkc .gt_sourcenotes {
+#hcpyoqygmg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1456,7 +1469,7 @@ $$</p>
   border-right-color: #D3D3D3;
 }
 
-#ohyetvxnkc .gt_sourcenote {
+#hcpyoqygmg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1464,72 +1477,72 @@ $$</p>
   padding-right: 5px;
 }
 
-#ohyetvxnkc .gt_left {
+#hcpyoqygmg .gt_left {
   text-align: left;
 }
 
-#ohyetvxnkc .gt_center {
+#hcpyoqygmg .gt_center {
   text-align: center;
 }
 
-#ohyetvxnkc .gt_right {
+#hcpyoqygmg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ohyetvxnkc .gt_font_normal {
+#hcpyoqygmg .gt_font_normal {
   font-weight: normal;
 }
 
-#ohyetvxnkc .gt_font_bold {
+#hcpyoqygmg .gt_font_bold {
   font-weight: bold;
 }
 
-#ohyetvxnkc .gt_font_italic {
+#hcpyoqygmg .gt_font_italic {
   font-style: italic;
 }
 
-#ohyetvxnkc .gt_super {
+#hcpyoqygmg .gt_super {
   font-size: 65%;
 }
 
-#ohyetvxnkc .gt_footnote_marks {
+#hcpyoqygmg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ohyetvxnkc .gt_asterisk {
+#hcpyoqygmg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ohyetvxnkc .gt_indent_1 {
+#hcpyoqygmg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ohyetvxnkc .gt_indent_2 {
+#hcpyoqygmg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ohyetvxnkc .gt_indent_3 {
+#hcpyoqygmg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ohyetvxnkc .gt_indent_4 {
+#hcpyoqygmg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ohyetvxnkc .gt_indent_5 {
+#hcpyoqygmg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ohyetvxnkc .katex-display {
+#hcpyoqygmg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ohyetvxnkc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hcpyoqygmg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1810,7 +1823,7 @@ $$</p>
 <li>Installed R versions at each NSI, along with details on package installation policies. This information is available in <code>Rversions_countries.csv</code>, located in the <code>/MDI/docs/</code>.</li>
 </ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Country-specific R info">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1819,7 +1832,7 @@ $$</p>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <details class="code-fold">
@@ -2018,10 +2031,10 @@ $$</p>
 </div>
 </div>
 <ul>
-<li>Package conflict resolution preferences are documented in <code>conflicts_prefer.csv</code>, located under <code>/MDI/rocket/Rtools/Rpackages/</code>.</li>
+<li>Package conflict resolution preferences are documented in <code>conflicts_prefer.csv</code>, located under <code>/MDI/rocket/Rpackages/</code>.</li>
 </ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="R Package conflicts info">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2030,7 +2043,7 @@ $$</p>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <details class="code-fold">
@@ -2041,7 +2054,7 @@ $$</p>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the rversions data</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'..'</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'rocket/Rtools/Rpackages/'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'rocket/Rpackages/'</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>rconflicts_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"conflicts_prefer.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scrollable table</span></span>
@@ -2722,7 +2735,7 @@ $$</p>
 <p><code>mdi_export()</code> also requires <code>dirOUTPUT</code>, the output directory to export to — normally just the <code>dirOUTPUT</code> variable set by Countdown.</p>
 <p>Below is a description of all parameters required for <code>mdi_export()</code>:</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Focus on `mdi_export()`">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2731,7 +2744,7 @@ $$</p>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>It is fundamental, for disclosure reasons, that the module writer fills in exhaustive information related to each output file when using function <code>mdi_export()</code>. In particular, please provide</p>
 <ol type="1">
@@ -2883,7 +2896,7 @@ A module-specific cross-country combined file (e.g., <code>EN_combined.csv</code
 Learn more how this is done
 </summary>
 <ul>
-<li><p>MDI tools such as <code>mdi_aggregate()</code>, <code>disclose()</code>, <code>disclosCrit()</code>, <code>mdi_regress()</code>, and <code>mdi_export()</code> help automate disclosure control by enforcing rules based on parameters set in the Countdown, ensuring compliance before output is released.</p></li>
+<li><p>MDI tools such as <code>mdi_aggregate()</code>, <code>mdi_disclose()</code>, <code>disclosCrit()</code>, <code>mdi_regress()</code>, and <code>mdi_export()</code> help automate disclosure control by enforcing rules based on parameters set in the Countdown, ensuring compliance before output is released.</p></li>
 <li><p>Primary disclosure (Step 1) requires suppression of all cells that fail the dominance criterion or contain fewer than the minimum number of observations (<code>minNrObs</code>).</p></li>
 <li><p>Secondary disclosure (Step 2) involves suppressing additional cells to protect those flagged in Step 1, following the minimum frequency rule. This typically means suppressing the smallest unsuppressed cell if only one cell was suppressed in Step 1 (applicable to totals/sums where the parent node is available).</p></li>
 </ul>
@@ -2943,10 +2956,8 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">FI</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">FR</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">DE</th>
-<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">DEt</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">NL</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">PTx</th>
-<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">PT</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">SI</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">GB</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; font-weight: bold;">MT</th>
@@ -2960,10 +2971,8 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">4</td>
-<td style="text-align: center;">NA</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">10</td>
@@ -2976,10 +2985,8 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">var</td>
 <td style="text-align: center;">var</td>
 <td style="text-align: center;">var</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">var</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">persons_br</td>
-<td style="text-align: center;">var</td>
 <td style="text-align: center;">var</td>
 <td style="text-align: center;">var</td>
 <td style="text-align: center;">var</td>
@@ -2992,10 +2999,8 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">0.85</td>
 <td style="text-align: center;">0.75</td>
 <td style="text-align: center;">0.85</td>
-<td style="text-align: center;">NA</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">0.5</td>
-<td style="text-align: center;">0.5</td>
-<td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">0.5</td>
 <td style="text-align: center;">0.4375</td>
@@ -3008,9 +3013,7 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
@@ -3024,10 +3027,8 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
@@ -3035,32 +3036,42 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
+<td style="text-align: center;">MDIdomDirection</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">low</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+<td style="text-align: center;">high</td>
+</tr>
+<tr class="odd">
 <td style="text-align: center;">show_domPerc</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;">show_values</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">NA</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
@@ -3070,7 +3081,7 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 </table>
 </div>
 <p>Some countries apply additional disclosure criteria. For instance, the Netherlands (NL) and Slovenia (SI) require that all exported variables (not just employment (emp) and sales (nq)) comply with the dominance share criterion. In such cases, the parameter domVar is set to ‘var’ in the Countdown file. These disclosure parameters are configured during the execution of the infrastructure at an NSI, either by MDI or NSI staff.</p>
-<p>A blank column in the table above is expected, not a gap to be filled in by someone else. Some NSIs do not share their disclosure parameters outside their own environment; they populate the column by hand in their own copy of the payload, on their own server, before running the launch. <strong>Germany (DE) is blank for this reason</strong> and is expected to remain so in the distributed payload. Two things follow from this. First, never copy another country’s values into a blank column: those numbers are that NSI’s own rule, and a substituted value that happens to be laxer than the real one produces output the NSI will reject — or, worse, will not. Second, a module run against a blank column has no thresholds to check against, so a well-written module stops with an explicit message rather than exporting against <code>mdi_export()</code>’s generic defaults. Encountering that stop before the column is populated is the intended behaviour.</p>
+<p>A blank column in the table above is expected, not a gap to be filled in by someone else. Some NSIs do not share their disclosure parameters outside their own environment; they populate the column by hand in their own copy of the payload, on their own server, before running the launch. <strong>Germany (DE) is blank for this reason</strong> and is expected to remain so in the distributed payload, except for <code>MDIdomDirection</code> (<code>low</code>), which describes how DE’s formula works rather than a threshold. Two things follow from this. First, never copy another country’s values into a blank column: those numbers are that NSI’s own rule, and a substituted value that happens to be laxer than the real one produces output the NSI will reject — or, worse, will not. Second, a module run against a blank column has no thresholds to check against, so a well-written module stops with an explicit message rather than exporting against <code>mdi_export()</code>’s generic defaults. Encountering that stop before the column is populated is the intended behaviour.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3118,13 +3129,13 @@ Hide or not hide values post-disclosure (<strong>show_values</strong>)
 <td style="text-align: center;">Yes (`disclose`)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">disclose.R</td>
+<td style="text-align: center;">mdi_disclose.R</td>
 <td style="text-align: center;">Performs primary and secondary disclosure checks.</td>
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">No</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">disclosCrit.R</td>
+<td style="text-align: center;">mdi_disclose_crit.R</td>
 <td style="text-align: center;">Adds disclosure metrics (`domPerc`, `NumObs`) to datasets.</td>
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">No</td>
@@ -3150,7 +3161,7 @@ All affected variables in that row, including the <code>NumObs</code> column, ar
 For sum-type variables, the function evaluates the dominance share of the largest contributors (<code>domPerc_*</code>), calculated by [<code>disclosCrit()</code>].</p>
 <ul>
 <li>For most countries: a cell is suppressed if the dominance share <strong>exceeds</strong> the threshold (<code>domPerc &gt;= MDIdomSh</code>).</li>
-<li><strong>Germany (DE):</strong> the rule is <strong>inverted</strong> — a cell is suppressed if the dominance share <strong>falls below</strong> the threshold (<code>domPerc &lt; MDIdomSh</code>).<br>
+<li><strong>Germany (DE):</strong> the rule is <strong>inverted</strong> — a cell is suppressed if the dominance share <strong>falls below</strong> the threshold (<code>domPerc &lt; MDIdomSh</code>). The direction is the <code>MDIdomDirection</code> setting in <code>MD_disclosure_info.csv</code> (<code>low</code> for DE, <code>high</code> elsewhere); modules pass it on as <code>dom_direction = MDIdomDirection</code>.<br>
 This reflects German statistical disclosure practice, where low dominance values indicate high concentration risk.</li>
 </ul></li>
 </ul>
@@ -3161,7 +3172,7 @@ This reflects German statistical disclosure practice, where low dominance values
 <h4 data-number="2.6.6.2" class="anchored" data-anchor-id="secondary-disclosure-hierarchical-totals-only"><span class="header-section-number">2.6.6.2</span> Secondary Disclosure (Hierarchical Totals Only)</h4>
 <p>When the aggregated data includes hierarchical levels — for example, industry or regional totals — an additional <strong>secondary disclosure</strong> step prevents back-calculation of suppressed values.</p>
 <ul>
-<li>The hierarchy file (<code>hhfile</code>) must be a <strong>wide table</strong> with one column per hierarchical level, named <code>h_0</code>, <code>h_1</code>, <code>h_2</code>, … — the number is the level index, <code>h_0</code> being the finest. Column <em>position</em> is irrelevant; the order is read from the index. What each level <em>means</em> is declared in <code>MD_hier_levels.csv</code>, not encoded in the column name, so use <code>hier_col()</code> rather than hard-coding an index: <code>hier_col("MD_nuts_hier", md_varname = "nuts3")</code> returns <code>"h_1"</code>. If the data sits above the file’s finest level, name the level it does sit at with <code>hbase</code> — e.g.&nbsp;<code>hbase = hier_col("MD_nuts_hier", md_varname = "nuts3")</code> for a table with no <code>lau</code>.</li>
+<li>The hierarchy file (<code>hhfile</code>) must be a <strong>wide table</strong> with one column per hierarchical level, named <code>h_0</code>, <code>h_1</code>, <code>h_2</code>, … — the number is the level index, <code>h_0</code> being the finest. Column <em>position</em> is irrelevant; the order is read from the index. What each level <em>means</em> is declared in <code>MD_hier_levels.csv</code>, not encoded in the column name, so use <code>hier_col()</code> rather than hard-coding an index: <code>hier_col("MD_nuts_hier", md_varname = "nuts3", hlevels = MD_hier_levels)</code> returns <code>"h_1"</code>. If the data sits above the file’s finest level, name the level it does sit at with <code>hbase</code> — e.g.&nbsp;<code>hbase = hier_col("MD_nuts_hier", md_varname = "nuts3", hlevels = MD_hier_levels)</code> for a table with no <code>lau</code>.</li>
 <li>The <code>node</code> variable in the dataset identifies the child level.</li>
 <li>The parent level is determined by the next column to the right of the child in the sorted hierarchy (e.g., if <code>node = h_1</code>, the parent is <code>h_2</code>).</li>
 </ul>
@@ -3180,8 +3191,8 @@ Instead of using the standard top-<code>n</code> share (sum of the top <code>dom
 This yields a <strong>dominance percentile</strong> that decreases as concentration increases — hence, in Germany, smaller values of <code>domPerc</code> indicate greater dominance and trigger suppression (<code>domPerc &lt; MDIdomSh</code>).</p>
 <hr>
 </section>
-<section id="output-of-disclose" class="level4" data-number="2.6.6.4">
-<h4 data-number="2.6.6.4" class="anchored" data-anchor-id="output-of-disclose"><span class="header-section-number">2.6.6.4</span> Output of <code>disclose()</code></h4>
+<section id="output-of-mdi_disclose" class="level4" data-number="2.6.6.4">
+<h4 data-number="2.6.6.4" class="anchored" data-anchor-id="output-of-mdi_disclose"><span class="header-section-number">2.6.6.4</span> Output of <code>mdi_disclose()</code></h4>
 <p>The tool returns the dataset with all required suppressions applied and two disclosure flags:<br>
 - <code>discflag1</code>: primary disclosure<br>
 - <code>discflag2</code>: secondary disclosure</p>
@@ -3240,7 +3251,7 @@ Files structure
 </details>
 <p>To write their codes, users need to first follow the steps below to load the environment. I.e., run some functions which import the mockdata and all the necessary auxiliary files mimicking the NSI environments.</p>
 <div id="writing-nuvoulos" class="callout callout-style-simple callout-important callout-titled" title="Steps to write and execute your codes">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3249,7 +3260,7 @@ Files structure
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>go to the section “Applications” on the left navigation bar and open the RStudio application</p>
 <ul>
@@ -3614,7 +3625,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 <li><strong>launchpad</strong> NSI-specific information for controlling MDI code and rocket launches.</li>
 </ul>
 <div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3623,7 +3634,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -3646,6 +3657,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 ├── countdown.R
 ├── interactive_MDI.R
 ├── liftoff.R
+├── participant_countdown.R
 ├── pre_launch_checker.R
 └── report_file_changes.R</code></pre>
 </div>
@@ -3657,6 +3669,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 ├── CompNet
 ├── MDIprogs
 ├── NSImetadata
+├── Rpackages
 ├── Rtools
 ├── auxdata
 ├── control
@@ -3683,7 +3696,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 <h3 data-number="3.2.5" class="anchored" data-anchor-id="importing-to-and-exporting-from-the-nsi-site"><span class="header-section-number">3.2.5</span> Importing to, and exporting from, the NSI site</h3>
 <p>Whenever an import or export operation is required from or to an environment, it is important to consider both the time it takes and whether the operation incurs any monetary cost.</p>
 <div class="callout callout-style-simple callout-none no-icon callout-titled" title="💵 Click to view costs per country">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -3692,27 +3705,27 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
-<div id="wxyhfkhjoy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wxyhfkhjoy table {
+<div id="ggtdwlytpm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ggtdwlytpm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wxyhfkhjoy thead, #wxyhfkhjoy tbody, #wxyhfkhjoy tfoot, #wxyhfkhjoy tr, #wxyhfkhjoy td, #wxyhfkhjoy th {
+#ggtdwlytpm thead, #ggtdwlytpm tbody, #ggtdwlytpm tfoot, #ggtdwlytpm tr, #ggtdwlytpm td, #ggtdwlytpm th {
   border-style: none;
 }
 
-#wxyhfkhjoy p {
+#ggtdwlytpm p {
   margin: 0;
   padding: 0;
 }
 
-#wxyhfkhjoy .gt_table {
+#ggtdwlytpm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3738,12 +3751,12 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-left-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_caption {
+#ggtdwlytpm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wxyhfkhjoy .gt_title {
+#ggtdwlytpm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3755,7 +3768,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-width: 0;
 }
 
-#wxyhfkhjoy .gt_subtitle {
+#ggtdwlytpm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3767,7 +3780,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-width: 0;
 }
 
-#wxyhfkhjoy .gt_heading {
+#ggtdwlytpm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3779,13 +3792,13 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_bottom_border {
+#ggtdwlytpm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_col_headings {
+#ggtdwlytpm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3800,7 +3813,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_col_heading {
+#ggtdwlytpm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3820,7 +3833,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#wxyhfkhjoy .gt_column_spanner_outer {
+#ggtdwlytpm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3832,15 +3845,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 4px;
 }
 
-#wxyhfkhjoy .gt_column_spanner_outer:first-child {
+#ggtdwlytpm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wxyhfkhjoy .gt_column_spanner_outer:last-child {
+#ggtdwlytpm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wxyhfkhjoy .gt_column_spanner {
+#ggtdwlytpm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3852,11 +3865,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   width: 100%;
 }
 
-#wxyhfkhjoy .gt_spanner_row {
+#ggtdwlytpm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wxyhfkhjoy .gt_group_heading {
+#ggtdwlytpm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3882,7 +3895,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   text-align: left;
 }
 
-#wxyhfkhjoy .gt_empty_group_heading {
+#ggtdwlytpm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3897,15 +3910,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: middle;
 }
 
-#wxyhfkhjoy .gt_from_md > :first-child {
+#ggtdwlytpm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wxyhfkhjoy .gt_from_md > :last-child {
+#ggtdwlytpm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wxyhfkhjoy .gt_row {
+#ggtdwlytpm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3924,7 +3937,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   overflow-x: hidden;
 }
 
-#wxyhfkhjoy .gt_stub {
+#ggtdwlytpm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3937,7 +3950,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#wxyhfkhjoy .gt_stub_row_group {
+#ggtdwlytpm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3951,15 +3964,15 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   vertical-align: top;
 }
 
-#wxyhfkhjoy .gt_row_group_first td {
+#ggtdwlytpm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wxyhfkhjoy .gt_row_group_first th {
+#ggtdwlytpm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wxyhfkhjoy .gt_summary_row {
+#ggtdwlytpm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3969,16 +3982,16 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#wxyhfkhjoy .gt_first_summary_row {
+#ggtdwlytpm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_first_summary_row.thick {
+#ggtdwlytpm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wxyhfkhjoy .gt_last_summary_row {
+#ggtdwlytpm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3988,7 +4001,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_grand_summary_row {
+#ggtdwlytpm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3998,7 +4011,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#wxyhfkhjoy .gt_first_grand_summary_row {
+#ggtdwlytpm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4008,7 +4021,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-top-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_last_grand_summary_row_top {
+#ggtdwlytpm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4018,11 +4031,11 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_striped {
+#ggtdwlytpm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wxyhfkhjoy .gt_table_body {
+#ggtdwlytpm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4031,7 +4044,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-bottom-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_footnotes {
+#ggtdwlytpm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4045,7 +4058,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_footnote {
+#ggtdwlytpm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4054,7 +4067,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#wxyhfkhjoy .gt_sourcenotes {
+#ggtdwlytpm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4068,7 +4081,7 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   border-right-color: #D3D3D3;
 }
 
-#wxyhfkhjoy .gt_sourcenote {
+#ggtdwlytpm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4076,72 +4089,72 @@ Enables interactive work inside the MDI environment (e.g.&nbsp;for metadata expl
   padding-right: 5px;
 }
 
-#wxyhfkhjoy .gt_left {
+#ggtdwlytpm .gt_left {
   text-align: left;
 }
 
-#wxyhfkhjoy .gt_center {
+#ggtdwlytpm .gt_center {
   text-align: center;
 }
 
-#wxyhfkhjoy .gt_right {
+#ggtdwlytpm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wxyhfkhjoy .gt_font_normal {
+#ggtdwlytpm .gt_font_normal {
   font-weight: normal;
 }
 
-#wxyhfkhjoy .gt_font_bold {
+#ggtdwlytpm .gt_font_bold {
   font-weight: bold;
 }
 
-#wxyhfkhjoy .gt_font_italic {
+#ggtdwlytpm .gt_font_italic {
   font-style: italic;
 }
 
-#wxyhfkhjoy .gt_super {
+#ggtdwlytpm .gt_super {
   font-size: 65%;
 }
 
-#wxyhfkhjoy .gt_footnote_marks {
+#ggtdwlytpm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wxyhfkhjoy .gt_asterisk {
+#ggtdwlytpm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wxyhfkhjoy .gt_indent_1 {
+#ggtdwlytpm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wxyhfkhjoy .gt_indent_2 {
+#ggtdwlytpm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wxyhfkhjoy .gt_indent_3 {
+#ggtdwlytpm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wxyhfkhjoy .gt_indent_4 {
+#ggtdwlytpm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wxyhfkhjoy .gt_indent_5 {
+#ggtdwlytpm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wxyhfkhjoy .katex-display {
+#ggtdwlytpm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wxyhfkhjoy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ggtdwlytpm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4335,7 +4348,7 @@ Important
 </div>
 </div>
 <div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4344,7 +4357,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Where the Teams folder is not usable, <code>rocket/MDIprogs/mdi_build_patch.R</code> produces the same patch as a <strong>zip in <code>dirOUTPUT</code></strong>, built from a <code>manifest_remote.csv</code> and <code>report_info.csv</code> placed there by hand. It requires <code>CountryCode_patch</code> to be set at the top of the script, refuses to run if that code or the launch version contradicts <code>report_info.csv</code>, and bundles <code>mdi_apply_patch.R</code> into the zip so the NSI needs nothing else.</p>
 </div>
@@ -4398,10 +4411,11 @@ Important
 <li><code>enterprise</code>: An organizational unit producing goods or services, with decision-making autonomy, possibly spanning multiple activities, locations, or legal units. Hence, one enterprise might be constituted by more than one legal unit. This corresponds to <code>entid</code> in the MD data</li>
 <li><code>enterprise_group</code>: A set of legally or financially linked enterprises, controlled by a group head, forming an economic entity with shared or centralized decision-making. This corresponds to <code>entgrp</code> in the MD data</li>
 </ul></li>
-<li><p><code>data_source</code>: refers to the origin of the data. Three options are possible:</p>
+<li><p><code>data_source</code>: refers to the origin of the data. Four options are possible:</p>
 <ul>
 <li><code>survey</code>: If the data was collected through surveys</li>
 <li><code>administrative_source</code>: Information collected by public authorities from firms as part of legal or regulatory requirements, such as tax records, employment filings, or financial statements</li>
+<li><code>statistical_register</code>: Registers built and maintained by the NSI for statistical purposes, such as the statistical business register. They combine administrative and survey sources and have been statistically validated and corrected by the NSI</li>
 <li><code>mixed</code>: If the data comes both from surveys, administrative source of other collection methods.</li>
 </ul></li>
 <li><p><code>firm_sample</code>: Information about the population of firms present in the datafile (usually a piece of text, trying to be as concise as possible)</p></li>
@@ -4410,23 +4424,23 @@ Important
 <p>An example (for NSI=FI, 2018) of the metadata for the raw data files (the columns <code>yearvar</code>, <code>year_end</code>, <code>path</code>, <code>details</code> and <code>firm_sample</code> are omitted for viewing):</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="xbnndykxqt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xbnndykxqt table {
+<div id="rwqexqohss" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rwqexqohss table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xbnndykxqt thead, #xbnndykxqt tbody, #xbnndykxqt tfoot, #xbnndykxqt tr, #xbnndykxqt td, #xbnndykxqt th {
+#rwqexqohss thead, #rwqexqohss tbody, #rwqexqohss tfoot, #rwqexqohss tr, #rwqexqohss td, #rwqexqohss th {
   border-style: none;
 }
 
-#xbnndykxqt p {
+#rwqexqohss p {
   margin: 0;
   padding: 0;
 }
 
-#xbnndykxqt .gt_table {
+#rwqexqohss .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4452,12 +4466,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_caption {
+#rwqexqohss .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xbnndykxqt .gt_title {
+#rwqexqohss .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4469,7 +4483,7 @@ Important
   border-bottom-width: 0;
 }
 
-#xbnndykxqt .gt_subtitle {
+#rwqexqohss .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4481,7 +4495,7 @@ Important
   border-top-width: 0;
 }
 
-#xbnndykxqt .gt_heading {
+#rwqexqohss .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4493,13 +4507,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_bottom_border {
+#rwqexqohss .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_col_headings {
+#rwqexqohss .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4514,7 +4528,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_col_heading {
+#rwqexqohss .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4534,7 +4548,7 @@ Important
   overflow-x: hidden;
 }
 
-#xbnndykxqt .gt_column_spanner_outer {
+#rwqexqohss .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4546,15 +4560,15 @@ Important
   padding-right: 4px;
 }
 
-#xbnndykxqt .gt_column_spanner_outer:first-child {
+#rwqexqohss .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xbnndykxqt .gt_column_spanner_outer:last-child {
+#rwqexqohss .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xbnndykxqt .gt_column_spanner {
+#rwqexqohss .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4566,11 +4580,11 @@ Important
   width: 100%;
 }
 
-#xbnndykxqt .gt_spanner_row {
+#rwqexqohss .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xbnndykxqt .gt_group_heading {
+#rwqexqohss .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4596,7 +4610,7 @@ Important
   text-align: left;
 }
 
-#xbnndykxqt .gt_empty_group_heading {
+#rwqexqohss .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4611,15 +4625,15 @@ Important
   vertical-align: middle;
 }
 
-#xbnndykxqt .gt_from_md > :first-child {
+#rwqexqohss .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xbnndykxqt .gt_from_md > :last-child {
+#rwqexqohss .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xbnndykxqt .gt_row {
+#rwqexqohss .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4638,7 +4652,7 @@ Important
   overflow-x: hidden;
 }
 
-#xbnndykxqt .gt_stub {
+#rwqexqohss .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4651,7 +4665,7 @@ Important
   padding-right: 5px;
 }
 
-#xbnndykxqt .gt_stub_row_group {
+#rwqexqohss .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4665,15 +4679,15 @@ Important
   vertical-align: top;
 }
 
-#xbnndykxqt .gt_row_group_first td {
+#rwqexqohss .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xbnndykxqt .gt_row_group_first th {
+#rwqexqohss .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xbnndykxqt .gt_summary_row {
+#rwqexqohss .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4683,16 +4697,16 @@ Important
   padding-right: 5px;
 }
 
-#xbnndykxqt .gt_first_summary_row {
+#rwqexqohss .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_first_summary_row.thick {
+#rwqexqohss .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xbnndykxqt .gt_last_summary_row {
+#rwqexqohss .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4702,7 +4716,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_grand_summary_row {
+#rwqexqohss .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4712,7 +4726,7 @@ Important
   padding-right: 5px;
 }
 
-#xbnndykxqt .gt_first_grand_summary_row {
+#rwqexqohss .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4722,7 +4736,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_last_grand_summary_row_top {
+#rwqexqohss .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4732,11 +4746,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_striped {
+#rwqexqohss .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xbnndykxqt .gt_table_body {
+#rwqexqohss .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4745,7 +4759,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_footnotes {
+#rwqexqohss .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4759,7 +4773,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_footnote {
+#rwqexqohss .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4768,7 +4782,7 @@ Important
   padding-right: 5px;
 }
 
-#xbnndykxqt .gt_sourcenotes {
+#rwqexqohss .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4782,7 +4796,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#xbnndykxqt .gt_sourcenote {
+#rwqexqohss .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4790,72 +4804,72 @@ Important
   padding-right: 5px;
 }
 
-#xbnndykxqt .gt_left {
+#rwqexqohss .gt_left {
   text-align: left;
 }
 
-#xbnndykxqt .gt_center {
+#rwqexqohss .gt_center {
   text-align: center;
 }
 
-#xbnndykxqt .gt_right {
+#rwqexqohss .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xbnndykxqt .gt_font_normal {
+#rwqexqohss .gt_font_normal {
   font-weight: normal;
 }
 
-#xbnndykxqt .gt_font_bold {
+#rwqexqohss .gt_font_bold {
   font-weight: bold;
 }
 
-#xbnndykxqt .gt_font_italic {
+#rwqexqohss .gt_font_italic {
   font-style: italic;
 }
 
-#xbnndykxqt .gt_super {
+#rwqexqohss .gt_super {
   font-size: 65%;
 }
 
-#xbnndykxqt .gt_footnote_marks {
+#rwqexqohss .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xbnndykxqt .gt_asterisk {
+#rwqexqohss .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xbnndykxqt .gt_indent_1 {
+#rwqexqohss .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xbnndykxqt .gt_indent_2 {
+#rwqexqohss .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xbnndykxqt .gt_indent_3 {
+#rwqexqohss .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xbnndykxqt .gt_indent_4 {
+#rwqexqohss .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xbnndykxqt .gt_indent_5 {
+#rwqexqohss .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xbnndykxqt .katex-display {
+#rwqexqohss .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xbnndykxqt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rwqexqohss div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4930,7 +4944,7 @@ Important
 </div>
 </div>
 <div id="nsi_datafile-oracle-guide" class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4939,7 +4953,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In some NSI environments, raw firm-level data is stored in an <strong>Oracle relational database</strong> rather than as flat files on disk. The MDI infrastructure supports this case without any new metadata column: the existing <code>format</code> and <code>path</code> columns of <code>NSI_datafiles.csv</code> are reused, with adapted meanings.</p>
 <section id="how-it-works" class="level6 unnumbered">
@@ -4955,7 +4969,7 @@ Important
 <section id="behaviour-at-runtime" class="level6 unnumbered">
 <h6 class="unnumbered anchored" data-anchor-id="behaviour-at-runtime">Behaviour at runtime</h6>
 <ul>
-<li><p>The infrastructure opens a single Oracle connection at the start of <code>read_firmdata.R</code> (and at the start of <code>pre_launch_checker.R</code>) and reuses it for all Oracle rows in the same session, so the password is requested only once per script</p></li>
+<li><p>The infrastructure opens a single Oracle connection when the data import starts (and at the start of <code>pre_launch_checker.R</code>) and reuses it for all Oracle rows in the same session, so the password is requested only once per run. The connection is closed when the import ends, also if it stops with an error</p></li>
 <li><p>The pre-launch file-existence check is automatically skipped for rows where <code>format = oracle</code> (there is no file on disk to check)</p></li>
 <li><p>The metadata checker enforces that rows with <code>format = oracle</code> have a non-empty <code>path</code> value (the DSN name).</p></li>
 </ul>
@@ -5045,7 +5059,7 @@ Important
 </div>
 </div>
 <div class="callout callout-style-simple callout-none no-icon callout-titled" title="Click to see an abbreviated list of R date formats:">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -5054,7 +5068,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -5192,23 +5206,23 @@ Important
 <h5 data-number="3.3.1.2.3" class="anchored" data-anchor-id="example-netherlands-sbs-2018-nl_varnames"><span class="header-section-number">3.3.1.2.3</span> Example: Netherlands (SBS, 2018): NL_varnames</h5>
 <div class="cell">
 <div class="cell-output-display">
-<div id="deaoyjtorc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#deaoyjtorc table {
+<div id="willbjvilm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#willbjvilm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#deaoyjtorc thead, #deaoyjtorc tbody, #deaoyjtorc tfoot, #deaoyjtorc tr, #deaoyjtorc td, #deaoyjtorc th {
+#willbjvilm thead, #willbjvilm tbody, #willbjvilm tfoot, #willbjvilm tr, #willbjvilm td, #willbjvilm th {
   border-style: none;
 }
 
-#deaoyjtorc p {
+#willbjvilm p {
   margin: 0;
   padding: 0;
 }
 
-#deaoyjtorc .gt_table {
+#willbjvilm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5234,12 +5248,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_caption {
+#willbjvilm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#deaoyjtorc .gt_title {
+#willbjvilm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5251,7 +5265,7 @@ Important
   border-bottom-width: 0;
 }
 
-#deaoyjtorc .gt_subtitle {
+#willbjvilm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5263,7 +5277,7 @@ Important
   border-top-width: 0;
 }
 
-#deaoyjtorc .gt_heading {
+#willbjvilm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5275,13 +5289,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_bottom_border {
+#willbjvilm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_col_headings {
+#willbjvilm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5296,7 +5310,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_col_heading {
+#willbjvilm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5316,7 +5330,7 @@ Important
   overflow-x: hidden;
 }
 
-#deaoyjtorc .gt_column_spanner_outer {
+#willbjvilm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5328,15 +5342,15 @@ Important
   padding-right: 4px;
 }
 
-#deaoyjtorc .gt_column_spanner_outer:first-child {
+#willbjvilm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#deaoyjtorc .gt_column_spanner_outer:last-child {
+#willbjvilm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#deaoyjtorc .gt_column_spanner {
+#willbjvilm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5348,11 +5362,11 @@ Important
   width: 100%;
 }
 
-#deaoyjtorc .gt_spanner_row {
+#willbjvilm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#deaoyjtorc .gt_group_heading {
+#willbjvilm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5378,7 +5392,7 @@ Important
   text-align: left;
 }
 
-#deaoyjtorc .gt_empty_group_heading {
+#willbjvilm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5393,15 +5407,15 @@ Important
   vertical-align: middle;
 }
 
-#deaoyjtorc .gt_from_md > :first-child {
+#willbjvilm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#deaoyjtorc .gt_from_md > :last-child {
+#willbjvilm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#deaoyjtorc .gt_row {
+#willbjvilm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5420,7 +5434,7 @@ Important
   overflow-x: hidden;
 }
 
-#deaoyjtorc .gt_stub {
+#willbjvilm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5433,7 +5447,7 @@ Important
   padding-right: 5px;
 }
 
-#deaoyjtorc .gt_stub_row_group {
+#willbjvilm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5447,15 +5461,15 @@ Important
   vertical-align: top;
 }
 
-#deaoyjtorc .gt_row_group_first td {
+#willbjvilm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#deaoyjtorc .gt_row_group_first th {
+#willbjvilm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#deaoyjtorc .gt_summary_row {
+#willbjvilm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5465,16 +5479,16 @@ Important
   padding-right: 5px;
 }
 
-#deaoyjtorc .gt_first_summary_row {
+#willbjvilm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_first_summary_row.thick {
+#willbjvilm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#deaoyjtorc .gt_last_summary_row {
+#willbjvilm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5484,7 +5498,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_grand_summary_row {
+#willbjvilm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5494,7 +5508,7 @@ Important
   padding-right: 5px;
 }
 
-#deaoyjtorc .gt_first_grand_summary_row {
+#willbjvilm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5504,7 +5518,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_last_grand_summary_row_top {
+#willbjvilm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5514,11 +5528,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_striped {
+#willbjvilm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#deaoyjtorc .gt_table_body {
+#willbjvilm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5527,7 +5541,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_footnotes {
+#willbjvilm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5541,7 +5555,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_footnote {
+#willbjvilm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5550,7 +5564,7 @@ Important
   padding-right: 5px;
 }
 
-#deaoyjtorc .gt_sourcenotes {
+#willbjvilm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5564,7 +5578,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#deaoyjtorc .gt_sourcenote {
+#willbjvilm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5572,72 +5586,72 @@ Important
   padding-right: 5px;
 }
 
-#deaoyjtorc .gt_left {
+#willbjvilm .gt_left {
   text-align: left;
 }
 
-#deaoyjtorc .gt_center {
+#willbjvilm .gt_center {
   text-align: center;
 }
 
-#deaoyjtorc .gt_right {
+#willbjvilm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#deaoyjtorc .gt_font_normal {
+#willbjvilm .gt_font_normal {
   font-weight: normal;
 }
 
-#deaoyjtorc .gt_font_bold {
+#willbjvilm .gt_font_bold {
   font-weight: bold;
 }
 
-#deaoyjtorc .gt_font_italic {
+#willbjvilm .gt_font_italic {
   font-style: italic;
 }
 
-#deaoyjtorc .gt_super {
+#willbjvilm .gt_super {
   font-size: 65%;
 }
 
-#deaoyjtorc .gt_footnote_marks {
+#willbjvilm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#deaoyjtorc .gt_asterisk {
+#willbjvilm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#deaoyjtorc .gt_indent_1 {
+#willbjvilm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#deaoyjtorc .gt_indent_2 {
+#willbjvilm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#deaoyjtorc .gt_indent_3 {
+#willbjvilm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#deaoyjtorc .gt_indent_4 {
+#willbjvilm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#deaoyjtorc .gt_indent_5 {
+#willbjvilm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#deaoyjtorc .katex-display {
+#willbjvilm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#deaoyjtorc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#willbjvilm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5890,23 +5904,23 @@ Important
 <p>An example below of the values occurring for the unit of measurement in the SI <code>PRODCOM</code> data for 2012.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="wqxivthcfh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wqxivthcfh table {
+<div id="stgjvbdnxq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#stgjvbdnxq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wqxivthcfh thead, #wqxivthcfh tbody, #wqxivthcfh tfoot, #wqxivthcfh tr, #wqxivthcfh td, #wqxivthcfh th {
+#stgjvbdnxq thead, #stgjvbdnxq tbody, #stgjvbdnxq tfoot, #stgjvbdnxq tr, #stgjvbdnxq td, #stgjvbdnxq th {
   border-style: none;
 }
 
-#wqxivthcfh p {
+#stgjvbdnxq p {
   margin: 0;
   padding: 0;
 }
 
-#wqxivthcfh .gt_table {
+#stgjvbdnxq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5932,12 +5946,12 @@ Important
   border-left-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_caption {
+#stgjvbdnxq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wqxivthcfh .gt_title {
+#stgjvbdnxq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5949,7 +5963,7 @@ Important
   border-bottom-width: 0;
 }
 
-#wqxivthcfh .gt_subtitle {
+#stgjvbdnxq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5961,7 +5975,7 @@ Important
   border-top-width: 0;
 }
 
-#wqxivthcfh .gt_heading {
+#stgjvbdnxq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5973,13 +5987,13 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_bottom_border {
+#stgjvbdnxq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_col_headings {
+#stgjvbdnxq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5994,7 +6008,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_col_heading {
+#stgjvbdnxq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6014,7 +6028,7 @@ Important
   overflow-x: hidden;
 }
 
-#wqxivthcfh .gt_column_spanner_outer {
+#stgjvbdnxq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6026,15 +6040,15 @@ Important
   padding-right: 4px;
 }
 
-#wqxivthcfh .gt_column_spanner_outer:first-child {
+#stgjvbdnxq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wqxivthcfh .gt_column_spanner_outer:last-child {
+#stgjvbdnxq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wqxivthcfh .gt_column_spanner {
+#stgjvbdnxq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6046,11 +6060,11 @@ Important
   width: 100%;
 }
 
-#wqxivthcfh .gt_spanner_row {
+#stgjvbdnxq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wqxivthcfh .gt_group_heading {
+#stgjvbdnxq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6076,7 +6090,7 @@ Important
   text-align: left;
 }
 
-#wqxivthcfh .gt_empty_group_heading {
+#stgjvbdnxq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6091,15 +6105,15 @@ Important
   vertical-align: middle;
 }
 
-#wqxivthcfh .gt_from_md > :first-child {
+#stgjvbdnxq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wqxivthcfh .gt_from_md > :last-child {
+#stgjvbdnxq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wqxivthcfh .gt_row {
+#stgjvbdnxq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6118,7 +6132,7 @@ Important
   overflow-x: hidden;
 }
 
-#wqxivthcfh .gt_stub {
+#stgjvbdnxq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6131,7 +6145,7 @@ Important
   padding-right: 5px;
 }
 
-#wqxivthcfh .gt_stub_row_group {
+#stgjvbdnxq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6145,15 +6159,15 @@ Important
   vertical-align: top;
 }
 
-#wqxivthcfh .gt_row_group_first td {
+#stgjvbdnxq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wqxivthcfh .gt_row_group_first th {
+#stgjvbdnxq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wqxivthcfh .gt_summary_row {
+#stgjvbdnxq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6163,16 +6177,16 @@ Important
   padding-right: 5px;
 }
 
-#wqxivthcfh .gt_first_summary_row {
+#stgjvbdnxq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_first_summary_row.thick {
+#stgjvbdnxq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wqxivthcfh .gt_last_summary_row {
+#stgjvbdnxq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6182,7 +6196,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_grand_summary_row {
+#stgjvbdnxq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6192,7 +6206,7 @@ Important
   padding-right: 5px;
 }
 
-#wqxivthcfh .gt_first_grand_summary_row {
+#stgjvbdnxq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6202,7 +6216,7 @@ Important
   border-top-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_last_grand_summary_row_top {
+#stgjvbdnxq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6212,11 +6226,11 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_striped {
+#stgjvbdnxq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wqxivthcfh .gt_table_body {
+#stgjvbdnxq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6225,7 +6239,7 @@ Important
   border-bottom-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_footnotes {
+#stgjvbdnxq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6239,7 +6253,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_footnote {
+#stgjvbdnxq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6248,7 +6262,7 @@ Important
   padding-right: 5px;
 }
 
-#wqxivthcfh .gt_sourcenotes {
+#stgjvbdnxq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6262,7 +6276,7 @@ Important
   border-right-color: #D3D3D3;
 }
 
-#wqxivthcfh .gt_sourcenote {
+#stgjvbdnxq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6270,72 +6284,72 @@ Important
   padding-right: 5px;
 }
 
-#wqxivthcfh .gt_left {
+#stgjvbdnxq .gt_left {
   text-align: left;
 }
 
-#wqxivthcfh .gt_center {
+#stgjvbdnxq .gt_center {
   text-align: center;
 }
 
-#wqxivthcfh .gt_right {
+#stgjvbdnxq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wqxivthcfh .gt_font_normal {
+#stgjvbdnxq .gt_font_normal {
   font-weight: normal;
 }
 
-#wqxivthcfh .gt_font_bold {
+#stgjvbdnxq .gt_font_bold {
   font-weight: bold;
 }
 
-#wqxivthcfh .gt_font_italic {
+#stgjvbdnxq .gt_font_italic {
   font-style: italic;
 }
 
-#wqxivthcfh .gt_super {
+#stgjvbdnxq .gt_super {
   font-size: 65%;
 }
 
-#wqxivthcfh .gt_footnote_marks {
+#stgjvbdnxq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wqxivthcfh .gt_asterisk {
+#stgjvbdnxq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wqxivthcfh .gt_indent_1 {
+#stgjvbdnxq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wqxivthcfh .gt_indent_2 {
+#stgjvbdnxq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wqxivthcfh .gt_indent_3 {
+#stgjvbdnxq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wqxivthcfh .gt_indent_4 {
+#stgjvbdnxq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wqxivthcfh .gt_indent_5 {
+#stgjvbdnxq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wqxivthcfh .katex-display {
+#stgjvbdnxq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wqxivthcfh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#stgjvbdnxq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -8947,7 +8961,8 @@ Allocates a higher-level value proportionally using variables from <em>other dat
 The listed candidates are checked in order, and the first available is used; if none are available, the total is split equally across all lower-level entities (the trailing <code>equal</code> is a documentation convention for this fallback, not a candidate that is itself looked up).<br>
 Example:<br>
 <code>weighted_alloc:PRODCOM.rev|ITGS.ntrade|SBS.emp|equal</code><br>
-<span class="math inline">\(\rightarrow\)</span> uses product-level revenue, if unavailable uses trade value, then employment, then equal split.</p></li>
+<span class="math inline">\(\rightarrow\)</span> uses product-level revenue, if unavailable uses trade value, then employment, then equal split.<br>
+The chain is checked separately for each higher-level unit and year: a firm whose plants have no revenue can still be split by trade value. The datasets the weights come from are passed to <code>mdi_key_id_switch()</code> as <code>weight_data</code>, e.g.&nbsp;<code>weight_data = list(PRODCOM = prodcom, ITGS = itgs, SBS = sbs)</code>; a candidate whose dataset isn’t passed or isn’t at the lower level is skipped with a warning, and a message reports how many units each candidate split. The chain lives in <code>MD_varnames.csv</code> rather than in module code so that every module splits a variable the same way.</p></li>
 </ul>
 <p>This design ensures that numerical variables preserve total consistency, while categorical and boolean fields retain logical coherence during aggregation and disaggregation.</p>
 <p>Below a sample of five rows with a defined aggregation/disaggregation rule:</p>
@@ -9415,31 +9430,31 @@ Example:<br>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="MD_dataset">BS</td>
-<td class="gt_row gt_left" headers="MD_varname">trade_credit</td>
+<td class="gt_row gt_left" headers="MD_varname">total_inventories</td>
 <td class="gt_row gt_left" headers="aggregation_method">sum</td>
 <td class="gt_row gt_left" headers="disaggregation_method">weighted_alloc:SBS.emp|SBS.nv|PRODCOM.rev|ITGS.ntrade|BR.persons_br|equal</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="MD_dataset">CIS</td>
-<td class="gt_row gt_left" headers="MD_varname">inpsdv4</td>
+<td class="gt_row gt_left" headers="MD_varname">inpsdv3</td>
 <td class="gt_row gt_left" headers="aggregation_method">any</td>
 <td class="gt_row gt_left" headers="disaggregation_method">replicate</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="MD_dataset">ICTEC</td>
-<td class="gt_row gt_left" headers="MD_varname">INVREC</td>
+<td class="gt_row gt_left" headers="MD_varname">INTRA</td>
 <td class="gt_row gt_left" headers="aggregation_method">any</td>
 <td class="gt_row gt_left" headers="disaggregation_method">replicate</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="MD_dataset">CIS</td>
-<td class="gt_row gt_left" headers="MD_varname">mktpri</td>
+<td class="gt_row gt_left" headers="MD_varname">mktpdp</td>
 <td class="gt_row gt_left" headers="aggregation_method">any</td>
 <td class="gt_row gt_left" headers="disaggregation_method">replicate</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="MD_dataset">ICTEC</td>
-<td class="gt_row gt_left" headers="MD_varname">CRMSTR</td>
+<td class="gt_row gt_left" headers="MD_varname">CRMAN</td>
 <td class="gt_row gt_left" headers="aggregation_method">any</td>
 <td class="gt_row gt_left" headers="disaggregation_method">replicate</td>
 </tr>
@@ -11739,7 +11754,7 @@ Example:<br>
 <section id="examples-by-harmonization-method" class="level5" data-number="3.3.3.1.1">
 <h5 data-number="3.3.3.1.1" class="anchored" data-anchor-id="examples-by-harmonization-method"><span class="header-section-number">3.3.3.1.1</span> Examples by harmonization method</h5>
 <div class="callout callout-style-default callout-note callout-titled" title="Example: revalue">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -11748,7 +11763,7 @@ Example:<br>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>As said, a revalue row in the concordance table simply transforms the content of the raw data’s column, without changing the column name to the desired <code>MD_varname</code>. For instance, say that you want to remove all dots from a string in raw variable <code>var1</code> from <code>NSI_dataset</code> <code>data_firm</code> for year 2010. To do that, we add a row in the concordance table which looks as follows:</p>
 <table class="caption-top table">
@@ -11862,7 +11877,7 @@ Example:<br>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Example: reclass/recode">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -11871,7 +11886,7 @@ Example:<br>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A reclass/recode row in the concordance table maps the values of a categorical variable (be it a class or codebook variable) to some specified objective values, as indicated in the corresponding class/codeconc table. For instance, say that you want to change the mapping of categorical variable <code>var2</code> from <code>NSI_dataset</code> <code>survey_firm</code> for year 2012. The raw variable can take values 1, 2 and 9, which link to ‘yes’, ‘no’, ‘not available’. To do that, we assign recode (given that this is a codebook variable; we would indicate reclass in case of a class variable) in the method column, as follows</p>
 <table class="caption-top table">
@@ -11989,7 +12004,7 @@ Example:<br>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Example: redefine">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -11998,7 +12013,7 @@ Example:<br>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A redefine row in the concordance table aggregates two or more <code>NSI_varname</code>’s to create an objective <code>MD_varname</code>. As mentioned, the aggregation function is not restricted to a specific form. It can be a sum or subtraction of all non-NA values of the raw variables of the aggregation (detail = <code>+</code> or <code>-</code>) or a custom function (detail = <code>fn(content of the function in R syntax)</code>, unquoted — the content is spliced directly into an R expression and evaluated, so wrapping it in quotes would assign the literal string instead of the computed value).</p>
 <p>For example, if we want to <strong>sum the values of var3, var4 and var5</strong> from datafile <code>2005_bs</code> to create <code>MD_varname</code> <code>nv</code>, we add the following rows to the table</p>
@@ -12275,7 +12290,7 @@ Example:<br>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Example: remap">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -12284,7 +12299,7 @@ Example:<br>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A remap row in the concordance table assigns the name of a given <code>MD_varname</code> to an <code>NSI_varname</code>’ without changing the values of the variable itself. This method is usually used to store variables to the objective MD panel without changing anything or which were subject to a revalue or recode/reclass operation.</p>
 <p>For example, if we want to store var6 from datafile <code>ener_2001</code> to create <code>MD_varname</code> <code>firmid</code>, we add the following row to the table</p>
@@ -13208,59 +13223,59 @@ Example:<br>
 <thead>
 <tr class="gt_col_headings header">
 <th id="NSI_dataset" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">NSI_dataset</th>
+<th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
 <th id="NSI_varname" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">NSI_varname</th>
-<th id="year" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">year</th>
 <th id="MD_dataset" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">MD_dataset</th>
 <th id="MD_varname" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">MD_varname</th>
-<th id="left" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">left</th>
-<th id="right" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">right</th>
+<th id="left" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">left</th>
+<th id="right" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">right</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="NSI_dataset">ifats</td>
-<td class="gt_row gt_left" headers="NSI_varname">imputeifats</td>
-<td class="gt_row gt_center" headers="year">NA</td>
-<td class="gt_row gt_left" headers="MD_dataset">IFATS</td>
-<td class="gt_row gt_left" headers="MD_varname">imputed</td>
-<td class="gt_row gt_right" headers="left">1</td>
-<td class="gt_row gt_right" headers="right">0</td>
+<td class="gt_row gt_left" headers="NSI_dataset">SCIE</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+<td class="gt_row gt_left" headers="NSI_varname">EFJR0</td>
+<td class="gt_row gt_left" headers="MD_dataset">BR</td>
+<td class="gt_row gt_left" headers="MD_varname">lfo</td>
+<td class="gt_row gt_left" headers="left">soc</td>
+<td class="gt_row gt_left" headers="right">LL</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="NSI_dataset">ifats</td>
-<td class="gt_row gt_left" headers="NSI_varname">imputeifats</td>
-<td class="gt_row gt_center" headers="year">NA</td>
-<td class="gt_row gt_left" headers="MD_dataset">IFATS</td>
-<td class="gt_row gt_left" headers="MD_varname">imputed</td>
-<td class="gt_row gt_right" headers="left">2</td>
-<td class="gt_row gt_right" headers="right">1</td>
+<td class="gt_row gt_left" headers="NSI_dataset">SCIE</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+<td class="gt_row gt_left" headers="NSI_varname">EFJR0</td>
+<td class="gt_row gt_left" headers="MD_dataset">BR</td>
+<td class="gt_row gt_left" headers="MD_varname">lfo</td>
+<td class="gt_row gt_left" headers="left">eni</td>
+<td class="gt_row gt_left" headers="right">SP</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="NSI_dataset">itgs</td>
-<td class="gt_row gt_left" headers="NSI_varname">exim</td>
-<td class="gt_row gt_center" headers="year">NA</td>
-<td class="gt_row gt_left" headers="MD_dataset">ITGS</td>
-<td class="gt_row gt_left" headers="MD_varname">exim</td>
-<td class="gt_row gt_right" headers="left">1</td>
-<td class="gt_row gt_right" headers="right">0</td>
+<td class="gt_row gt_left" headers="NSI_dataset">SCIE</td>
+<td class="gt_row gt_right" headers="year">2006</td>
+<td class="gt_row gt_left" headers="NSI_varname">EFJR0</td>
+<td class="gt_row gt_left" headers="MD_dataset">BR</td>
+<td class="gt_row gt_left" headers="MD_varname">lfo</td>
+<td class="gt_row gt_left" headers="left">NA</td>
+<td class="gt_row gt_left" headers="right">ND</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="NSI_dataset">itgs</td>
-<td class="gt_row gt_left" headers="NSI_varname">exim</td>
-<td class="gt_row gt_center" headers="year">NA</td>
-<td class="gt_row gt_left" headers="MD_dataset">ITGS</td>
-<td class="gt_row gt_left" headers="MD_varname">exim</td>
-<td class="gt_row gt_right" headers="left">2</td>
-<td class="gt_row gt_right" headers="right">1</td>
+<td class="gt_row gt_left" headers="NSI_dataset">SCIE</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+<td class="gt_row gt_left" headers="NSI_varname">EFJR0</td>
+<td class="gt_row gt_left" headers="MD_dataset">BR</td>
+<td class="gt_row gt_left" headers="MD_varname">lfo</td>
+<td class="gt_row gt_left" headers="left">soc</td>
+<td class="gt_row gt_left" headers="right">LL</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="NSI_dataset">itgs</td>
-<td class="gt_row gt_left" headers="NSI_varname">imputeitgs</td>
-<td class="gt_row gt_center" headers="year">NA</td>
-<td class="gt_row gt_left" headers="MD_dataset">ITGS</td>
-<td class="gt_row gt_left" headers="MD_varname">imputed</td>
-<td class="gt_row gt_right" headers="left">1</td>
-<td class="gt_row gt_right" headers="right">0</td>
+<td class="gt_row gt_left" headers="NSI_dataset">SCIE</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+<td class="gt_row gt_left" headers="NSI_varname">EFJR0</td>
+<td class="gt_row gt_left" headers="MD_dataset">BR</td>
+<td class="gt_row gt_left" headers="MD_varname">lfo</td>
+<td class="gt_row gt_left" headers="left">eni</td>
+<td class="gt_row gt_left" headers="right">SP</td>
 </tr>
 </tbody><tfoot class="gt_sourcenotes">
 <tr class="odd">
@@ -13938,7 +13953,7 @@ Example:<br>
 <p>This script scans the raw data directory in the protected NSI environment and builds the metadata table required by the CompNet rocket. It creates the <code>*_datafiles.csv</code> file according to the <a href="#nsi-datafiles">specification in mantioned above</a>.</p>
 <p>The script can be found in this dropdown menu:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -13947,7 +13962,7 @@ Example:<br>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -14004,7 +14019,7 @@ Example:<br>
 <span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a>DT[, yearvar      <span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]   <span class="co"># name of year column if panel; else ""/NA</span></span>
 <span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a>DT[, details      <span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]</span>
 <span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a>DT[, firm_unit    <span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]   <span class="co"># one of: plant, legal_unit, enterprise, enterprise_group</span></span>
-<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a>DT[, data_source  <span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]   <span class="co"># one of: survey, administrative_source, mixed</span></span>
+<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a>DT[, data_source  <span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]   <span class="co"># one of: survey, administrative_source, statistical_register, mixed</span></span>
 <span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a>DT[, firm_sample  <span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]</span>
 <span id="cb27-56"><a href="#cb27-56" aria-hidden="true" tabindex="-1"></a>DT[, preprocessing<span class="sc">:</span><span class="er">=</span> <span class="cn">NA_character_</span>]   <span class="co"># instruction string per §3.2.4–3.2.9</span></span>
 <span id="cb27-57"><a href="#cb27-57" aria-hidden="true" tabindex="-1"></a></span>
@@ -14056,7 +14071,7 @@ The following columns are created but left empty (<code>NA</code>). They must be
 </li>
 <li><code>firm_unit</code>: one of {<code>plant</code>, <code>legal_unit</code>, <code>enterprise</code>, <code>enterprise_group</code>}.<br>
 </li>
-<li><code>data_source</code>: one of {<code>survey</code>, <code>administrative_source</code>, <code>mixed</code>}.<br>
+<li><code>data_source</code>: one of {<code>survey</code>, <code>administrative_source</code>, <code>statistical_register</code>, <code>mixed</code>}.<br>
 </li>
 <li><code>firm_sample</code>: information on the sampling scheme.<br>
 </li>
@@ -14087,7 +14102,7 @@ The script writes the CSV into: <code>/NSImetadata/_datafiles.csv</code></li>
 It should always be run <strong>after</strong> the <code>NSI_datafiles</code> script.</p>
 <p>The script can be found in this dropdown menu:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -14096,7 +14111,7 @@ It should always be run <strong>after</strong> the <code>NSI_datafiles</code> sc
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -14268,7 +14283,7 @@ Missing variables are reported in the console when running the script.<br>
 It should always be run <strong>after</strong> the <code>NSI_datafiles</code> script.</p>
 <p>The script can be found in this dropdown menu:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -14277,7 +14292,7 @@ It should always be run <strong>after</strong> the <code>NSI_datafiles</code> sc
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -14423,7 +14438,7 @@ For the specified dataset, the script will:
 It should always be run <strong>after</strong> the <code>NSI_datafiles</code> script.</p>
 <p>The script can be found in this dropdown menu:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -14432,7 +14447,7 @@ It should always be run <strong>after</strong> the <code>NSI_datafiles</code> sc
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -14603,7 +14618,7 @@ Unlike the other metadata files, it <strong>cannot be generated from the raw mic
 It is essential for ensuring consistent longitudinal tracking of firms and dataset merging.</p>
 <p>The script can be found in this dropdown menu:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -14612,7 +14627,7 @@ It is essential for ensuring consistent longitudinal tracking of firms and datas
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output-display">
@@ -14753,7 +14768,7 @@ It is essential for ensuring consistent longitudinal tracking of firms and datas
 <li><p>NSIs document their raw files, and the Launcher—guided by this metadata—performs the harmonization and constructs the MD panels.</p></li>
 <li><p>NSIs carry out the full harmonization to MD standards, and the Launcher simply reads the pre-harmonized files into R.</p>
 <div id="nsi_datafile-preprocessing-routines-guide" class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -14762,15 +14777,16 @@ It is essential for ensuring consistent longitudinal tracking of firms and datas
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Some raw datasets might require specific preprocessing. This is taken care of by the infrastructure right after the raw datafile is imported by the launcher and before it is harmonized using the preprocessing tool (<code>rocket/MDIprogs/datafile_preprocessing_tool.R</code>).</p>
+<p>Some raw datasets might require specific preprocessing. This is taken care of by the infrastructure right after the raw datafile is imported by the launcher and before it is harmonized using the preprocessing tool (<code>rocket/Rtools/R/mdi_preprocess.R</code>).</p>
 <p>The tool is a general-purpose function designed to apply one or more <strong>preprocessing transformations</strong> to raw datasets (stored as <code>data.table</code> objects). It enables modular, rule-based data cleaning and transformation by interpreting a structured string called <code>preprocessing_string</code>.</p>
 <h3 id="how-it-works-1" class="unnumbered anchored">How it works</h3>
 <ol type="1">
 <li><strong>Instruction string</strong> (<code>preprocessing_string</code>) encodes all preprocessing steps.</li>
 <li>The string is split into separate operations using <code>||</code>.</li>
 <li>Each operation is parsed and executed <strong>in sequence</strong>.</li>
+<li>Before each step runs, the tool checks that the operation exists and that every column it reads is in the data at that point (the variables listed for the datafile in <code>&lt;CC&gt;_varnames.csv</code>, plus those created by earlier steps). Otherwise the run stops with a message naming the step and the columns. A <code>derive</code> value that looks like a column name but isn’t one is written as text, with a warning. <code>metadata_checker.R</code> applies the same check before a run.</li>
 <li>The data is modified <strong>in-place</strong> step by step, and the final <code>data.table</code> is returned.</li>
 </ol>
 <hr>
@@ -14787,71 +14803,81 @@ It is essential for ensuring consistent longitudinal tracking of firms and datas
 <table class="caption-top table">
 <colgroup>
 <col style="width: 3%">
-<col style="width: 17%">
-<col style="width: 78%">
+<col style="width: 15%">
+<col style="width: 66%">
+<col style="width: 14%">
 </colgroup>
-<thead>
-<tr class="header">
-<th>Operation</th>
-<th>Format</th>
-<th>Description</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td><code>dedup</code></td>
-<td><code>dedup|id_col1#id_col2|method|[optional:dedup_col]</code></td>
-<td>Removes duplicates by ID(s). Methods: <code>na</code>, <code>min</code>, <code>max</code>, <code>meanmode</code>, <code>random</code>.</td>
+<td rowspan="2"><h1 id="operation" data-number="4"><span class="header-section-number">4</span> Operation</h1>
+<p><code>dedup</code></p></td>
+<td rowspan="2"><h1 id="format" data-number="5"><span class="header-section-number">5</span> Format</h1>
+<p><code>dedup|id_col1#id_col2|method|[optional:dedup_col]</code></p></td>
+<td rowspan="2"><h1 id="description" data-number="6"><span class="header-section-number">6</span> Description</h1>
+<p>Removes duplicates by ID(s). Methods: <code>na</code>, <code>min</code>, <code>max</code>, <code>meanmode</code>, <code>random</code>.</p></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
+</tr>
+<tr class="odd">
 <td><code>filter</code></td>
 <td><code>filter|column|operator|value</code></td>
 <td>Filters rows based on logical conditions. Operators: <code>eq</code>, <code>neq</code>, <code>gt</code>, <code>gte</code>, <code>lt</code>, <code>lte</code>, <code>in</code>, <code>nin</code>, <code>isna</code>, <code>notna</code>. <code>isna</code>/<code>notna</code> test for missing values and take <strong>no value</strong>, so they have three parts instead of four (e.g.&nbsp;<code>filter|COD_ASIA|notna</code>).</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>agg</code></td>
 <td><code>agg|group_col1#group_col2|var1:func#var2:func</code></td>
 <td>Aggregates rows over groups using functions: <code>sum</code>, <code>mean</code>, <code>min</code>, <code>max</code>, <code>median</code>, <code>sd</code>, <code>mode</code>, <code>pickmaxby-refcol</code>.</td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>restruct</code></td>
 <td><code>restruct|column_to_remove|col1#col2#col3</code></td>
 <td>Drops a column and deduplicates rows based on remaining selected columns.</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>reshape</code></td>
 <td><code>reshape|id_col1#id_col2|names_from|values_from1#values_from2</code></td>
 <td>Reshapes data from long to wide format using <code>dcast()</code>.</td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>reshapelong</code></td>
 <td><code>reshapelong|id_cols|measure_cols|names_to|values_to</code></td>
 <td>Reshapes data from wide to long using <code>melt()</code>: each measure column becomes a row. <code>names_to</code> holds the original column name, <code>values_to</code> its value. Use when a raw file stores one record per category in separate columns but MD expects one row per category.</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>derive</code></td>
 <td><code>derive|new_col|condmap|cond1:val1#cond2:val2#...|default:&lt;default_val&gt;</code></td>
 <td>Creates a new column from conditional logic. Conditions use standard R syntax; values can be column names or literals. A default must be specified.</td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>scaleif</code></td>
 <td><code>scaleif|condition_col|val1:factor1#val2:factor2#...|col1#col2#...</code></td>
 <td>Conditionally multiplies one or more columns by a factor based on a categorical column’s value.</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>trimchars</code></td>
 <td><code>trimchars|col1#col2#...|n</code></td>
 <td>Trims the last <code>n</code> characters from each specified character column. Useful to normalize identifiers or string variables.</td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>parsedate</code></td>
 <td><code>parsedate|col|informat|[lang]|[outformat]</code></td>
 <td>Parses a date column from strptime tokens (e.g.&nbsp;<code>%d-%b-%y</code>), independently of the system locale. Month names (<code>%b</code>/<code>%B</code>) use <code>readr</code>’s CLDR names: <code>lang</code> is a two-letter code (<code>it</code>, <code>de</code>, …; English if omitted), and case is normalised. Returns a <code>Date</code>, or a string if <code>outformat</code> is given.</td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>mergefrom</code></td>
 <td><code>mergefrom|datafile_name|join_key1#join_key2#...|col1#col2#...|[join_type]</code></td>
-<td>Imports one or more raw files belonging to <code>datafile_name</code> (as defined in column <code>NSI_datafile</code> of file <code>NSI_datafiles</code>), stacks them if multiple, and merges the specified columns into the current datafile using the provided join keys. By default a <strong>left join</strong> is performed. If <code>join_type</code> is set to <code>outer</code>, a full outer join is applied.</td>
+<td colspan="2">Reads the join keys and the listed columns of another raw file, <code>datafile_name</code> (one <code>NSI_datafile</code> of file <code>NSI_datafiles</code>, read with its own path, format, encoding and declared classes), and merges the columns into the current datafile on the join keys. <code>join_type</code> is <code>left</code> (default), <code>inner</code> or <code>full</code>. The join keys must identify rows uniquely in both files and be text on both sides or numbers on both sides.</td>
 </tr>
 </tbody>
 </table>
@@ -14882,11 +14908,11 @@ It is essential for ensuring consistent longitudinal tracking of firms and datas
 <p>The advantage of having the Launcher perform the harmonization is a reduction in maintenance costs for NSIs, particularly for recurring annual updates. It also improves the codification and reproducibility of the conceptual work done by NSI staff. However, this approach entails higher initial costs, as it requires NSIs to adopt a more rigid system of metadata documentation and to coordinate more closely with the MDI team.</p>
 </section>
 </section>
-<section id="run-mdi-harmonization-modules" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="run-mdi-harmonization-modules"><span class="header-section-number">3.4</span> Run MDI: Harmonization &amp; Modules</h2>
+<section id="run-mdi-harmonization-modules" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="run-mdi-harmonization-modules"><span class="header-section-number">6.1</span> Run MDI: Harmonization &amp; Modules</h2>
 <p>This section describes the main steps to configure and run the MDI system. It covers how to prepare the <code>countdown.R</code> script, perform metadata checks, and execute harmonization and analysis modules. Each step is explained in detail below. An overview of all the steps an be found in the <a href="#launch-sequence-overview">previous section</a></p>
-<section id="countdown" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="countdown"><span class="header-section-number">3.4.1</span> Countdown</h3>
+<section id="countdown" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="countdown"><span class="header-section-number">6.1.1</span> Countdown</h3>
 <p>The countdown (<code>countdown.R</code>) is the starting point for all use of the MDI. It requires the user to make a number of adjustments to ensure that the MDI can be executed successfully for the selected purpose. The following parameters must be reviewed and set by the user.</p>
 <ul>
 <li><p><strong>MDI Installation Directory (<code>dirMDI</code>)</strong><br>
@@ -14920,11 +14946,12 @@ These flags control how the MDI process handles raw data imports and temporary f
 <li><code>MDIimportFlag</code>: Set to TRUE to import raw NSI data files. If FALSE, existing virtual datasets stored in <code>dirTMPSAVE</code> are used.</li>
 <li><code>MDIcleanTMP</code>: If TRUE, the temporary directory <code>dirTMPSAVE</code> is cleaned before execution.</li>
 </ul></li>
-<li><p><strong>Optional – mock data flag</strong><br>
-This flag controls whether the MDI is executed using mock data.</p>
+<li><p><strong>Optional – post-harmonization report</strong><br>
+This flag controls whether the post-harmonization report (PHC) is written.</p>
 <ul>
-<li><code>IsMOCK</code>: Set to TRUE to run the MDI in a test scenario using mock data. When TRUE, temporary files are stored in a country-specific subdirectory to avoid overwriting files when switching countries.</li>
-</ul></li>
+<li><code>MDIphcRUN</code>: Set to FALSE to skip the post-harmonization report, e.g.&nbsp;when running on mock data. An NSI keeps it TRUE. (Replaces <code>IsMOCK</code> from earlier launches.)</li>
+</ul>
+<p>Mock data comes with one folder per country, so for mock runs include <code>CountryCode</code> in <code>dirINPUTDATA</code> and <code>dirTMPSAVE</code>, e.g.&nbsp;<code>dirINPUTDATA &lt;- paste0("/files/mockdata/", CountryCode, "/")</code>. Keeping the country in <code>dirTMPSAVE</code> also means switching country can’t overwrite, or read, another country’s harmonized datasets.</p></li>
 <li><p><strong>Optional – execution control flags</strong><br>
 These flags influence how the MDI scripts run and how much output is produced.</p>
 <ul>
@@ -14948,6 +14975,24 @@ These flags influence how the MDI scripts run and how much output is produced.</
 <p>Note that a filtered run writes <strong>partial MD panels</strong> to <code>dirTMPSAVE</code>, and the post-harmonization checks then only see the variables that survived the filter. Set it back to <code>FALSE</code> — and re-import with <code>MDIimportFlag &lt;- TRUE</code> — for the official launch.</p>
 </div>
 </div>
+<ul>
+<li><p><code>MDIdatasets</code>: Harmonize only these MD datasets, e.g.&nbsp;<code>MDIdatasets &lt;- c("SBS", "PRODCOM")</code>. <code>NULL</code> (default) harmonizes all of them. The other datasets in <code>dirTMPSAVE</code> stay as an earlier run left them, so this is for redoing one or two datasets, e.g.&nbsp;after a run that stopped at one of them or after a fix to their metadata. Only the NSI files the chosen datasets need are read; <code>MDIcleanTMP</code> removes only their files, and only their rows of the conversion log are replaced. Choosing SBS or BR also redoes the PIM capital stock (<code>K_pim</code>, added to SBS from BR’s industries). A name the country doesn’t map stops the run and lists the ones it does. With <code>MDIimportFlag &lt;- FALSE</code> nothing is harmonized, so the setting is ignored.</p></li>
+<li><p><code>MDImodules</code>: Run only these research modules, e.g.&nbsp;<code>MDImodules &lt;- "MOD0"</code>. <code>NULL</code> (default) runs all of them. Combined with <code>MDIimportFlag &lt;- FALSE</code>, this reruns a module on the datasets already in <code>dirTMPSAVE</code> without harmonizing again. With <code>filteredHarmonization &lt;- TRUE</code>, only the chosen modules’ variables are harmonized.</p></li>
+<li><p><code>dirMODULES</code>: A folder with your own research module(s) to run instead of the launch’s, each in a 4-letter-named subfolder with <code>&lt;CODE&gt;_MDnames_select.csv</code> and <code>Launch_&lt;version&gt;_&lt;CODE&gt;.R</code>, e.g.&nbsp;<code>dirMODULES &lt;- "~/modules/"</code> for <code>~/modules/ABCD/</code>. <code>NULL</code> (default) runs the launch’s modules in <code>payload/Launch_&lt;version&gt;/Rmodules/</code>. The modules are run by the launch’s <code>main.R</code> either way, and find their own files through <code>dirPROGS</code>, which then points to this folder.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nuvolos module testing space: one shared MDI installation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To test modules before a launch, researchers use a Nuvolos space in which the MDI installation (<code>/space_mounts/MDI/…</code>) and the harmonized mock data (<code>/space_mounts/mockdata/…</code>) are kept once, read-only, instead of a full copy per person. Each instance of the space comes with its own copy of <code>launchpad/participant_countdown.R</code> and a <code>/files/modules/</code> folder: the countdown points <code>dirMDI</code> and <code>dirTMPSAVE</code> to the shared copies and <code>dirMODULES</code> and <code>dirOUTPUT</code> to the instance’s own folders, and fixes <code>MDIimportFlag &lt;- FALSE</code> and <code>MDImoduleRUN &lt;- TRUE</code>, so a run only reads the shared data and writes only to the instance’s <code>dirOUTPUT</code>. The researcher puts their module in <code>/files/modules/&lt;CODE&gt;/</code>, sets <code>CountryCode</code>, and chooses <code>liftoff.R</code> (runs the module as at an NSI) or <code>interactive_MDI.R</code> (to write and test it). A module must therefore write only to <code>dirOUTPUT</code>. The MDI team updates the shared installation and mock data between launches.</p>
+</div>
+</div>
 <details>
 <summary>
 Click here to see the entire <code>countdown.R</code> script
@@ -14962,7 +15007,7 @@ Click here to see the entire <code>countdown.R</code> script
 <span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
 <span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>MDI_launch_version <span class="ot">&lt;-</span> <span class="st">"v2.3"</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>MDI_launch_version <span class="ot">&lt;-</span> <span class="st">"v2.4"</span></span>
 <span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
@@ -14988,63 +15033,63 @@ Click here to see the entire <code>countdown.R</code> script
 <span id="cb37-34"><a href="#cb37-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. Set the full path to the  directory with NSI firm-level data files (or mockdata files)</span></span>
 <span id="cb37-35"><a href="#cb37-35" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
 <span id="cb37-36"><a href="#cb37-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-37"><a href="#cb37-37" aria-hidden="true" tabindex="-1"></a>dirINPUTDATA <span class="ot">&lt;-</span> <span class="st">"/files/NSIdatafiles/"</span></span>
-<span id="cb37-38"><a href="#cb37-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-39"><a href="#cb37-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-40"><a href="#cb37-40" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-41"><a href="#cb37-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 7b. Database user for NSI rows where format == "oracle" (leave NULL otherwise)</span></span>
+<span id="cb37-37"><a href="#cb37-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Mock data comes with one folder per country: include CountryCode, as here.</span></span>
+<span id="cb37-38"><a href="#cb37-38" aria-hidden="true" tabindex="-1"></a><span class="co"># An NSI points this at its own data folder.</span></span>
+<span id="cb37-39"><a href="#cb37-39" aria-hidden="true" tabindex="-1"></a>dirINPUTDATA <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"/files/NSIdatafiles/"</span>, CountryCode, <span class="st">"/"</span>)</span>
+<span id="cb37-40"><a href="#cb37-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-41"><a href="#cb37-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-42"><a href="#cb37-42" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-43"><a href="#cb37-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-44"><a href="#cb37-44" aria-hidden="true" tabindex="-1"></a>db_user <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb37-43"><a href="#cb37-43" aria-hidden="true" tabindex="-1"></a><span class="co"># 7b. Database user for NSI rows where format == "oracle" (leave NULL otherwise)</span></span>
+<span id="cb37-44"><a href="#cb37-44" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
 <span id="cb37-45"><a href="#cb37-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-46"><a href="#cb37-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-47"><a href="#cb37-47" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-48"><a href="#cb37-48" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Set the full path to the directory to which generated files are exported (dirOUTPUT)</span></span>
+<span id="cb37-46"><a href="#cb37-46" aria-hidden="true" tabindex="-1"></a>db_user <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb37-47"><a href="#cb37-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-48"><a href="#cb37-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-49"><a href="#cb37-49" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-50"><a href="#cb37-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-51"><a href="#cb37-51" aria-hidden="true" tabindex="-1"></a>dirOUTPUT <span class="ot">&lt;-</span> <span class="st">"/files/output/"</span></span>
+<span id="cb37-50"><a href="#cb37-50" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Set the full path to the directory to which generated files are exported (dirOUTPUT)</span></span>
+<span id="cb37-51"><a href="#cb37-51" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
 <span id="cb37-52"><a href="#cb37-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-53"><a href="#cb37-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-54"><a href="#cb37-54" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-55"><a href="#cb37-55" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Set the full path to the directory for temporary storage of MDI virtual longitudinal datasets (dirTMPSAVE)</span></span>
+<span id="cb37-53"><a href="#cb37-53" aria-hidden="true" tabindex="-1"></a>dirOUTPUT <span class="ot">&lt;-</span> <span class="st">"/files/output/"</span></span>
+<span id="cb37-54"><a href="#cb37-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-55"><a href="#cb37-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-56"><a href="#cb37-56" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-57"><a href="#cb37-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-58"><a href="#cb37-58" aria-hidden="true" tabindex="-1"></a>dirTMPSAVE <span class="ot">&lt;-</span> <span class="st">"/files/TMP/"</span></span>
+<span id="cb37-57"><a href="#cb37-57" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Set the full path to the directory for temporary storage of MDI virtual longitudinal datasets (dirTMPSAVE)</span></span>
+<span id="cb37-58"><a href="#cb37-58" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
 <span id="cb37-59"><a href="#cb37-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-60"><a href="#cb37-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-61"><a href="#cb37-61" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
-<span id="cb37-62"><a href="#cb37-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional steps (steps 5, 4, 3 &amp; 2)</span></span>
-<span id="cb37-63"><a href="#cb37-63" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
+<span id="cb37-60"><a href="#cb37-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep CountryCode in the path: switching country then can't overwrite or</span></span>
+<span id="cb37-61"><a href="#cb37-61" aria-hidden="true" tabindex="-1"></a><span class="co"># read another country's harmonized datasets.</span></span>
+<span id="cb37-62"><a href="#cb37-62" aria-hidden="true" tabindex="-1"></a>dirTMPSAVE <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"/space_mounts/mockdata/"</span>, MDI_launch_version, <span class="st">"/"</span>, CountryCode, <span class="st">"/"</span>)</span>
+<span id="cb37-63"><a href="#cb37-63" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(dirTMPSAVE)) <span class="fu">dir.create</span>(dirTMPSAVE, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb37-64"><a href="#cb37-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-65"><a href="#cb37-65" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
-<span id="cb37-66"><a href="#cb37-66" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Flag for temporary MDI files   #</span></span>
-<span id="cb37-67"><a href="#cb37-67" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
-<span id="cb37-68"><a href="#cb37-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-69"><a href="#cb37-69" aria-hidden="true" tabindex="-1"></a><span class="co"># set ImportFlag=TRUE if you want to import raw NSI data files (if FALSE: reads MDI virtual data from dirTMPSAVE)</span></span>
-<span id="cb37-70"><a href="#cb37-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-71"><a href="#cb37-71" aria-hidden="true" tabindex="-1"></a>MDIimportFlag <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb37-72"><a href="#cb37-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-73"><a href="#cb37-73" aria-hidden="true" tabindex="-1"></a><span class="do">################################################</span></span>
-<span id="cb37-74"><a href="#cb37-74" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Flag for cleaning the temoporary folder   #</span></span>
-<span id="cb37-75"><a href="#cb37-75" aria-hidden="true" tabindex="-1"></a><span class="do">################################################</span></span>
-<span id="cb37-76"><a href="#cb37-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-77"><a href="#cb37-77" aria-hidden="true" tabindex="-1"></a><span class="co"># set cleanTMP=TRUE if you would like to clean the dirTMPSAVE before running</span></span>
-<span id="cb37-78"><a href="#cb37-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-79"><a href="#cb37-79" aria-hidden="true" tabindex="-1"></a>MDIcleanTMP <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb37-80"><a href="#cb37-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-81"><a href="#cb37-81" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
-<span id="cb37-82"><a href="#cb37-82" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Flag for mock data use         #</span></span>
-<span id="cb37-83"><a href="#cb37-83" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
-<span id="cb37-84"><a href="#cb37-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-85"><a href="#cb37-85" aria-hidden="true" tabindex="-1"></a>IsMOCK <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb37-86"><a href="#cb37-86" aria-hidden="true" tabindex="-1"></a><span class="co"># If isMOCK, temporary files are stored in CountryCode folder,</span></span>
-<span id="cb37-87"><a href="#cb37-87" aria-hidden="true" tabindex="-1"></a><span class="co"># so that files arent overwritten when switching country</span></span>
-<span id="cb37-88"><a href="#cb37-88" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (IsMOCK) {</span>
-<span id="cb37-89"><a href="#cb37-89" aria-hidden="true" tabindex="-1"></a>  dirTMPSAVE <span class="ot">&lt;-</span> <span class="fu">paste0</span>(dirTMPSAVE, CountryCode, <span class="st">"/"</span>)</span>
-<span id="cb37-90"><a href="#cb37-90" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(dirTMPSAVE)) {</span>
-<span id="cb37-91"><a href="#cb37-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(dirTMPSAVE)</span>
-<span id="cb37-92"><a href="#cb37-92" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb37-93"><a href="#cb37-93" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-65"><a href="#cb37-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-66"><a href="#cb37-66" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
+<span id="cb37-67"><a href="#cb37-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional steps (steps 5, 4, 3 &amp; 2)</span></span>
+<span id="cb37-68"><a href="#cb37-68" aria-hidden="true" tabindex="-1"></a><span class="do">########################################</span></span>
+<span id="cb37-69"><a href="#cb37-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-70"><a href="#cb37-70" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
+<span id="cb37-71"><a href="#cb37-71" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Flag for temporary MDI files   #</span></span>
+<span id="cb37-72"><a href="#cb37-72" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
+<span id="cb37-73"><a href="#cb37-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-74"><a href="#cb37-74" aria-hidden="true" tabindex="-1"></a><span class="co"># set ImportFlag=TRUE if you want to import raw NSI data files (if FALSE: reads MDI virtual data from dirTMPSAVE)</span></span>
+<span id="cb37-75"><a href="#cb37-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-76"><a href="#cb37-76" aria-hidden="true" tabindex="-1"></a>MDIimportFlag <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb37-77"><a href="#cb37-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-78"><a href="#cb37-78" aria-hidden="true" tabindex="-1"></a><span class="do">################################################</span></span>
+<span id="cb37-79"><a href="#cb37-79" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Flag for cleaning the temoporary folder   #</span></span>
+<span id="cb37-80"><a href="#cb37-80" aria-hidden="true" tabindex="-1"></a><span class="do">################################################</span></span>
+<span id="cb37-81"><a href="#cb37-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-82"><a href="#cb37-82" aria-hidden="true" tabindex="-1"></a><span class="co"># set cleanTMP=TRUE if you would like to clean the dirTMPSAVE before running</span></span>
+<span id="cb37-83"><a href="#cb37-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-84"><a href="#cb37-84" aria-hidden="true" tabindex="-1"></a>MDIcleanTMP <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb37-85"><a href="#cb37-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-86"><a href="#cb37-86" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
+<span id="cb37-87"><a href="#cb37-87" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Post-harmonization report      #</span></span>
+<span id="cb37-88"><a href="#cb37-88" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
+<span id="cb37-89"><a href="#cb37-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-90"><a href="#cb37-90" aria-hidden="true" tabindex="-1"></a><span class="co"># set MDIphcRUN = FALSE to skip the post-harmonization report (PHC), e.g. for</span></span>
+<span id="cb37-91"><a href="#cb37-91" aria-hidden="true" tabindex="-1"></a><span class="co"># mock data; an NSI keeps it TRUE.</span></span>
+<span id="cb37-92"><a href="#cb37-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-93"><a href="#cb37-93" aria-hidden="true" tabindex="-1"></a>MDIphcRUN <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
 <span id="cb37-94"><a href="#cb37-94" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-95"><a href="#cb37-95" aria-hidden="true" tabindex="-1"></a><span class="do">#####################################</span></span>
 <span id="cb37-96"><a href="#cb37-96" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Flags to control execution     #</span></span>
@@ -15063,63 +15108,76 @@ Click here to see the entire <code>countdown.R</code> script
 <span id="cb37-109"><a href="#cb37-109" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-110"><a href="#cb37-110" aria-hidden="true" tabindex="-1"></a>MDIimputeFlag <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
 <span id="cb37-111"><a href="#cb37-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-112"><a href="#cb37-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Flag to indicate whether this is a test run on the server with mock data</span></span>
-<span id="cb37-113"><a href="#cb37-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-114"><a href="#cb37-114" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want the harmonization to be done only for the variables included in the current</span></span>
-<span id="cb37-115"><a href="#cb37-115" aria-hidden="true" tabindex="-1"></a><span class="co"># launch's MDnames_select file</span></span>
-<span id="cb37-116"><a href="#cb37-116" aria-hidden="true" tabindex="-1"></a>filteredHarmonization <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb37-117"><a href="#cb37-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-118"><a href="#cb37-118" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
-<span id="cb37-119"><a href="#cb37-119" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Liftoff                 #</span></span>
-<span id="cb37-120"><a href="#cb37-120" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
+<span id="cb37-112"><a href="#cb37-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-113"><a href="#cb37-113" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want the harmonization to be done only for the variables included in the current</span></span>
+<span id="cb37-114"><a href="#cb37-114" aria-hidden="true" tabindex="-1"></a><span class="co"># launch's MDnames_select file</span></span>
+<span id="cb37-115"><a href="#cb37-115" aria-hidden="true" tabindex="-1"></a>filteredHarmonization <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb37-116"><a href="#cb37-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-117"><a href="#cb37-117" aria-hidden="true" tabindex="-1"></a><span class="co"># To harmonize only some MD datasets, e.g. after a run that stopped at one of</span></span>
+<span id="cb37-118"><a href="#cb37-118" aria-hidden="true" tabindex="-1"></a><span class="co"># them: MDIdatasets &lt;- c("SBS", "PRODCOM"). The other datasets in dirTMPSAVE</span></span>
+<span id="cb37-119"><a href="#cb37-119" aria-hidden="true" tabindex="-1"></a><span class="co"># stay as the earlier run left them. NULL = all.</span></span>
+<span id="cb37-120"><a href="#cb37-120" aria-hidden="true" tabindex="-1"></a>MDIdatasets <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb37-121"><a href="#cb37-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-122"><a href="#cb37-122" aria-hidden="true" tabindex="-1"></a><span class="co"># save the program countdown.R to your work directory.</span></span>
-<span id="cb37-123"><a href="#cb37-123" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the file to choose which program/feature to execute:</span></span>
+<span id="cb37-122"><a href="#cb37-122" aria-hidden="true" tabindex="-1"></a><span class="co"># To run only some research modules: MDImodules &lt;- c("MOD0"). NULL = all.</span></span>
+<span id="cb37-123"><a href="#cb37-123" aria-hidden="true" tabindex="-1"></a>MDImodules <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb37-124"><a href="#cb37-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-125"><a href="#cb37-125" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, pick the program to be executed</span></span>
-<span id="cb37-126"><a href="#cb37-126" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. run pre_launch_checker.R  to run after an update of MDI at NSI, to check and fix metadata</span></span>
-<span id="cb37-127"><a href="#cb37-127" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. run liftoff.R to run rocket: execute MD harmonizer and run payload modules</span></span>
-<span id="cb37-128"><a href="#cb37-128" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. run interactive_MDI.R to initialize environment to test/debug/explore/write module code.</span></span>
-<span id="cb37-129"><a href="#cb37-129" aria-hidden="true" tabindex="-1"></a><span class="co"># ---&gt; Choose below with number of the selected program</span></span>
+<span id="cb37-125"><a href="#cb37-125" aria-hidden="true" tabindex="-1"></a><span class="co"># A folder with your own module(s) to run instead of the launch's, each in a</span></span>
+<span id="cb37-126"><a href="#cb37-126" aria-hidden="true" tabindex="-1"></a><span class="co"># 4-letter-named subfolder, e.g. "~/modules/" for ~/modules/ABCD/</span></span>
+<span id="cb37-127"><a href="#cb37-127" aria-hidden="true" tabindex="-1"></a><span class="co"># (workshops: see launchpad/participant_countdown.R). NULL = the launch's</span></span>
+<span id="cb37-128"><a href="#cb37-128" aria-hidden="true" tabindex="-1"></a><span class="co"># modules.</span></span>
+<span id="cb37-129"><a href="#cb37-129" aria-hidden="true" tabindex="-1"></a>dirMODULES <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
 <span id="cb37-130"><a href="#cb37-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-131"><a href="#cb37-131" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the session is interactive (works both in RStudio and console)</span></span>
-<span id="cb37-132"><a href="#cb37-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-133"><a href="#cb37-133" aria-hidden="true" tabindex="-1"></a>program_choices <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pre_launch_checker.R"</span>, <span class="st">"liftoff.R"</span>, <span class="st">"interactive_MDI.R"</span>)</span>
+<span id="cb37-131"><a href="#cb37-131" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
+<span id="cb37-132"><a href="#cb37-132" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Liftoff                 #</span></span>
+<span id="cb37-133"><a href="#cb37-133" aria-hidden="true" tabindex="-1"></a><span class="do">##############################</span></span>
 <span id="cb37-134"><a href="#cb37-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-135"><a href="#cb37-135" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
-<span id="cb37-136"><a href="#cb37-136" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Use select.list() for interactive selection</span></span>
+<span id="cb37-135"><a href="#cb37-135" aria-hidden="true" tabindex="-1"></a><span class="co"># save the program countdown.R to your work directory.</span></span>
+<span id="cb37-136"><a href="#cb37-136" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the file to choose which program/feature to execute:</span></span>
 <span id="cb37-137"><a href="#cb37-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-138"><a href="#cb37-138" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">select.list</span>(program_choices, <span class="at">title =</span> <span class="st">"Choose a program to run:"</span>)</span>
-<span id="cb37-139"><a href="#cb37-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-140"><a href="#cb37-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-141"><a href="#cb37-141" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (user_input <span class="sc">!=</span> <span class="st">""</span>) {</span>
-<span id="cb37-142"><a href="#cb37-142" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
+<span id="cb37-138"><a href="#cb37-138" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, pick the program to be executed</span></span>
+<span id="cb37-139"><a href="#cb37-139" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. run pre_launch_checker.R  to run after an update of MDI at NSI, to check and fix metadata</span></span>
+<span id="cb37-140"><a href="#cb37-140" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. run liftoff.R to run rocket: execute MD harmonizer and run payload modules</span></span>
+<span id="cb37-141"><a href="#cb37-141" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. run interactive_MDI.R to initialize environment to test/debug/explore/write module code.</span></span>
+<span id="cb37-142"><a href="#cb37-142" aria-hidden="true" tabindex="-1"></a><span class="co"># ---&gt; Choose below with number of the selected program</span></span>
 <span id="cb37-143"><a href="#cb37-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-144"><a href="#cb37-144" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, user_input))</span>
-<span id="cb37-145"><a href="#cb37-145" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb37-146"><a href="#cb37-146" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"No selection made. Exiting.</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb37-147"><a href="#cb37-147" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb37-148"><a href="#cb37-148" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb37-149"><a href="#cb37-149" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If not in an interactive session, use readline()</span></span>
+<span id="cb37-144"><a href="#cb37-144" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the session is interactive (works both in RStudio and console)</span></span>
+<span id="cb37-145"><a href="#cb37-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-146"><a href="#cb37-146" aria-hidden="true" tabindex="-1"></a>program_choices <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pre_launch_checker.R"</span>, <span class="st">"liftoff.R"</span>, <span class="st">"interactive_MDI.R"</span>)</span>
+<span id="cb37-147"><a href="#cb37-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-148"><a href="#cb37-148" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
+<span id="cb37-149"><a href="#cb37-149" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Use select.list() for interactive selection</span></span>
 <span id="cb37-150"><a href="#cb37-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-151"><a href="#cb37-151" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">readline</span>(<span class="at">prompt =</span> <span class="st">"Please enter an integer (1 for pre_launch_checker.R, 2 for liftoff.R, 3 for interactive_MDI.R): "</span>))</span>
-<span id="cb37-152"><a href="#cb37-152" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(user_input) <span class="sc">&amp;&amp;</span> user_input <span class="sc">%in%</span> <span class="fu">seq_along</span>(program_choices)) {</span>
-<span id="cb37-153"><a href="#cb37-153" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Map the user input to the corresponding script name</span></span>
-<span id="cb37-154"><a href="#cb37-154" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
-<span id="cb37-155"><a href="#cb37-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-156"><a href="#cb37-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, program_choices[user_input]))</span>
-<span id="cb37-157"><a href="#cb37-157" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb37-158"><a href="#cb37-158" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"Invalid input. Please enter a valid integer (1, 2 or 3).</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb37-159"><a href="#cb37-159" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb37-160"><a href="#cb37-160" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb37-151"><a href="#cb37-151" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">select.list</span>(program_choices, <span class="at">title =</span> <span class="st">"Choose a program to run:"</span>)</span>
+<span id="cb37-152"><a href="#cb37-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-153"><a href="#cb37-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-154"><a href="#cb37-154" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (user_input <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb37-155"><a href="#cb37-155" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
+<span id="cb37-156"><a href="#cb37-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-157"><a href="#cb37-157" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, user_input))</span>
+<span id="cb37-158"><a href="#cb37-158" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb37-159"><a href="#cb37-159" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"No selection made. Exiting.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb37-160"><a href="#cb37-160" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb37-161"><a href="#cb37-161" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb37-162"><a href="#cb37-162" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If not in an interactive session, use readline()</span></span>
+<span id="cb37-163"><a href="#cb37-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-164"><a href="#cb37-164" aria-hidden="true" tabindex="-1"></a>  user_input <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">readline</span>(<span class="at">prompt =</span> <span class="st">"Please enter an integer (1 for pre_launch_checker.R, 2 for liftoff.R, 3 for interactive_MDI.R): "</span>))</span>
+<span id="cb37-165"><a href="#cb37-165" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(user_input) <span class="sc">&amp;&amp;</span> user_input <span class="sc">%in%</span> <span class="fu">seq_along</span>(program_choices)) {</span>
+<span id="cb37-166"><a href="#cb37-166" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Map the user input to the corresponding script name</span></span>
+<span id="cb37-167"><a href="#cb37-167" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source the corresponding script</span></span>
+<span id="cb37-168"><a href="#cb37-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-169"><a href="#cb37-169" aria-hidden="true" tabindex="-1"></a>    <span class="fu">source</span>(<span class="fu">paste0</span>(dirMDI, <span class="st">"launchpad/"</span>, program_choices[user_input]))</span>
+<span id="cb37-170"><a href="#cb37-170" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb37-171"><a href="#cb37-171" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"Invalid input. Please enter a valid integer (1, 2 or 3).</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb37-172"><a href="#cb37-172" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb37-173"><a href="#cb37-173" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </section>
-<section id="pre-launch-checker" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="pre-launch-checker"><span class="header-section-number">3.4.2</span> Pre-Launch-Checker</h3>
+<section id="pre-launch-checker" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="pre-launch-checker"><span class="header-section-number">6.1.2</span> Pre-Launch-Checker</h3>
 <p>The program <code id="prelaunchchecker">pre_launch_checker.R</code> (run <code>countdown.R</code> and choose this program) needs to be run before anything else. It performs various checks on the NSI metadata to avoid errors later on. The results of the checks can be found in the file <code>pre_launch_checker_results.txt</code> in the output directory. It shows possible errors that should be adjusted in the NSI metadata. Additionally, two concordance files (NSI_pcc8t0_pcc8t1_conc.csv and NSI_MD_nace_conc.csv) are created using existing concordance files and updating them with the data at the NSI. These concordance table might contain empty values, if no value was previously defined. Missing values need to be filled in manually. When the concordance files are ready to be used, they need to be moved to the directory indicated in <code>pre_launch_checker_results.txt</code></p>
 </section>
-<section id="post-harmonization-quality-checks" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="post-harmonization-quality-checks"><span class="header-section-number">3.4.3</span> Post-Harmonization Quality Checks</h3>
+<section id="post-harmonization-quality-checks" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="post-harmonization-quality-checks"><span class="header-section-number">6.1.3</span> Post-Harmonization Quality Checks</h3>
 <p>After harmonizing your country’s microdata to the MD format, the <em>Post-Harmonization Checker</em> (<code>PHC</code>) script is automatically executed in the rocket to ensure that the harmonized datasets meet essential quality and consistency standards. This diagnostic process validates whether the resulting data is clean, correctly structured, and ready for module execution.</p>
 <p>The script performs the following checks on the harmonized MD dataset:</p>
 <table class="caption-top table">
@@ -15156,19 +15214,23 @@ Click here to see the entire <code>countdown.R</code> script
 </tr>
 <tr class="even">
 <td><strong>5. Break Detection</strong></td>
-<td>Identifies structural breaks in aggregate-level distributions over time (over 10% jumps).</td>
+<td>Identifies structural breaks in aggregate-level distributions over time (over 25% jumps).</td>
+</tr>
+<tr class="odd">
+<td><strong>6. NA Share Check</strong></td>
+<td>Flags jumps of over 10 percentage points in a variable’s yearly share of <code>NA</code> values.</td>
 </tr>
 </tbody>
 </table>
 <p>Each of these checks outputs either a summary table (<code>.txt</code>) or a visual diagnostic (<code>.pdf</code>) to help identify problems.</p>
 <p>Every MD variable — not only key variables — is now force-coerced to its declared <code>class</code> in <code>MD_varnames.csv</code> before these checks run. As a result, the <strong>Variable Class Check</strong> is expected to pass (<code>class_match == TRUE</code>) for essentially every variable by construction. The check that actually matters going forward is the <strong>Coercion Fallout Check</strong>: <code>as.numeric()</code>, <code>as.integer()</code>, <code>as.Date()</code>, and the logical parser fail silently on unparseable input, turning bad values into <code>NA</code> with no error or warning. A variable with a non-zero <code>na_introduced</code> count lost real data during harmonization and needs investigation.</p>
-<section id="phc-output-files-generated" class="level4" data-number="3.4.3.1">
-<h4 data-number="3.4.3.1" class="anchored" data-anchor-id="phc-output-files-generated"><span class="header-section-number">3.4.3.1</span> PHC Output Files Generated</h4>
+<section id="phc-output-files-generated" class="level4" data-number="6.1.3.1">
+<h4 data-number="6.1.3.1" class="anchored" data-anchor-id="phc-output-files-generated"><span class="header-section-number">6.1.3.1</span> PHC Output Files Generated</h4>
 <p>After the script runs successfully, you will find the following two files (Note: The file <code>breaks_report.pdf</code> isn’t generated if there is insufficient data, e.g.&nbsp;if only one year is available):</p>
 <ol type="1">
 <li><strong><code>&lt;CountryCode&gt;_phc_results.txt</code></strong><br>
 <em>Location:</em> <code>dirTMPSAVE</code><br>
-<em>Contents:</em> Duplicate summary, class and format mismatches, detected date ranges.</li>
+<em>Contents:</em> Duplicate summary, rows without a year, class and format mismatches, detected date ranges.</li>
 </ol>
 <p><strong>Duplicate Check Table</strong></p>
 <table class="caption-top table">
@@ -15205,7 +15267,40 @@ Click here to see the entire <code>countdown.R</code> script
 </tr>
 </tbody>
 </table>
+<p><strong>Year Check Table</strong></p>
+<p>Every row of a harmonized dataset needs a <code>year</code>. Only datasets with rows missing one are listed; if there are none, the section says so. A listed dataset lost its year during harmonization and needs investigation before the modules run.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>dataset</code></td>
+<td>MD Dataset</td>
+</tr>
+<tr class="even">
+<td><code>has_year</code></td>
+<td><code>TRUE</code> if the dataset has a <code>year</code> column</td>
+</tr>
+<tr class="odd">
+<td><code>num_rows</code></td>
+<td>Number of rows in the dataset</td>
+</tr>
+<tr class="even">
+<td><code>num_rows_no_year</code></td>
+<td>Number of rows without a year (all rows if there’s no <code>year</code> column); should be <code>0</code></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Variable Class Check Table</strong></p>
+<p>Only variables whose class doesn’t match are listed; if all match, the section says how many variables were checked. Variables declared <code>factor</code> whose domain isn’t <code>MD_codebook</code> (e.g.&nbsp;<code>nace</code>, <code>ctry</code>) are named on a separate line instead: they are left as they are on purpose, since their codes aren’t checked against a codebook.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
@@ -15372,7 +15467,7 @@ Click here to see the entire <code>countdown.R</code> script
 </table>
 <ol start="2" type="1">
 <li><strong><code>breaks_report.pdf</code></strong><br>
-<em>Location:</em> <code>dirTMPSAVE</code>&nbsp;(Note: This file isn’t generated if there is insufficient data, e.g.&nbsp;if only one year is available ) <em>Contents:</em> Plots showing time-series breaks for each numeric variable by dataset. The red dots show a structural break in the time series defined by a minimum 10% jump.</li>
+<em>Location:</em> <code>dirTMPSAVE</code>&nbsp;(Note: This file isn’t generated if there is insufficient data, e.g.&nbsp;if only one year is available ) <em>Contents:</em> One page per variable flagged by the break detection or the NA share check. On top, for numeric variables, the yearly statistics (p25, p50, p75, mean, sd) of the non-<code>NA</code> values; the dots show a structural break, a jump of more than 25%. Below, the variable’s yearly share of <code>NA</code> values; the red dots show a change of more than 10 percentage points from the year before, or a year in which every value is <code>NA</code>. Every numeric variable a dataset has is checked, including <code>K_pim</code>, which the pipeline computes after harmonization.</li>
 </ol>
 <p><strong>Break Summary Table (PDF)</strong></p>
 <table class="caption-top table">
@@ -15407,12 +15502,57 @@ Click here to see the entire <code>countdown.R</code> script
 <td><code>growth</code></td>
 <td>Relative change from previous year (e.g., +0.25 = 25% increase, -1.0 = 100% drop)</td>
 </tr>
+<tr class="even">
+<td><code>from_zero</code></td>
+<td><code>TRUE</code> if a mean or sd leaves 0 (<code>growth</code> is then <code>NA</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>From a previous value of 0 there is no relative change: p25, p50 and p75 aren’t flagged then, as they jump between 0 and small values for variables with many zeros.</p>
+<p><strong>NA Share Table (TXT)</strong></p>
+<p>Variables that are <code>NA</code> in every year are listed on one line (“NA in every year: …”); the table lists the other flagged years.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>dataset</code></td>
+<td>Dataset name</td>
+</tr>
+<tr class="even">
+<td><code>variable</code></td>
+<td>Variable (any class; key variables aren’t checked)</td>
+</tr>
+<tr class="odd">
+<td><code>year</code></td>
+<td>Year flagged</td>
+</tr>
+<tr class="even">
+<td><code>na_share</code></td>
+<td>Share of rows of that year with an <code>NA</code> value (0 to 1)</td>
+</tr>
+<tr class="odd">
+<td><code>change</code></td>
+<td>Change from the year before (e.g., +0.3 = 30 percentage points more <code>NA</code>s)</td>
+</tr>
+<tr class="even">
+<td><code>all_na</code></td>
+<td><code>TRUE</code> if every value of that year is <code>NA</code></td>
+</tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors" class="level4" data-number="3.4.3.2">
-<h4 data-number="3.4.3.2" class="anchored" data-anchor-id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors"><span class="header-section-number">3.4.3.2</span> Instructions for Country Leaders for Reviewing and Fixing PHC Errors</h4>
+<section id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors" class="level4" data-number="6.1.3.2">
+<h4 data-number="6.1.3.2" class="anchored" data-anchor-id="instructions-for-country-leaders-for-reviewing-and-fixing-phc-errors"><span class="header-section-number">6.1.3.2</span> Instructions for Country Leaders for Reviewing and Fixing PHC Errors</h4>
 <ol type="1">
 <li>Duplicate Check</li>
 </ol>
@@ -15467,6 +15607,14 @@ Click here to see the entire <code>countdown.R</code> script
 <li><strong>Look for:</strong> Large positive/negative <code>growth</code> values in the break summary and red dots in the plots.</li>
 <li><strong>Fix:</strong> Review input consistency across years (e.g., variable definitions, missing categories). Cross-check with national data providers to see if breaks are expected due to methodology changes.</li>
 </ul>
+<ol start="6" type="1">
+<li>NA Share Check</li>
+</ol>
+<ul>
+<li><strong>Check:</strong> The share of <code>NA</code> values per year of every non-key variable. The break detection only looks at the non-<code>NA</code> values, so a loss of coverage doesn’t show there.</li>
+<li><strong>Look for:</strong> Years where the share jumps (e.g., 0% up to one year, 30% from the next), and variables or years with every value <code>NA</code>.</li>
+<li><strong>Fix:</strong> A jump starting in one year usually means the metadata stops covering that year: a code table without codes for it, or a raw variable renamed in that year’s file. A variable <code>NA</code> in every year usually means its concordance row produces values the type conversion can’t read (compare the coercion fallout check), or the country doesn’t provide it.</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -15490,10 +15638,10 @@ Click here to see the entire <code>countdown.R</code> script
 </section>
 </section>
 </section>
-<section id="developing-testing" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Developing &amp; Testing</h1>
-<section id="nuvolos-developer-space" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="nuvolos-developer-space"><span class="header-section-number">4.1</span> Nuvolos Developer Space</h2>
+<section id="developing-testing" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Developing &amp; Testing</h1>
+<section id="nuvolos-developer-space" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="nuvolos-developer-space"><span class="header-section-number">7.1</span> Nuvolos Developer Space</h2>
 <p>This space is intended for code development, module creation, and script testing on mock data. It is designed for MDI team members and module writers who are familiar with the MDI infrastructure and have access to the MDI GitHub repository. (More information on <a href="#nuvolos-where-mdi-users-develop-and-test-their-codes">Nuvolos: where MDI users develop and test their codes</a>)</p>
 <p>Each user must <a href="#connect-github">connect their Github account</a> to enable pushing and pulling changes. Note the following:</p>
 <ul>
@@ -15502,7 +15650,7 @@ Click here to see the entire <code>countdown.R</code> script
 <li><p>The workspace includes harmonized MD mock data, which you can use for testing and developing your modules. You can find it in <code>space_mounts/mockdata/v2.3/&lt;CountryCode&gt;/</code>. (Note: This folder is only accessible via RStudio and won’t show up in the Files section)</p></li>
 </ul>
 <div id="connect-github" class="callout callout-style-simple callout-note callout-titled" title="First time users: How to connect Github">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -15511,7 +15659,7 @@ Click here to see the entire <code>countdown.R</code> script
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div id="callout-49" class="callout-49-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>If you’re using the Nuvolos Developer Space for the first time you need to connect your GitHub account. Follow the steps below:</p>
 <ul>
@@ -15546,8 +15694,8 @@ Click here to see the entire <code>countdown.R</code> script
 </div>
 </div>
 </section>
-<section id="general-workflow-with-git" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="general-workflow-with-git"><span class="header-section-number">4.2</span> General Workflow with Git</h2>
+<section id="general-workflow-with-git" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="general-workflow-with-git"><span class="header-section-number">7.2</span> General Workflow with Git</h2>
 <p>If you’re in the right branch and your repository is up-to-date, this is the normal workflow:</p>
 <ol type="1">
 <li>You change a file/ add a module/ add metadata.</li>
@@ -15584,8 +15732,8 @@ Click here to see the entire <code>countdown.R</code> script
 <p><code>On branch branch_name Your branch is up to date with 'origin/branch_name'.  nothing to commit, working tree clean</code></p></li>
 </ol>
 </section>
-<section id="how-to-add-your-research-module-to-the-mdi-infrastructure" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="how-to-add-your-research-module-to-the-mdi-infrastructure"><span class="header-section-number">4.3</span> How to add your research module to the MDI infrastructure</h2>
+<section id="how-to-add-your-research-module-to-the-mdi-infrastructure" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="how-to-add-your-research-module-to-the-mdi-infrastructure"><span class="header-section-number">7.3</span> How to add your research module to the MDI infrastructure</h2>
 <p>If you want to add your module to the MDI infrastructure via the Nuvolos Developer Space you need to have access to the MDI GitHub repository and set up your GitHub account in Nuvolos (see:<a href="#connect-github">first time users</a>) Then open RStudio in the Developer Space and follow these steps to add your module:</p>
 <ol type="1">
 <li><p>Add a module folder</p>
@@ -15593,18 +15741,18 @@ Click here to see the entire <code>countdown.R</code> script
 <li><p>Add your MDnames_select file</p>
 <p>Inside your module folder add the MDnames_select file. This file contains a list of the variables that your module uses (<a href="#data-selection">more information here</a>) and it needs to be named like this: <code>(res_group)_MDnames_select.csv</code> where <code>res_group</code> is your module abbreviation, eg. <code>ABCD_MDnames_select.csv</code></p></li>
 <li><p>Add your main script</p>
-<p>Inside your module folder add your main script. This script needs to be named the following way: <code>Launch_X.X_(res_group).R</code> where X.X is the current launch version and <code>res_group</code> is your module abbreviation. Eg. <code>Launch_2.4_ABCD.R</code>. This scripts will be executed by the code when your module is run. That does not mean all your code needs to be in that one script. You can add as many scripts as you like and call them using <code>source(path/to/your/script/)</code>.</p></li>
+<p>Inside your module folder add your main script. This script needs to be named the following way: <code>Launch_vX.X_(res_group).R</code> where vX.X is the current launch version (with the <code>v</code>) and <code>res_group</code> is your module abbreviation. Eg. <code>Launch_v2.4_ABCD.R</code>. This scripts will be executed by the code when your module is run. That does not mean all your code needs to be in that one script. You can add as many scripts as you like and call them using <code>source(path/to/your/script/)</code>.</p></li>
 <li><p>Add any other scripts/files/ folders</p>
 <p>If you need any additional scripts or files place them in your module folder.</p></li>
 </ol>
-<p>This is an example of a module folder: <img src="images/ex_module_folder.png" class="img-fluid"> The folder has the module abbreviation <code>CPNT</code> and contains the main script <code>Launch_2.4_CPNT.R</code>, the <code>CPNT_MDnames_select.csv</code> file and two additional files <code>EU_countries.csv</code> and <code>Questionnaire.xlsx</code>. <em>(The screenshot still shows the pre-v2.4 two-letter <code>CN</code> naming.)</em></p>
+<p>This is an example of a module folder: <img src="images/ex_module_folder.png" class="img-fluid"> The folder has the module abbreviation <code>CPNT</code> and contains the main script <code>Launch_v2.4_CPNT.R</code>, the <code>CPNT_MDnames_select.csv</code> file and two additional files <code>EU_countries.csv</code> and <code>Questionnaire.xlsx</code>. <em>(The screenshot still shows the pre-v2.4 two-letter <code>CN</code> naming.)</em></p>
 </section>
-<section id="test-module" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="test-module"><span class="header-section-number">4.4</span> How to develop and test your module using (mock) data</h2>
+<section id="test-module" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="test-module"><span class="header-section-number">7.4</span> How to develop and test your module using (mock) data</h2>
 <p>To develop your module you first need to adjust and run the countdown. This will import all libraries and variables you might want to use in your module. To do so, navigate to <code>launchpad/countdown.R</code>.<br>
 The countdown script functions as a configuration file that, for example, sets up paths and flags for the MDI execution. You need to adjust the parameters in the script to fit your needs. For example, set the flag <code>isMOCK</code> to TRUE if you’re working with mock data, or set <code>dirTMP</code> to the directory where the harmonized mock data is stored (<code>space_mounts/mockdata/v2.3/&lt;CountryCode&gt;/</code>). You can find all parameters and flags in the <a href="#countdown">countdown section</a> of this manual.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -15613,22 +15761,22 @@ The countdown script functions as a configuration file that, for example, sets u
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-48" class="callout-48-contents callout-collapse collapse">
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Make a copy of the countdown script in the launchpad folder and adjust the parameters in the copy. This way you can keep the original countdown script as it is and use your copy for testing and development. Name the copy of the script <code>countdown_xzy.R</code>, where xyz can be your initials, modules name or anything else that helps you identify the script as your copy. Using the naming convention <code>countdown_</code> will make sure that this script is ignored by Git and won’t be pushed to GitHub. This way you can adjust the parameters in your copy without worrying about pushing changes to the original countdown script.</p>
 </div>
 </div>
 </div>
-<p>After adjusting the parameters, run the countdown script and select option 4 “Interactive MDI”. This will set up the environment for you to develop and test your module, but it will not run any MDI module. You can then run your module script (e.g.&nbsp;<code>Launch_2.4_ABCD.R</code>) to test your module using the mock data or develop it further using the libraries and variables/data that are loaded by the countdown script (eg. deflators). You can find the imported variables in the environment pane of RStudio.</p>
+<p>After adjusting the parameters, run the countdown script and select option 4 “Interactive MDI”. This will set up the environment for you to develop and test your module, but it will not run any MDI module. You can then run your module script (e.g.&nbsp;<code>Launch_v2.4_ABCD.R</code>) to test your module using the mock data or develop it further using the libraries and variables/data that are loaded by the countdown script (eg. deflators). You can find the imported variables in the environment pane of RStudio.</p>
 <p><img src="images/ex_environment.png" class="img-fluid"></p>
 <p>If you want to mimic a launch as it would happen at an NSI, set the flag <code>MDIimportFlag</code> to FALSE and <code>MDImoduleRUN</code> to TRUE. Then run the countdown and select option 2 “liftoff”. This will set up the environment and run all modules with the selected mock data.</p>
-<section id="mockdata" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="mockdata"><span class="header-section-number">4.4.1</span> Mockdata</h3>
+<section id="mockdata" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="mockdata"><span class="header-section-number">7.4.1</span> Mockdata</h3>
 <p>To ensure robustness, consistency, and functionality across the MDI infrastructure, the development and use of mock data is essential. Mock data is artificially generated to mimic the structure, format, and statistical properties of real firm-level data, without ever containing real firm information.</p>
 <p>Mock data is generated directly in the harmonized <strong>MD format</strong>, producing ready-to-use mock MD panels without a separate harmonization step.</p>
 <p>At its core is a firm-dynamics simulation based on Hopenhayn (1992): an unbalanced panel of firms is simulated over time, with stochastic productivity draws driving firm entry, exit, and growth. Firm-level variables (labor, capital, depreciation, EBITDA, etc.) are derived from this simulated productivity process, and the remaining BR/BS/survey variables are predicted using auxiliary regressions and sampling routines calibrated per country.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -15637,7 +15785,7 @@ The countdown script functions as a configuration file that, for example, sets u
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-49" class="callout-49-contents callout-collapse collapse">
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Part 1: Prepare Auxiliary Files</p>
@@ -15684,8 +15832,8 @@ The countdown script functions as a configuration file that, for example, sets u
 </section>
 </section>
 </section>
-<section id="acknowledgement" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Acknowledgement</h1>
+<section id="acknowledgement" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Acknowledgement</h1>
 <p>We gratefully acknowledge the support of the European Union, whose funding made this project possible. We also thank all National Statistical Institutes (NSIs), National Statistical Systems, National Productivity Boards (NPBs), and other collaborators for their valuable contributions to the development of the MDI project and this manual.</p>
 </section>
 
